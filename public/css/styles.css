@@ -1,0 +1,25 @@
+:root {
+    --green-100: #EAF1E7;
+    --green-200: #A8C79E;
+    --green-300: #5D7D66;
+    --green-500: #75A95F;
+    --green-700: #43633C;
+    --green-900: #101E11;
+    --orange-500: #A0522D;
+
+    --font-family-titulo: "Yeseva One", serif;
+    --font-family-paragrafo: "Poppins", sans-serif;
+
+    --font-size-titulo-desktop: 2rem; /*32px*/
+    --font-size-subtitulo-desktop: 1.5rem; /*24px*/
+    --font-size-paragrafo-desktop: 1rem; /*16px*/
+
+    --font-size-titulo-mobile: 1rem; /*16px*/
+    --font-size-subtitulo-mobile: 0.75rem; /*12px*/
+    --font-size-paragrafo-mobile: 0.5rem; /*8px*/
+
+    --padding-1-pagina-desktop: 4.375rem; /*70px*/
+    --padding-2-pagina-desktop: 7rem; /*112px*/
+
+    --padding-pagina-mobile: 1rem; /*16px*/
+}
