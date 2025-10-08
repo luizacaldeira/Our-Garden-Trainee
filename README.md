@@ -21,12 +21,11 @@
 
 #### Scrum Master:
 
-* Luiza Caldeira Daniel - https://github.com/luizacaldeira
+* [Luiza Caldeira Daniel](https://github.com/luizacaldeira)
 
 #### Links Úteis:
 
-* [Trello]()
-
+* [Trello](https://trello.com/b/GVrSWTrQ/252-trello-do-scrum-our-garden-%F0%9F%AA%B4)
 
 
 ## Descrição do Projeto:
