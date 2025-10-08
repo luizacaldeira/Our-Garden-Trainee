@@ -21,7 +21,7 @@
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github).
+* Luiza Caldeira Daniel - https://github.com/luizacaldeira
 
 #### Links Úteis:
 
