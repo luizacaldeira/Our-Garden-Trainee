@@ -1,3 +1,5 @@
+@import url('./styles.css');
+
 * {
     padding: 0;
     margin: 0;
@@ -6,10 +8,14 @@
 
 body {
     font-family: var(--font-family-paragrafo);
+    font-size: var(--font-size-paragrafo-desktop);
+    -webkit-font-smoothing: antialiased;
 }
 
 footer {
-    height: 34rem;
+    width: 100vw;
+    height: 26rem;
+
     background-color: var(--green-900);
     color: var(--green-100);
 
@@ -20,21 +26,23 @@ footer {
 }
 
 .footer-content {
+    width: 100%;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     gap: 4.375rem;
-
-    background-color: yellow;
 }
 
 .footer-content .cards {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
 
-    background-color: red;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
 }
 
 .footer-content .cards .card {
@@ -44,4 +52,41 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 0.625rem; /*10px*/
+}
+
+.footer-content .cards .card .title {
+    font-size: 1.5rem;
+}
+
+.footer-content .cards .card .title a .logo-code-branca {
+    width: 4.375rem; /*70px*/
+    height: 4.375rem; /*70px*/
+
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-content .cards .card .title a .logo-code-branca:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-content .cards .card .content .icons {
+    display: flex;
+    gap: 0.625rem; /*10px*/
+}
+
+.footer-content .cards .card .content .icons .icon {
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-content .cards .card .content .icons .icon:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-content .cards .vertical-line {
+  border-left: 2px solid var(--green-100);
+  height: 8rem;               
+  margin: 0 20px;              
 }
