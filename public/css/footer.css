@@ -13,5 +13,35 @@ footer {
     background-color: var(--green-900);
     color: var(--green-100);
 
-    padding: var(--);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-1-pagina-desktop);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4.375rem;
+
+    background-color: yellow;
+}
+
+.footer-content .cards {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: red;
+}
+
+.footer-content .cards .card {
+    width: 15.625rem; /*250px*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
