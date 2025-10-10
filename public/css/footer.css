@@ -34,8 +34,7 @@ footer {
     align-items: center;
     justify-content: center;
 
-    gap: 4.375rem;
-    /*70px*/
+    gap: 4.375rem; /*70px*/
 }
 
 .footer-content .cards {
@@ -48,15 +47,13 @@ footer {
 }
 
 .footer-content .cards .card {
-    width: 15.625rem;
-    /*250px*/
+    width: 15.625rem; /*250px*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 0.625rem;
-    /*10px*/
+    gap: 0.625rem; /*10px*/
 }
 
 .footer-content .cards .card .title {
@@ -64,10 +61,8 @@ footer {
 }
 
 .footer-content .cards .card .title a .logo-code-branca {
-    width: 4.375rem;
-    /*70px*/
-    height: 4.375rem;
-    /*70px*/
+    width: 4.375rem; /*70px*/
+    height: 4.375rem; /*70px*/
 
     transition: all 0.2s ease-in-out;
 }
@@ -79,15 +74,12 @@ footer {
 
 .footer-content .cards .card .content .icons {
     display: flex;
-    gap: 0.625rem;
-    /*10px*/
+    gap: 0.625rem; /*10px*/
 }
 
 .footer-content .cards .card .content .icons .icon {
-    width: 2.5rem;
-    /*40px*/
-    height: 2.5rem;
-    /*40px*/
+    width: 2.5rem; /*40px*/
+    height: 2.5rem; /*40px*/
 
     transition: all 0.2s ease-in-out;
 }
@@ -107,8 +99,52 @@ footer {
     display: none;
 }
 
+/* Laptops pequenos */
+@media screen and (min-width: 701px) and (max-width: 1097px) {
+    footer {
+        font-size: 0.875rem; /*14px*/
+    }
+
+    .footer-content .cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        gap: 1.5rem; /*24px*/
+    }
+
+    .footer-content .cards .card {
+        width: 12.5rem; /*200px*/
+        gap: 0.5rem; /*8px*/
+    }
+
+    .footer-content .cards .card .title {
+        font-size: 1.3rem;
+    }
+
+    .footer-content .cards .card .title a .logo-code-branca {
+        width: 4rem; /*64px*/
+        height: 4rem; /*64px*/
+    }
+
+    .footer-content .cards .card .content .icons .icon {
+        width: 2.3rem; /*36.8px*/
+        height: 2.3rem; /*36.8px*/
+    }
+
+    .footer-content .cards .vertical-line {
+        display: none;
+    }
+
+    .footer-content .cards hr {
+        display: flex;
+        width: 15.625rem; /*250px*/
+    }
+}
+
 /* Smartphones grandes */
-@media screen and (min-width: 361px) and (max-width: 746px) {
+@media screen and (min-width: 361px) and (max-width: 700px) {
     footer {
         font-size: var(--font-size-paragrafo-mobile);
     }
