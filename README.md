@@ -21,12 +21,11 @@
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github).
+* [Luiza Caldeira Daniel](https://github.com/luizacaldeira)
 
 #### Links Úteis:
 
-* [Trello]()
-
+* [Trello](https://trello.com/b/GVrSWTrQ/252-trello-do-scrum-our-garden-%F0%9F%AA%B4)
 
 
 ## Descrição do Projeto:
