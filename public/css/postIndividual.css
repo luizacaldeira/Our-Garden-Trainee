@@ -1,0 +1,122 @@
+@import url('./styles.css');
+
+body {
+    font-family: var(--font-family-paragrafo);
+    font-size: var(--font-size-paragrafo-desktop);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+main .hero-section {
+    background: linear-gradient(to bottom, var(--green-200) 0%, #8EB87F 78%, var(--green-500) 100%);
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4.375rem;
+}
+
+main .hero-section .post-container {
+    background-color: var(--green-700);
+
+    max-width: 52.5rem; /*840px*/
+    min-height: 30.375rem; /*486px*/
+
+    border-bottom-right-radius: 7rem;
+    border-top-right-radius: 7rem;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+main .hero-section .post-container .post {
+    display: flex;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    border-top-right-radius: 7rem;
+    border-bottom-right-radius: 6rem; /*96px*/
+}
+
+main .hero-section .post-container .post .image-container {
+    width: 48%;
+}
+
+main .hero-section .post-container .post .image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+main .hero-section .post-container .post .content {
+    flex: 1;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 2.5rem; /*40px*/
+
+    gap: 1.25rem; /*20px*/
+
+    color: var(--green-900);
+
+}
+
+main .hero-section .post-container .post .content .content-header .header-title p {
+    font-family: var(--font-family-titulo);
+    /* font-size: var(--font-size-titulo-desktop); */
+    font-size: 36px;
+
+    font-weight: bolder;
+}
+
+main .hero-section .post-container .post .content .content-main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.625rem; /*10px*/
+}
+
+main .hero-section .post-container .post .content .content-main .class-container {
+    display: flex;
+
+    gap: 0.625rem; /*10px*/
+}
+
+main .hero-section .post-container .post .content .content-main .class-container .classification {
+    background-color: var(--green-200);
+
+    padding: 0.3125rem; /*5px*/
+
+    border-radius: 2rem;
+
+    font-size: var(--font-size-subtitulo-mobile);
+}
+
+main .hero-section .post-container .post .content .content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .hero-section .post-container .post .content .content-footer .author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.3125rem; /*5px*/
+}
+
+main .hero-section .post-container .post .content .content-footer .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.3125rem; /*5px*/
+}
