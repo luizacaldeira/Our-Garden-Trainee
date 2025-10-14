@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.loginBackground{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding: 0;
+}
+
+.loginBackgroundImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loginBackgroundColor{
+    background-color: var(--green-200);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
