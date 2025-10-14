@@ -8,8 +8,10 @@ btn_show_more.addEventListener('click', () => {
         return btn_show_more.innerHTML = `<img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"></img>`;
     }
 
-    btn_show_more.innerHTML = `
-      <img src="../../../public/assets/arrow-down-icon.svg" alt="Seta para baixo">
-      Saiba mais sobre a planta
-    `;
+    setTimeout(() => {
+      btn_show_more.innerHTML = `
+        <img src="../../../public/assets/arrow-down-icon.svg" alt="Seta para baixo">
+        Saiba mais sobre a planta
+      `;
+    }, 400); 
 });
