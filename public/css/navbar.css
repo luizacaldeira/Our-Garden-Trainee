@@ -3,13 +3,23 @@ body{
     font-family: var(--font-family-paragrafo);
 }
 
+.navbarGlobal{
+    background-color: var(--green-900);
+    align-items: center;
+    padding: 0 1rem;
+}
+.bi{
+    display: none;
+}
+
+
 .navbar{
     background-color: var(--green-900);
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 112px;
+    padding: 1.5rem 7rem;
 }
 
 .navbarText{
@@ -56,8 +66,40 @@ body{
     box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.9);
 }
 
-@media screen and (min-width:380px) and (max-width:440px){
+@media screen and (max-width:430px){
+    
+    .navbarGlobal{
+        background-color: var(--green-900);
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        padding: 0 1rem;
+        font-size: 2.5rem;
+    }
+
     .navbar{
-        background-color: red;
+        justify-content: center;
+        padding: 4% 25%;
+    }
+    
+    .navbarText{
+        display: none;
+    }
+
+    .navbarDivider{
+        display: none;
+    }
+
+    .navbarLoginButton{
+        display: none;
+    }
+
+    .navbarLogo{
+        height: 5rem;
+    }
+
+    .bi{
+        display: flex;
+        color: var(--green-100);
     }
 }
