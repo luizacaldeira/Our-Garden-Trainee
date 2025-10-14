@@ -254,7 +254,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:hover {
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: opacity 0.4s ease, max-height 0.4s ease;
+        transition: opacity 0s ease, max-height 0.4s ease;
     }
 
     main .hero-section .post-container .plant-infos-container.open {
@@ -449,7 +449,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:hover {
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: opacity 0.4s ease, max-height 0.4s ease;
+        transition: opacity 0s ease, max-height 0.4s ease;
     }
 
     main .hero-section .post-container .plant-infos-container.open {
@@ -678,7 +678,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:hover {
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: opacity 0.4s ease, max-height 0.4s ease;
+        transition: opacity 0s ease, max-height 0.4s ease;
     }
 
     main .hero-section .post-container .plant-infos-container.open {
@@ -907,7 +907,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:hover {
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: opacity 0.4s ease, max-height 0.4s ease;
+        transition: opacity 0s ease, max-height 0.4s ease;
     }
 
     main .hero-section .post-container .plant-infos-container.open {
