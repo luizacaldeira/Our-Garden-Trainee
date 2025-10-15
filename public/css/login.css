@@ -2,7 +2,8 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .loginBackground{
@@ -11,12 +12,16 @@ body{
     grid-template-columns: 1fr 1fr;
     height: 100vh;
     padding: 0;
+    place-items: center;
+    position: relative;
 }
 
-.loginBackgroundImg img{
+.loginBackgroundImg{
+    background-image: url("../../../public/assets/BackgroundFolhas.jpg");
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
 }
 
 .loginBackgroundColor{
@@ -24,4 +29,167 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.loginBox{
+    background-color: var(--green-100);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 10px;
+}
+
+.loginBoxImg{
+    background-image: url("../../../public/assets/BackgroundFolhas.jpg");
+    background-image: cover;
+    background-position: center;
+    border-radius: 90px 30px 150px 90px;
+}
+
+.loginBoxForm{
+    padding: 4% 8%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.loginBoxTitle{
+    color: var(--green-900);
+    font-family: var(--font-family-titulo);
+    font-size: 30px;
+}
+
+.loginBoxSubtitle{
+    color: var(--green-900);
+    font-family: var(--font-family-paragrafo);
+    font-size: 10px;
+    padding: 5px 0px;
+}
+
+.loginBoxEmail{
+    color: var(--green-900);
+    font-family: var(--font-family-paragrafo);
+    font-size: 14px;
+}
+
+.loginBoxSenha{
+    color: var(--green-900);
+    font-family: var(--font-family-paragrafo);
+    font-size: 14px;
+}
+
+.loginBoxPassword{
+    color: var(--green-900);
+    font-family: var(--font-family-paragrafo);
+    font-size: 12px;
+    text-align: end;
+}
+
+.loginBoxButton{
+    color: var(--green-100);
+    font-family: var(--font-family-paragrafo);
+    font-size: 13px;
+    text-align: center;
+    background-color: var(--green-900);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.loginBoxEnd{
+    color: var(--green-900);
+    font-family: var(--font-family-paragrafo);
+    font-size: 13px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 0 120px;
+}
+
+.loginRegisterButton{
+    color: var(--orange-500);
+}
+
+.loginInput{
+    background-color: var(--green-200);
+    padding: 2% 4%;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    justify-content: space-between;
+}
+
+.inputLogin{
+    background-color: var(--green-200);
+    border: none;
+    width: 100%;
+}
+
+.loginLock{
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    width: 100%;
+}
+
+.inputLogin:focus{
+    border: none;
+    outline: none;
+}
+
+.loginData{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.loginVerification{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.loginBoxId{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.loginBoxXoxomidias{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+}
+
+.bi{
+    color: var(--green-900);
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+}
+
+.bi-lock{
+    color: var(--green-300);
+    font-size: 18px;
+    width: 10px;
+}
+
+.bi-envelope{
+    color: var(--green-300);
+    font-size: 18px;
+    width: 10px;
+}
+
+.bi-eye-slash{
+    color: var(--green-300);
+    font-size: 18px;
 }
