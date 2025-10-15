@@ -2,7 +2,6 @@
 
 body{
     background-color: var(--green-200);
-    padding: 0 10%;
     
 }
 
@@ -12,20 +11,24 @@ body{
     align-items: center;
     width: 100%;
     height: auto;
+    padding: 0 10%;
 }
 
 
 .container {
     display: flex;
     gap: 10px;
-    padding: 7% 3% 7% 3%;
+    padding: 7% 5% 7% 5%;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .container h2 {
     font-family: var(--font-family-paragrafo);
     font-size: var(--font-size-titulo-desktop);
     width: 100%;
+    color: var(--green-900);
 }
 
 .pesquisa {
@@ -33,18 +36,24 @@ body{
     background-color: white;
     border-radius: 60px;
     height: 100%;
-    width: 60%;
+    width: 100%;
     padding: 15px 10px ;
     display: flex;
     gap: 10px;
-    /*border: 1px solid black;*/
     align-items: center;
+    border: 1px solid black;
 }
 
 .pesquisa p {
     font-size: 16px;
     height: 100%;
-    
+    width: 100%;
+    border: 1px solid black;
+}
+
+.pesquisaEFunil {
+    display: flex;
+    gap: 10%;
 }
 
 .funilPosts {
@@ -60,8 +69,8 @@ body{
 
 .listaCards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -142,7 +151,7 @@ body{
     width: fit-content;
     font-size:30px;
     font-family: var(--font-family-titulo);
-    
+    color: var(--green-900);
 }
 
 .conteudo p {
@@ -165,32 +174,110 @@ body{
     text-align: left;
     padding: 0%;
     font-family: var(--font-family-paragrafo);
-    font-size: 12px;
+    font-size: 13px;
     font-style: italic;
 }
 
 .hora i {
     text-align: right;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .paginacao {
+    width: 100%;
+    justify-content: center;
+    padding: 1% 20%;
+    /* align-items: center; */
     display: flex;
-    gap: 150%;
-    font-size: 30px;
-    padding: 10%;
     font-family: var(--font-family-paragrafo);
+    font-weight: bold;
+}
+
+.elementosPaginacao {
+    font-size: 25px;
+    width: 100%;
+}
+
+.arcos {
+    display: flex;
+    gap: 30%;
+    padding: 4%;
+    justify-content: center;
+    align-items: center;
+}
+
+.arcos i {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 1%;
 }
 
 .numeros {
-    font-size: 30px;
     display: flex;
-    gap: 100%;
-    justify-content:center ;
+    gap: 30%;
+    width: 100%;
+    justify-content: center;
+    padding: 5%;
+}
+
+.numeros p {
+    padding: 8%;
+}
+
+.numero1 {
+    background-color: var(--green-500);
+    border-radius: 100px;
+    padding: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .numeros p:hover {
     background-color: var(--green-500);
     border-radius: 50px;
-    padding: 8%;
+}
+
+.arcos i:hover {
+    background-color: var(--green-500);
+    border-radius: 40%;
+}
+
+@media (max-width: 790px) {
+    .pagina {
+        padding: 0 1%;
+    }
+
+    .listaCards {
+        grid-template-columns: 1fr;
+        gap: 9%;
+    }
+
+    .profile {
+        padding: 5%;
+    }
+
+    .nomeEFoto {
+        gap: 5%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction:column-reverse;
+    }
+
+    .container h2 {
+        font-size: 20px;
+        padding-top: 5%;
+    }
+
+    .pesquisa {
+        width: 100%;
+        display: flex;
+    }
+
+    .pesquisa, .funilPosts {
+        display: flex;
+    }
 }
