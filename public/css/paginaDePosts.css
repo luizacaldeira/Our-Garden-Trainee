@@ -41,14 +41,14 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
-    border: 1px solid black;
+    padding-right: 300px;
 }
 
 .pesquisa p {
     font-size: 16px;
     height: 100%;
     width: 100%;
-    border: 1px solid black;
+    
 }
 
 .pesquisaEFunil {
@@ -273,7 +273,7 @@ body{
     }
 
     .pesquisa {
-        width: 100%;
+        width: 50%;
         display: flex;
     }
 
