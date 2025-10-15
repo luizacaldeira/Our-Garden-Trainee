@@ -213,6 +213,10 @@ main .hero-section .post-container .show-more-container .btn-show-more:hover {
     transform: scale(1.05);
 }
 
+main .hero-section .post-container .show-more-container .btn-show-more:focus {
+    outline: none;
+}
+
 
 /* Laptops pequenos */
 @media screen and (min-width: 993px) and (max-width: 1097px) {}
