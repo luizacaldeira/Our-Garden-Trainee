@@ -177,6 +177,20 @@ main .hero-section .post-container .plant-infos-container .container span {
     font-weight: 500;
 }
 
+main .hero-section .post-container .plant-infos-container .container .classifications {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+main .hero-section .post-container .plant-infos-container .container .cares {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
 main .hero-section .post-container .show-more-container {
     display: flex;
     align-items: center;
