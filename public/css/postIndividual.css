@@ -586,7 +586,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
         width: 100%;
         min-height: 100vh;
 
-        font-size: var(--font-size-subtitulo-mobile);
+        font-size: var(--font-size-titulo-mobile);
     }
 
     main .hero-section {
@@ -757,7 +757,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
         justify-content: center;
 
         font-family: var(--font-family-titulo);
-        font-size: var(--font-size-subtitulo-desktop);
+        font-size: var(--font-size-titulo-desktop);
     }
 
     main .hero-section .post-container .plant-infos-container .container {
@@ -768,7 +768,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
     }
 
     main .hero-section .post-container .plant-infos-container .container span {
-        font-size: var(--font-size-paragrafo-desktop);
+        font-size: var(--font-size-subtitulo-desktop);
         font-weight: 500;
     }
 
@@ -802,7 +802,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
 
         transition: all 0.2s ease-in-out;
 
-        font-size: var(--font-size-subtitulo-mobile);
+        font-size: var(--font-size-titulo-mobile);
     }
 
     main .hero-section .post-container .show-more-container .btn-show-more:hover {
