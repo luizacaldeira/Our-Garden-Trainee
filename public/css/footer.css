@@ -207,7 +207,6 @@ footer {
 
     .footer-content .cards .card {
         width: 100%;
-        max-width: 533px;
     }
 
     .footer-content .cards .card .title {
@@ -236,7 +235,6 @@ footer {
     .footer-content .cards hr {
         display: flex;
         width: 100%;
-        max-width: 533px;
     }
 
     .footer-content .slogan p {
@@ -266,7 +264,7 @@ footer {
     }
 
     .footer-content .cards .card {
-        width: 9.375rem; /*150px*/
+        width: 100%
     }
 
     .footer-content .cards .card .title {
@@ -294,7 +292,7 @@ footer {
 
     .footer-content .cards hr {
         display: flex;
-        width: 9.375rem; /*150px*/
+        width: 100%
     }
 
     .footer-content .slogan {
