@@ -175,3 +175,16 @@ main .section3 .users-table tbody tr td {
     border-top: 1px solid var(--green-900);
     padding: 1rem; /*16px*/
 }
+
+main .section3 .users-table tbody tr td .actions .btn-actions {
+    all: unset;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+main .section3 .users-table tbody tr td .actions .btn-actions:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
