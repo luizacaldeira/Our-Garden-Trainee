@@ -188,3 +188,72 @@ main .section3 .users-table tbody tr td .actions .btn-actions:hover {
     transition: all 0.2s ease-in-out;
     transform: scale(1.1);
 }
+
+main .section3 .pagination {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .section3 .pagination .content {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.625rem; /*10px*/
+
+    border-top: 1px solid var(--green-900);
+
+    padding: 1rem 0 0 0; /*16px*/
+}
+
+main .section3 .pagination .content .arrow-left {
+    all: unset;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+main .section3 .pagination .content .arrow-left:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+main .section3 .pagination .content .pages {
+    display: flex;
+    align-items: center;
+    
+    gap: 0.625rem; /*10px*/
+}
+
+main .section3 .pagination .content .pages .page {
+    all: unset;
+
+    font-weight: bolder;
+
+    padding: 0.625rem;
+
+    border-radius: 0.375rem; /*6px*/
+}
+
+main .section3 .pagination .content .pages .page:hover {
+    background-color: var(--green-500);
+}
+
+main .section3 .pagination .content .arrow-right {
+    all: unset;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+main .section3 .pagination .content .arrow-right:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
