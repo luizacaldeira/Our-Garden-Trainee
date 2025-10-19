@@ -50,7 +50,7 @@ body{
 }
 
 .section2{
-    padding: 0 0 6% 0;
+    padding: 0 0 7% 0;
     border: 1px solid red;
 }
 
@@ -59,13 +59,35 @@ body{
     font-family: var(--font-family-paragrafo);
 }
 
-.section3{
+.section3Total{
     width: 100%;
-    height: 30%;
+    height: 40%;
     border: 1px solid blue;
     display: flex;
     gap: 10%;
     padding: 0 5%;
+    justify-content: space-between;
+}
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    position: relative;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.icon {
+    background-color: var(--green-500);
+    width: fit-content;
+    border-radius: 10px;
+    padding: 5% 7%;
+    position: absolute;
+    top: -30px;
+    left: 37%;
+    font-size: 30px;
+    color: aliceblue;
 }
 
 .containerUsuarios {
@@ -76,6 +98,8 @@ body{
     align-items: center;
     background-color: white;
     border-radius: 20px;
+    min-width: 230px;
+    max-width: 250px;
 }
 
 .content {
@@ -95,4 +119,19 @@ body{
     font-size: 19px;
 }
 
+.verMais {
+    border: 1px solid red;
+    text-align: center;
+    padding: 5% 7%;
+    background-color: var(--green-500);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    font-family: var(--font-family-paragrafo);
+    width: fit-content;
+    font-size: 15px;
+    white-space: nowrap;
+    color: aliceblue;
+}
 
