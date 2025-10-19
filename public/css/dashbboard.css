@@ -1,0 +1,98 @@
+body{
+    background-color: var(--green-100);
+}
+
+.containerDashboard {
+    display: flex;
+}
+
+.sidebarDashboard {
+    background-color: var(--green-200);
+    width: 20%;
+    height: 100vh;
+}
+
+.mainDashbord {
+    flex: 1;
+    padding: 0 3%;
+}
+
+.section1 {
+    display:flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 4% 0;
+}
+
+.total {
+    display: flex;
+    gap: 7%;
+    border: 1px solid orange;
+    width: 40%;
+}
+
+.total p {
+    background-color: var(--green-200);
+    border-radius: 20px;
+    padding: 3%;
+    font-family: var(--font-family-paragrafo);
+    font-size: 13px;
+}
+
+.profileADM h5{
+    font-size: 15px;
+    font-family: var(--font-family-paragrafo);
+}
+
+.profileADM p {
+    font-size: 12px;
+    font-family: var(--font-family-paragrafo);
+}
+
+.section2{
+    padding: 0 0 6% 0;
+    border: 1px solid red;
+}
+
+.section2 h3 {
+    font-size: 30px;
+    font-family: var(--font-family-paragrafo);
+}
+
+.section3{
+    width: 100%;
+    height: 30%;
+    border: 1px solid blue;
+    display: flex;
+    gap: 10%;
+    padding: 0 5%;
+}
+
+.containerUsuarios {
+    border: 1px solid black;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.content {
+    border: 1px solid palevioletred;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: var(--font-family-paragrafo);
+}
+
+.content h2 {
+    font-size: 30px;
+}
+
+.content text {
+    font-size: 19px;
+}
+
+
