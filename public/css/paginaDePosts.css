@@ -19,7 +19,7 @@ body{
     display: flex;
     gap: 10px;
     padding: 7% 5% 7% 5%;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     width: 100%;
 }
@@ -44,7 +44,7 @@ body{
     padding-right: 300px;
 }
 
-.pesquisa p {
+.pesquisa input {
     font-size: 16px;
     height: 100%;
     width: 100%;
@@ -273,8 +273,17 @@ body{
     }
 
     .pesquisa {
-        width: 50%;
+        width: 100%;
         display: flex;
+    }
+
+    .funilPosts {
+        justify-content: center ;
+        width: fit-content;
+    }
+
+    .pesquisaEFunil {
+        gap: 5px;
     }
 
 }
