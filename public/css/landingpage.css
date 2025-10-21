@@ -61,9 +61,14 @@ body {
     font-size: 4rem;
     font-weight: 600;
 }
+.herobottom {
+    display: flex;
+    justify-content: center;
+}
 .herobottom h1 {
-    font-size: 1.4rem;
-    font-weight: 600;
+    width: 80%;
+    font-size: 1rem;
+    font-family: var(--font-family-paragrafo);
 }
 
 .ladodireito {
@@ -125,13 +130,11 @@ body {
     width: fit-content;
     align-items: center;
     border-radius: 8px;
-    height: 20vh;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    height: 22vh;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
 }
 .card1 img {
-    height: 20vh;
+    height: 22vh;
 
 }
 .cardcontent1 {
@@ -140,7 +143,7 @@ body {
     flex-direction: column;
     align-self: center;
     border-radius: 8px;
-    padding: 3%;
+    padding: 2%;
 }
 .titulo1 {
     width: 100%;
@@ -155,6 +158,7 @@ body {
     font-family: var(--font-family-titulo);
     color: #101E11;
     font-size: 1.4rem;
+    font-weight: 600;
     width: 100%;
     text-align: left;
     justify-content: center;
@@ -169,33 +173,44 @@ body {
     text-align: left;
 
 }
-.saibamais1{
+.bottomcontent {
     display: flex;
     width: 100%;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 2%;
+    gap: 30%;
     align-items: center;
-    padding-right: 5%;
-    height: 5vh;
+
 }
-.saibatext1 h1 {
+.categorias {
     display: flex;
     font-family: var(--font-family-paragrafo);
-    font-size: 0.8rem;
-    color: #101E11; 
+    font-size: 10px;
+    width: 100%;
+    justify-content: space-between;
+
+}
+.categorias h1{
+    font-size: 0.7rem;
+}
+.cat {
+    display: flex;
+    background-color: var(--green-200);
+    align-items: center;
     text-align: center;
     justify-content: center;
-    align-items: center;
-    margin: auto;
+    padding: 3%;
+    border-radius: 16px;
 }
-.saibaicon1 i {
-    width: 100%;
-    font-size: 18px;
-    cursor: pointer;
-    color: #75A95F ;
+.cat h1{
+    display: flex;
+    margin: 0;
 }
 
+.saibaicon1 i {
+    width: 100%;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--green-500) ;
+}
 
 .setabaixo {
     width: fit-content;
