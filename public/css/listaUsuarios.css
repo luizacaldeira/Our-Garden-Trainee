@@ -10,7 +10,7 @@ main {
     padding: 2.5rem; /*40px*/
     gap: 2.5rem; /*40px*/
 
-    background-color: var(--green-100);
+    background-color: var(--green-200);
     color: var(--green-900);
 
     min-width: 100%;
@@ -33,7 +33,7 @@ main .section1 .input-search-container {
     padding: 0.625rem; /*10px*/
     gap: 0.625rem; /*10px*/
 
-    background-color: #FFFFFF;
+    background-color: var(--green-100);
 
     border-radius: 2rem;
 
@@ -112,7 +112,7 @@ main .section2 .buttons-container .btn-create-user {
     gap: 0.675rem; /*10px*/
     padding: 0.675rem; /*10px*/
 
-    background-color: var(--green-500);
+    background-color: var(--green-700);
     color: var(--green-100);
 
     border-radius: 0.75rem; /*12px*/
@@ -130,7 +130,7 @@ main .section2 .buttons-container .btn-create-user:hover {
 }
 
 main .section3 {
-    background-color: #FFFFFF;
+    background-color: var(--green-100);
 
     border-radius: 2rem;
 
