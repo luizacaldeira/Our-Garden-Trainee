@@ -26,14 +26,44 @@ body {
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    width: 92%;
+    width: 88%;
     background-color: transparent;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    gap: 5%;
 }
 
-.imagemdahero{
-    width: 30%;
+.herocontent {
+    background-image: url("/public/assets/folhagem-tropical-com-textura-de-fundo.jpg");
+    background-position: center;
+    background-size: cover;
+    color: var(--green-100);
+    display: flex;
+    width: 32%;
+    height: 100vh;
+    flex-direction: column;
+    font-family: var(--font-family-titulo);
+    text-align: center;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 150px;
+    align-content: center;
+    justify-content: space-between;
+    padding: 5% 5% 5% 5%;
+
+}
+.herotop h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+.heromiddle h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+.herobottom h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .ladodireito {
@@ -43,44 +73,49 @@ body {
     justify-content: center;
     width: 60%;
     background-color: transparent;
-    align-content: space-between;
-    padding: 0 5% 0 5%; 
+    padding: 0 5% 0 5%;
     
 }
 
 .novid {
     background-color: transparent;
     width:100%;
-    height: 15vh;
+    height: fit-content;
     align-items: center;
     justify-content: center;
     text-align: center;
     align-content: center;
-    
+
 }
 
 .novid h1{
     font-family: var(--font-family-titulo);
-    font-size: 2rem;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
     color:var(--green-900);
-    padding-top: 10%;
+    
 }
-
+.setacima {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 8px;
+    cursor: pointer;
+}
 .setacima i {
     width: 100%;
     font-size: 35px;
-    cursor: pointer;
-   
+    color: var(--green-700);
 
 }
 .cards{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 85vh;
+    height: fit-content;
     gap: 5vh;
     background-color: transparent;
-    padding: 10% 0 0 0;
+    padding: 1% 0 1% 0;
     
 }
 .card1{
@@ -105,7 +140,7 @@ body {
     flex-direction: column;
     align-self: center;
     border-radius: 8px;
-
+    padding: 3%;
 }
 .titulo1 {
     width: 100%;
@@ -119,21 +154,20 @@ body {
 .titulo1 h1 {
     font-family: var(--font-family-titulo);
     color: #101E11;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 100%;
-
-    text-align: center;
+    text-align: left;
     justify-content: center;
     align-self: center;
     align-content: center;
-    padding-right: 25%;
+
 }
 .texto1 h1 {
     font-family: var(--font-family-paragrafo);
     font-size: 0.8rem;
     color: #28150C;
-    padding-left: 5%;
-    padding-right: 5%;
+    text-align: left;
+
 }
 .saibamais1{
     display: flex;
@@ -162,164 +196,10 @@ body {
     color: #75A95F ;
 }
 
-.card2{
-    display: flex; 
-    flex-direction: row;
-    background-color: #FFFFFF;
-    width: fit-content;
-    align-items: center;
-    border-radius: 8%;
 
-}
-.card2 img {
-    height: 18vh;
-
-}
-.cardcontent2 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    background-color: white;
-
-}
-.titulo2 {
-    width: 100%;
-    height: 5vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    align-content: center;
-
-}
-.titulo2 h1 {
-    font-family: var(--font-family-titulo);
-    color: #101E11;
-    font-size: 1.5rem;
-    width: 100%;
-
-    text-align: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    padding-right: 25%;
-}
-.texto2 h1 {
-    font-family: var(--font-family-paragrafo);
-    font-size: 0.8rem;
-    color: #28150C;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-.saibamais2{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: flex-end;
-    gap: 2%;
-    text-align: center;
-    align-self: center;
-    align-items: center;
-    padding-right: 5%;
-}
-.saibatext2 h1 {
-    font-family: var(--font-family-paragrafo);
-    font-size: 0.8rem;
-    color: #101E11; 
-    text-align: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    
-}
-.saibaicon2 i {
-    width: 100%;
-    font-size: 18px;
-    cursor: pointer;
-    color: #75A95F ;
-}
-.card3{
-    display: flex; 
-    flex-direction: row;
-    background-color: #FFFFFF;
-    width: fit-content;
-    align-items: center;
-    border-radius: 8%;
-
-}
-.card3 img {
-    height: 18vh;
-
-}
-.cardcontent3 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    background-color: white;
-
-}
-.titulo3 {
-    width: 100%;
-    height: 5vh;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    align-content: center;
-
-}
-.titulo3 h1 {
-    font-family: var(--font-family-titulo);
-    color: #101E11;
-    font-size: 1.5rem;
-    width: 100%;
-
-    text-align: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    padding-right: 25%;
-}
-.texto3 h1 {
-    font-family: var(--font-family-paragrafo);
-    font-size: 0.8rem;
-    color: #28150C;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-.saibamais3{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: flex-end;
-    gap: 2%;
-    text-align: center;
-    align-self: center;
-    align-items: center;
-    padding-right: 5%;
-}
-.saibatext3 h1 {
-    font-family: var(--font-family-paragrafo);
-    font-size: 0.8rem;
-    color: #101E11; 
-    text-align: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    
-}
-.saibaicon3 i {
-    width: 100%;
-    font-size: 18px;
-    cursor: pointer;
-    color: #75A95F ;
-}
 .setabaixo {
     width: fit-content;
     height: fit-content;
-    background-color: #75A95F;
     border-radius: 8px;
     cursor: pointer;
 }
@@ -327,6 +207,7 @@ body {
     width: 100%;
     font-size: 35px;
     height: fit-content;
+    color: var(--green-700);
 }
 
 @media (max-width: 790px){
