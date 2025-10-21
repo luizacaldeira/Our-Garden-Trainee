@@ -1,11 +1,11 @@
 body{
-    background-color: rgb(201,225,190,0.9);
     height: 100vh;
-    /* background-image: url(../assets/Image\(2\).png);
+    background-image: url(../assets/monstera-deixa-o-papel-de-parede-fundo-da-natureza.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-blend-mode: overlay; */
+    background-color: rgba(0, 0, 0, 0.519);
+    background-blend-mode:multiply;
 }
 
 .containerDashboard {
@@ -23,7 +23,7 @@ body{
     flex: 1;
     padding: 0 3%;
     height: 100%;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     padding: 1% 5%;
 }
 
@@ -62,17 +62,20 @@ body{
     white-space: nowrap;
     width: 50%;
     justify-content: end;
+    color: var(--green-100);
 }
 
 
 .textADM h5{
     font-size: 15px;
     font-family: var(--font-family-paragrafo);
+    color: var(--green-100);
 }
 
 .textADM p {
     font-size: 12px;
     font-family: var(--font-family-paragrafo);
+    color: var(--green-100);
 }
 
 .section2{
@@ -83,6 +86,7 @@ body{
 .section2 h3 {
     font-size: 30px;
     font-family: var(--font-family-paragrafo);
+    color: var(--green-100);
 }
 
 .section3Total{
@@ -90,7 +94,7 @@ body{
     height: fit-content;
     /* border: 1px solid blue; */
     display: flex;
-    gap: 20%;
+    gap: 5%;
     padding: 0 5%;
     justify-content: center;
 }
@@ -116,6 +120,7 @@ body{
     left: 42%;
     font-size: 30px;
     color: aliceblue;
+    z-index: 99;
 }
 
 .containerUsuarios {
@@ -123,15 +128,22 @@ body{
     display: flex;
     flex-grow: 1;
     align-items: center;
-    background-color: white;
     border-radius: 20px;
     /* min-width: 230px; */
     max-width: 360px;
     padding: 4%;
     height: 100%;
     /* max-height: 150px; */
-    width: 100%;
+    width: 90vw;
     box-shadow: 2px 4px 7px rgb(0, 0, 0, 0.2);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.095);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.716);
+    backdrop-filter: blur(4.2px);
+    -webkit-backdrop-filter: blur(4.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--green-100);
 }
 
 .content {
