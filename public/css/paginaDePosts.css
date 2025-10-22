@@ -17,10 +17,11 @@ body{
 
 .container {
     display: flex;
-    padding: 7% 5% 7% 3%;
+    padding: 5% 3.5%;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    /* border: 1px solid orange; */
 }
 
 .container h2 {
@@ -28,25 +29,29 @@ body{
     font-size: var(--font-size-titulo-desktop);
     width: 100%;
     color: var(--green-900);
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
 
 }
 .pesquisaEFunil {
     display: flex;
     gap: 5%;
+    /* border: 1px solid red; */
+    width: 100%;
+    justify-content: end;
 }
 
 .pesquisa {
     font-family: var(--font-family-paragrafo);
     background-color: white;
     border-radius: 60px;
-    height: 100%;
-    width: 100%;
+    /* width: 100%; */
     padding: 10px 10px ;
     display: flex;
     gap: 15%;
     align-items: center;
     padding-right: 300px;
+    border: 1px solid black;
+    color: var(--green-900);
 }
 
 .pesquisa p {
@@ -58,16 +63,16 @@ body{
 }
 
 
-/* .funilPosts {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-}
+.funilPosts {
+    font-size: 25px;
+    padding-left: 1%;
+    color: var(--green-900);
+} 
 
-.funilPosts i {
+/* .funilPosts i {
     width: 20%;
     font-size: 30px;
-} */
+}  */
 
 .listaCards {
     display: grid;
@@ -78,6 +83,7 @@ body{
     /* align-items: start; */
     justify-items: center;
     grid-auto-rows: minmax(0, auto);
+    /* padding-bottom: 5%; */
 }
 
 
@@ -107,7 +113,7 @@ body{
 
 .nomeEFoto {
     display: flex;
-    gap: 10%;
+    gap: 5%;
     align-items: center;
 }
 
@@ -187,24 +193,34 @@ body{
 .paginacao {
     width: 100%;
     justify-content: center;
-    padding: 1% 20%;
+    padding: 5% 25% ;
     /* align-items: center; */
     display: flex;
     font-family: var(--font-family-paragrafo);
     font-weight: bold;
+    color: var(--green-900);
 }
 
 .elementosPaginacao {
     font-size: 25px;
     width: 100%;
+    /* border: 1px solid firebrick; */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .arcos {
     display: flex;
-    gap: 30%;
+    gap: 5%;
     padding: 4%;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid magenta; */
 }
 
 .arcos i {
@@ -216,38 +232,38 @@ body{
 
 .numeros {
     display: flex;
-    gap: 30%;
+    width: 50%;
+    justify-content: center;
+    gap: 10%;
+    /* gap: 30%;
     width: 100%;
     justify-content: center;
-    padding: 5%;
+    padding: 5%; */
+    /* border: 1px solid red; */
 }
 
 .numeros p {
-    padding: 8%;
-}
-
-.numero1 {
-    background-color: var(--green-500);
-    border-radius: 100px;
-    padding: 8%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 4%;
+    /* border: 1px solid aqua; */
 }
 
 .numeros p:hover {
     background-color: var(--green-500);
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .arcos i:hover {
     background-color: var(--green-500);
-    border-radius: 40%;
+    border-radius: 10px;
 }
 
 @media (max-width: 790px) {
     .pagina {
         padding: 0 1%;
+    }
+
+    .pesquisaEFunil{
+        width: 100%;
     }
 
     .listaCards {
