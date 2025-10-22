@@ -212,7 +212,7 @@ footer {
     }
 
     .footer-content .cards .card .title {
-        font-weight: 600;
+        font-weight: 500;
         font-size: var( --font-size-subtitulo-desktop);
     }
 
@@ -270,7 +270,7 @@ footer {
     }
 
     .footer-content .cards .card .title {
-        font-weight: 600;
+        font-weight: 500;
         font-size: var( --font-size-titulo-mobile);
     }
 
