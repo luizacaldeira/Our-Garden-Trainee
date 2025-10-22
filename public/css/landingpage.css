@@ -185,10 +185,12 @@ body {
     font-size: 10px;
     width: 100%;
     justify-content: space-between;
+    gap: 2%;
 
 }
 .categorias h1{
     font-size: 0.7rem;
+    font-weight: 600;
 }
 .cat {
     display: flex;

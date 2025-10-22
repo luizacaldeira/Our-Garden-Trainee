@@ -17,11 +17,10 @@ body {
     background-color: var(--green-200);
 }
 
-.sidebaraberta{
+.sidebar{
     display: flex;
     height: 100vh;
     width: 15vw;
-    background-color: ;
 }
 .sidebarcontfull{
     display: flex;
@@ -149,4 +148,72 @@ body {
     font-size: 0.8rem;
     color: white;
     margin: 0;
+}
+@media ((max-width: 800px)){
+
+.pagina{
+    width: 100% ;
+    height: 100%;
+    background-color: var(--green-200);
+}
+.sidebar{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+}
+.sidebarcontfull{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    height: 100%;
+}
+.contentsidebar{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.vazio{
+    width: 0;
+}
+.botoes{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+.dashboardbot{
+    display: flex;
+    flex-direction: column;    
+    border-radius: 0;
+}
+.userin {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    background-color: var(--green-900);
+}
+.usericon {
+    color: white;
+}
+.usertext h1{
+    color: white;
+}
+.logomobile{
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    width: vw;
+    height: 100%;
+    background-image: url(/public/assets/4.png);
+    background-color: var(--green-900);
+}
+.postbot {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+}
+.logout {
+    display: flex;
+    flex-direction: column;
+}
+
 }
