@@ -13,12 +13,6 @@ body{
     height: 100%;
 }
 
-/* .sidebarDashboard {
-    background-color: var(--green-200);
-    width: 20%;
-    height: 100vh;
-} */
-
 .mainDashbord {
     flex: 1;
     padding: 0 3%;
@@ -226,3 +220,9 @@ body{
     padding: 8% 0;
 }
 }
+
+/* @media (max-width: 820px) {
+    .section1 {
+    display: flex;
+    
+} */
