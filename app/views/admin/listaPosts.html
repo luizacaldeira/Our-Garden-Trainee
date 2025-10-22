@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../public/css/styles.css">
+    <link rel="stylesheet" href="../../../public/css/listaPosts.css">
+        
+    <title>Lista de Posts</title>
+</head>
+
+<body>
+    <div class="backgroundListaPosts">
+        <div class="sidebarListaPosts"></div>
+        <div class="mainListaPosts">
+            <div class="superiorListaPosts">
+                <div class="pesquisaPosts">
+                    <img src="../../../public/assets/lupa-icon.svg" alt="ícone de lupa" class="lupa-icon">
+                    <input type="text" name="pesquisarUsuarios" id="input-search" class="input-search" placeholder="Pesquisar publicação...">
+                </div>
+                <div class="perfilListaPosts">
+                    <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
+                    <div class="nomePerfil">
+                        <strong>Julia Rodrigues</strong>
+                        <p>administrador</p>
+                    </div>
+                    <button class="btn-show-more-profile"><img src="../../../public/assets/arrow-down-icon.svg" alt="ícone de seta para baixo"></button>
+                </div>
+            </div>
+            
+            <div class="superiorTabelaPosts">
+                <div class="tituloTabelaPosts">
+                    <p>Publicações</p>
+                </div>
+                <div class="botoeslistaPosts">
+                    <img src="../../../public/assets/plus-icon.svg" alt="ícone de mais">
+                    Novo usuário
+                </div>
+            </div>
+
+            <div class="tabelaPostsContent">
+                <table class="tabelaPosts">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TÍTULO</th>
+                            <th>AUTOR</th>
+                            <th>DATA</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                        <td><strong>Casa com cara de jardim</strong></td>
+                        <td>Julia Rodrigues</td>
+                        <td>17/10/2025</td>
+                        <td>
+                            <div class="botoesAcoes">
+                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
+                            </div>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="paginacaoPosts">
+                    <div class="paginacaoPostsConteudo">
+                        <button class="arrow-left"><img src="../../../public/assets/arrow-left-icon.svg" alt="ícone de seta para esquerda"></button>
+                        <div class="pages">
+                            <button class="page">1</button>
+                            <button class="page">2</button>
+                            <button class="page">3</button>
+                            <button class="page">4</button>
+                            <button class="page">...</button>
+                        </div>
+                        <button class="arrow-right"><img src="../../../public/assets/arrow-right-icon.svg" alt="ícone de seta para direita"></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
