@@ -225,6 +225,9 @@ body {
     border-radius: 0;
     height: 33%;
 }
+.logouticon{
+    font-size: 25px;
+}
 .logout {
     display: flex;
     flex-direction: column;
