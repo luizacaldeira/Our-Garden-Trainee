@@ -40,6 +40,8 @@ body{
     justify-content: end;
 }
 
+
+
 .pesquisa {
     font-family: var(--font-family-paragrafo);
     background-color: white;
@@ -50,7 +52,7 @@ body{
     gap: 15%;
     align-items: center;
     padding-right: 300px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     color: var(--green-900);
 }
 
@@ -67,6 +69,8 @@ body{
     font-size: 25px;
     padding-left: 1%;
     color: var(--green-900);
+    width: 100%;
+    top: 80px;
 } 
 
 /* .funilPosts i {
@@ -263,7 +267,12 @@ body{
     }
 
     .pesquisaEFunil{
-        width: 100%;
+        width: 80%;
+    }
+
+    .pesquisaFunil {
+        display: flex;
+        
     }
 
     .listaCards {
@@ -290,13 +299,17 @@ body{
     }
 
     .pesquisa {
-        width: 100%;
+        width: 30%;
         display: flex;
+
     }
 
     .funilPosts {
-        justify-content: center ;
+        /* justify-content: center ; */
         width: fit-content;
+        align-items: center;
+        height: 100%;
+    
     }
 
     .pesquisaEFunil {
