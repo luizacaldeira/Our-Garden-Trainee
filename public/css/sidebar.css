@@ -12,11 +12,16 @@ body {
     height: 100%;
     display: flex;
 }
+.pagina {
+    width: 100%;
+    background-color: var(--green-200);
+}
+
 .sidebaraberta{
     display: flex;
     height: 100vh;
-    background-color: var(--green-900);
     width: 15vw;
+    background-color: ;
 }
 .sidebarcontfull{
     display: flex;
@@ -32,47 +37,116 @@ body {
     background-size: cover;
     width: 100%;
     height: 20%;
+    background-color: var(--green-900);
 }
 .contentsidebar{
     display: flex;
     flex-direction: column;
-    background-color: pink;
     height: 80%;
     width: 100%;
-    gap: 50%;
+    font-family: var(--font-family-paragrafo);
+
 }
 .botoes{
     display: flex;
     flex-direction: column;
-    background-color: red;
     width: 100%;
     height: 30%;
+    background-color: transparent;
 }
 .dashboardbot{
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 33%;
-    background-color: orange;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    cursor: pointer;
+    background-color: var(--green-900);
+    border-bottom-right-radius: 50px;
+}
+.dashicon {
+    color: white;
+}
+.dashtext h1 {
+    font-size: 0.8rem;
+    margin: 0;
+    color: white;
 }
 .userbot{
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 33%;
-    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    cursor: pointer;
+    background-color: var(--green-900);
+}
+.userin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green-200);
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    height: 100%;
+    padding-right: 10%;
+    gap: 5%;
+}
+.usericon {
+    color: var(--green-900);
+}
+.usertext h1{
+    font-size: 0.8rem;
+    color: var(--green-900);
+    margin: 0;
 }
 .postbot{
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 34%;
-    background-color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    cursor: pointer;
+    border-top-right-radius: 50px;
+    background-color: var(--green-900);
+}
+.posticon {
+    color: white;
+}
+.posttext h1{
+    font-size: 0.8rem;
+    color: white;
+    margin: 0;
+}
+.vazio{
+    display: flex;
+    width: 100%;
+    background-color: var(--green-900);
+    height: 60%;
 }
 .logout{
     display: flex;
     flex-direction: row;
-    background-color: blue;
     width: 100%;
-    height: 20%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    background-color: var(--green-900);
+}
+.logouticon {
+    color: white;
+}
+.logouttext h1{
+    font-size: 0.8rem;
+    color: white;
+    margin: 0;
 }
