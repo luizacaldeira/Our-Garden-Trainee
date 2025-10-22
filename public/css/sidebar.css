@@ -12,3 +12,67 @@ body {
     height: 100%;
     display: flex;
 }
+.sidebaraberta{
+    display: flex;
+    height: 100vh;
+    background-color: var(--green-900);
+    width: 15vw;
+}
+.sidebarcontfull{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.logo{
+    display: flex;
+    background-image: url(/public/assets/1.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 20%;
+}
+.contentsidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    height: 80%;
+    width: 100%;
+    gap: 50%;
+}
+.botoes{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    width: 100%;
+    height: 30%;
+}
+.dashboardbot{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 33%;
+    background-color: orange;
+}
+.userbot{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 33%;
+    background-color: aqua;
+}
+.postbot{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 34%;
+    background-color: white;
+}
+.logout{
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+    width: 100%;
+    height: 20%;
+}
