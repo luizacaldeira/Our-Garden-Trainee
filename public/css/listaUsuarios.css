@@ -99,8 +99,7 @@ main .section2 {
 }
 
 main .section2 .title p {
-    font-size: var(--font-size-titulo-desktop);
-    font-weight: bolder;
+    font-size: 1.875rem;
 }
 
 main .section2 .buttons-container .btn-create-user {
@@ -175,6 +174,13 @@ main .section3 .users-table tbody tr td {
 
     border-top: 1px solid var(--green-900);
     padding: 1rem; /*16px*/
+}
+
+main .section3 .users-table tbody tr td .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 main .section3 .users-table tbody tr td .actions .btn-actions {
