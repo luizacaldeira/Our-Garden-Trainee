@@ -79,8 +79,6 @@ main .hero-section .post-container .post .content .content-header .header-title 
     font-family: var(--font-family-titulo);
     /* font-size: var(--font-size-titulo-desktop); */
     font-size: 36px;
-
-    font-weight: bolder;
 }
 
 main .hero-section .post-container .post .content .content-main {
@@ -224,6 +222,7 @@ main .hero-section .post-container .show-more-container .btn-show-more {
     transition: all 0.2s ease-in-out;
 
     font-size: var(--font-size-paragrafo-desktop);
+    font-family: var(--font-family-paragrafo);
 }
 
 main .hero-section .post-container .show-more-container .btn-show-more:hover {
