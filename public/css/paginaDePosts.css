@@ -17,9 +17,8 @@ body{
 
 .container {
     display: flex;
-    gap: 10px;
-    padding: 7% 5% 7% 5%;
-    /* align-items: center; */
+    padding: 7% 5% 7% 3%;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
 }
@@ -29,6 +28,12 @@ body{
     font-size: var(--font-size-titulo-desktop);
     width: 100%;
     color: var(--green-900);
+    border: 1px solid rebeccapurple;
+
+}
+.pesquisaEFunil {
+    display: flex;
+    gap: 5%;
 }
 
 .pesquisa {
@@ -37,26 +42,23 @@ body{
     border-radius: 60px;
     height: 100%;
     width: 100%;
-    padding: 15px 10px ;
+    padding: 10px 10px ;
     display: flex;
-    gap: 10px;
+    gap: 15%;
     align-items: center;
     padding-right: 300px;
 }
 
-.pesquisa input {
-    font-size: 16px;
+.pesquisa p {
+    /* font-size: 16px;
     height: 100%;
     width: 100%;
-    
+    text-align: center;
+    border: 1px solid red; */
 }
 
-.pesquisaEFunil {
-    display: flex;
-    gap: 10%;
-}
 
-.funilPosts {
+/* .funilPosts {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -65,7 +67,7 @@ body{
 .funilPosts i {
     width: 20%;
     font-size: 30px;
-}
+} */
 
 .listaCards {
     display: grid;
@@ -73,8 +75,7 @@ body{
     gap: 5rem;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    align-items: start;
+    /* align-items: start; */
     justify-items: center;
     grid-auto-rows: minmax(0, auto);
 }
