@@ -144,6 +144,10 @@ body {
     outline: none;
 }
 
+.inputLogin::placeholder{
+    color: var(--green-900);
+}
+
 .loginLock {
     display: flex;
     flex-direction: row;
@@ -185,17 +189,17 @@ body {
 }
 
 .bi-lock {
-    color: var(--green-300);
+    color: var(--green-900);
     font-size: 18px;
 }
 
 .bi-envelope {
-    color: var(--green-300);
+    color: var(--green-900);
     font-size: 18px;
 }
 
 .bi-eye-slash {
-    color: var(--green-300);
+    color: var(--green-900);
     font-size: 18px;
 }
 
