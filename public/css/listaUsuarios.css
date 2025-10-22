@@ -71,25 +71,6 @@ main .section1 .profile-container .profile-name p {
     font-size: 0.875rem; /*14px*/
 }
 
-main .section1 .profile-container .btn-show-more-profile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: transparent;
-
-    all: unset;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease-in-out;
-}
-
-main .section1 .profile-container .btn-show-more-profile:hover {
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.1);
-}
-
 main .section2 {
     display: flex;
     align-items: center;
@@ -100,6 +81,8 @@ main .section2 {
 
 main .section2 .title p {
     font-size: 1.875rem;
+
+    font-weight: 600;
 }
 
 main .section2 .buttons-container .btn-create-user {
