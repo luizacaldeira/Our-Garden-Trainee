@@ -117,7 +117,8 @@ body {
     border-top-right-radius: 50px;
     background-color: var(--green-900);
 }
-.posticon i {
+.bi {
+    font-size: 25px;
     color: white;
 }
 .posttext h1{
@@ -152,7 +153,7 @@ body {
 .logomobile{
     display: none;
 }
-@media ((max-width: 800px)){
+@media ((max-width: 1050px)){
 
 .pagina{
     width: fit-content;
