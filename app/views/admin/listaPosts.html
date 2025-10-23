@@ -175,14 +175,16 @@
                 </div>
 
                 <div class="modal-create-publication-main">
-                    <form id="createPublicationForm">
-                        <section class="create-publication-container" id="photoContainer">
-                            <img src="../../../public/assets/image-icon.svg" alt="ícone de adicionar nova imagem">
-                            <p>Selecione uma foto</p>
-                            <input type="file" name="adicionar nova foto" id="add-new-photo">
+                    <form class="create-publication-form" id="createPublicationForm">
+                        <section class="create-publication-container photo-container" id="photoContainer">
+                            <div class="photo-container-content">
+                                <img src="../../../public/assets/image-icon.svg" alt="ícone de adicionar nova imagem">
+                                <p>Selecione uma foto</p>
+                                <input type="file" name="adicionar nova foto" id="add-new-photo">
+                            </div>
                         </section>
 
-                        <section  class="create-publication-container" id="titleContainer">
+                        <section class="create-publication-container" id="titleContainer">
                             <span>Título:</span>
                             <input type="text" name="título da publicação" id="inputTitleName"
                                 placeholder="Digite o título da publicação...">
@@ -228,24 +230,25 @@
                         </section>
 
                         <section class="create-publication-container" id="caresContainer">
-                            <span>Sobre:</span>
+                            <span>Cuidados:</span>
                             <div class="add-cares">
                                 <input type="text" name="cuidados com a planta" id="inputCaresPlant"
                                     placeholder="Digite cuidados sobre a planta...">
                                 <img src="../../../public/assets/plus-icon.svg" alt="ícone de mais">
                             </div>
                         </section>
-                        
+
                         <section class="buttons">
                             <button class="btn-cancel-publication">Cancelar</button>
-                            <button type="submit" class="btn-create-publication" id="btnCreatePublication">Criar</button>
+                            <button type="submit" class="btn-create-publication"
+                                id="btnCreatePublication">Criar</button>
                         </section>
                     </form>
                 </div>
 
             </div>
         </div>
-
+    </div>
 
 </body>
 
