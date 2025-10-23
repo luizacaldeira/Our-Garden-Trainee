@@ -367,6 +367,41 @@ body {
     cursor: pointer;
 }
 
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .classification-button .arrow-up-icon {
+    display: none;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .classification-container {
+    position: relative;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .dropdown-classification {
+    display: none;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .dropdown-classification.open {
+    border-radius: 0.5rem;
+
+    font-size: 0.75rem;
+
+    display: block;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .dropdown-classification label {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: start;
+
+    padding: 0.625rem;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .dropdown-classification label input {
+    width: 5%;
+}
+
 @media screen and (max-width: 500px){
     .botoesAcoes{
         display: flex;

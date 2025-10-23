@@ -202,13 +202,14 @@
                                 placeholder="Digite o nome da planta...">
                         </section>
 
-                        <section class="create-publication-container" id="classificationContainer">
+                        <section class="create-publication-container classification-container" id="classificationContainer">
                             <span>Classificação:</span>
-                            <button class="classification-button" id="btn-classification">
+                            <button class="classification-button" id="btnClassification">
                                 <p>Escolha até 3 opções...</p>
-                                <img src="../../../public/assets/arrow-down-icon.svg" alt="seta para baixo">
+                                <img src="../../../public/assets/arrow-down-icon.svg" alt="seta para baixo" class="arrow-down-icon" id="arrowDownIcon">
+                                <img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima" class="arrow-up-icon" id="arrowUpIcon">
                             </button>
-                            <div class="dropdown-classification">
+                            <div class="dropdown-classification" id="dropdownClassification">
                                 <label><input type="checkbox" value="Ornamentais"> Ornamentais</label>
                                 <label><input type="checkbox" value="Medicinais"> Medicinais</label>
                                 <label><input type="checkbox" value="Alimentícias"> Alimentícias</label>
@@ -249,6 +250,9 @@
             </div>
         </div>
     </div>
+
+    <!-- JAVASCRIPT -->
+     <script src="../../../public/js/listaPosts.js"></script>
 
 </body>
 
