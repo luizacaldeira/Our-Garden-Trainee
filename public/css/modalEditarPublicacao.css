@@ -59,9 +59,26 @@ input{
     gap: 2%;
 }
 
-.nameClass input {
-    
+.name {
+    /* border: 1px solid aqua; */
+    width: 100%;
 }
+
+.class {
+    width: 100%;
+}
+
+.name input {
+    width: 100%;
+}
+
+.class input {
+    width: 100%;
+}
+
+/* .nameClass input {
+    
+} */
 
 .buttons {
     display: flex;
