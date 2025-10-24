@@ -260,8 +260,6 @@ body {
     position: absolute;
     top: 10%;
     left: 30%;
-
-    overflow-y: auto;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-header {

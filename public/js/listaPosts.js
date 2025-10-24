@@ -9,7 +9,8 @@ botoes_lista_posts.addEventListener("click", () => {
 
 // Faz fechar o modal de criar nova publicação
 const btn_cancel_publication = document.querySelector("#btnCancelPublication");
-btn_cancel_publication.addEventListener("click", () => {
+btn_cancel_publication.addEventListener("click", (event) => {
+    event.preventDefault();
     modal_create_publication.style.display = "none";
     filtro.style.display = "none";
 })
