@@ -42,10 +42,10 @@
                 <div class="tituloTabelaPosts">
                     <p>Publicações</p>
                 </div>
-                <div class="botoeslistaPosts">
+                <button class="botoeslistaPosts" id="botoeslistaPosts">
                     <img src="../../../public/assets/plus-icon.svg" alt="ícone de mais">
                     Nova publicação
-                </div>
+                </button>
             </div>
 
             <div class="tabelaPostsContent">
@@ -168,7 +168,9 @@
             </div>
 
             <!-- MODAL CRIAR NOVA PUBLICAÇÃO -->
-            <div class="modal-create-publication">
+            <div class="filtro" id="filtro"></div>
+            
+            <div class="modal-create-publication" id="modalCreatePublication">
                 <div class="modal-create-publication-header">
                     <img src="../../../public/assets/plus-circle-icon.svg" alt="ícone de mais">
                     <p>Criar nova publicação</p>
@@ -240,7 +242,7 @@
                         </section>
 
                         <section class="buttons">
-                            <button class="btn-cancel-publication">Cancelar</button>
+                            <button class="btn-cancel-publication" id="btnCancelPublication">Cancelar</button>
                             <button type="submit" class="btn-create-publication"
                                 id="btnCreatePublication">Criar</button>
                         </section>
