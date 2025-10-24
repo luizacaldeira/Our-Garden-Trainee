@@ -13,7 +13,36 @@ btn_cancel_publication.addEventListener("click", (event) => {
     event.preventDefault();
     modal_create_publication.style.display = "none";
     filtro.style.display = "none";
-})
+});
+
+// Exibir preview imagem selecionada
+function exibirPreviewImagem(idInput, idLabelContent) {
+    console.log("entrei na função");
+    if (idInput) {
+        const id_input = document.getElementById(idInput);
+        console.log(idInput);
+            const reader = new FileReader(); // leitor de arquivos
+            console.log(reader);
+            const imageSrc = id_input.files[0];
+            console.log(imageSrc);
+
+            if (imageSrc) {
+                reader.onload = (e) => {
+                    console.log(imageSrc);
+                    const preview = document.getElementById(idLabelContent);
+                    console.log("preview" + preview);
+                    preview.innerHTML = `<img class="preview-image" src="${e.target.result}" alt="previsualização">`;
+                }
+
+                reader.onerror = (e) => {
+                    console.error("Deu erro");
+                }
+
+                reader.readAsDataURL(imageSrc);
+            }
+            console.log("arquivo nulo")
+    }
+}
 
 // Faz aparecer as opções de classificação da planta do modal de criar nova publicação
 const btn_classification = document.querySelector("#btnClassification");
@@ -33,31 +62,30 @@ btn_classification.addEventListener('click', (event) => {
     }
 });
 
-// Exibir preview imagem selecionada
-function exibirPreviewImagem(idInput, idLabelContent) {
-    console.log("entrei na função");
-    if (idInput) {
-        const id_input = document.getElementById(idInput);
-        console.log(idInput);
-            const reader = new FileReader(); // leitor de arquivos
-            console.log(reader);
-            const imageSrc = id_input.files[0];
-            console.log(imageSrc);
+// Limita o máximo de 3 opções de escolha de classificação
+/**
+ * Código disponível em: https://gist.github.com/dantetesta/590f6719400d57001380c9ca017982b3
+ */
+document.addEventListener("DOMContentLoaded", () => {
+function limitCheckboxSelection(groupName, limit) {
+  const checkboxes = document.querySelectorAll(`input[name="${groupName}"]`);
 
-            if (imageSrc) {
-                reader.onload = function (e) {
-                    console.log(imageSrc);
-                    const preview = document.getElementById(idLabelContent);
-                    console.log("preview" + preview);
-                    preview.innerHTML = `<img class="preview-image" src="${e.target.result}" alt="previsualização">`;
-                }
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      const checkedCount = document.querySelectorAll(`input[name="${groupName}"]:checked`).length;
 
-                reader.onerror = function (e) {
-                    console.error("Deu erro");
-                }
-
-                reader.readAsDataURL(imageSrc);
-            }
-            console.log("arquivo nulo")
-    }
+      if (checkedCount > limit) {
+        checkbox.checked = false;
+      }
+    });
+  });
 }
+
+const checkboxSetups = [
+  { groupName: "classification[]", limit: 3 },
+];
+
+checkboxSetups.forEach((setup) => {
+  limitCheckboxSelection(setup.groupName, setup.limit);
+});
+});
