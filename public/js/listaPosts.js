@@ -32,3 +32,32 @@ btn_classification.addEventListener('click', (event) => {
         arrow_up_icon.style.display = "none";
     }
 });
+
+// Exibir preview imagem selecionada
+function exibirPreviewImagem(idInput, idLabelContent) {
+    console.log("entrei na função");
+    if (idInput) {
+        const id_input = document.getElementById(idInput);
+        console.log(idInput);
+            const reader = new FileReader(); // leitor de arquivos
+            console.log(reader);
+            const imageSrc = id_input.files[0];
+            console.log(imageSrc);
+
+            if (imageSrc) {
+                reader.onload = function (e) {
+                    console.log(imageSrc);
+                    const preview = document.getElementById(idLabelContent);
+                    console.log("preview" + preview);
+                    preview.innerHTML = `<img class="preview-image" src="${e.target.result}" alt="previsualização">`;
+                }
+
+                reader.onerror = function (e) {
+                    console.error("Deu erro");
+                }
+
+                reader.readAsDataURL(imageSrc);
+            }
+            console.log("arquivo nulo")
+    }
+}

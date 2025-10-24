@@ -258,8 +258,11 @@ body {
     border-radius: 1rem;
 
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 30%;
+    bottom: 5%;
+
+    overflow-y: auto;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-header {
@@ -348,7 +351,8 @@ body {
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content {
-    width: 41%;
+    width: 31%;
+    height: 10rem;
 
     display: flex;
     flex-direction: column;
@@ -358,7 +362,43 @@ body {
     border: 2px solid var(--green-700);
     border-radius: 1rem;
 
-    padding: 0.625rem;
+    overflow: hidden;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container {
+    width: 100%;
+    height: 100%;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.2rem;
+
+    cursor: pointer;
+
+    color: var(--green-700);
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content .preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content:hover {
+    background-color: var(--green-200);
+}
+
+.previewImage {
+    width: 100%;
+    height: 100%;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container img {

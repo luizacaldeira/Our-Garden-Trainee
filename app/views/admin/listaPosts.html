@@ -169,7 +169,7 @@
 
             <!-- MODAL CRIAR NOVA PUBLICAÇÃO -->
             <div class="filtro" id="filtro"></div>
-            
+
             <div class="modal-create-publication" id="modalCreatePublication">
                 <div class="modal-create-publication-header">
                     <img src="../../../public/assets/plus-circle-icon.svg" alt="ícone de mais">
@@ -180,9 +180,14 @@
                     <form class="create-publication-form" id="createPublicationForm">
                         <section class="create-publication-container photo-container" id="photoContainer">
                             <div class="photo-container-content">
-                                <img src="../../../public/assets/image-icon.svg" alt="ícone de adicionar nova imagem">
-                                <p>Selecione uma foto</p>
-                                <input type="file" name="adicionar nova foto" id="add-new-photo">
+                                <input type="file" name="adicionar nova foto" id="addNewPhotoInput" onchange="exibirPreviewImagem('addNewPhotoInput', 'labelContent')" style="display: none;">
+                                <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
+                                    <div class="label-content" id="labelContent">
+                                        <img src="../../../public/assets/image-icon.svg"
+                                            alt="ícone de adicionar nova imagem">
+                                        <p>Selecione uma foto</p>
+                                    </div>
+                                </label>
                             </div>
                         </section>
 
@@ -204,12 +209,15 @@
                                 placeholder="Digite o nome da planta...">
                         </section>
 
-                        <section class="create-publication-container classification-container" id="classificationContainer">
+                        <section class="create-publication-container classification-container"
+                            id="classificationContainer">
                             <span>Classificação:</span>
                             <button class="classification-button" id="btnClassification">
                                 <p>Escolha até 3 opções...</p>
-                                <img src="../../../public/assets/arrow-down-icon.svg" alt="seta para baixo" class="arrow-down-icon" id="arrowDownIcon">
-                                <img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima" class="arrow-up-icon" id="arrowUpIcon">
+                                <img src="../../../public/assets/arrow-down-icon.svg" alt="seta para baixo"
+                                    class="arrow-down-icon" id="arrowDownIcon">
+                                <img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
+                                    class="arrow-up-icon" id="arrowUpIcon">
                             </button>
                             <div class="dropdown-classification" id="dropdownClassification">
                                 <label><input type="checkbox" value="Ornamentais"> Ornamentais</label>
@@ -254,7 +262,7 @@
     </div>
 
     <!-- JAVASCRIPT -->
-     <script src="../../../public/js/listaPosts.js"></script>
+    <script src="../../../public/js/listaPosts.js"></script>
 
 </body>
 
