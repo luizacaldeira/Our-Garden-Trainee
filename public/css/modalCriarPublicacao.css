@@ -279,6 +279,8 @@
     justify-content: center;
 
     gap: 0.625rem;
+
+    padding-top: 0.5rem;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-cancel-publication {
@@ -295,6 +297,8 @@
     cursor: pointer;
 
     font-family: var(--font-family-paragrafo);
+
+    min-width: 12%;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-cancel-publication:hover {
@@ -312,7 +316,7 @@
     border-radius: 0.5rem;
     border: none;
 
-    width: 4.75rem;
+    min-width: 12%;
 
     cursor: pointer;
 
