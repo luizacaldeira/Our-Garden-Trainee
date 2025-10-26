@@ -116,6 +116,13 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-size: var(--font-size-paragrafo-desktop);
     font-family: var(--font-family-paragrafo);
+    
+    transition: all 0.2s ease-in-out;
+}
+
+.botoeslistaPosts:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
 }
 
 .tabelaPostsContent {
