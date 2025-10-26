@@ -252,11 +252,19 @@
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares {
     width: 100%;
     display: flex;
+    flex-direction: column;
 
     gap: 0.5rem;
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .btn-add-care {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .input-cares-container {
+    width: 100%;
+    display: flex;
+
+    gap: 0.5rem;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .input-cares-container .btn-add-care {
     all: unset;
 
     display: flex;
@@ -267,8 +275,29 @@
     cursor: pointer;
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .btn-add-care img {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .input-cares-container .btn-add-care img {
     cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .input-cares-container .btn-add-care img:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .ul-cares {
+    width: 100%;
+
+    font-size: 0.75rem;
+
+    padding: 0.5rem 1rem;
+
+    color: var(--green-900);
+
+    background-color: var(--green-200);
+
+    border-radius: 0.5rem;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons {

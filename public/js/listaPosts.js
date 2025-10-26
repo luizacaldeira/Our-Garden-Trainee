@@ -16,6 +16,7 @@ btn_cancel_publication.addEventListener("click", (event) => {
     filtro.style.display = "none";
 
     create_publication_form.reset(); // reseta os campos do formulario
+    add_cares_container.removeChild(ulCares); // remove as opções de cuidado com a planta
 });
 
 // Exibir preview imagem selecionada
@@ -91,4 +92,27 @@ const checkboxSetups = [
 checkboxSetups.forEach((setup) => {
   limitCheckboxSelection(setup.groupName, setup.limit);
 });
+});
+
+// Cria as opções de cuidados com a planta
+const input_cares_plant = document.querySelector("#inputCaresPlant");
+const btn_add_cares = document.querySelector("#btnAddCares");
+const add_cares_container = document.querySelector("#addCaresContainer");
+btn_add_cares.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  const ulCares = document.createElement("ul");
+  ulCares.setAttribute("class", "ul-cares");
+  ulCares.setAttribute("id", "ulCares");
+
+  add_cares_container.appendChild(ulCares);
+
+  const liCares = document.createElement("li");
+  liCares.setAttribute("class", "li-cares");
+  liCares.setAttribute("id", "liCares")
+  liCares.innerHTML = `${input_cares_plant.value}`;
+
+  ulCares.appendChild(liCares);
+
+  input_cares_plant.value = '';
 });
