@@ -293,6 +293,8 @@
     border-radius: 0.5rem;
 
     cursor: pointer;
+
+    font-family: var(--font-family-paragrafo);
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-cancel-publication:hover {
@@ -313,6 +315,8 @@
     width: 4.75rem;
 
     cursor: pointer;
+
+    font-family: var(--font-family-paragrafo);
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-create-publication:hover {

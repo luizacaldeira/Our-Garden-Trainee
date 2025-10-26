@@ -1,6 +1,6 @@
 .modal-edit-publication {
     display: flex;
-    display: none;
+    /* display: none; */
     flex-direction: column;
     background-color: var(--green-100);
     position: absolute;
