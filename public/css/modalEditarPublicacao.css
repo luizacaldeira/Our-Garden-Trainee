@@ -27,35 +27,37 @@
 
 .selectPhoto button {
     padding: 6%;
-    border: 1px solid var(--green-900);
+    border: 2px solid var(--green-700);
     border-radius: 5px;
     font-family: var(--font-family-paragrafo);
     background-color: var(--green-100);
+    color: var(--green-300);
 }
 
 .infosPost {
     display: flex;
     flex-direction: column;
-    padding: 5%;
-    gap: 20px;
+    padding: 0 3%;
+    gap: 13px;
     color: var(--green-700);
     font-family: var(--font-family-paragrafo);
 }
 
 .infosPost span {
     /* border: 1px solid red; */
-    font-size: 18px;
+    font-size: 16px;
     font-family: var(--font-family-paragrafo);
+    font-weight: 500;
 }
 
 input{
     width: 100%;
-    border: 1px solid var(--green-900);
+    border: 1px solid var(--green-700);
     border-radius: 5px;
-    padding: 2%;
+    padding: 1.5%;
     background-color: var(--green-100);
     font-size: 12px;
-    color: var(--green-300);
+    color: var(--green-900);
     font-family: var(--font-family-paragrafo);
     /* width: 100%; */
 }
@@ -100,15 +102,36 @@ input{
 .buttons {
     display: flex;
     justify-content: center;
-    gap: 2%;
-    
+    gap: 4%;
+    padding: 2%;
+    font-size: 16px;
 }
 
-.buttons button {
+.botaoCancelar button{
     border: 1px solid var(--green-900);
     border-radius: 5px;
-    padding: 2%;
+    padding: 10%;
     font-family: var(--font-family-paragrafo);
-    background-color: var(--green-100);
+    background-color: var(--green-200);
+    color: var(--green-900);
+}
+
+.botaoEditar button{
+    border: 1px solid var(--green-900);
+    border-radius: 5px;
+    padding: 10%;
+    width: 170%;
+    height: 100%;
+    font-family: var(--font-family-paragrafo);
+    background-color: var(--green-900);
+    color: var(--green-100);
+}
+
+.botaoCancelar button:hover {
+    background-color: var(--green-300);
+}
+
+.botaoEditar button:hover {
+    background-color: var(--green-700);
 }
 
