@@ -112,7 +112,13 @@ btn_add_cares.addEventListener("click", (event) => {
   liCares.setAttribute("id", "liCares")
   liCares.innerHTML = `${input_cares_plant.value}`;
 
+  const delete_li_cares = document.createElement("img");
+  delete_li_cares.setAttribute("src", "../../../public/assets/trash-icon.svg");
+  delete_li_cares.setAttribute("alt", "ícone de lixeira");
+  delete_li_cares.setAttribute("class", "delete-li-cares");
+
   ulCares.appendChild(liCares);
+  ulCares.appendChild(delete_li_cares);
 
   input_cares_plant.value = '';
 });

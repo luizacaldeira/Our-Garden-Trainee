@@ -291,13 +291,16 @@
 
     font-size: 0.75rem;
 
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
 
     color: var(--green-900);
 
     background-color: var(--green-200);
 
     border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons {
