@@ -8,6 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../../public/css/listaUsuarios.css">
     <link rel="stylesheet" href="../../../public/css/modalAddNewUser.css">
+    <link rel="stylesheet" href="../../../public/css/modalViewUser.css">
 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -149,13 +150,12 @@
                 <img src="../../../public/assets/plus-icon.svg" alt="ícone de adiconar">
                 <p>Adicionar Usuario</p>
             </div>
-
             <div class="modalAddNewUserMain">
                 <form class="addNewUserForm" id="addNewUserForm">
-                    <div class="addNewUserContent userPhoto" id="userPhoto">
-
-                    </div>
                     <div class="inputsAddNewUser">
+                        <div class="userPhoto" id="userPhoto">
+                            <input type="file" name="adicionar foto de perdil" id="userPhoto">
+                        </div>
                         <div class="userName">
                             <section class="addUserName">
                                 <span>Nome:</span>
@@ -175,14 +175,37 @@
                             </section>
                         </div>
                     </div>
-
                     <section class="bottonsAddUser">
                         <button class="btnCancelNewUser" id="btnCancelNewUser">Cancelar</button>
                         <button class="btnAddNewUser" id="btnAddNewUser">Adicionar</button>
                     </section>
                 </form>
             </div>
+        </section>
 
+        <section class="modalViewUser" id="modalViewUser">
+            <div class="modalViewUserHeader">
+                <p>Visualizar Usuário</p>
+            </div>
+            <div class="modalAddNewUserMain">
+                <form class="modalViewUserForm" id="modalViewUserForm">
+                    <div class="viewUserPhoto"></div>
+                    <div class="viewUserContent">
+                        <div class="viewUserName">
+                            <span>Nome:</span>
+                            <p>Julia Rodrigues</p>
+                        </div>
+                        <div class="viewUserEmail">
+                            <span>Email:</span>
+                            <p>juliarodrigues@gmail.com</p>
+                        </div>
+                    </div>
+                    <section class="bottonsViewUser">
+                        <button class="btnExitViewUser" id="btnExutNewUser">Sair</button>
+                    </section>
+                    
+                </form>
+            </div>
         </section>
     </main>
 

@@ -12,7 +12,7 @@
     left: 0;
 }
 
-.modalAddNewUser{
+.modalViewUser{
     background-color: var(--green-100);
     width: 50%;
     border-radius: 1rem;
@@ -26,11 +26,9 @@
     top: 5%;
     right: 25%;
     bottom: 5%;
-
-    display: none;
 }
 
-.modalAddNewUserHeader{
+.modalViewUserHeader{
     background-color: var(--green-900);
     width: 100%;
     height: 20%;
@@ -44,7 +42,12 @@
     border-top-right-radius: 1rem;
 }
 
-.modalAddNewUserMain{
+.modalViewUserHeader p{
+    color: var(--green-100);
+    font-size: 1.5rem;
+}
+
+.modalViewUserMain{
     width: 100%;
     flex: 1;
     display: flex;
@@ -54,18 +57,13 @@
     overflow-y: auto;
 }
 
-.modalAddNewUserHeader p{
-    color: var(--green-100);
-    font-size: 1.5rem;
-}
-
-.inputsAddNewUser{
+.modalViewUserContent{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.inputsAddNewUser input{
+.viewUserName p{
     width: 100%;
     height: fit-content;
     padding: 0.625rem;
@@ -75,17 +73,25 @@
     background: transparent;
 }
 
-.inputsAddNewUser input::placeholder{
-    font-family: var(--font-family-paragrafo);
-    color: var(--green-300);
-    font-size: 0.75rem;
+.viewUserEmail p{
+    width: 100%;
+    height: fit-content;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--green-700);
+    color: var(--green-900);
+    background: transparent;
 }
 
-.inputsAddNewUser input:focus{
+.viewUserName:hover p{
     outline: 1px solid var(--green-700);
 }
 
-.bottonsAddUser{
+.viewUserEmail:hover p{
+    outline: 1px solid var(--green-700);
+}
+
+.bottonsViewUser{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,22 +99,12 @@
     padding: 2rem;
 }
 
-.btnCancelNewUser{
-    all: unset;
-    background-color: var(--green-200);
-    color: var(--green-900);
-    border: 1px solid var(--green-900);
-    border-radius: 0.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.btnAddNewUser{
+.btnExitViewUser{
     all: unset;
     background-color: var(--green-900);
     color: var(--green-100);
     border: 1px solid var(--green-900);
     border-radius: 0.5rem;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.5rem 3rem;
 }
