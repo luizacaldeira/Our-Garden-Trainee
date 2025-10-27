@@ -291,16 +291,34 @@
 
     font-size: 0.75rem;
 
-    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .ul-cares .li-cares {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5rem;
 
     color: var(--green-900);
 
     background-color: var(--green-200);
 
     border-radius: 0.5rem;
+}
 
-    display: flex;
-    justify-content: space-between;
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .ul-cares .li-cares img {
+    width: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .create-publication-container .add-cares .ul-cares .li-cares img:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons {
