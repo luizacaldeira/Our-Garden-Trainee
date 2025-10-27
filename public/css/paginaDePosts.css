@@ -2,7 +2,6 @@
 
 body{
     background-color: var(--green-200);
-    
 }
 
 .pagina {
@@ -14,78 +13,56 @@ body{
     padding: 0 10%;
 }
 
-
-
 .container {
     display: flex;
-    gap: 10px;
-    padding: 7% 2% 7% 1.5%;
-    /* align-items: center; */
-    justify-content: space-between;
-    width: 100%;
+    padding: 7% 0 7% 0;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 98%;
+    height: 100%;
     /* border: 1px solid orange; */
 }
 
 .container h2 {
     font-family: var(--font-family-paragrafo);
     font-size: var(--font-size-titulo-desktop);
-    width: 100%;
-    height: 100%;
+    width: 70%;
     color: var(--green-900);
     /* border: 1px solid rebeccapurple; */
-
 }
-.pesquisaFunil {
+
+.pesquisaFunil{
     display: flex;
-    gap: 5%;
-    /* border: 1px solid red; */
-    /* width: 100%;
-    justify-content: end; */
+    height: 48px;
+    width: 100%;
+    justify-content: end;
+    gap: 2%;
 }
-
-
 
 .pesquisa {
+    width: 60%;
+}
+
+.pesquisa input {
+    border-radius: 30px;
+    border: none;
+    padding: 3% 5%;
+    width: 100%;
     font-family: var(--font-family-paragrafo);
-    background-color: white;
-    border-radius: 60px;
-    width: 100%;
-    padding: 15px 10px ;
-    display: flex;
-    gap: 15%;
-    align-items: center;
-    padding-right: 300px;
-    /* border: 1px solid black; */
     color: var(--green-900);
 }
 
-.pesquisa p {
-    /* font-size: 16px;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    border: 1px solid red; */
-}
+/* .pesquisa i {
+    position: absolute;
+    top: 11%;
+    left: 59%;
+} */
 
-
-.funilPosts {
-    /* font-size: 25px; */
-    color: var(--green-900);
-    width: 100%;
-    /* border: 1px solid red; */
-    display: flex;
-    align-items: center;
-} 
-
-.funilPosts i {
-    /* width: 20%; */
+.funil {
     font-size: 30px;
-    /* border: 1px solid purple; */
-    /* text-align: center;
-    align-items: center;
-    justify-content: center;
-    justify-content: center; */
-} 
+    align-content: center;
+    /* border: 1px solid red; */
+}
 
 .listaCards {
     display: grid;
@@ -144,6 +121,8 @@ body{
     display: flex;
     font-size: 30px;
     color: var(--green-700);
+    /* transform: scaleY(-1); */
+    transform: rotate(300deg);
 }
 
 .imgPlantaPosts {
@@ -207,7 +186,7 @@ body{
 .paginacao {
     width: 100%;
     justify-content: center;
-    padding: 5% 25% ;
+    padding: 5%;
     /* align-items: center; */
     display: flex;
     font-family: var(--font-family-paragrafo);
@@ -217,7 +196,7 @@ body{
 
 .elementosPaginacao {
     font-size: 25px;
-    width: 100%;
+    width: 30%;
     /* border: 1px solid firebrick; */
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.18);
@@ -230,7 +209,7 @@ body{
 
 .arcos {
     display: flex;
-    gap: 5%;
+    gap: 15%;
     padding: 4%;
     justify-content: center;
     align-items: center;
@@ -257,32 +236,48 @@ body{
 }
 
 .numeros p {
-    padding: 4%;
+    padding: 5%;
     /* border: 1px solid aqua; */
 }
 
 .numeros p:hover {
     background-color: var(--green-500);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .arcos i:hover {
     background-color: var(--green-500);
     border-radius: 10px;
+    padding: 4% 1%;
+    cursor: pointer;
 }
 
 @media (max-width: 790px) {
     .pagina {
-        padding: 0 1%;
+        padding: 0 7%;
     }
 
-    .pesquisaEFunil{
-        width: 80%;
+    .container {
+        display: flex;
+        flex-direction:column-reverse;
+        width: 100%;
+    }
+    
+    .container h2 {
+        font-size: 20px;
+        padding-top: 5%;
     }
 
     .pesquisaFunil {
         display: flex;
-        
+        /* border: 1px solid red; */
+        /* width: 100%; */
+    }
+
+    .pesquisa {
+        width: 100%;
+        border: 1px solid orange;
     }
 
     .listaCards {
@@ -298,32 +293,6 @@ body{
         gap: 5%;
     }
 
-    .container {
-        display: flex;
-        flex-direction:column-reverse;
-    }
 
-    .container h2 {
-        font-size: 20px;
-        padding-top: 5%;
-    }
-
-    .pesquisa {
-        width: 30%;
-        display: flex;
-
-    }
-
-    .funilPosts {
-        /* justify-content: center ; */
-        width: fit-content;
-        align-items: center;
-        height: 100%;
-    
-    }
-
-    .pesquisaEFunil {
-        gap: 5px;
-    }
 
 }
