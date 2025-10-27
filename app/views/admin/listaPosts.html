@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../../../public/css/listaPosts.css">
     <link rel="stylesheet" href="../../../public/css/modalEditarPublicacao.css">
     <link rel="stylesheet" href="../../../public/css/modalCriarPublicacao.css">
+    <link rel="stylesheet" href="../../../public/css/modalExcluirPublicacao.css">
 
     <title>Lista de Posts</title>
 </head>
@@ -339,13 +340,34 @@
                                 <button>Editar</button>
                             </div>
                         </div>
+                    </form>
+                </div>
+            </div>
 
+            <!-- MODAL EXCLUIR PUBLICAÇÃO -->
+            <div class="modal-delete-publication" id="modalDeletePublication">
+                <div class="modal-delete-publication-header">
+                    <i class="bi bi-trash"></i>
+                    <p>Excluir publicação</p>
+                </div>
+            
+                <div class="modal-delete-publication-main">
+                    <form class="delete-publication-form" id="deletePublicationForm">
+                        <div class="text">
+                            <p>Tem certeza que deseja excluir essa publicação?</p>
+                        </div>
+
+                        <div class="buttons">
+                            <div class="botaoCancelarExcluir">
+                                <button>Cancelar</button>
+                            </div>
+                            <div class="botaoExcluir">
+                                <button>Excluir</button>
+                            </div>
+                        </div>
 
                     </form>
                 </div>
-
-            </div>
-
 
         </div>
     </div>

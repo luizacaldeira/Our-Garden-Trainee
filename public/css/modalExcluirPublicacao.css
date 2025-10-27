@@ -1,0 +1,68 @@
+.modal-delete-publication {
+    display: none;
+    position: absolute;
+    background-color: var(--green-100);
+    border-radius: 10px;
+    /* border: 2px solid red; */
+}
+
+.modal-delete-publication-header {
+    background-color: var(--green-900);
+    color: var(--green-100);
+    text-align: center;
+    border-radius: 10px 10px 0 0 ;
+    padding: 5%;
+    font-family: var(--font-family-paragrafo);
+}
+
+.modal-delete-publication-main {
+    padding: 5% 10%;
+    font-family: var(--font-family-paragrafo);
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 5%;
+    width: 100%;
+    padding-top: 7%;
+    font-size: 16px;
+    /* border: 1px solid purple; */
+}
+
+.botaoCancelarExcluir {
+    width: 100%;
+} 
+
+.botaoCancelarExcluir button{
+    border: 1px solid var(--green-900);
+    border-radius: 5px;
+    padding:  7%;
+    font-family: var(--font-family-paragrafo);
+    background-color: var(--green-200);
+    color: var(--green-900);
+    width: 100%;
+}
+
+.botaoExcluir {
+    width: 100%;
+}
+
+.botaoExcluir button{
+    border: 1px solid var(--green-900);
+    border-radius: 5px;
+    padding: 7%;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family-paragrafo);
+    background-color: var(--green-900);
+    color: var(--green-100);
+}
+
+.botaoCancelarExcluir button:hover {
+    background-color: var(--green-300);
+}
+
+.botaoExcluir button:hover {
+    background-color: var(--green-700);
+}
