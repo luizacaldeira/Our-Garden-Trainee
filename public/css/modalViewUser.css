@@ -63,6 +63,25 @@
     gap: 1rem;
 }
 
+.viewUserPhoto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.viewUserPhoto img{
+    height: 10rem;
+    border-radius: 2rem;
+    border: 1px solid var(--green-700);
+}
+
+.viewUserPhoto img:hover{
+    outline: 1px solid var(--green-700);
+}
+
 .viewUserName p{
     width: 100%;
     height: fit-content;
