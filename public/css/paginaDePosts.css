@@ -62,6 +62,7 @@ body{
     font-size: 30px;
     align-content: center;
     /* border: 1px solid red; */
+    cursor: pointer;
 }
 
 .listaCards {
@@ -85,7 +86,7 @@ body{
     flex-direction: column;
     width: 100%;
     box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.5);
-    
+    cursor: pointer;
 }
 
 .infos{
@@ -197,6 +198,7 @@ body{
 .elementosPaginacao {
     font-size: 25px;
     width: 30%;
+    /* padding: 0 1%; */
     /* border: 1px solid firebrick; */
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.18);
@@ -261,38 +263,48 @@ body{
     .container {
         display: flex;
         flex-direction:column-reverse;
-        width: 100%;
+        gap: 20%;
     }
     
     .container h2 {
         font-size: 20px;
-        padding-top: 5%;
+        width: 100%;
     }
 
     .pesquisaFunil {
         display: flex;
         /* border: 1px solid red; */
-        /* width: 100%; */
+        width: 100%;
+        justify-content: space-between;
     }
 
     .pesquisa {
-        width: 100%;
-        border: 1px solid orange;
+        /* border: 1px solid orange; */
+        align-content: center;
+        width: 90%;
+    }
+
+    .funil {
+        font-size: 25px;
+
     }
 
     .listaCards {
         grid-template-columns: 1fr;
-        
+        gap: 50px;
     }
 
     .profile {
-        padding: 5%;
+        padding: 4%;
     }
 
     .nomeEFoto {
         gap: 5%;
     }
 
+    .elementosPaginacao {
+        width: 80%;
+    }
 
 
 }
