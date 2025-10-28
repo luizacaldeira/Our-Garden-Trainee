@@ -26,13 +26,11 @@
     overflow-y: auto;
 }
 
-.selectPhoto {
-    padding-top: 5%;
-    /* border: 1px solid red; */
-    text-align: center;
+#changePhoto {
+    display: none;
 }
 
-.selectPhoto button {
+.label-content {
     padding: 6%;
     border: 2px solid var(--green-700);
     border-radius: 15px;
@@ -40,6 +38,30 @@
     background-color: var(--green-100);
     color: var(--green-300);
     cursor: pointer;
+    width: 30%;
+    object-fit: cover;
+}
+
+.label-content img {
+    width: 100%;
+}
+
+.selectPhoto label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectPhoto{
+    padding-top: 5%;
+    /* border: 1px solid red; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
 }
 
 

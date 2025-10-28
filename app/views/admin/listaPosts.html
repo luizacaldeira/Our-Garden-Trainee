@@ -298,13 +298,17 @@
                 <div class="modal-edit-publication-main">
                     <form class="edit-publication-form" id="editPublicationForm">
                         <div class="selectPhoto">
-                            <button><img src="../../../public/assets/image-icon.svg"
-                            alt="ícone de adicionar nova imagem"><p>Selecione a nova foto</p></button>
+                            <input type="file" name="trocar foto" id="changePhoto" onchange="trocarPreviewImagem('changePhoto','label-content')">
+                            <label for="changePhoto">
+                                <div class="label-content" id="label-content">
+                                    <img src="../../../public/assets/code-logo.png" alt="">
+                                </div>
+                            </label>
                         </div>
                         <div class="infosPost">
                             <div class="title">
                                 <span>Título:</span>
-                                <input type="text" value="Hanna" placeholder="Digite o novo título da publicação...">
+                                <input type="text" placeholder="Digite o novo título da publicação...">
                             </div>
                             <div class="description">
                                 <span>Descrição:</span>
