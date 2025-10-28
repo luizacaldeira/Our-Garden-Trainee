@@ -317,9 +317,22 @@
                                 </div>
                                 <div class="class">
                                     <span>Classificação:</span>
-                                    <button>Escolha 3 opções...  <img src="../../../public/assets/arrow-down-icon.svg" alt="seta para baixo"
-                                    class="arrow-down-icon" id="arrowDownIcon"> </button>
-                                    
+                                    <button id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao',event)">Escolha 3 opções...  <img src="../../../public/assets/arrow-down-icon.svg" alt="seta para baixo" 
+                                    class="arrow-down-icon" id="arrowDownIcon"> <img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima" 
+                                    class="arrow-up-icon" id="arrowUpIcon"></button>
+                                    <div class="dropDownClassificacao" id="dropDownClassificacao">
+                                        <label><input type="checkbox" name="" id="">Ornamentais</label>
+                                        <label><input type="checkbox" name="" id="">Medicinais</label>
+                                        <label><input type="checkbox" name="" id="">Alimentícias</label>
+                                        <label><input type="checkbox" name="" id="">Aromáticas</label>
+                                        <label><input type="checkbox" name="" id="">Tóxicas</label>
+                                        <label><input type="checkbox" name="" id="">Industriais</label>
+                                        <label><input type="checkbox" name="" id="">Forrageiras</label>
+                                        <label><input type="checkbox" name="" id="">Madeireiras</label>
+                                        <label><input type="checkbox" name="" id="">Oleaginosas</label>
+                                        <label><input type="checkbox" name="" id="">Fibrosas</label>
+                                        <label><input type="checkbox" name="" id="">Condimentares</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="infosPlanta">
@@ -342,7 +355,7 @@
                             </div>
                             
                             <div class="botaoEditar">
-                                <button>Editar</button>
+                                <button type="submit">Editar</button>
                             </div>
                         </div>
                     </form>
@@ -380,6 +393,7 @@
     <!-- JAVASCRIPT -->
     <script src="../../../public/js/modalCriarPublicacao.js"></script>
     <script src="../../../public/js/modal.js"></script>
+    <script src="../../../public/js/modalEditarPublicacao.js"></script>
 
 </body>
 
