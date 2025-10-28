@@ -203,6 +203,7 @@ body{
 .elementosPaginacao {
     font-size: 25px;
     width: 30%;
+    color: var(--green-900);
     /* padding: 0 1%; */
     /* border: 1px solid firebrick; */
     /* From https://css.glass */
