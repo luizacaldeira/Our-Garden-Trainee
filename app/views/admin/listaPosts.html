@@ -78,9 +78,9 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis"></button>
+                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira"></button>
+                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -96,9 +96,9 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis"></button>
+                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira"></button>
+                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -114,9 +114,9 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis"></button>
+                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira"></button>
+                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -132,9 +132,9 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis"></button>
+                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira"></button>
+                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -150,9 +150,9 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis"></button>
+                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira"></button>
+                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -335,7 +335,7 @@
 
                         <div class="buttons">
                             <div class="botaoCancelar">
-                                <button>Cancelar</button>
+                                <button onclick="fecharModal('modalEditPublication','filtro')">Cancelar</button>
                             </div>
                             
                             <div class="botaoEditar">
@@ -359,7 +359,7 @@
                             <p>Tem certeza que deseja excluir essa publicação?</p>
                         </div>
 
-                        <div class="buttons">
+                        <div class="buttonsExcluir">
                             <div class="botaoCancelarExcluir">
                                 <button>Cancelar</button>
                             </div>
@@ -376,6 +376,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="../../../public/js/modalCriarPublicacao.js"></script>
+    <script src="../../../public/js/modal.js"></script>
 
 </body>
 

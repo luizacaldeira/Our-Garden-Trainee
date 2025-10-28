@@ -1,8 +1,12 @@
 .modal-delete-publication {
+    display: flex;
+    flex-direction: column;
     display: none;
     position: absolute;
     background-color: var(--green-100);
     border-radius: 10px;
+    left: 37%;
+    top: 30%;
     /* border: 2px solid red; */
 }
 
@@ -21,7 +25,7 @@
     text-align: center;
 }
 
-.buttons {
+.buttonsExcluir {
     display: flex;
     gap: 5%;
     width: 100%;
