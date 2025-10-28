@@ -10,6 +10,8 @@
     bottom: 0;
     right: 0;
     left: 0;
+
+    display: none;
 }
 
 .modalViewUser{
@@ -26,6 +28,8 @@
     top: 10%;
     right: 35%;
     bottom: 10%;
+
+    display: none;
 }
 
 .modalViewUserHeader{

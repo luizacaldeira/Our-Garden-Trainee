@@ -40,7 +40,7 @@
                 <p>Usuários cadastrados</p>
             </div>
             <div class="buttons-container">
-                <button class="btn-create-user">
+                <button class="btn-create-user" onclick="abrirModal('modalAddNewUser', 'fundoJS')">
                     <img src="../../../public/assets/plus-icon.svg" alt="ícone de mais">
                     Novo usuário
                 </button>
@@ -176,7 +176,7 @@
                         </div>
                     </div>
                     <section class="bottonsAddUser">
-                        <button class="btnCancelNewUser" id="btnCancelNewUser">Cancelar</button>
+                        <button class="btnCancelNewUser" id="btnCancelNewUser" onclick="fecharModal('btnCancelNewUser', 'fundoJS')">Cancelar</button>
                         <button class="btnAddNewUser" id="btnAddNewUser">Adicionar</button>
                     </section>
                 </form>
@@ -212,6 +212,7 @@
     </main>
 
     <script src="../../../public/js/listaUsuarios.js"></script>
+    <script src="../../../public/js/modal.js"></script>
 </body>
 
 </html>
