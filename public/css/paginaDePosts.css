@@ -40,16 +40,23 @@ body{
 }
 
 .pesquisa {
-    width: 60%;
+    width: 70%;
+    border-radius: 30px;
+    border: none;
+    padding: 3% 5%;
+    font-family: var(--font-family-paragrafo);
+    color: var(--green-900);
+    background-color: var(--green-100);
 }
 
 .pesquisa input {
-    border-radius: 30px;
+    /* border-radius: 30px;
     border: none;
     padding: 3% 5%;
     width: 100%;
     font-family: var(--font-family-paragrafo);
-    color: var(--green-900);
+    color: var(--green-900); */
+    align-content: center;
 }
 
 /* .pesquisa i {
@@ -60,7 +67,7 @@ body{
 
 .funil {
     font-size: 30px;
-    align-content: center;
+    /* align-items: center; */
     /* border: 1px solid red; */
     cursor: pointer;
 }
