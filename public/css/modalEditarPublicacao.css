@@ -29,7 +29,7 @@
 .selectPhoto button {
     padding: 6%;
     border: 2px solid var(--green-700);
-    border-radius: 5px;
+    border-radius: 15px;
     font-family: var(--font-family-paragrafo);
     background-color: var(--green-100);
     color: var(--green-300);
@@ -153,4 +153,46 @@ input{
     background-color: var(--green-700);
 }
 
+@media screen and (min-width: 400px) and (max-width: 1000px){
+    .modal-edit-publication {
+        width: 80%;
+        left: 10%;
+    }
 
+    .buttons {
+        padding: 4%;
+        gap: 4%;
+    }
+
+    .botaoCancelar {
+        width: 40%;
+    }
+
+    .botaoEditar{
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 399px){
+    .modal-edit-publication {
+        width: 80%;
+        left: 10%;
+    }
+
+    .infosPost{
+        padding: 7% 5%;
+    }
+
+    .buttons {
+        padding: 4%;
+        gap: 4%;
+    }
+
+    .botaoCancelar {
+        width: 70%;
+    }
+
+    .botaoEditar{
+        width: 60%;
+    }
+}
