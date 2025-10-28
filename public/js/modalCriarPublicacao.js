@@ -2,6 +2,7 @@
 const botoes_lista_posts = document.querySelector("#botoeslistaPosts");
 const modal_create_publication = document.querySelector("#modalCreatePublication");
 const filtro = document.querySelector("#filtro");
+
 botoes_lista_posts.addEventListener("click", () => {
   modal_create_publication.style.display = "flex";
   filtro.style.display = "block";
@@ -10,6 +11,8 @@ botoes_lista_posts.addEventListener("click", () => {
 // Faz fechar o modal de criar nova publicação
 const btn_cancel_publication = document.querySelector("#btnCancelPublication");
 const create_publication_form = document.querySelector("#createPublicationForm");
+const imagePreview = document.querySelector("#labelContent");
+
 btn_cancel_publication.addEventListener("click", (event) => {
   event.preventDefault();
   modal_create_publication.style.display = "none";
@@ -17,6 +20,9 @@ btn_cancel_publication.addEventListener("click", (event) => {
 
   create_publication_form.reset(); // reseta os campos do formulario
   add_cares_container.removeChild(ul_cares); // remove as opções de cuidado com a planta
+  imagePreview.innerHTML = `<img src="../../../public/assets/image-icon.svg"
+                                            alt="ícone de adicionar nova imagem">
+                                        <p>Selecione uma foto</p>`;  // Retira a imagem que o usuário selecionou
 });
 
 // Exibir preview imagem selecionada
@@ -46,6 +52,7 @@ const btn_classification = document.querySelector("#btnClassification");
 const dropdown_classification = document.querySelector("#dropdownClassification");
 const arrow_down_icon = document.querySelector("#arrowDownIcon");
 const arrow_up_icon = document.querySelector("#arrowUpIcon");
+
 btn_classification.addEventListener('click', (event) => {
   event.preventDefault();
   dropdown_classification.classList.toggle('open');
@@ -94,6 +101,7 @@ const add_cares_container = document.querySelector("#addCaresContainer");
 const ul_cares = document.querySelector("#ulCares");
 const cares = [];
 let cont = -1;
+
 btn_add_cares.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -107,10 +115,9 @@ btn_add_cares.addEventListener("click", (event) => {
   liCares.setAttribute("id", cont+1);
   liCares.innerHTML = `${input_cares_plant.value}`;
   liCares.appendChild(delete_li_cares);
-  
+
   if (input_cares_plant.value != '') {
-    cares.push({id: cont+1, content: input_cares_plant.value});
-    console.log("cares:", cares);
+    cares.push({ id: cont+1, content: input_cares_plant.value });
     cont++;
     add_cares_container.appendChild(ul_cares);
     ul_cares.appendChild(liCares);
@@ -120,34 +127,19 @@ btn_add_cares.addEventListener("click", (event) => {
 
   delete_li_cares.addEventListener("click", () => {
     const caresExclusao = cares.find(care => care.id.toString() === liCares.id.toString());
-    console.log("caresexclusao", caresExclusao);
     cares.splice(caresExclusao.id, 1);
-    console.log("cares: " + cares);
-
     ul_cares.removeChild(liCares);
     
-    console.log("lisfilhas:", ul_cares.children);
-
-    if (ul_cares.childNodes.length == 0) {
-      add_cares_container.removeChild(ul_cares);
-    }
-
     if(cares.length < 5 && input_cares_plant.style.display == "none" && btn_add_cares.style.display == "none") {
       input_cares_plant.style.display = "block";
       btn_add_cares.style.display = "block";
     }
   });
 
-  cares.map(care => {
-    console.log("careIdMap: " + care.id);
-  })
-
   if(cares.length >= 5) {
     input_cares_plant.style.display = "none";
     btn_add_cares.style.display = "none";
   } 
 
-  console.log("caresJSON:", JSON.stringify(cares));
-  console.log("liId: " + liCares.id);
   input_cares_plant.value = '';
 });

@@ -190,7 +190,7 @@
                             <div class="photo-container-content">
                                 <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
                                     onchange="exibirPreviewImagem('addNewPhotoInput', 'labelContent')"
-                                    style="display: none;">
+                                    style="display: none;" required>
                                 <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
                                     <div class="label-content" id="labelContent">
                                         <img src="../../../public/assets/image-icon.svg"
@@ -204,20 +204,20 @@
                         <section class="create-publication-container" id="titleContainer">
                             <span>Título:</span>
                             <input type="text" name="título da publicação" id="inputTitleName"
-                                placeholder="Digite o título da publicação...">
+                                placeholder="Digite o título da publicação..." required>
                         </section>
 
                         <section class="create-publication-container" id="descriptionContainer">
                             <span>Descrição:</span>
                             <input type="text" name="descrição da publicação" id="inputDescriptionName"
-                                placeholder="Digite a descrição da publicação...">
+                                placeholder="Digite a descrição da publicação..." required>
                         </section>
 
                         <div class="div-name-classification">
                             <section class="create-publication-container" id="nameContainer">
                                 <span>Nome:</span>
                                 <input type="text" name="nome da planta" id="inputPlantName"
-                                    placeholder="Digite o nome da planta...">
+                                    placeholder="Digite o nome da planta..." required>
                             </section>
 
                             <section class="create-publication-container classification-container"
@@ -268,7 +268,7 @@
                             <div class="add-cares" id="addCaresContainer">
                                 <div class="input-cares-container">
                                     <input type="text" name="cuidados com a planta" id="inputCaresPlant"
-                                        placeholder="Digite cuidados sobre a planta...">
+                                        placeholder="Digite até 5 cuidados sobre a planta...">
                                     <button class="btn-add-care" id="btnAddCares">
                                         <img src="../../../public/assets/plus-circle-green-icon.svg"
                                             alt="ícone de mais">
@@ -375,7 +375,7 @@
     </div>
 
     <!-- JAVASCRIPT -->
-    <script src="../../../public/js/listaPosts.js"></script>
+    <script src="../../../public/js/modalCriarPublicacao.js"></script>
 
 </body>
 
