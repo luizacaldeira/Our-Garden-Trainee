@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="../../../public/css/listaUsuarios.css">
     <link rel="stylesheet" href="../../../public/css/modalAddNewUser.css">
     <link rel="stylesheet" href="../../../public/css/modalViewUser.css">
     <link rel="stylesheet" href="/public/css/modalEdituser.css"
-
+    
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -68,7 +69,7 @@
                         <td>
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
                             </div>
                         </td>
@@ -81,7 +82,7 @@
                         <td>
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
                             </div>
                         </td>
@@ -94,7 +95,7 @@
                         <td>
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
                             </div>
                         </td>
@@ -107,7 +108,7 @@
                         <td>
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
                             </div>
                         </td>
@@ -120,7 +121,7 @@
                         <td>
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
                             </div>
                         </td>
@@ -214,16 +215,43 @@
     <!-- MODAL EDITAR USUARIO  -->
         <section class="modalEditUser" id = "modalEditUser">
             <div class="modalEditUserHeader">
-                <div class="iconEditUser">
-                    <i class="bi bi-person-plus-fill"></i>
-                </div>
-                <div class="textEditUser">
-                    <p> Editar Usuário </p>
-                </div>
-
+                <img src="/public/assets/plus-icon.svg">
+                <p> Editar Usuário </p>
             </div>
-            
+            <div class="modalEditUserMain">
+                    <form class="editUserForm" id="editUserForm">
+                    <div class="inputsEditUser">
+                        <div class="editUserPhoto" id="editUserPhoto">
+                            <input type="file" name="adicionar nova foto de perdil" id="editUserPhoto">
+                        </div>
+                        <div class="editUserName">
+                            <div class="editUserNamebox">
+                                <span>Nome:</span>
+                                <input type="text" name="edite nome do user" id="inputEditUserName" placeholder="Digite novo nome...">
+                            </div>
+                        </div>
+                        <div class="editUserEmail">
+                            <div class="editUserEmailbox">
+                                <span>Email:</span>
+                                <input type="text" name="edite email do user" id="inputEditUserEmail" placeholder="Digite novo email...">
+                            </div>
+                        </div>
+                        <div class="editUserPassword">
+                            <div class="editUserPasswordbox">
+                                <span>Senha:</span>
+                                <input type="text" name="nova senha do user" id="inputEditUserPassword" placeholder="Digite a nova senha...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottonsEditUser">
+                        <button class="btnCancelEditUser" id="btnCancelNewUser" onclick="fecharModal('btnCancelEditUser', 'fundoJS')">Cancelar</button>
+                        <button class="btnEditUser" id="btnAddNewUser">Editar</button>
+                    </div>
+                </form>
+                </div>    
         </section>
+        <!-- MODAL EXCLUIR USUÁRIO -->
+        <section> </section>
     <script src="../../../public/js/listaUsuarios.js"></script>
     <script src="../../../public/js/modal.js"></script>
 </body>
