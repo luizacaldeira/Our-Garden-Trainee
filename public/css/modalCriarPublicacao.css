@@ -154,6 +154,8 @@
     cursor: pointer;
 
     color: var(--green-700);
+
+    text-align: center;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content .preview-image {
@@ -348,7 +350,7 @@
 
     font-family: var(--font-family-paragrafo);
 
-    min-width: 12%;
+    width: 5rem;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-cancel-publication:hover {
@@ -366,7 +368,7 @@
     border-radius: 0.5rem;
     border: none;
 
-    min-width: 12%;
+    width: 5rem;
 
     cursor: pointer;
 
@@ -375,4 +377,205 @@
 
 .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-create-publication:hover {
     background-color: var(--green-700);
+}
+
+/* Laptops pequenos */
+@media screen and (min-width: 789px) and (max-width: 1097px) {
+    .backgroundListaPosts .mainListaPosts .modal-create-publication {
+        width: 75%;
+
+        position: absolute;
+        left: 14%;
+        top: 15%;
+        bottom: 15%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content {
+        width: 41%;
+        height: 10rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification .classification-container .dropdown-classification.open {
+        width: 100%;
+        top: 105%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification .classification-container .dropdown-classification label {
+        display: flex;
+
+        padding: 0.3rem 0.625rem;
+        gap: 0.2rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification .classification-container .dropdown-classification label input {
+        width: 10%;
+
+        transform: scale(1.2);
+    }
+}
+
+@media screen and (min-width: 613px) and (max-width: 789px) {
+    .backgroundListaPosts .mainListaPosts .modal-create-publication {
+        width: 65%;
+
+        position: absolute;
+        left: 17%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content {
+        width: 51%;
+        height: 10rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification .classification-container .dropdown-classification label input {
+        width: 5%;
+
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 613px) {
+    .backgroundListaPosts .mainListaPosts .modal-create-publication {
+        width: 75%;
+
+        position: absolute;
+        left: 12%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 510px) {
+    .backgroundListaPosts .mainListaPosts .modal-create-publication {
+        width: 90%;
+
+        position: absolute;
+        left: 5%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification .classification-container .dropdown-classification label input {
+        width: 8%;
+
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 376px) {
+    .backgroundListaPosts .mainListaPosts .modal-create-publication {
+        width: 90%;
+
+        position: absolute;
+        left: 5%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-header img {
+        width: 1.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-header p {
+        font-size: 1.2rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content {
+        font-size: 0.75rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification .classification-container .dropdown-classification label input {
+        width: 8%;
+
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .backgroundListaPosts .mainListaPosts .modal-create-publication {
+        width: 90%;
+
+        position: absolute;
+        left: 5%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-header img {
+        width: 1.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-header p {
+        font-size: 1.2rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content {
+        font-size: 0.75rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification .classification-container .dropdown-classification label input {
+        width: 8%;
+
+        transform: scale(1.3);
+    }
 }
