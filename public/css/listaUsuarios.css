@@ -122,9 +122,9 @@ main .section3 {
 }
 
 main .section3 .users-table {
-   width: 100%;
+    width: 100%;
 
-   border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 main .section3 .users-table thead {
@@ -141,6 +141,8 @@ main .section3 .users-table thead tr th {
     font-weight: 400;
 
     padding: 1rem; /*16px*/
+
+    text-align: center;
 }
 
 main .section3 .users-table tbody {
