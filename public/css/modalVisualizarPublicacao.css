@@ -161,3 +161,119 @@
 .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .buttons .close-modal-view:hover {
     background-color: var(--green-700);
 }
+
+
+/* Laptops pequenos */
+@media screen and (min-width: 789px) and (max-width: 1097px) {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication {
+        width: 75%;
+
+        position: absolute;
+        left: 14%;
+        top: 15%;
+        bottom: 15%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content  {
+        width: 41%;
+        height: 10rem;
+    }
+}
+
+@media screen and (min-width: 613px) and (max-width: 789px) {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication {
+        width: 65%;
+
+        position: absolute;
+        left: 17%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content  {
+        width: 51%;
+        height: 10rem;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 613px) {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication {
+        width: 75%;
+
+        position: absolute;
+        left: 12%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content  {
+        width: 51%;
+        height: 9rem;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 510px) {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication {
+        width: 90%;
+
+        position: absolute;
+        left: 5%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content  {
+        width: 51%;
+        height: 9rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 376px) {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication {
+        width: 90%;
+
+        position: absolute;
+        left: 5%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-header p {
+        font-size: 1.2rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+   .backgroundListaPosts .mainListaPosts .modal-view-publication {
+        width: 90%;
+
+        position: absolute;
+        left: 5%;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-header p {
+        font-size: 1.2rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+}
