@@ -163,7 +163,7 @@ main .section3 .users-table tbody tr td .actions {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 main .section3 .users-table tbody tr td .actions .btn-actions {
