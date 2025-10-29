@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../../public/css/modalAddNewUser.css">
     <link rel="stylesheet" href="../../../public/css/modalViewUser.css">
     <link rel="stylesheet" href="/public/css/modalEdituser.css">
+    <link rel="stylesheet" href="/public/css/modalDeletUser.css">
     
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -70,7 +71,7 @@
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
                             </div>
                         </td>
                     </tr>
@@ -83,7 +84,7 @@
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
                             </div>
                         </td>
                     </tr>
@@ -96,7 +97,7 @@
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
                             </div>
                         </td>
                     </tr>
@@ -109,7 +110,7 @@
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
                             </div>
                         </td>
                     </tr>
@@ -122,7 +123,7 @@
                             <div class="actions">
                                 <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
                                 <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"></button>
+                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
                             </div>
                         </td>
                     </tr>
@@ -146,7 +147,7 @@
         </section>
 
         <div class="fundoJS" id="fundoJS"></div>
-        <!-- MODAL CRIAR USUARIO -->
+    <!-- MODAL CRIAR USUARIO -->
         <section class="modalAddNewUser" id="modalAddNewUser">
             <div class="modalAddNewUserHeader">
                 <img src="../../../public/assets/plus-icon.svg" alt="ícone de adiconar">
@@ -184,7 +185,7 @@
                 </form>
             </div>
         </section>
-        <!-- MODAL VISUALIZAR USUARIO -->
+    <!-- MODAL VISUALIZAR USUARIO -->
         <section class="modalViewUser" id="modalViewUser">
             <div class="modalViewUserHeader">
                 <p>Visualizar Usuário</p>
@@ -250,10 +251,11 @@
                 </form>
                 </div>    
         </section>
-        <!-- MODAL EXCLUIR USUÁRIO -->
+    <!-- MODAL EXCLUIR USUÁRIO -->
         <section class="modalDeletUser" id="modalDeletUser">
             <div class="modalDeletUserHeader">
-                <img src="/public/assets/trash-icon.svg">
+                <img src="/public/assets/x-circle.svg">
+                <p>Excluir</p>
             </div>
             <div class="modalDeletUserMain">
                 <form class="deletUserForm" id="deleteUserForm">
@@ -262,6 +264,7 @@
                     </div>
                     <div class="bottonsDeletUser">
                         <button class="btnCancelDeletUser" id="btnCancelDeletUser" onclick="fecharModal('btnCancelDeletUser' , 'fundoJS')"> Cancelar </button>
+                        <button class="btnDeletUser" id="btnDeletUser">Excluir</button>
                     </div>
                 </form>
             </div>
