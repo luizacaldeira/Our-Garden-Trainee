@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../../../public/css/modalEditarPublicacao.css">
     <link rel="stylesheet" href="../../../public/css/modalCriarPublicacao.css">
     <link rel="stylesheet" href="../../../public/css/modalExcluirPublicacao.css">
+    <link rel="stylesheet" href="../../../public/css/modalVisualizarPublicacao.css">
 
     <title>Lista de Posts</title>
 </head>
@@ -78,9 +79,11 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
+                                            alt="ícone de lápis"
+                                            onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
+                                            alt="ícone de lixeira"
+                                            onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -96,9 +99,11 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
+                                            alt="ícone de lápis"
+                                            onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
+                                            alt="ícone de lixeira"
+                                            onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -114,9 +119,11 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
+                                            alt="ícone de lápis"
+                                            onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
+                                            alt="ícone de lixeira"
+                                            onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -132,9 +139,11 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
+                                            alt="ícone de lápis"
+                                            onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
+                                            alt="ícone de lixeira"
+                                            onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -150,9 +159,11 @@
                                     <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                             alt="ícone de olho"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                            alt="ícone de lápis" onclick="abrirModal('modalEditPublication','filtro')"></button>
+                                            alt="ícone de lápis"
+                                            onclick="abrirModal('modalEditPublication','filtro')"></button>
                                     <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                            alt="ícone de lixeira" onclick="abrirModal('modalDeletePublication','filtro')"></button>
+                                            alt="ícone de lixeira"
+                                            onclick="abrirModal('modalDeletePublication','filtro')"></button>
                                 </div>
                             </td>
                         </tr>
@@ -288,6 +299,94 @@
 
             </div>
 
+            <!-- MODAL VISUALIZAR PUBLICAÇÃO -->
+            <div class="modal-view-publication" id="modalViewPublication">
+                <div class="modal-view-publication-header">
+                    <img src="../../../public/assets/eye-icon.svg" alt="ícone de olho">
+                    <p>Visualizar publicação</p>
+                </div>
+
+                <div class="modal-view-publication-main">
+                    <section class="view-publication-container photo-container" id="photoContainer">
+                        <div class="view-photo-container-content">
+                            <div class="view-image-container" id="viewImageContainer">
+                                <img src="../../../public/assets/code-logo.png" alt="">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="view-publication-container" id="viewTitleContainer">
+                        <span>Título:</span>
+                        <div class="view-input">
+                            <p>Casa com cara de jardim.</p>
+                        </div>
+                    </section>
+
+                    <section class="view-publication-container" id="viewDescriptionContainer">
+                        <span>Descrição:</span>
+                        <div class="view-input">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quia iusto deserunt at
+                                ab, illo vero error. Eveniet porro rem repudiandae eligendi eius saepe cum odit,
+                                delectus fugit corrupti cumque.</p>
+                        </div>
+                    </section>
+
+                    <section class="view-publication-container" id="viewNameContainer">
+                        <span>Nome:</span>
+                        <div class="view-input">
+                            <p>Comigo-ninguém-pode</p>
+                        </div>
+                    </section>
+
+                    <section class="create-publication-container classification-container" id="classificationContainer">
+                        <span>Classificação:</span>
+                        <div class="view-input">
+                            <ul class="view-classification-ul">
+                                <li class="view-classification-li">
+                                    <strong>Ornamental:</strong> é cultivada principalmente pela beleza estética
+                                    (flores, folhas, formato ou cor), e não pelo uso alimentar ou medicinal.
+                                </li>
+                                <li class="view-classification-li">
+                                    <strong>Tóxica:</strong> possui substâncias que podem causar irritação,
+                                    intoxicação ou até envenenamento se ingerida ou em contato com a pele/olhos.
+                                </li>
+                                <li class="view-classification-li">
+                                    <strong>Interior:</strong> é adaptada para ser cultivada dentro de casas,
+                                    escritórios ou ambientes fechados, pois tolera luz indireta ou meia-sombra.
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="view-publication-container" id="viewAboutContainer">
+                        <span>Sobre:</span>
+                        <div class="view-input">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur molestias
+                                ipsam dolores assumenda nobis consectetur eaque cum laboriosam fugiat soluta, animi esse
+                                libero, eius, corrupti sint eveniet similique id.</p>
+                        </div>
+                    </section>
+
+                    <section class="create-publication-container" id="caresContainer">
+                        <span>Cuidados:</span>
+                        <div class="view-input">
+                            <ul class="view-cares-ul">
+                                <li class="view-care">Evite sol direto nas folhas, pois pode causar queimaduras.</li>
+                                <li class="view-care">Mantenha o solo levemente úmido, mas nunca encharcado.</li>
+                                <li class="view-care"> Utilize substrato rico em matéria orgânica e bem drenado.</li>
+                                <li class="view-care">Evite correntes de ar frio e mudanças bruscas de temperatura.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="buttons">
+                        <button class="close-modal-view" id="btnCloseModalView">Fechar</button>
+                    </section>
+
+                </div>
+
+            </div>
+
             <!-- MODAL EDITAR PUBLICAÇÃO -->
             <div class="modal-edit-publication" id="modalEditPublication">
                 <div class="modal-edit-publication-header">
@@ -298,7 +397,8 @@
                 <div class="modal-edit-publication-main">
                     <form class="edit-publication-form" id="editPublicationForm">
                         <div class="selectPhoto">
-                            <input type="file" name="trocar foto" id="changePhoto" onchange="trocarPreviewImagem('changePhoto','label-content')">
+                            <input type="file" name="trocar foto" id="changePhoto"
+                                onchange="trocarPreviewImagem('changePhoto','label-content')">
                             <label for="changePhoto">
                                 <div class="label-content" id="label-content">
                                     <img src="../../../public/assets/code-logo.png" alt="">
@@ -321,9 +421,11 @@
                                 </div>
                                 <div class="class">
                                     <span>Classificação:</span>
-                                    <button id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao')">Escolha 3 opções...  <img src="../../../public/assets/arrow-down-icon.svg" alt="seta para baixo" 
-                                    class="arrow-down-icon" id="arrowDownIcon"> <img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima" 
-                                    class="arrow-up-icon" id="arrowUpIcon"></button>
+                                    <button id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao')">Escolha
+                                        3 opções... <img src="../../../public/assets/arrow-down-icon.svg"
+                                            alt="seta para baixo" class="arrow-down-icon" id="arrowDownIcon"> <img
+                                            src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
+                                            class="arrow-up-icon" id="arrowUpIcon"></button>
                                     <div class="dropDownClassificacao" id="dropDownClassificacao">
                                         <label><input type="checkbox" name="classification[]" id="">Ornamentais</label>
                                         <label><input type="checkbox" name="classification[]" id="">Medicinais</label>
@@ -335,7 +437,8 @@
                                         <label><input type="checkbox" name="classification[]" id="">Madeireiras</label>
                                         <label><input type="checkbox" name="classification[]" id="">Oleaginosas</label>
                                         <label><input type="checkbox" name="classification[]" id="">Fibrosas</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Condimentares</label>
+                                        <label><input type="checkbox" name="classification[]"
+                                                id="">Condimentares</label>
                                     </div>
                                 </div>
                             </div>
@@ -357,7 +460,7 @@
                             <div class="botaoCancelar">
                                 <button onclick="fecharModal('modalEditPublication','filtro')">Cancelar</button>
                             </div>
-                            
+
                             <div class="botaoEditar">
                                 <button type="submit">Editar</button>
                             </div>
@@ -372,7 +475,7 @@
                     <i class="bi bi-trash"></i>
                     <p>Excluir publicação</p>
                 </div>
-            
+
                 <div class="modal-delete-publication-main">
                     <form class="delete-publication-form" id="deletePublicationForm">
                         <div class="text">
@@ -391,13 +494,13 @@
                     </form>
                 </div>
 
+            </div>
         </div>
-    </div>
 
-    <!-- JAVASCRIPT -->
-    <script src="../../../public/js/modalCriarPublicacao.js"></script>
-    <script src="../../../public/js/modal.js"></script>
-    <script src="../../../public/js/modalEditarPublicacao.js"></script>
+        <!-- JAVASCRIPT -->
+        <script src="../../../public/js/modalCriarPublicacao.js"></script>
+        <script src="../../../public/js/modal.js"></script>
+        <script src="../../../public/js/modalEditarPublicacao.js"></script>
 
 </body>
 
