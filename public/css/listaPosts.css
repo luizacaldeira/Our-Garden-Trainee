@@ -220,7 +220,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .btn-actions {
