@@ -113,21 +113,27 @@ btn_add_cares.addEventListener("click", (event) => {
   const liCares = document.createElement("li");
   liCares.setAttribute("class", "li-cares");
   liCares.setAttribute("id", cont+1);
-  liCares.innerHTML = `${input_cares_plant.value}`;
+  liCares.innerHTML = input_cares_plant.value;
   liCares.appendChild(delete_li_cares);
 
-  if (input_cares_plant.value != '') {
+  if (input_cares_plant.value.trim() != '') {
     cares.push({ id: cont+1, content: input_cares_plant.value });
     cont++;
-    add_cares_container.appendChild(ul_cares);
     ul_cares.appendChild(liCares);
   } else {
     alert("Preencha os campos do formulario antes de adicionar um novo cuidado.");
   }
 
+   if(cares.length >= 5) {
+    input_cares_plant.style.display = "none";
+    btn_add_cares.style.display = "none";
+  } 
+
+  input_cares_plant.value = '';
+
   delete_li_cares.addEventListener("click", () => {
-    const caresExclusao = cares.find(care => care.id.toString() === liCares.id.toString());
-    cares.splice(caresExclusao.id, 1);
+    const caresExclusao = cares.findIndex(care => care.id === Number(liCares.id));
+    if(caresExclusao != -1) cares.splice(caresExclusao, 1);
     ul_cares.removeChild(liCares);
     
     if(cares.length < 5 && input_cares_plant.style.display == "none" && btn_add_cares.style.display == "none") {
@@ -136,10 +142,4 @@ btn_add_cares.addEventListener("click", (event) => {
     }
   });
 
-  if(cares.length >= 5) {
-    input_cares_plant.style.display = "none";
-    btn_add_cares.style.display = "none";
-  } 
-
-  input_cares_plant.value = '';
 });
