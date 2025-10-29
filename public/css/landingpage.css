@@ -30,7 +30,7 @@ body {
     background-color: transparent;
     padding-top: 2%;
     padding-bottom: 2%;
-    gap: 5%;
+    gap: 3%;
 }
 
 .herocontent {
@@ -44,21 +44,18 @@ body {
     flex-direction: column;
     font-family: var(--font-family-titulo);
     text-align: center;
-    border-top-left-radius: 150px;
-    border-top-right-radius: 16px;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 150px;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
     align-content: center;
     justify-content: space-between;
     padding: 5% 5% 5% 5%;
 
 }
-.herotop h1 {
-    font-size: 2rem;
-    font-weight: 600;
+.herotop img{
+    width: 50%;
 }
 .heromiddle h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 .herobottom {
