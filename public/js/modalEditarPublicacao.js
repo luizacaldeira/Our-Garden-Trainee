@@ -3,15 +3,22 @@ fomulario.addEventListener('submit', (event) =>{
     event.preventDefault();
 })
 
-const arrowUp = document.getElementById('arrowUpIcon');
-const arrowDown = document.getElementById('arrowDownIcon');
+const setaCima = document.getElementById('iconeSetaCima');
+const setaBaixo = document.getElementById('iconeSetaBaixo');
 
 // FUNÇÃO QUE ABRE E FECHA O DROPDOWN
 function abrirDropdown (idDropdown){
-    document.getElementById(idDropdown).classList.toggle('open');
+    const dropdown = document.getElementById(idDropdown);
+    dropdown.classList.toggle('open');
 
-    // arrowDown.style.display = 'none';
-    // arrowUp.style.display = 'block';
+    if (dropdown.classList.contains('open')){
+        setaBaixo.style.display = 'none';
+        setaCima.style.display = 'block';
+    }
+    else {
+        setaBaixo.style.display = 'block';
+        setaCima.style.display = 'none';
+    }
 }
 
 // FUNÇÃO QUE LIMITA O MAXIMO DE 3 OPÇÕES DE ESCOLHA DE CLASSIFICAÇÃO

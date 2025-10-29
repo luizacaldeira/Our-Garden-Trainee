@@ -157,8 +157,13 @@ input{
     outline: none;
 }
 
-.arrow-up-icon {
+.icone-seta-baixo {
+    cursor: pointer;
+}
+
+.icone-seta-cima {
     display: none;
+    cursor: pointer;
 }
 
 .nameClass {
