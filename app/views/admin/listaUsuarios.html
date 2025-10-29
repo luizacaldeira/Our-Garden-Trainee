@@ -244,14 +244,28 @@
                         </div>
                     </div>
                     <div class="bottonsEditUser">
-                        <button class="btnCancelEditUser" id="btnCancelNewUser" onclick="fecharModal('btnCancelEditUser', 'fundoJS')">Cancelar</button>
-                        <button class="btnEditUser" id="btnAddNewUser">Editar</button>
+                        <button class="btnCancelEditUser" id="btnCancelEditUser" onclick="fecharModal('btnCancelEditUser', 'fundoJS')">Cancelar</button>
+                        <button class="btnEditUser" id="btnEditUser">Editar</button>
                     </div>
                 </form>
                 </div>    
         </section>
         <!-- MODAL EXCLUIR USUÁRIO -->
-        <section> </section>
+        <section class="modalDeletUser" id="modalDeletUser">
+            <div class="modalDeletUserHeader">
+                <img src="/public/assets/trash-icon.svg">
+            </div>
+            <div class="modalDeletUserMain">
+                <form class="deletUserForm" id="deleteUserForm">
+                    <div class="deletUserText">
+                        <p> Tem certeza que deseja excluir esse usuário? </p>
+                    </div>
+                    <div class="bottonsDeletUser">
+                        <button class="btnCancelDeletUser" id="btnCancelDeletUser" onclick="fecharModal('btnCancelDeletUser' , 'fundoJS')"> Cancelar </button>
+                    </div>
+                </form>
+            </div>
+        </section>
     <script src="../../../public/js/listaUsuarios.js"></script>
     <script src="../../../public/js/modal.js"></script>
 </body>
