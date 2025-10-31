@@ -140,7 +140,7 @@
     height: 100%;
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .preview-content {
     width: 100%;
     height: 100%;
 
@@ -158,7 +158,7 @@
     text-align: center;
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content .preview-image {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .preview-content .preview-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -323,7 +323,7 @@
     transform: scale(1.1);
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .modal-create-buttons {
     width: 100%;
     display: flex;
 
@@ -332,10 +332,10 @@
 
     gap: 0.625rem;
 
-    padding-top: 0.5rem;
+    padding: 0.5rem 0 1rem 0;
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-cancel-publication {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .modal-create-buttons .btn-cancel-publication {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -353,11 +353,11 @@
     width: 5rem;
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-cancel-publication:hover {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .modal-create-buttons .btn-cancel-publication:hover {
     background-color: var(--green-300);
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-create-publication {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .modal-create-buttons .btn-create-publication {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -375,7 +375,7 @@
     font-family: var(--font-family-paragrafo);
 }
 
-.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .buttons .btn-create-publication:hover {
+.backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .modal-create-buttons .btn-create-publication:hover {
     background-color: var(--green-700);
 }
 
@@ -523,7 +523,7 @@
         height: 9rem;
     }
 
-    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content {
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .preview-content {
         font-size: 0.75rem;
     }
 
@@ -564,7 +564,7 @@
         height: 9rem;
     }
 
-    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .label-content {
+    .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .photo-container .photo-container-content .label-photo-container .preview-content {
         font-size: 0.75rem;
     }
 

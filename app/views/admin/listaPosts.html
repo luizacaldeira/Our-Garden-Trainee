@@ -200,10 +200,10 @@
                         <section class="create-publication-container photo-container" id="photoContainer">
                             <div class="photo-container-content">
                                 <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
-                                    onchange="exibirPreviewImagem('addNewPhotoInput', 'labelContent')"
+                                    onchange="exibirPreviewImagem('addNewPhotoInput', 'previewContent')"
                                     style="display: none;" required>
                                 <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
-                                    <div class="label-content" id="labelContent">
+                                    <div class="preview-content" id="previewContent">
                                         <img src="../../../public/assets/image-icon.svg"
                                             alt="ícone de adicionar nova imagem">
                                         <p>Selecione uma foto</p>
@@ -289,7 +289,7 @@
                             </div>
                         </section>
 
-                        <section class="buttons">
+                        <section class="modal-create-buttons">
                             <button class="btn-cancel-publication" id="btnCancelPublication">Cancelar</button>
                             <button type="submit" class="btn-create-publication"
                                 id="btnCreatePublication">Criar</button>

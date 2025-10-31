@@ -11,7 +11,7 @@ botoes_lista_posts.addEventListener("click", () => {
 // Faz fechar o modal de criar nova publicação
 const btn_cancel_publication = document.querySelector("#btnCancelPublication");
 const create_publication_form = document.querySelector("#createPublicationForm");
-const imagePreview = document.querySelector("#labelContent");
+const imagePreview = document.querySelector("#previewContent");
 
 btn_cancel_publication.addEventListener("click", (event) => {
   event.preventDefault();
@@ -26,7 +26,7 @@ btn_cancel_publication.addEventListener("click", (event) => {
 });
 
 // Exibir preview imagem selecionada
-function exibirPreviewImagem(idInput, idLabelContent) {
+function exibirPreviewImagem(idInput, idPreviewContent) {
   if (idInput) {
     const id_input = document.getElementById(idInput);
     const reader = new FileReader(); // leitor de arquivos
@@ -34,7 +34,7 @@ function exibirPreviewImagem(idInput, idLabelContent) {
 
     if (imageSrc) {
       reader.onload = (e) => {
-        const preview = document.getElementById(idLabelContent);
+        const preview = document.getElementById(idPreviewContent);
         preview.innerHTML = `<img class="preview-image" src="${e.target.result}" alt="previsualização">`;
       }
 
