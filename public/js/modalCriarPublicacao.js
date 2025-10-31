@@ -19,7 +19,6 @@ btn_cancel_publication.addEventListener("click", (event) => {
   filtro.style.display = "none";
 
   create_publication_form.reset(); // reseta os campos do formulario
-  add_cares_container.removeChild(ul_cares); // remove as opções de cuidado com a planta
   imagePreview.innerHTML = `<img src="../../../public/assets/image-icon.svg"
                                             alt="ícone de adicionar nova imagem">
                                         <p>Selecione uma foto</p>`;  // Retira a imagem que o usuário selecionou
