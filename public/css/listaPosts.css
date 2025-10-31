@@ -8,16 +8,8 @@ body {
 }
 
 .backgroundListaPosts {
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    height: 100vh;
-    width: 100%;
-    overflow-y: scroll;
-}
-
-.sidebarListaPosts {
-    background-color: var(--green-700);
-    height: 100%;
+    display: flex;
+    min-height: 100vh;
     width: 100%;
 }
 
