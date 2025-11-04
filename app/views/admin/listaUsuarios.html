@@ -156,8 +156,14 @@
             <div class="modalAddNewUserMain">
                 <form class="addNewUserForm" id="addNewUserForm">
                     <div class="inputsAddNewUser">
-                        <div class="userPhoto" id="userPhoto">
-                            <input type="file" name="adicionar foto de perdil" id="userPhoto">
+                        <div class="userPhotoContainer" id="userPhotoContainer">
+                            <input type="file" name="adicionar foto de perfil" id="userPhoto" style="display: none;" onchange="exibirPreviewImagem('userPhoto','userPreviewContent')" required>
+                            <label for="userPhoto" id="userPreviewLabel">
+                                <div id="userPreviewContent">
+                                    <img src="../../../public/assets/image-icon.svg" alt="ícone de adicionar nova imagem">
+                                    <p>Selecione imagem</p>
+                                </div>
+                            </label>
                         </div>
                         <div class="userName">
                             <section class="addUserName">
@@ -223,7 +229,7 @@
                     <form class="editUserForm" id="editUserForm">
                     <div class="inputsEditUser">
                         <div class="editUserPhoto" id="editUserPhoto">
-                            <input type="file" name="adicionar nova foto de perdil" id="editUserPhoto">
+                            <input type="file" name="adicionar nova foto de perfil" id="editUserPhoto">
                         </div>
                         <div class="editUserName">
                             <div class="editUserNamebox">
@@ -271,6 +277,7 @@
         </section>
     <script src="../../../public/js/listaUsuarios.js"></script>
     <script src="../../../public/js/modal.js"></script>
+    <script src="../../../public/js/preview.js"></script>
 </body>
 
 </html>
