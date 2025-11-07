@@ -400,7 +400,7 @@
         top: 105%;
 
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .backgroundListaPosts .mainListaPosts .modal-create-publication .modal-create-publication-main .create-publication-form .div-name-classification .classification-container .dropdown-classification label {
