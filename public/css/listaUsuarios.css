@@ -193,13 +193,13 @@ main .section3 .pagination {
 }
 
 main .section3 .pagination .content {
-   width: 23%;
+    width: 23%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.625rem;
     border-top: 1px solid var(--green-900);
-    padding: 0.4rem 1rem;
+    padding: 0.6rem 1rem;
 
     background: rgba(255, 255, 255, 0.18);
     border-radius: 40px;
