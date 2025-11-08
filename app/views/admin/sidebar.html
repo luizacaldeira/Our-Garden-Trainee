@@ -9,40 +9,47 @@
     <link rel="stylesheet" href="/public/css/styles.css">
 </head>
 <body>
-    <nav id="sidebar">
-        <div id="sidebarcontent">
-            <div id="logo_ourgarden">
-                <img src="/public/assets/1.png" id="logo_ourgarden1">
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebarcontent">
+            <div class="logo_ourgarden" id="id_logo_ourgarden">
+                <img src="/public/assets/4.png" id="logo_ourgarden4">
             </div>
-            <ul id="sidebotton">
-                <li class="sidebottons active">
-                    <a href="#">
-                        <i class="bi bi-grid"></i>
-                        <span class="item-description">
-                            Dashboard
-                        </span>
-                    </a>
-                </li>
-                <li class="sidebottons">
-                    <a href="#">
-                        <i class="bi bi-person"></i>
-                        <span class="item-description">
-                            Usuários
-                        </span>
-                    </a>
-                </li>
-                <li class="sidebottons">
-                    <a href="#">
-                        <i class="bi bi-pencil-square"></i>
-                        <span class="item-description">
-                            Publicações
-                        </span>
-                    </a>
-                </li>
-            </ul>
+            <div class="sidebottomout">
+                <ul class="sidebotton">
+                    <li class="sidebottons active">
+                        <a href="#">
+                            <i class="bi bi-grid"></i>
+                            <span class="item-description">
+                                Dashboard
+                            </span>
+                        </a>
+                    </li>
+                    <li class="sidebottons">
+                        <a href="#">
+                            <i class="bi bi-person"></i>
+                            <span class="item-description">
+                                Usuários
+                            </span>
+                        </a>
+                    </li>
+                    <li class="sidebottons">
+                        <a href="#">
+                            <i class="bi bi-pencil-square"></i>
+                            <span class="item-description">
+                                Publicações
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <button id="open_btn">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
         </div>
-        <div id="logoutsidebar">
-            <button id="logoutsidebar_btn">
+        <div class="vazio">
+        </div>
+        <div class="logoutsidebar">
+            <button class="logoutsidebar_btn">
                 <i class="bi bi-box-arrow-left"></i>
                 <span class="item-description">
                     Sair
@@ -50,9 +57,6 @@
             </button>
         </div>
     </nav>
-    <main>
-        <h1>Conteudo da pagina</h1>
-    </main>
     <script src="/public/js/sidebar.js"></script>
 </body>
 </html>
