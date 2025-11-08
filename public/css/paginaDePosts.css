@@ -313,6 +313,10 @@ body{
 }
 
 @media screen and (min-width: 1105px) and (max-width: 1299px){
+    .container h2 {
+        font-size: 28px;
+    }
+    
     .conteudo h3 {
         font-size: 22px;
     }
@@ -456,7 +460,7 @@ body{
     }
 
     .paginacao {
-        padding: 10%;
+        padding: 0 10% 15% 10%;
     }
 
     .elementosPaginacao {
@@ -519,7 +523,7 @@ body{
     }
 
     .paginacao {
-        padding: 10%;
+        padding: 0 10% 15% 10%;
         padding-top: 0;
     }
 
