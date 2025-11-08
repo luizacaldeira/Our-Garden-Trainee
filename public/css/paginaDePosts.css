@@ -86,7 +86,7 @@ body{
 
 
 .card {
-    background-color: aliceblue;
+    background-color: rgba(236, 248, 240, 0.945);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -168,7 +168,7 @@ body{
 
 .conteudo h3 {
     width: fit-content;
-    font-size:30px;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
     font-family: var(--font-family-titulo);
     color: var(--green-900);
 }
@@ -298,65 +298,234 @@ body{
     /* height: 70%; */
 }
 
-/* .arcos i:hover {
-    background-color: var(--green-500);
-    border-radius: 1px;
-    padding: 2% 1%;
-    
-    cursor: pointer;
-    height: 70%;
-} */
+@media screen and (min-width: 1300px) and (max-width: 1420px){
+    .conteudo h3 {
+        font-size: 22px;
+    }
 
-@media (max-width: 790px) {
+    .conteudo p {
+        font-size: 12px;
+    }
+
+    .hora {
+        font-size: 7px;
+    }
+}
+
+@media screen and (min-width: 1105px) and (max-width: 1299px){
+    .conteudo h3 {
+        font-size: 22px;
+    }
+
+    .conteudo p {
+        font-size: 12px;
+    }
+
+    .hora {
+        font-size: 7px;
+    }
+
+    .listaCards {
+        gap: 4rem;
+        padding-bottom: 5%;
+    }
+
+    .card {
+        height: 100%;
+    }
+
+}
+
+
+    /* Tablets */
+@media screen and (min-width: 789px) and (max-width: 992px){
     .pagina {
-        padding: 0 7%;
+        padding: 0 8%;
+    }
+    
+    .container {
+        width: 100%;
+    }
+
+    .container h2 {
+        font-size: 25px;
+    }
+
+
+    
+    .listaCards {
+        width: 100%;
+        gap: 4rem 3rem;
+    }
+
+    .card {
+        height: 100%;
+    }
+
+    .conteudo h3 {
+        font-size: 20px;
+    }
+
+    .conteudo p {
+        font-size: 12px;
+    }
+
+    .hora {
+        font-size: 8px;
+    }
+
+    .paginacao {
+        padding: 6%;
+    }
+
+}
+
+/* Tablets pequenos */
+@media screen and (min-width: 600px) and (max-width: 788px){
+    .pagina {
+        padding: 5%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    /* .container h3 {
+        font-size: 15px;
+    } */
+
+    .listaCards {
+        width: 100%;
+    
+    }
+}
+
+/* Smartphones grandes */
+@media screen and (min-width: 361px) and (max-width: 703px){
+    .pagina {
+        padding: 0;
     }
 
     .container {
         display: flex;
-        flex-direction:column-reverse;
+        flex-direction: column-reverse;
         gap: 20%;
     }
-    
-    .container h2 {
-        font-size: 20px;
-        width: 100%;
-    }
 
-    .pesquisaFunil {
-        display: flex;
-        /* border: 1px solid red; */
+    .container h2 {
+        font-size: 24px;
         width: 100%;
-        justify-content: space-between;
     }
 
     .pesquisa {
-        /* border: 1px solid orange; */
-        align-content: center;
         width: 90%;
     }
-
-    .funil {
-        font-size: 25px;
-
+    
+    .listaCards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
     }
 
-    .listaCards {
-        grid-template-columns: 1fr;
-        gap: 50px;
+    .card {
+        width: 100%;
+        height: 92%;
     }
 
     .profile {
-        padding: 4%;
+        padding: 3% 5%;
     }
 
-    .nomeEFoto {
-        gap: 5%;
+    .nomeEFoto p {
+        font-size: 17px;
+    }
+
+    .imgPlantaPosts {
+        height: 55%;
+    }
+
+    .conteudo h3 {
+        font-size: 23px;
+    }
+
+    .conteudo p {
+        font-size: 12px;
+    }
+
+    .hora {
+        padding-bottom: 3%;
+    }
+
+    .paginacao {
+        padding: 10%;
     }
 
     .elementosPaginacao {
-        /* width: 80%; */
+        width: 85%;
+        display: flex;
+        padding: 2%;
+        justify-content: center;
+    }
+}
+
+/* Smartphones pequenos */
+@media screen and (max-width: 360px){
+    .pagina {
+        padding: 0;
     }
 
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20%;
+    }
 
+    .container h2 {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .conteudo p {
+        font-size: 12px;
+    }
+
+    .pesquisa {
+        width: 87%;
+    }
+    
+    .listaCards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+
+    .card {
+        width: 100%;
+        height: 98%;
+    }
+
+    .profile {
+        padding: 3% 5%;
+    }
+
+    .nomeEFoto p {
+        font-size: 17px;
+    }
+
+    .imgPlantaPosts {
+        height: 60%;
+    }
+
+    .hora {
+        padding-bottom: 3%;
+    }
+
+    .paginacao {
+        padding: 10%;
+        padding-top: 0;
+    }
+
+    .elementosPaginacao {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
