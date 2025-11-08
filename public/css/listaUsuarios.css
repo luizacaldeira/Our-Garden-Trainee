@@ -1,20 +1,29 @@
 @import url('./styles.css');
 
-main {
+.background-complete-page {
     font-size: var(--font-size-paragrafo-desktop);
     font-family: var(--font-family-paragrafo);
 
     display: flex;
-    flex-direction: column;
 
-    padding: 2.5rem; /*40px*/
-    gap: 2.5rem; /*40px*/
+    min-width: 100vw;
+    min-height: 100vh;
 
     background-color: var(--green-200);
     color: var(--green-900);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2.5rem;
+    /*40px*/
+    gap: 2.5rem;
+    /*40px*/
 
     min-width: 100%;
-    min-height: max-content;
+    min-height: 100%;
 }
 
 main .section1 {
@@ -29,8 +38,10 @@ main .section1 .input-search-container {
     display: flex;
     align-items: center;
 
-    padding: 0.625rem; /*10px*/
-    gap: 0.625rem; /*10px*/
+    padding: 0.625rem;
+    /*10px*/
+    gap: 0.625rem;
+    /*10px*/
 
     background-color: var(--green-100);
 
@@ -47,8 +58,8 @@ main .section1 .input-search-container .lupa-icon {
 main .section1 .input-search-container .input-search {
     all: unset;
 
-    flex: 1; 
-    width: 100%; 
+    flex: 1;
+    width: 100%;
     height: 100%;
     box-sizing: border-box;
 
@@ -62,12 +73,25 @@ main .section1 .input-search-container .input-search::placeholder {
 main .section1 .profile-container {
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    gap: 0.625rem; /*10px*/
+    gap: 0.625rem;
+    /*10px*/
+}
+
+main .section1 .profile-container .profile-name {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
 
 main .section1 .profile-container .profile-name p {
-    font-size: 0.875rem; /*14px*/
+    font-size: 0.875rem;
+    /*14px*/
+
+    margin-bottom: 0;
 }
 
 main .section2 {
@@ -90,13 +114,16 @@ main .section2 .buttons-container .btn-create-user {
     display: flex;
     align-items: center;
 
-    gap: 0.675rem; /*10px*/
-    padding: 0.675rem; /*10px*/
+    gap: 0.675rem;
+    /*10px*/
+    padding: 0.675rem;
+    /*10px*/
 
     background-color: var(--green-900);
     color: var(--green-100);
 
-    border-radius: 0.75rem; /*12px*/
+    border-radius: 0.75rem;
+    /*12px*/
 
     cursor: pointer;
 
@@ -120,7 +147,7 @@ main .section3 {
     width: 100%;
 }
 
-.usersTablePagination {
+main .section3 .usersTablePagination {
     width: 100%;
 }
 
@@ -143,7 +170,8 @@ main .section3 .users-table thead tr th {
 
     font-weight: 400;
 
-    padding: 1rem; /*16px*/
+    padding: 1rem;
+    /*16px*/
 
     text-align: center;
 }
@@ -161,7 +189,8 @@ main .section3 .users-table tbody tr td {
     text-align: center;
 
     border-top: 1px solid var(--green-900);
-    padding: 1rem; /*16px*/
+    padding: 1rem;
+    /*16px*/
 }
 
 main .section3 .users-table tbody tr td .actions {
@@ -196,7 +225,7 @@ main .section3 .pagination {
 }
 
 main .section3 .pagination .content {
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,8 +254,9 @@ main .section3 .pagination .content .arrow-left {
 main .section3 .pagination .content .pages {
     display: flex;
     align-items: center;
-    
-    gap: 0.625rem; /*10px*/
+
+    gap: 0.625rem;
+    /*10px*/
 }
 
 main .section3 .pagination .content .pages .page {
@@ -267,8 +297,8 @@ main .section3 .pagination .content .arrow-right {
         width: 41%;
     }
 
-    main .section3 .pagination .content  {
-        width: 45%;
+    main .section3 .pagination .content {
+        width: 27%;
     }
 }
 
@@ -281,41 +311,84 @@ main .section3 .pagination .content .arrow-right {
         width: 41%;
     }
 
-    main .section3 .pagination .content  {
+    main .section3 .pagination .content {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 768px) {
+    main .section3 {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    main .section3 .usersTablePagination {
+        width: fit-content;
+    }
+
+    main .section3 .usersTablePagination .users-table {
+        margin-right: 2rem;
+    }
+
+    main .section3 .users-table tbody tr td .actions {
+        display: flex;
+        gap: 0.575rem;
+    }
+
+    .pagination {
+        width: 100%;
+    }
+
+    .backgroundListaPosts {
+        min-height: max-content;
+    }
+
+    .pesquisaPosts {
+        width: 41%;
+    }
+
+    .mainListaPosts {
+        height: max-content;
+    }
+
+    .paginacaoPostsConteudo {
         width: 45%;
     }
 }
 
 @media screen and (max-width: 500px) {
-
-    main{
+    main {
         width: 100%;
         padding: 1rem;
         gap: 1.5rem;
     }
 
-    .input-search-container {
+    main .section1 .input-search-container {
         width: 45%;
     }
 
-    .title p {
+    main .section2 .title p {
         font-size: 25px;
     }
 
-    .buttons-container {
+    main .section2 .buttons-container .buttons-container {
         font-size: 13px;
     }
 
-    .section3 {
-        overflow-x: scroll;
+    main .section3 {
+        overflow-x: auto;
         width: 100%;
     }
 
-    .usersTablePagination {
-        width: 200%;
+    main .section3 .usersTablePagination {
+        width: fit-content;
     }
 
-    .actions {
+    main .section3 .usersTablePagination .users-table {
+        margin-right: 2rem;
+    }
+
+    main .section3 .users-table tbody tr td .actions {
         display: flex;
         gap: 0.575rem;
     }
