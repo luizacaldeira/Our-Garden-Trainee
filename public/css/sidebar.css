@@ -8,9 +8,13 @@
 }
 
 body {
-    margin: 0;
     min-height: 100vh;
     display: flex;
+    background-color: var(--green-200);
+}
+
+main{
+    padding: 20px;
 }
 
 #sidebar {
@@ -25,65 +29,57 @@ body {
 #logo_ourgarden1{
     width: 150px;
     object-fit: cover;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    text-align: center;
-    padding-left: 30px;
+    padding-left: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-#sidebotton /*pega user infos e sidebotton*/{
+#sidebotton /*side_items*/{
     display: flex;
     flex-direction: column;
-    gap: 10px;
     list-style: none;
-    padding: 0;
-    align-items: center;
 }
 
-#sidebotton span:last-child{
-    font-size: 0.9rem;
-}
-
-.sidebottons /*sideitens*/ {
+.sidebottons /*side-item*/ {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     width: 100%;
-    justify-items: center;
+    height: 50px;
+    justify-content: flex-start;
     cursor: pointer;
+    align-content: center;
+    align-items: center;
+    padding-left: 25px;
 }
 
 .sidebottons.active{
     background-color: var(--green-200);
 }
 
-.sidebottons:hover(not.active):{
-    background-color: var(--green-900);
+.sidebottons:hover:not(.active){
+    background-color: var(--green-200);
+    color: var(--green-900);
+
 }
 
 .sidebottons a{
     text-decoration: none;
     display:flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
     color: var(--green-200);
-
 }
+
 .sidebottons.active a{ 
     color: var(--green-900)
 }
 
 .sidebottons a i {
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 20px;
     height: 20px;
-    text-align: start;
+    justify-content: center;
+    align-items: center;
 }
 
 #logoutsidebar{
@@ -98,5 +94,7 @@ body {
     gap: 10px;
     background-color: var(--green-900);
     color: var(--green-200);
+    cursor: pointer;
 }
+
 
