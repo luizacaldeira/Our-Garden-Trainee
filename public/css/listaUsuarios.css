@@ -121,6 +121,10 @@ main .section3 {
     width: 100%;
 }
 
+.usersTablePagination {
+    width: 100%;
+}
+
 main .section3 .users-table {
     width: 100%;
 
