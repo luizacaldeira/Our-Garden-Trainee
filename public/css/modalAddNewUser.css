@@ -35,7 +35,7 @@
 .modalAddNewUserHeader{
     background-color: var(--green-900);
     width: 100%;
-    height: 20%;
+    height: min-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,6 +87,57 @@
     outline: 1px solid var(--green-700);
 }
 
+.photo-container {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-container-content {
+    width: 31%;
+    height: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid var(--green-700);
+    border-radius: 1rem;
+
+    overflow: hidden;
+}
+
+.label-photo-container {
+    width: 100%;
+    height: 100%;
+}
+
+.preview-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.2rem;
+
+    cursor: pointer;
+
+    color: var(--green-700);
+
+    text-align: center;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .bottonsAddUser{
     display: flex;
     align-items: center;
@@ -113,4 +164,105 @@
     border-radius: 0.5rem;
     cursor: pointer;
     padding: 0.5rem;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 789px) and (max-width: 1097px) {    
+    .modalAddNewUser {
+        width: 75%;
+        position: absolute;
+        left: 14%;
+        top: 15%;
+        bottom: 15%;
+    }
+
+    .photo-container-content {
+        width: 41%;
+        height: 10rem;
+    }
+}
+
+@media screen and (min-width: 613px) and (max-width: 789px) {
+    .modalAddNewUser {
+        width: 65%;
+        position: absolute;
+        left: 17%;
+    }
+
+    .modalAddNewUserMain {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .photo-container-content {
+        width: 51%;
+        height: 10rem;
+    }
+}
+
+@media screen and (min-width: 510px) and (max-width: 613px) {
+    .modalAddNewUser {
+        width: 75%;
+        position: absolute;
+        left: 12%;
+    }
+
+    .modalAddNewUserMain {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 510px) {
+    .modalAddNewUser {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+    }
+
+    .modalAddNewUserMain {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 376px) {
+    .modalAddNewUser {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+    }
+
+    .modalAddNewUserMain {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .modalAddNewUser {
+        width: 90%;
+        position: absolute;
+        left: 5%;
+    }
+
+    .modalAddNewUserMain {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .photo-container-content {
+        width: 51%;
+        height: 9rem;
+    }
 }

@@ -158,15 +158,20 @@
             <div class="modalAddNewUserMain">
                 <form class="addNewUserForm" id="addNewUserForm">
                     <div class="inputsAddNewUser">
-                        <div class="userPhotoContainer" id="userPhotoContainer">
-                            <input type="file" name="adicionar foto de perfil" id="userPhoto" style="display: none;" onchange="exibirPreviewImagem('userPhoto','userPreviewContent')" required>
-                            <label for="userPhoto" id="userPreviewLabel">
-                                <div id="userPreviewContent">
-                                    <img src="../../../public/assets/image-icon.svg" alt="ícone de adicionar nova imagem">
-                                    <p>Selecione imagem</p>
-                                </div>
-                            </label>
-                        </div>
+                        <section class="create-publication-container photo-container" id="photoContainer">
+                            <div class="photo-container-content">
+                                <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
+                                    onchange="exibirPreviewImagem('addNewPhotoInput', 'previewContent')"
+                                    style="display: none;" required>
+                                <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
+                                    <div class="preview-content" id="previewContent">
+                                        <img src="../../../public/assets/image-icon.svg"
+                                            alt="ícone de adicionar nova imagem">
+                                        <p>Selecione uma foto</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </section>
                         <div class="userName">
                             <section class="addUserName">
                                 <span>Nome:</span>

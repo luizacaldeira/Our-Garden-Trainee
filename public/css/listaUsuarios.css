@@ -14,8 +14,7 @@ main {
     color: var(--green-900);
 
     min-width: 100%;
-    width: max-content;
-    min-height: 100vh;
+    min-height: max-content;
 }
 
 main .section1 {
