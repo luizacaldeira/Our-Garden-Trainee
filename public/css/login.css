@@ -90,6 +90,7 @@ body {
     font-family: var(--font-family-paragrafo);
     font-size: 12px;
     text-align: end;
+    cursor: pointer;
 }
 
 .loginBoxButton {
@@ -119,6 +120,7 @@ body {
 
 .loginRegisterButton {
     color: var(--orange-500);
+    cursor: pointer;
 }
 
 .loginInput {
@@ -181,6 +183,10 @@ body {
     justify-content: center;
 }
 
+.loginBoxXoxomidias i{
+    cursor: pointer;
+}
+
 .bi {
     color: var(--green-900);
     font-size: 28px;
@@ -201,6 +207,7 @@ body {
 .bi-eye-slash {
     color: var(--green-900);
     font-size: 18px;
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {
