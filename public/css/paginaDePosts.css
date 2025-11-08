@@ -73,8 +73,9 @@ body{
 .listaCards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    column-gap: 5rem;
     width: 80%;
+    
     max-width: 1200px;
     /* align-items: start; */
     justify-content: center;
@@ -90,8 +91,11 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 85%;
     box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.5);
     cursor: pointer;
+    /* border: 1px solid blue; */
+    width: 100%;
 }
 
 .infos{
@@ -105,7 +109,7 @@ body{
     font-family: var(--font-family-paragrafo);
     justify-content: space-between;
     align-items: center;
-    
+    color: var(--green-900);
 }
 
 .nomeEFoto {
@@ -121,6 +125,7 @@ body{
 
 .usuarioPosts {
     font-size: 30px;
+    color: var(--green-900);
 }
 
 .folhinhaPosts {
@@ -133,24 +138,32 @@ body{
 
 .imgPlantaPosts {
     width: 100%;
+    height: 60%;
 }
 
 .imgPlantaPosts img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 
-.conteudo h3, #conteudo p, #hora {
-    padding-bottom: 3%;
-}
 
 .conteudo {
     width: 100%;
+    height: 25%;
     gap: 0%;
     padding: 3% 5%;
     display: flex;
     flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.conteudo h3, .conteudo p, .hora {
+    /* padding-bottom: 3%; */
+    padding: 2px;
+    /* border: 1px solid purple; */
+    
 }
 
 .conteudo h3 {
@@ -164,12 +177,12 @@ body{
     
     font-size: 14px;
     font-family: var(--font-family-paragrafo);
-    
 }
 
 .hora {
     display: flex;
     width: 100%;
+    
     justify-content: flex-end;
     align-items: center;
     gap: 2%;
@@ -191,24 +204,30 @@ body{
 
 .paginacao {
     width: 100%;
+    /* height: 50%; */
     justify-content: center;
-    padding: 5%;
+    padding: 0 5%;
+    padding-bottom: 5%;
     /* align-items: center; */
     display: flex;
     font-family: var(--font-family-paragrafo);
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--green-900);
 }
 
 .elementosPaginacao {
-    font-size: 25px;
-    width: 30%;
+    font-size: 18px;
+    width: fit-content;
+    height: fit-content;
     color: var(--green-900);
+    display: flex;
+    padding: 0.8% 2% 0.8% 2%;
+
     /* padding: 0 1%; */
     /* border: 1px solid firebrick; */
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.18);
-    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.422);
+    border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.7px);
     -webkit-backdrop-filter: blur(3.7px);
@@ -217,10 +236,12 @@ body{
 
 .arcos {
     display: flex;
-    gap: 15%;
-    padding: 4%;
+    /* gap: 12%; */
+    /* padding: 4%; */
     justify-content: center;
-    align-items: center;
+    height: 100%;
+    width: fit-content;
+    /* background-color: blue; */
     /* border: 1px solid magenta; */
 }
 
@@ -228,14 +249,22 @@ body{
     display: flex;
     text-align: center;
     align-items: center;
-    padding: 1%;
+    padding: 4%;
+    cursor: pointer;
+    color: var(--green-900);
+
 }
 
 .numeros {
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: center;
-    gap: 10%;
+    align-items: center;
+    gap: 9%;
+    color: var(--green-900);
+    height: 100%;
+    margin: 1%;
+
     /* gap: 30%;
     width: 100%;
     justify-content: center;
@@ -244,22 +273,39 @@ body{
 }
 
 .numeros p {
-    padding: 5%;
+    padding: 7%;
+
     /* border: 1px solid aqua; */
 }
 
-.numeros p:hover {
-    background-color: var(--green-500);
+.item-paginacao {
+    /* height: 3rem; */
     border-radius: 10px;
-    cursor: pointer;
+    width: 3rem;
+    display: flex;
+    background-color: var(--green-200);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.arcos i:hover {
+.item-paginacao:hover {
     background-color: var(--green-500);
-    border-radius: 10px;
-    padding: 4% 1%;
     cursor: pointer;
+    /* height: 70%; */
 }
+
+/* .arcos i:hover {
+    background-color: var(--green-500);
+    border-radius: 1px;
+    padding: 2% 1%;
+    
+    cursor: pointer;
+    height: 70%;
+} */
 
 @media (max-width: 790px) {
     .pagina {
@@ -309,7 +355,7 @@ body{
     }
 
     .elementosPaginacao {
-        width: 80%;
+        /* width: 80%; */
     }
 
 
