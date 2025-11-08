@@ -13,11 +13,13 @@ body {
 
     min-width: 100%;
     width: max-content;
+
+    height: max-content;
 }
 
 .mainListaPosts {
     background-color: var(--green-200);
-    height: 100%;
+    height: max-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -74,15 +76,6 @@ body {
     color: var(--green-900);
 }
 
-.btn-show-more-profile {
-    all: unset;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    cursor: pointer;
-}
-
 .superiorTabelaPosts {
     display: flex;
     flex-direction: row;
@@ -123,6 +116,10 @@ body {
     background-color: var(--green-100);
     border-radius: 2rem;
     padding: 1.25rem;
+    width: 100%;
+}
+
+.tabelaPostsMeio {
     width: 100%;
 }
 
@@ -248,13 +245,27 @@ body {
     transform: scale(1.1);
 }
 
-@media screen and (min-width: 800px) and (max-width: 1280px) {
+@media screen and (min-width: 1279px) and (max-width: 1290px) {
     .backgroundListaPosts {
-        min-height: 100.1vh;
+        min-height: max-content;
+    }
+
+    .pesquisaPosts {
+        width: 41%;
+    }
+
+    .paginacaoPostsConteudo {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1279px) {
+    .backgroundListaPosts {
+        min-height: max-content;
     }
 
     .mainListaPosts {
-        height: 100.1vh;
+        height: max-content;
     }
 
     .pesquisaPosts {
@@ -268,7 +279,7 @@ body {
 
 @media screen and (min-width: 767px) and (max-width: 768px) {
     .backgroundListaPosts {
-        min-height: 104.2vh;
+        min-height: max-content;
     }
 
     .pesquisaPosts {
@@ -276,21 +287,53 @@ body {
     }
 
     .mainListaPosts {
-        height: 104.2vh;
+        height: max-content;
+    }
+
+     .paginacaoPostsConteudo {
+        width: 45%;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .pesquisaPosts {
-        width: 41%;
+
+    .backgroundListaPosts {
+        width: 100%;
     }
-    
-    .botoesAcoes {
-        display: flex;
-        gap: 0.375rem;
+
+    .mainListaPosts {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .pesquisaPosts {
+        width: 45%;
+    }
+
+    .tituloTabelaPosts p {
+        font-size: 25px;
+    }
+
+    .botoeslistaPosts {
+        font-size: 13px;
+    }
+
+    .tabelaPostsContent {
+        overflow-x: scroll;
+
+        width: 100%;
+    }
+
+    .tabelaPostsMeio {
+        width: 200%;
     }
 
     .paginacaoPostsConteudo {
-        width: 50%;
+        width: 51%;
+    }
+
+    .botoesAcoes {
+        display: flex;
+        gap: 0.575rem;
     }
 }
