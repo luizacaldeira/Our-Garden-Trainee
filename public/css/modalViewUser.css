@@ -120,6 +120,10 @@
     padding: 0.5rem 3rem;
 }
 
+.btnExitViewUser:hover{
+    background-color: var(--green-700);
+}
+
 /* REPONSIVIDADE */
 @media screen and (min-width: 789px) and (max-width: 1097px) {    
     .modalViewUser {

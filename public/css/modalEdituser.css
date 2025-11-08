@@ -110,6 +110,10 @@
     padding: 0.5rem;
 }
 
+.btnCancelEditUser:hover{
+    background-color: var(--green-300);
+}
+
 .btnEditUser{
     all: unset;
     background-color: var(--green-900);
@@ -118,6 +122,10 @@
     border-radius: 0.5rem;
     cursor: pointer;
     padding: 0.5rem;
+}
+
+.btnEditUser:hover{
+    background-color: var(--green-700);
 }
 
 /* REPONSIVIDADE */

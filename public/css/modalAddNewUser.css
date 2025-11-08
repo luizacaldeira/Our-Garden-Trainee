@@ -156,6 +156,10 @@
     padding: 0.5rem;
 }
 
+.btnCancelNewUser:hover{
+    background-color: var(--green-300);
+}
+
 .btnAddNewUser{
     all: unset;
     background-color: var(--green-900);
@@ -164,6 +168,10 @@
     border-radius: 0.5rem;
     cursor: pointer;
     padding: 0.5rem;
+}
+
+.btnAddNewUser:hover{
+    background-color: var(--green-700);
 }
 
 /* RESPONSIVIDADE */

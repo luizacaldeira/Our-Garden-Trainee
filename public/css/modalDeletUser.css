@@ -79,6 +79,10 @@
     padding: 0.5rem;
 }
 
+.btnCancelDeletUser:hover{
+    background-color: var(--green-300);
+}
+
 .btnDeletUser{
     all: unset;
     background-color: var(--green-900);
@@ -87,6 +91,10 @@
     border-radius: 0.5rem;
     cursor: pointer;
     padding: 0.5rem;
+}
+
+.btnDeletUser:hover{
+    background-color: var(--green-700);
 }
 
 /* REPONSIVIDADE */
