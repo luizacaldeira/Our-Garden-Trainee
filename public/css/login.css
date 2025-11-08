@@ -104,6 +104,12 @@ body {
     cursor: pointer;
 }
 
+.loginBoxButton:hover{
+    background-color: var(--green-700);
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
+}
+
 .loginBoxEnd {
     color: var(--green-900);
     font-family: var(--font-family-paragrafo);
@@ -184,7 +190,12 @@ body {
 }
 
 .loginBoxXoxomidias i{
-    cursor: pointer;
+    cursor: pointer;    
+}
+
+.loginBoxXoxomidias i:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
 }
 
 .bi {
