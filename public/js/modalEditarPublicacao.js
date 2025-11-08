@@ -1,8 +1,3 @@
-const fomulario = document.getElementById('editPublicationForm');
-fomulario.addEventListener('submit', (event) =>{
-    event.preventDefault();
-})
-
 const setaCima = document.getElementById('iconeSetaCima');
 const setaBaixo = document.getElementById('iconeSetaBaixo');
 

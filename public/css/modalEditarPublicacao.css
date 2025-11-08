@@ -31,7 +31,7 @@
 }
 
 .label-content {
-    padding: 6%;
+    /* padding: 6%; */
     border: 3px solid var(--green-700);
     border-radius: 15px;
     font-family: var(--font-family-paragrafo);
@@ -39,14 +39,21 @@
     color: var(--green-300);
     cursor: pointer;
     width: 30%;
-    object-fit: cover;
+    overflow: hidden;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .label-content img {
     width: 100%;
+    object-fit: cover;
+    
 }
 
 .selectPhoto label {
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
