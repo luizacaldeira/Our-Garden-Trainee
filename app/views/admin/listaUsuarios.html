@@ -51,97 +51,99 @@
         </section>
 
         <section class="section3">
-            <table class="users-table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NOME</th>
-                        <th>EMAIL</th>
-                        <th>TIPO</th>
-                        <th>AÇÕES</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Julia Rodrigues</strong></td>
-                        <td>juliarodrigues@rmail.com</td>
-                        <td>administrador</td>
-                        <td>
-                            <div class="actions">
-                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Julia Rodrigues</strong></td>
-                        <td>juliarodrigues@rmail.com</td>
-                        <td>administrador</td>
-                        <td>
-                            <div class="actions">
-                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Julia Rodrigues</strong></td>
-                        <td>juliarodrigues@rmail.com</td>
-                        <td>administrador</td>
-                        <td>
-                            <div class="actions">
-                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Julia Rodrigues</strong></td>
-                        <td>juliarodrigues@rmail.com</td>
-                        <td>administrador</td>
-                        <td>
-                            <div class="actions">
-                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><strong>Julia Rodrigues</strong></td>
-                        <td>juliarodrigues@rmail.com</td>
-                        <td>administrador</td>
-                        <td>
-                            <div class="actions">
-                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="pagination">
-                <div class="content">
-                    <button class="arrow-left"><img src="../../../public/assets/arrow-left-icon.svg"
-                            alt="ícone de seta para esquerda"></button>
-                    <div class="pages">
-                        <button class="page">1</button>
-                        <button class="page">2</button>
-                        <button class="page">3</button>
-                        <button class="page">4</button>
-                        <button class="page">...</button>
+            <div class="usersTablePagination">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>EMAIL</th>
+                            <th>TIPO</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Julia Rodrigues</strong></td>
+                            <td>juliarodrigues@rmail.com</td>
+                            <td>administrador</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Julia Rodrigues</strong></td>
+                            <td>juliarodrigues@rmail.com</td>
+                            <td>administrador</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Julia Rodrigues</strong></td>
+                            <td>juliarodrigues@rmail.com</td>
+                            <td>administrador</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Julia Rodrigues</strong></td>
+                            <td>juliarodrigues@rmail.com</td>
+                            <td>administrador</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Julia Rodrigues</strong></td>
+                            <td>juliarodrigues@rmail.com</td>
+                            <td>administrador</td>
+                            <td>
+                                <div class="actions">
+                                    <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                    <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <div class="content">
+                        <button class="arrow-left"><img src="../../../public/assets/arrow-left-icon.svg"
+                                alt="ícone de seta para esquerda"></button>
+                        <div class="pages">
+                            <button class="page">1</button>
+                            <button class="page">2</button>
+                            <button class="page">3</button>
+                            <button class="page">4</button>
+                            <button class="page">...</button>
+                        </div>
+                        <button class="arrow-right"><img src="../../../public/assets/arrow-right-icon.svg"
+                                alt="ícone de seta para direita"></button>
                     </div>
-                    <button class="arrow-right"><img src="../../../public/assets/arrow-right-icon.svg"
-                            alt="ícone de seta para direita"></button>
                 </div>
             </div>
         </section>

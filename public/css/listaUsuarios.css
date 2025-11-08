@@ -75,7 +75,6 @@ main .section2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     width: 100%;
 }
 
@@ -83,6 +82,7 @@ main .section2 .title p {
     font-size: 1.875rem;
 
     font-weight: 600;
+    margin: 0;
 }
 
 main .section2 .buttons-container .btn-create-user {
@@ -193,13 +193,13 @@ main .section3 .pagination {
 }
 
 main .section3 .pagination .content {
-    width: 23%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.625rem;
     border-top: 1px solid var(--green-900);
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 1rem;
 
     background: rgba(255, 255, 255, 0.18);
     border-radius: 40px;
@@ -254,9 +254,10 @@ main .section3 .pagination .content .arrow-right {
     transition: all 0.2s ease-in-out;
 }
 
-@media screen and (min-width: 800px) and (max-width: 1280px) {
+/* RESPONSIVIDADE */
+@media screen and (min-width: 1279px) and (max-width: 1280px) {
     main {
-        min-height: 104.6vh;
+        min-height: max-content;
     }
 
     main .section1 .input-search-container {
@@ -268,9 +269,9 @@ main .section3 .pagination .content .arrow-right {
     }
 }
 
-@media screen and (min-width: 767px) and (max-width: 768px) {
+@media screen and (min-width: 800px) and (max-width: 1279px) {
     main {
-        min-height: 106.3vh;
+        min-height: max-content;
     }
 
     main .section1 .input-search-container {
@@ -282,18 +283,41 @@ main .section3 .pagination .content .arrow-right {
     }
 }
 
-/* Dispositivos pequenos */
-@media screen and (min-width: 103px) and (max-width: 788px) {
-    main .section1 .input-search-container {
-        width: 41%;
+@media screen and (max-width: 500px) {
+
+    main{
+        width: 100%;
+        padding: 1rem;
+        gap: 1.5rem;
     }
 
-    main .section3 .users-table tbody tr td .actions {
+    .input-search-container {
+        width: 45%;
+    }
+
+    .title p {
+        font-size: 25px;
+    }
+
+    .buttons-container {
+        font-size: 13px;
+    }
+
+    .section3 {
+        overflow-x: scroll;
+        width: 100%;
+    }
+
+    .usersTablePagination {
+        width: 200%;
+    }
+
+    .actions {
         display: flex;
-        gap: 0.375rem; /*6px*/
+        gap: 0.575rem;
     }
 
-    main .section3 .pagination .content  {
-        width: 45%;
+    .pagination {
+        width: 100%;
     }
 }
