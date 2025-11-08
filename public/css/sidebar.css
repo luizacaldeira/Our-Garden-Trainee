@@ -21,9 +21,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-color: var(--green-900); */
     height: 100vh;
-    /* width: 180px; */
     position: relative;
     width: fit-content;
 }
