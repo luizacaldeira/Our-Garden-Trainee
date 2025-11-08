@@ -411,22 +411,22 @@
                             </label>
                         </div>
                         <div class="infosPost">
-                            <div class="title">
+                            <div class="title editPublicationContainer">
                                 <span>Título:</span>
-                                <input type="text" placeholder="Digite o novo título da publicação...">
+                                <input type="text" placeholder="Digite o novo título da publicação..." class="modalEditInput">
                             </div>
-                            <div class="description">
+                            <div class="description editPublicationContainer">
                                 <span>Descrição:</span>
-                                <input type="text" placeholder="Digite a nova descrição da publicação...">
+                                <input type="text" placeholder="Digite a nova descrição da publicação..." class="modalEditInput">
                             </div>
                             <div class="nameClass">
-                                <div class="name">
+                                <div class="name editPublicationContainer">
                                     <span>Nome:</span>
-                                    <input type="text" placeholder="Digite o nome da planta...">
+                                    <input type="text" placeholder="Digite o nome da planta..." class="modalEditInput">
                                 </div>
-                                <div class="class">
+                                <div class="class editPublicationContainer">
                                     <span>Classificação:</span>
-                                    <button id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao')">Escolha
+                                    <button type="button" id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao')">Escolha
                                         3 opções... <img src="../../../public/assets/arrow-down-icon.svg"
                                             alt="seta para baixo" class="icone-seta-baixo" id="iconeSetaBaixo"> <img
                                             src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
@@ -447,14 +447,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="infosPlanta">
+                            <div class="infosPlanta editPublicationContainer">
                                 <span>Sobre:</span>
-                                <input type="text" placeholder="Digite novas informações sobre a planta...">
+                                <input type="text" placeholder="Digite novas informações sobre a planta..." class="modalEditInput">
                             </div>
-                            <div class="cares">
+                            <div class="cares editPublicationContainer">
                                 <span>Cuidados:</span>
                                 <div class="inputEPlus">
-                                    <input type="text" placeholder="Digite cuidados sobre a planta...">
+                                    <input type="text" placeholder="Digite cuidados sobre a planta..." class="modalEditInput">
                                     <i class="bi bi-plus-circle"></i>
                                 </div>
                                 <ul id="ulCares" class="ul-cares"></ul>
@@ -489,7 +489,7 @@
 
                         <div class="buttonsExcluir">
                             <div class="botaoCancelarExcluir">
-                                <button>Cancelar</button>
+                                <button type="button">Cancelar</button>
                             </div>
                             <div class="botaoExcluir">
                                 <button>Excluir</button>
