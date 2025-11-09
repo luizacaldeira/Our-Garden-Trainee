@@ -365,8 +365,23 @@ main .section3 .pagination .content .arrow-right {
         width: 45%;
     }
 
+    main .section1 .profile-container .profile-name {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    }
+
+    main .section1 .profile-container .profile-name strong {
+        font-size: 0.875rem;
+    }
+
+    main .section1 .profile-container .profile-name p {
+        font-size: 0.7rem;
+    }
+
+
     main .section2 .title p {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     main .section2 .buttons-container {
