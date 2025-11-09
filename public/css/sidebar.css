@@ -33,7 +33,7 @@ main{
 .logo_ourgarden img{
     width: 30px;
     object-fit: cover;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
 }
 .logo_ourgarden {
@@ -119,7 +119,6 @@ main{
     width: 100%;
     justify-content: center;
     background-color: var(--green-900);
-    /* border-top-right-radius: 30px; */
     height: 80%;
 }
 
