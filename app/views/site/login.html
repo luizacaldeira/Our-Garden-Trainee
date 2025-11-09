@@ -46,7 +46,7 @@
                     </div>
                     <div class="loginInput">
                         <i class="bi bi-envelope"></i>
-                        <input class="inputLogin" type="text" placeholder="Digite seu email...">
+                        <input class="inputLogin" type="email" placeholder="Digite seu email...">
                     </div>
                 </div>
                 <div class="loginBoxId">
@@ -56,9 +56,12 @@
                     <div class="loginInput">
                         <div class="loginLock">
                             <i class="bi bi-lock"></i>
-                            <input class="inputLogin" type="text" placeholder="Digite sua senha...">
+                            <input class="inputLoginPassword" id="inputLoginPassword" type="password" placeholder="Digite sua senha...">
                         </div>
-                        <i class="bi bi-eye-slash"></i>
+                        <div class="divOlhos" id="divOlhos">
+                            <i class="bi bi-eye-slash" id="olho"></i>
+                            <i class="bi bi-eye" id="olhoAberto"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,13 +80,15 @@
             </div>
 
             <div class="loginBoxXoxomidias">
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-linkedin"></i>
-                <i class="bi bi-telephone-fill"></i>
+                <a class="a" href="https://www.instagram.com/codejr" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a class="a" href="https://www.facebook.com/codeempresajunior" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a class="a" href="https://www.linkedin.com/company/codejr/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a class="a" href="https://api.whatsapp.com/send/?phone=5532991519313&text&type=phone_number&app_absent=0" target="_blank"><i class="bi bi-telephone-fill"></i></a>
             </div>
         </div>
     </div>
+
+    <script src="../../../public/js/paginaLogin.js"></script>
 </body>
 
 </html>

@@ -66,11 +66,19 @@ body {
     font-size: 30px;
 }
 
+.loginBoxTitle h1{
+        font-weight: 400;
+    }
+
 .loginBoxSubtitle {
     color: var(--green-900);
     font-family: var(--font-family-paragrafo);
     font-size: 10px;
     padding: 5px 0;
+}
+
+.loginBoxSubtitle h2{
+    font-weight: 600;
 }
 
 .loginBoxEmail {
@@ -147,12 +155,27 @@ body {
     width: 100%;
 }
 
+.inputLoginPassword {
+    background-color: var(--green-200);
+    border: none;
+    width: 100%;
+}
+
 .inputLogin:focus {
     border: none;
     outline: none;
 }
 
+.inputLoginPassword:focus {
+    border: none;
+    outline: none;
+}
+
 .inputLogin::placeholder{
+    color: var(--green-900);
+}
+
+.inputLoginPassword::placeholder{
     color: var(--green-900);
 }
 
@@ -216,9 +239,21 @@ body {
 }
 
 .bi-eye-slash {
+    display: none;
     color: var(--green-900);
     font-size: 18px;
     cursor: pointer;
+}
+
+.bi-eye {
+    display: block;
+    color: var(--green-900);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.a{
+    all: unset;
 }
 
 @media (max-width: 1024px) {
@@ -248,7 +283,7 @@ body {
     }
 
     .loginBoxTitle {
-        font-size: 26px;
+        font-size: 26px;        
     }
 
     .loginBoxSubtitle {
