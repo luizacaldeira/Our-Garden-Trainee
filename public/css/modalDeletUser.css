@@ -32,7 +32,7 @@
 .modalDeletUserHeader{
     background-color: var(--green-900);
     width: 100%;
-    height: 10vh;
+    height: 17vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,9 +44,13 @@
     align-content: center;
 }
 
+.modalDeletUserHeader img {
+    width: 20px;
+    padding: 2px;
+}
 .modalDeletUserHeader p {
     color: var(--green-100);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .modalDeletUserMain{
     display: flex;

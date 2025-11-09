@@ -273,14 +273,19 @@
                 <div class="modalEditUserMain">
                     <form class="editUserForm" id="editUserForm">
                         <div class="inputsEditUser">
-                            <div class="editUserPhoto" id="editUserPhoto">
-                                <input type="file" name="adicionar nova foto de perfil" id="changeUserPhoto"onchange="trocarPreviewImagem('editUserPhoto','label-content')">
-                                <label for="changeUserPhoto">
-                                    <div class="label-content"id="label-content">
-                                        <img src="/public/assets/code-logo.png">
-                                    </div>
-
-                                </label>
+                            <div class="editUserPhotoOut">
+                                <div class="editUserPhoto" id="editUserPhoto">
+                                        <input type="file" name="adicionar nova foto" id="editUserPhotoInput"
+                                            onchange="exibirPreviewImagem('editUserPhoto', 'previewContent')"
+                                            style="display: none;" required>
+                                        <label for="editUserPhotoInput" id="labelArquivo" class="label-photo-container">
+                                            <div class="preview-content" id="previewContent">
+                                                <img src="../../../public/assets/image-icon.svg"
+                                                    alt="ícone de adicionar nova imagem">
+                                                <p>Selecione uma<br>nova foto</p>
+                                            </div>
+                                        </label>
+                                </div>
                             </div>
                             <div class="editUserName">
                                 <div class="editUserNamebox">
@@ -315,7 +320,7 @@
             <!-- MODAL EXCLUIR USUÁRIO -->
             <section class="modalDeletUser" id="modalDeletUser">
                 <div class="modalDeletUserHeader">
-                    <img src="/public/assets/trash-fill.svg">
+                    <img src="/public/assets/Design sem nome.png">
                     <p>Excluir</p>
                 </div>
                 <div class="modalDeletUserMain">
