@@ -171,7 +171,6 @@ body {
 }
 
 .paginacaoPostsConteudo {
-    width: 23%;
     display: flex;
     align-items: center;
     justify-content: center;
