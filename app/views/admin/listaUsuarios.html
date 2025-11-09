@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../../public/css/listaUsuarios.css">
+    <link rel="stylesheet" href="../../../public/css/modalAddNewUser.css">
+    <link rel="stylesheet" href="../../../public/css/modalViewUser.css">
+    <link rel="stylesheet" href="/public/css/modalEdituser.css">
+    <link rel="stylesheet" href="/public/css/modalDeletUser.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap"
+        rel="stylesheet" />
+
+    <title>Lista usuários</title>
+</head>
+
+<body>
+    <div class="background-complete-page">
+        <main>
+            <section class="section1">
+                <div class="input-search-container">
+                    <img src="../../../public/assets/lupa-icon.svg" alt="ícone de lupa" class="lupa-icon">
+                    <input type="text" name="pesquisarUsuarios" id="input-search" class="input-search"
+                        placeholder="Pesquisar usuário...">
+                </div>
+                <div class="profile-container">
+                    <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
+                    <div class="profile-name">
+                        <strong>Julia Rodrigues</strong>
+                        <p>administrador</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section2">
+                <div class="title">
+                    <p>Usuários</p>
+                </div>
+                <div class="buttons-container">
+                    <button class="btn-create-user" onclick="abrirModal('modalAddNewUser', 'fundoJS')">
+                        <img src="../../../public/assets/plus-icon.svg" alt="ícone de mais">
+                        Novo usuário
+                    </button>
+                </div>
+            </section>
+
+            <section class="section3">
+                <div class="usersTablePagination">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOME</th>
+                                <th>EMAIL</th>
+                                <th>TIPO</th>
+                                <th>AÇÕES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Julia Rodrigues</strong></td>
+                                <td>juliarodrigues@rmail.com</td>
+                                <td>administrador</td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                alt="ícone de olho"
+                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                alt="ícone de lápis"
+                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                alt="ícone de lixeira"
+                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Julia Rodrigues</strong></td>
+                                <td>juliarodrigues@rmail.com</td>
+                                <td>administrador</td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                alt="ícone de olho"
+                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                alt="ícone de lápis"
+                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                alt="ícone de lixeira"
+                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Julia Rodrigues</strong></td>
+                                <td>juliarodrigues@rmail.com</td>
+                                <td>administrador</td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                alt="ícone de olho"
+                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                alt="ícone de lápis"
+                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                alt="ícone de lixeira"
+                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Julia Rodrigues</strong></td>
+                                <td>juliarodrigues@rmail.com</td>
+                                <td>administrador</td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                alt="ícone de olho"
+                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                alt="ícone de lápis"
+                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                alt="ícone de lixeira"
+                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Julia Rodrigues</strong></td>
+                                <td>juliarodrigues@rmail.com</td>
+                                <td>administrador</td>
+                                <td>
+                                    <div class="actions">
+                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                alt="ícone de olho"
+                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                alt="ícone de lápis"
+                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                alt="ícone de lixeira"
+                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <div class="content">
+                            <button class="arrow-left"><img src="../../../public/assets/arrow-left-icon.svg"
+                                    alt="ícone de seta para esquerda"></button>
+                            <div class="pages">
+                                <button class="page">1</button>
+                                <button class="page">2</button>
+                                <button class="page">3</button>
+                                <button class="page">4</button>
+                                <button class="page">...</button>
+                            </div>
+                            <button class="arrow-right"><img src="../../../public/assets/arrow-right-icon.svg"
+                                    alt="ícone de seta para direita"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="fundoJS" id="fundoJS"></div>
+            <!-- MODAL CRIAR USUARIO -->
+            <section class="modalAddNewUser" id="modalAddNewUser">
+                <div class="modalAddNewUserHeader">
+                    <img src="../../../public/assets/plus-circle-icon.svg" alt="ícone de adiconar">
+                    <p>Adicionar Usuario</p>
+                </div>
+                <div class="modalAddNewUserMain">
+                    <form class="addNewUserForm" id="addNewUserForm">
+                        <div class="inputsAddNewUser">
+                            <section class="create-publication-container photo-container" id="photoContainer">
+                                <div class="photo-container-content">
+                                    <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
+                                        onchange="exibirPreviewImagem('addNewPhotoInput', 'previewContent')"
+                                        style="display: none;" required>
+                                    <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
+                                        <div class="preview-content" id="previewContent">
+                                            <img src="../../../public/assets/image-icon.svg"
+                                                alt="ícone de adicionar nova imagem">
+                                            <p>Selecione uma foto</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </section>
+                            <div class="userName">
+                                <section class="addUserName">
+                                    <span>Nome:</span>
+                                    <input type="text" name="nome do user" id="inputUserName"
+                                        placeholder="Digite seu nome...">
+                                </section>
+                            </div>
+                            <div class="userEmail">
+                                <section class="addUserEmail">
+                                    <span>Email:</span>
+                                    <input type="text" name="email do user" id="inputUserEmail"
+                                        placeholder="Digite seu email...">
+                                </section>
+                            </div>
+                            <div class="userPassword">
+                                <section class="addUserPassword">
+                                    <span>Senha:</span>
+                                    <input type="text" name="senha do user" id="inputUserPassword"
+                                        placeholder="Digite sua senha...">
+                                </section>
+                            </div>
+                        </div>
+                        <section class="bottonsAddUser">
+                            <button class="btnCancelNewUser" id="btnCancelNewUser" type="button"
+                                onclick="fecharModal('modalAddNewUser', 'fundoJS')">Cancelar</button>
+                            <button class="btnAddNewUser" id="btnAddNewUser" type="submit">Adicionar</button>
+                        </section>
+                    </form>
+                </div>
+            </section>
+            <!-- MODAL VISUALIZAR USUARIO -->
+            <section class="modalViewUser" id="modalViewUser">
+                <div class="modalViewUserHeader">
+                    <img src="../../../public/assets/eye-icon-white.svg" alt="ícone de vizualizar">
+                    <p>Visualizar Usuário</p>
+                </div>
+                <div class="modalAddNewUserMain">
+                    <form class="modalViewUserForm" id="modalViewUserForm">
+                        <div class="viewUserPhoto">
+                            <img src="../../../public/assets/XiJingPingGigaChad.jpg" alt="foto de perfil">
+                        </div>
+                        <div class="viewUserContent">
+                            <div class="viewUserName">
+                                <span>Nome:</span>
+                                <p>Julia Rodrigues</p>
+                            </div>
+                            <div class="viewUserEmail">
+                                <span>Email:</span>
+                                <p>juliarodrigues@gmail.com</p>
+                            </div>
+                        </div>
+                        <section class="bottonsViewUser">
+                            <button class="btnExitViewUser" id="btnExitNewUser" type="button"
+                                onclick="fecharModal('modalViewUser', 'fundoJS')">Sair</button>
+                        </section>
+                    </form>
+                </div>
+            </section>
+            <!-- MODAL EDITAR USUARIO  -->
+            <section class="modalEditUser" id="modalEditUser">
+                <div class="modalEditUserHeader">
+                    <img src="/public/assets/plus-icon.svg">
+                    <p> Editar Usuário </p>
+                </div>
+                <div class="modalEditUserMain">
+                    <form class="editUserForm" id="editUserForm">
+                        <div class="inputsEditUser">
+                            <div class="editUserPhotoOut">
+                                <div class="editUserPhoto" id="editUserPhoto">
+                                        <input type="file" name="adicionar nova foto" id="editUserPhotoInput"
+                                            onchange="exibirPreviewImagem('editUserPhoto', 'previewContent')"
+                                            style="display: none;" required>
+                                        <label for="editUserPhotoInput" id="labelArquivo" class="label-photo-container">
+                                            <div class="preview-content" id="previewContent">
+                                                <img src="../../../public/assets/image-icon.svg"
+                                                    alt="ícone de adicionar nova imagem">
+                                                <p>Selecione uma<br>nova foto</p>
+                                            </div>
+                                        </label>
+                                </div>
+                            </div>
+                            <div class="editUserName">
+                                <div class="editUserNamebox">
+                                    <span>Nome:</span>
+                                    <input type="text" name="edite nome do user" id="inputEditUserName"
+                                        placeholder="Digite novo nome...">
+                                </div>
+                            </div>
+                            <div class="editUserEmail">
+                                <div class="editUserEmailbox">
+                                    <span>Email:</span>
+                                    <input type="text" name="edite email do user" id="inputEditUserEmail"
+                                        placeholder="Digite novo email...">
+                                </div>
+                            </div>
+                            <div class="editUserPassword">
+                                <div class="editUserPasswordbox">
+                                    <span>Senha:</span>
+                                    <input type="text" name="nova senha do user" id="inputEditUserPassword"
+                                        placeholder="Digite a nova senha...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottonsEditUser">
+                            <button class="btnCancelEditUser" id="btnCancelEditUser" type="button"
+                                onclick="fecharModal('modalEditUser', 'fundoJS')">Cancelar</button>
+                            <button class="btnEditUser" id="btnEditUser" type="submit">Editar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <!-- MODAL EXCLUIR USUÁRIO -->
+            <section class="modalDeletUser" id="modalDeletUser">
+                <div class="modalDeletUserHeader">
+                    <img src="/public/assets/Design sem nome.png">
+                    <p>Excluir</p>
+                </div>
+                <div class="modalDeletUserMain">
+                    <form class="deletUserForm" id="deleteUserForm">
+                        <div class="deletUserText">
+                            <p> Tem certeza que deseja excluir esse usuário? </p>
+                        </div>
+                        <div class="bottonsDeletUser">
+                            <button class="btnCancelDeletUser" id="btnCancelDeletUser" type="button"
+                                onclick="fecharModal('modalDeletUser' , 'fundoJS')"> Cancelar </button>
+                            <button class="btnDeletUser" id="btnDeletUser" type="submit">Excluir</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../../../public/js/listaUsuarios.js"></script>
+    <script src="../../../public/js/modal.js"></script>
+    <script src="../../../public/js/preview.js"></script>
+</body>
+
+</html>
