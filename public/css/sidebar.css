@@ -26,7 +26,7 @@ main{
     width: fit-content;
 }
 .sidebarcontent {
-    width: fit-content;
+    width: 100%;
     height: fit-content
 }
 
@@ -41,7 +41,7 @@ main{
     width: 100%;
     justify-content: center;
     background-color: var(--green-900);
-    border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 20px;
 }
 
 .sidebotton /*side_items*/{
@@ -50,9 +50,7 @@ main{
     list-style: none;
     width: fit-content;
 }
-.sidebottomout{
-    background-color: var(--green-900);
-}
+
 
 .sidebottons /*side-item*/ {
     height: 50px;
@@ -63,6 +61,15 @@ main{
     padding-left: 25px;
     display: flex;
     width: fit-content;
+}
+.btnDashboard{
+    background-color: var(--green-900);
+}
+.btnUsuarios{
+    border-top-right-radius: 20px;
+    background-color: var(--green-900);
+}
+.btnPublicacoes{
     background-color: var(--green-900);
 }
 
@@ -105,7 +112,7 @@ main{
     width: 100%;
     justify-content: center;
     background-color: var(--green-900);
-    border-top-right-radius: 30px;
+    /* border-top-right-radius: 30px; */
     height: 80%;
 }
 
