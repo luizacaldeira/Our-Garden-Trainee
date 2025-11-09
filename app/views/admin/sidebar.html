@@ -12,7 +12,12 @@
     <nav class="sidebar" id="sidebar">
         <div class="sidebarcontent">
             <div class="logo_ourgarden" id="id_logo_ourgarden">
-                <img src="/public/assets/4.png" id="logo_ourgarden4">
+                <div class="logoopen" id="logoopen">
+                    <img src="/public/assets/1.png" id="logo_ourgarden1">
+                </div>
+                <div class="logoclose" id="logoclose"></div>
+                    <img src="/public/assets/4.png" id="logo_ourgarden4">
+                </div>
             </div>
             <div class="sidebottomout">
                 <ul class="sidebotton">
@@ -48,21 +53,14 @@
                     </div>
                 </ul>
             </div>
-                <button id="open_btn">
-                    <i class="bi bi-chevron-right"></i>
-                </button>
         </div>
         <div class="vazio">
         </div>
         <div class="logoutsidebar">
-            <button class="logoutsidebar_btn">
-                <div class="logoutsidebarcontent">
-                    <i class="bi bi-box-arrow-left"></i>
-                    <span class="item-description">
-                        Sair
-                    </span>
-                </div>
-            </button>
+            <a href="#" class="logoutsidebar_btn">
+                <i class="bi bi-box-arrow-left"></i>
+                <span class="item-description">Sair</span>
+            </a>
         </div>
     </nav>
     <script src="/public/js/sidebar.js"></script>

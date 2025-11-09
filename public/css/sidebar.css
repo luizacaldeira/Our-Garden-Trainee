@@ -22,9 +22,13 @@ main{
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    position: relative;
-    width: fit-content;
+    position: fixed; 
+    width: 60px; 
+    transition: width 0.3s ease; 
+    z-index: 1000; 
+    overflow: hidden; 
 }
+
 .sidebarcontent {
     width: 100%;
     height: fit-content
@@ -35,7 +39,17 @@ main{
     object-fit: cover;
     padding-top: 20px;
     padding-bottom: 30px;
+    transition: opacity 0.3s ease;
 }
+
+.logoopen{
+    width: fit-content;
+}
+
+.logoclose{
+    width: fit-content;
+}
+
 .logo_ourgarden {
     display: flex;
     width: 100%;
@@ -44,15 +58,14 @@ main{
     border-bottom-right-radius: 20px;
 }
 
-.sidebotton /*side_items*/{
+.sidebotton {
     display: flex;
     flex-direction: column;
     list-style: none;
     width: 100%;
 }
 
-
-.sidebottons /*side-item*/ {
+.sidebottons {
     height: 50px;
     justify-content: flex-start;
     cursor: pointer;
@@ -128,8 +141,8 @@ main{
     width: 100%;
     justify-items: center;
     padding-bottom: 20px;
-
 }
+
 .logoutsidebar_btn{
     border:none;
     font-size: 1rem;
@@ -151,54 +164,30 @@ main{
     cursor: pointer;
 
 }
-#open_btn {
-    position: absolute;
-    top: 30px;
-    right: -10px;
-    background-color: var(--green-500);
-    color: var(--green-900);
-    border-radius: 100%;
-    width: 20px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
+
+.sidebar:hover {
+    width: 190px; 
 }
 
-
-.item-description{
-    width: 0px;
+.sidebar .item-description {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
 
 }
-.logoutsidebar .logoutsidebar_btn .logoutsidebarcontent .item-description{
-    display: none;
+
+.sidebar:hover .item-description {
+    width: 150px;
+    opacity: 1;
 }
 
-.sidebar.open-sidebar .logoutsidebar .logoutsidebar_btn .logoutsidebarcontent .item-description{
-    display: flex;
-    width: fit-content;
-}
-.sidebar.open-sidebar .logoutsidebar{
-    display: flex;
+.sidebottons a {
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: auto;
+    transition: justify-content 0.3s ease;
 }
 
-.sidebar.open-sidebar{
-    min-width: 15%;
-    display: flex;
-}
-
-.sidebar.open-sidebar .item-description {
-    width: 150px;  
-}
-
-.sidebar.open-sidebar .sidebottons a {
+.sidebar:hover .sidebottons a {
     justify-content: flex-start;
-
 }
-
