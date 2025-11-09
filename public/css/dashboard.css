@@ -1,0 +1,230 @@
+body{
+    height: 100vh;
+    background-image: url(../assets/monstera-deixa-o-papel-de-parede-fundo-da-natureza.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.519);
+    background-blend-mode:multiply;
+}
+
+.containerDashboard {
+    display: flex;
+    height: 100%;
+}
+
+.mainDashbord {
+    flex: 1;
+    padding: 0 3%;
+    height: 100%;
+    /* border: 1px solid orange; */
+    padding: 1% 5%;
+}
+
+.section1 {
+    display:flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: 3% 0;
+}
+
+.arrow {
+    padding: 0 1%;
+}
+
+.total {
+    display: flex;
+    gap: 4%;
+    /* border: 1px solid orange; */
+    width: 40%;
+    text-align: center;
+}
+
+.total p {
+    background-color: var(--green-200);
+    border-radius: 20px;
+    padding: 3%;
+    font-family: var(--font-family-paragrafo);
+    font-size: 14px;
+}
+
+.profileADM {
+    display: flex;
+    gap: 2%;
+    /* border: 1px solid blue; */
+    font-size: 30px;
+    white-space: nowrap;
+    width: 50%;
+    justify-content: end;
+    color: var(--green-100);
+}
+
+
+.textADM h5{
+    font-size: 15px;
+    font-family: var(--font-family-paragrafo);
+    color: var(--green-100);
+}
+
+.textADM p {
+    font-size: 12px;
+    font-family: var(--font-family-paragrafo);
+    color: var(--green-100);
+}
+
+.section2{
+    padding: 0 0 7% 0;
+    /* border: 1px solid red; */
+}
+
+.section2 h3 {
+    font-size: 30px;
+    font-family: var(--font-family-paragrafo);
+    color: var(--green-100);
+}
+
+.section3Total{
+    width: 100%;
+    height: fit-content;
+    /* border: 1px solid blue; */
+    display: flex;
+    gap: 5%;
+    padding: 0 5%;
+    justify-content: center;
+}
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    /* height: 100%;
+    width: 100%; */
+    /* border: 1px solid black; */
+}
+
+.icon {
+    background-color: var(--green-500);
+    width: fit-content;
+    border-radius: 10px;
+    padding: 3% 5%;
+    position: absolute;
+    top: -25px;
+    left: 42%;
+    font-size: 30px;
+    color: aliceblue;
+    z-index: 99;
+}
+
+.containerUsuarios {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    border-radius: 20px;
+    /* min-width: 230px; */
+    max-width: 360px;
+    padding: 4%;
+    height: 100%;
+    /* max-height: 150px; */
+    width: 90vw;
+    box-shadow: 2px 4px 7px rgb(0, 0, 0, 0.2);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.095);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.716);
+    backdrop-filter: blur(4.2px);
+    -webkit-backdrop-filter: blur(4.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--green-100);
+}
+
+.content {
+    /* border: 1px solid palevioletred; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15% 5%;
+    font-family: var(--font-family-paragrafo);
+}
+
+.content h2 {
+    font-size: 30px;
+}
+
+.content text {
+    font-size: 19px;
+}
+
+.verMais {
+    /* border: 1px solid red; */
+    text-align: center;
+    padding: 4% 7%;
+    background-color: var(--green-500);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    font-family: var(--font-family-paragrafo);
+    width: fit-content;
+    font-size: 15px;
+    white-space: nowrap;
+    color: aliceblue;
+    box-shadow: 2px 4px 7px rgb(0, 0, 0, 0.5);
+}
+
+.verMais:hover {
+    background-color: var(--green-700);
+    scale: 1.05;
+    transition: 0.3s;
+}
+
+.arrow i:hover {
+    background-color: var(--green-500);
+    border-radius: 15px;
+    scale: 1.05;
+    transition: 0.1s;
+    /* padding: 3px; */
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+.section1 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileADM {
+    padding: 5% 0;
+    gap: 10px;
+    justify-content: center;
+}
+
+.total {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.section3Total{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 8% 9%;
+}
+
+.section2 {
+    padding: 8% 0;
+}
+}
+
+/* @media (max-width: 820px) {
+    .section1 {
+    display: flex;
+    
+} */

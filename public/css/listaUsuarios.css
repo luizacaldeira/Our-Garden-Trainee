@@ -1,0 +1,412 @@
+@import url('./styles.css');
+
+.background-complete-page {
+    font-size: var(--font-size-paragrafo-desktop);
+    font-family: var(--font-family-paragrafo);
+
+    display: flex;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    background-color: var(--green-200);
+    color: var(--green-900);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2.5rem;
+    /*40px*/
+    gap: 2.5rem;
+    /*40px*/
+
+    min-width: 100%;
+    min-height: 100%;
+}
+
+main .section1 {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .section1 .input-search-container {
+    display: flex;
+    align-items: center;
+
+    padding: 0.625rem;
+    /*10px*/
+    gap: 0.625rem;
+    /*10px*/
+
+    background-color: var(--green-100);
+
+    border-radius: 2rem;
+
+    width: 31%;
+}
+
+main .section1 .input-search-container .lupa-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+main .section1 .input-search-container .input-search {
+    all: unset;
+
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+main .section1 .input-search-container .input-search::placeholder {
+    color: var(--green-900);
+}
+
+main .section1 .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.625rem;
+    /*10px*/
+}
+
+main .section1 .profile-container .profile-name {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+main .section1 .profile-container .profile-name p {
+    font-size: 0.875rem;
+    /*14px*/
+
+    margin-bottom: 0;
+}
+
+main .section2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main .section2 .title p {
+    font-size: 1.875rem;
+
+    font-weight: 600;
+    margin: 0;
+}
+
+main .section2 .buttons-container .btn-create-user {
+    all: unset;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.675rem;
+    /*10px*/
+    padding: 0.675rem;
+    /*10px*/
+
+    background-color: var(--green-900);
+    color: var(--green-100);
+
+    border-radius: 0.75rem;
+    /*12px*/
+
+    cursor: pointer;
+
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.2s ease-in-out;
+}
+
+main .section2 .buttons-container .btn-create-user:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.03);
+}
+
+main .section3 {
+    background-color: var(--green-100);
+
+    border-radius: 2rem;
+
+    padding: 1.25rem;
+
+    width: 100%;
+}
+
+main .section3 .usersTablePagination {
+    width: 100%;
+}
+
+main .section3 .users-table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+main .section3 .users-table thead {
+    width: 100%;
+}
+
+main .section3 .users-table thead tr {
+    width: 100%;
+}
+
+main .section3 .users-table thead tr th {
+    width: 20%;
+
+    font-weight: 400;
+
+    padding: 1rem;
+    /*16px*/
+
+    text-align: center;
+}
+
+main .section3 .users-table tbody {
+    width: 100%;
+}
+
+main .section3 .users-table tbody tr {
+    width: 100%;
+}
+
+main .section3 .users-table tbody tr td {
+    width: 20%;
+    text-align: center;
+
+    border-top: 1px solid var(--green-900);
+    padding: 1rem;
+    /*16px*/
+}
+
+main .section3 .users-table tbody tr td .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main .section3 .users-table tbody tr td .actions .btn-actions {
+    all: unset;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+main .section3 .users-table tbody tr td .actions .btn-actions:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+main .section3 .pagination {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid var(--green-900);
+    padding-top: 1rem;
+}
+
+main .section3 .pagination .content {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border-top: 1px solid var(--green-900);
+    padding: 0.4rem 1rem;
+
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    font-size: 1rem;
+}
+
+main .section3 .pagination .content .arrow-left {
+    all: unset;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+main .section3 .pagination .content .pages {
+    display: flex;
+    align-items: center;
+
+    gap: 0.625rem;
+    /*10px*/
+}
+
+main .section3 .pagination .content .pages .page {
+    all: unset;
+
+    font-weight: bolder;
+    padding: 0.625rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+main .section3 .pagination .content .pages .page:hover {
+    background-color: var(--green-500);
+}
+
+main .section3 .pagination .content .arrow-right {
+    all: unset;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (min-width: 1279px) and (max-width: 1280px) {
+    main {
+        min-height: max-content;
+    }
+
+    main .section1 .input-search-container {
+        width: 41%;
+    }
+
+    main .section3 .pagination .content {
+        width: 27%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1279px) {
+    main {
+        min-height: max-content;
+    }
+
+    main .section1 .input-search-container {
+        width: 41%;
+    }
+
+    main .section3 .pagination .content {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 768px) {
+    main .section3 {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    main .section3 .usersTablePagination {
+        width: fit-content;
+    }
+
+    main .section3 .usersTablePagination .users-table {
+        margin-right: 2rem;
+    }
+
+    main .section3 .users-table tbody tr td .actions {
+        display: flex;
+        gap: 0.575rem;
+    }
+
+    .pagination {
+        width: 100%;
+    }
+
+    .backgroundListaPosts {
+        min-height: max-content;
+    }
+
+    .pesquisaPosts {
+        width: 41%;
+    }
+
+    .mainListaPosts {
+        height: max-content;
+    }
+
+    .paginacaoPostsConteudo {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 100%;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    main .section1 .input-search-container {
+        width: 45%;
+    }
+
+    main .section1 .profile-container .profile-name {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    }
+
+    main .section1 .profile-container .profile-name strong {
+        font-size: 0.875rem;
+    }
+
+    main .section1 .profile-container .profile-name p {
+        font-size: 0.7rem;
+    }
+
+
+    main .section2 .title p {
+        font-size: 25px;
+    }
+
+    main .section2 .buttons-container {
+        font-size: 13px;
+    }
+
+    main .section3 {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    main .section3 .usersTablePagination {
+        width: fit-content;
+    }
+
+    main .section3 .usersTablePagination .users-table {
+        margin-right: 2rem;
+    }
+
+    main .section3 .users-table tbody tr td .actions {
+        display: flex;
+        gap: 0.575rem;
+    }
+
+    .pagination {
+        width: 100%;
+    }
+}
