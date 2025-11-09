@@ -99,6 +99,10 @@ main{
     color: var(--green-900);
 }
 
+.sidebottons:hover:not(.active) a{
+    color: var(--green-900);
+}
+
 .sidebottons a i {
     display: flex;
     width: 20px;
