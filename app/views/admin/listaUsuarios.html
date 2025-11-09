@@ -274,7 +274,13 @@
                     <form class="editUserForm" id="editUserForm">
                         <div class="inputsEditUser">
                             <div class="editUserPhoto" id="editUserPhoto">
-                                <input type="file" name="adicionar nova foto de perfil" id="editUserPhoto">
+                                <input type="file" name="adicionar nova foto de perfil" id="changeUserPhoto"onchange="trocarPreviewImagem('editUserPhoto','label-content')">
+                                <label for="changeUserPhoto">
+                                    <div class="label-content"id="label-content">
+                                        <img src="/public/assets/code-logo.png">
+                                    </div>
+
+                                </label>
                             </div>
                             <div class="editUserName">
                                 <div class="editUserNamebox">

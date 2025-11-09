@@ -108,11 +108,12 @@
     }
 }
 
-@media screen and (min-width: 613px) and (max-width: 789px) {
+@media screen and (min-width: 613px) and (max-width: 500px) {
     .modalDeleteUser {
-        width: 65%;
+        width: 90%;
         position: absolute;
         left: 17%;
+
     }
 
     .modalDeleteUserMain {
