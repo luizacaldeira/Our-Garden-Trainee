@@ -48,7 +48,7 @@ main{
     display: flex;
     flex-direction: column;
     list-style: none;
-    width: fit-content;
+    width: 100%;
 }
 
 
@@ -60,7 +60,10 @@ main{
     align-items: center;
     padding-left: 25px;
     display: flex;
-    width: fit-content;
+    width: 100%;
+}
+.sidebottomout{
+    width: 100%;
 }
 .btnDashboard{
     background-color: var(--green-900);
@@ -128,12 +131,22 @@ main{
     padding-bottom: 20px;
 
 }
-
 .logoutsidebar_btn{
     border:none;
     font-size: 1rem;
     display: flex;
     gap: 10px;
+    background-color: var(--green-900);
+    color: var(--green-200);
+    cursor: pointer;
+
+}
+.sidebar.open-sidebar .logoutsidebarcontent{
+    border:none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     background-color: var(--green-900);
     color: var(--green-200);
     cursor: pointer;
@@ -159,6 +172,21 @@ main{
     white-space: nowrap;
     text-overflow: ellipsis;
 
+}
+.logoutsidebar .logoutsidebar_btn .logoutsidebarcontent .item-description{
+    display: none;
+}
+
+.sidebar.open-sidebar .logoutsidebar .logoutsidebar_btn .logoutsidebarcontent .item-description{
+    display: flex;
+    width: fit-content;
+}
+.sidebar.open-sidebar .logoutsidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
 }
 
 .sidebar.open-sidebar{
