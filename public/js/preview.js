@@ -1,6 +1,5 @@
 // Exibir preview imagem selecionada
 function exibirPreviewImagem(idInput, idLabelContent) {
-  console.log("entrei na função");
   if (idInput) {
     const id_input = document.getElementById(idInput);
     const reader = new FileReader(); // leitor de arquivos

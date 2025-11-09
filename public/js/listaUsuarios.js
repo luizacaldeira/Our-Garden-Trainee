@@ -7,7 +7,7 @@ function trocarPreviewImagem (idInput, idLabelContent){
         if (imgSrc){
             reader.onload = (e) => {
                 const preview = document.getElementById(idLabelContent);
-                preview.innerHTML = <img class="preview-image" src="${e.target.result}" alt="previsualização">;
+                preview.innerHTML = `<img class="preview-image" src="${e.target.result}" alt="previsualização">`;
             }
 
             reader.onerror = (e) => {
