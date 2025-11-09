@@ -99,69 +99,68 @@
 
 /* REPONSIVIDADE */
 @media screen and (min-width: 789px) and (max-width: 1097px) {    
-    .modalDeleteUser {
-        width: 75%;
+    .modalDeletUser {
+        width: 80%;
         position: absolute;
-        left: 14%;
+        left: 10%;
         top: 15%;
         bottom: 15%;
     }
 }
 
-@media screen and (min-width: 613px) and (max-width: 500px) {
+@media screen and (min-width: 613px) and (max-width: 789px) {
     .modalDeleteUser {
-        width: 90%;
+        width: 65%;
         position: absolute;
         left: 17%;
-
     }
 
-    .modalDeleteUserMain {
+    .modalDeletUserMain {
         padding: 0.5rem 0.8rem;
     }
 }
 
 @media screen and (min-width: 510px) and (max-width: 613px) {
-    .modalDeleteUser {
-        width: 75%;
+    .modalDeletUser {
+        width: 90%;
         position: absolute;
-        left: 12%;
+        left: 10%;
     }
 
-    .modalDeleteUserMain {
+    .modalDeletUserMain {
         padding: 0.5rem 0.5rem;
     }
 }
 
 @media screen and (min-width: 376px) and (max-width: 510px) {
-    .modalDeleteUser {
-        
+    .modalDeletUser {        
         position: absolute;
         left: 10%;
         right: 10%;
+        width: 80%;
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 376px) {
-    .modalDeleteUser {
+    .modalDeletUser {
         width: 90%;
         position: absolute;
         left: 5%;
     }
 
-    .modalDeleteUserMain {
+    .modalDeletUserMain {
         padding: 0.5rem 0.5rem;
     }
 }
 
 @media screen and (max-width: 320px) {
-    .modalDeleteUser {
+    .modalDeletUser {
         width: 90%;
         position: absolute;
         left: 5%;
     }
 
-    .modalDeleteUserMain {
+    .modalDeletUserMain {
         padding: 0.5rem 0.5rem;
     }
 }
