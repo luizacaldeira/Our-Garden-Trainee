@@ -99,6 +99,7 @@ body{
     gap: 30px;
     position: relative;
     align-items: center;
+    cursor: pointer;
     /* height: 100%;
     width: 100%; */
     /* border: 1px solid black; */
@@ -182,11 +183,12 @@ body{
 }
 
 .arrow i:hover {
-    background-color: var(--green-200);
-    border-radius: 20px;
+    background-color: var(--green-500);
+    border-radius: 15px;
     scale: 1.05;
     transition: 0.1s;
-    padding: 4px;
+    /* padding: 3px; */
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
