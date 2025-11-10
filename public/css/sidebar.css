@@ -157,28 +157,20 @@ main{
     width: 100%;
     justify-items: center;
     padding-bottom: 20px;
+    margin: auto;
+}
+.logoutsidebar .item-description {
+    margin: auto;
 }
 
 .logoutsidebar_btn{
     border:none;
     font-size: 1rem;
     display: flex;
-    gap: 10px;
     background-color: var(--green-900);
     color: var(--green-200);
     cursor: pointer;
-
-}
-.sidebar.open-sidebar .logoutsidebarcontent{
-    border:none;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background-color: var(--green-900);
-    color: var(--green-200);
-    cursor: pointer;
-
+    margin: auto;
 }
 
 .sidebar:hover {
