@@ -35,7 +35,6 @@ main{
 }
 
 .logo_ourgarden img{
-    width: 30px;
     object-fit: cover;
     padding-top: 20px;
     padding-bottom: 30px;
@@ -44,10 +43,27 @@ main{
 
 .logoopen{
     width: fit-content;
+    display: none;
+}
+.logoopen img {
+    width: 130px;
+}
+.logoclose img{
+    width: 40px;
+
 }
 
 .logoclose{
-    width: fit-content;
+    display: flex;
+    width: 30px;
+}
+
+.sidebar:hover .logoclose{
+    display: none;
+}
+
+.sidebar:hover .logoopen{
+    display: block;
 }
 
 .logo_ourgarden {
@@ -191,3 +207,22 @@ main{
 .sidebar:hover .sidebottons a {
     justify-content: flex-start;
 }
+
+.logoutsidebar a{
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar:hover .logoutsidebar .logoutsidebar_btn .logoutsidebarcontent .item-description{
+    display: flex;
+    width: fit-content;
+}
+
+.sidebar.:hover .logoutsidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
