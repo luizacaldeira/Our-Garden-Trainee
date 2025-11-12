@@ -67,16 +67,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach($users as $user): ?>
                             <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
+                                <td><?= $user->id ?></td>
+                                <td><strong><?= $user->nome ?></strong></td>
+                                <td><?= $user->email ?></td>
                                 <td>administrador</td>
                                 <td>
                                     <div class="actions">
                                         <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                                 alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                                onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')"></button>
                                         <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
                                                 alt="ícone de lápis"
                                                 onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
@@ -86,82 +87,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                     <div class="pagination">
@@ -237,7 +163,8 @@
                 </div>
             </section>
             <!-- MODAL VISUALIZAR USUARIO -->
-            <section class="modalViewUser" id="modalViewUser">
+            <?php foreach($users as $user): ?>
+            <section class="modalViewUser" id="modalViewUser<?= $user->id ?>">
                 <div class="modalViewUserHeader">
                     <img src="../../../public/assets/eye-icon-white.svg" alt="ícone de vizualizar">
                     <p>Visualizar Usuário</p>
@@ -245,25 +172,26 @@
                 <div class="modalAddNewUserMain">
                     <form class="modalViewUserForm" id="modalViewUserForm">
                         <div class="viewUserPhoto">
-                            <img src="../../../public/assets/XiJingPingGigaChad.jpg" alt="foto de perfil">
+                            <img <?= $user->imagem ?> alt="foto de perfil">
                         </div>
                         <div class="viewUserContent">
                             <div class="viewUserName">
                                 <span>Nome:</span>
-                                <p>Julia Rodrigues</p>
+                                <p><?= $user->nome ?></p>
                             </div>
                             <div class="viewUserEmail">
                                 <span>Email:</span>
-                                <p>juliarodrigues@gmail.com</p>
+                                <p><?= $user->email ?></p>
                             </div>
                         </div>
                         <section class="bottonsViewUser">
                             <button class="btnExitViewUser" id="btnExitNewUser" type="button"
-                                onclick="fecharModal('modalViewUser', 'fundoJS')">Sair</button>
+                                onclick="fecharModal('modalViewUser<?= $user->id ?>', 'fundoJS')">Sair</button>
                         </section>
                     </form>
                 </div>
             </section>
+            <?php endforeach; ?>
             <!-- MODAL EDITAR USUARIO  -->
             <section class="modalEditUser" id="modalEditUser">
                 <div class="modalEditUserHeader">

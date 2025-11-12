@@ -11,6 +11,6 @@ class UsuariosController
     public function index()
     {
         $users = App::get('database')->selectAll('usuarios');
-        return view('site/index', compact($users));
+        return view('admin/listaUsuarios', compact('users'));
     }
 }
