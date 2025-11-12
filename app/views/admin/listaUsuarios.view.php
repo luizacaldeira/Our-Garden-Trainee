@@ -110,19 +110,20 @@
 
             <div class="fundoJS" id="fundoJS"></div>
             <!-- MODAL CRIAR USUARIO -->
+            
             <section class="modalAddNewUser" id="modalAddNewUser">
                 <div class="modalAddNewUserHeader">
                     <img src="../../../public/assets/plus-circle-icon.svg" alt="ícone de adiconar">
                     <p>Adicionar Usuario</p>
                 </div>
                 <div class="modalAddNewUserMain">
-                    <form class="addNewUserForm" id="addNewUserForm">
+                    <form class="addNewUserForm" id="addNewUserForm" method="post" action="usuarios/criar">
                         <div class="inputsAddNewUser">
                             <section class="create-publication-container photo-container" id="photoContainer">
                                 <div class="photo-container-content">
                                     <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
                                         onchange="exibirPreviewImagem('addNewPhotoInput', 'previewContent')"
-                                        style="display: none;" required>
+                                        style="display: none;">
                                     <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
                                         <div class="preview-content" id="previewContent">
                                             <img src="../../../public/assets/image-icon.svg"
@@ -135,22 +136,19 @@
                             <div class="userName">
                                 <section class="addUserName">
                                     <span>Nome:</span>
-                                    <input type="text" name="nome do user" id="inputUserName"
-                                        placeholder="Digite seu nome...">
+                                    <input type="text" name="nome" id="inputUserName" placeholder="Digite seu nome...">
                                 </section>
                             </div>
                             <div class="userEmail">
                                 <section class="addUserEmail">
                                     <span>Email:</span>
-                                    <input type="text" name="email do user" id="inputUserEmail"
-                                        placeholder="Digite seu email...">
+                                    <input type="text" name="email" id="inputUserEmail" placeholder="Digite seu email...">
                                 </section>
                             </div>
                             <div class="userPassword">
                                 <section class="addUserPassword">
                                     <span>Senha:</span>
-                                    <input type="text" name="senha do user" id="inputUserPassword"
-                                        placeholder="Digite sua senha...">
+                                    <input type="text" name="senha" id="inputUserPassword" placeholder="Digite sua senha...">
                                 </section>
                             </div>
                         </div>
@@ -162,6 +160,7 @@
                     </form>
                 </div>
             </section>
+            
             <!-- MODAL VISUALIZAR USUARIO -->
             <?php foreach($users as $user): ?>
             <section class="modalViewUser" id="modalViewUser<?= $user->id ?>">
