@@ -8,7 +8,7 @@
 }
 
 body {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     background-color: var(--green-200);
 }
@@ -16,3 +16,84 @@ body {
 main{
     padding: 20px;
 }
+
+@media (max-width: 700px){
+
+.sidebarDesktop{
+    display: none;
+}
+
+.sidebar_mobile{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebarMobile{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100vw;
+    background-color: var(--green-900);
+    justify-content: center;
+}
+
+.botoes_mobile{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    gap: 50px;
+}
+.botoes_mobile a {
+
+}
+
+.botoes_mobile i {
+    text-decoration: none;
+    color: var(--green-200);
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+}
+
+.botoes_mobile .item-description-mobile {
+    font-size: 0.5rem;
+    color: var(--green-200);
+}
+
+.btnDashboardMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btnUsuarioMobile i{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    align-items: center;
+
+
+}
+/* .btnUsuarioMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+}
+
+
+.botoes_mobile a {
+    text-decoration: none;
+    margin: auto;
+    
+}
+
+
+
+.sidebarLogoMobile img {
+    width: 45px;
+}
+

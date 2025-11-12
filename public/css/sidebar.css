@@ -218,3 +218,11 @@ main{
     margin: auto;
 }
 
+@media (min-width: 700px){
+    
+    .sidebarMobile{
+        display: none;
+    }
+}
+
+
