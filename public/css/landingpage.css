@@ -79,10 +79,9 @@ body {
     flex-direction: row;
     width: 60%;
     background-color: transparent;
-    padding: 10% 5% 5% 10%;
     gap:40px;
     justify-content: center;
-    
+    height: 100vh;
 }
 
 .cards{
@@ -94,19 +93,26 @@ body {
     background-color: transparent;
 
 }
-.card1{
+.cardfilter{
     background-image: url(/public/assets/Foto.png);
+    border-radius: 26px;
+    height: 100%;
+    background-size: cover;
+
+}
+
+.card1{
+    background-color: #101e11a2;
     background-position: center;
     background-size: cover;
     display: flex; 
     flex-direction: row;
     width: fit-content;
     align-items: center;
-    border-radius: 20px;
-    height: fit-content;
+    border-radius: 26px;
+    height: 100%;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
 }
-
 
 .cardcontent1 {
     align-items: center;
@@ -127,7 +133,7 @@ body {
 }
 .titulo1 h1 {
     font-family: var(--font-family-titulo);
-    color: #101E11;
+    color: var(--green-100);
     font-size: 1.2rem;
     font-weight: 600;
     width: 100%;
@@ -150,7 +156,7 @@ body {
 .texto1 h1 {
     font-family: var(--font-family-paragrafo);
     font-size: 0.8rem;
-    color: #28150C;
+    color: var(--green-100);
     text-align: left;
 
 }
@@ -181,22 +187,65 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 3%;
+    padding: 1.5%;
     border-radius: 16px;
 }
 .cat h1{
     display: flex;
     margin: 0;
 }
-.bolinhascarrossel {
-    display: flex;
-    flex-direction: column;
-    color: var(--green-300);
+
+.swiper {
+    display: flex !important;
+    width: 100%;
+    overflow: hidden;
+    max-height: 80vh;
+    padding: 0% 10% 0% 10% !important;
+    margin: auto;
+    justify-content: center;
+
+}
+.swiper-wrapper{
+    display: flex !important;
+    height: 80vh;
+    justify-content: center;
     align-items: center;
 }
-.bolinha3{
-    color: var(--green-900);
-    font-size: 20px;
+
+.swiper-slide{
+    height: 20vh !important;
+    width: 35vw !important;
+}
+.swiper-slide-active {
+    height: 40vh !important;
+}
+.swiper-slide-next .cardfilter .card1 .cardcontent1 .cat{
+    display: none;
+}
+.swiper-slide-prev .cardfilter .card1 .cardcontent1 .cat{
+    display: none;
+}
+
+.swiper-pagination {
+    position: absolute;
+    right: 10px; /* posicione do lado direito */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    background: var(--green-300)!important;
+    opacity: 1 !important;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--green-900) !important;
 }
 
 
