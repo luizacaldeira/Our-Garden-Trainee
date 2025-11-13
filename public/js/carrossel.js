@@ -4,7 +4,7 @@
     direction: 'vertical',
     loop: true,
     slidesPerView: 3,
-    spaceBetween: 10,
+    spaceBetween: 20,
 
 
     pagination: {

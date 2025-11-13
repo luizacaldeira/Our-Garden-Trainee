@@ -211,13 +211,18 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-.swiper-slide{
-    height: 20vh !important;
+.swiper-slide {
     width: 35vw !important;
+
+}
+.swiper-slide-prev{
+    height: 18.5vh !important;
+}
+.swiper-slide-next{
+    height: 18.5vh !important;
 }
 .swiper-slide-active {
-    height: 40vh !important;
+    height: 35vh !important;
 }
 .swiper-slide-next .cardfilter .card1 .cardcontent1 .cat{
     display: none;
