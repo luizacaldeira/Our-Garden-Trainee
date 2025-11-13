@@ -16,6 +16,7 @@ body {
 .pagina {
     display: flex;
     width: 100vw;
+    height: 100vh;
     background-color: var(--green-200);
     align-items: center;
     justify-content: center;
@@ -40,7 +41,7 @@ body {
     background-size: cover;
     color: var(--green-100);
     display: flex;
-    width: 32%;
+    width: 40%;
     height: 100%;
     flex-direction: column;
     font-family: var(--font-family-titulo);
@@ -50,6 +51,9 @@ body {
     align-content: center;
     justify-content: space-between;
     padding: 5% 5% 5% 5%;
+    border: 5px solid var(--green-300);
+    border-bottom: none;
+    box-shadow: 0px 0px 50px 0px #000; 
 
 }
 .herotop img{
@@ -72,70 +76,38 @@ body {
 .ladodireito {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 60%;
     background-color: transparent;
-    padding: 0 5% 5% 5%;
-    
-}
-
-.novid {
-    background-color: transparent;
-    width:100%;
-    height: fit-content;
-    align-items: center;
+    padding: 10% 5% 5% 10%;
+    gap:40px;
     justify-content: center;
-    text-align: center;
-    align-content: center;
-
-}
-
-.novid h1{
-    font-family: var(--font-family-titulo);
-    font-weight: 600;
-    font-style: normal;
-    font-size: 2.5rem;
-    color:var(--green-900);
     
 }
-.setacima {
-    width: fit-content;
-    height: fit-content;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.setacima i {
-    width: 100%;
-    font-size: 35px;
-    color: var(--green-700);
 
-}
 .cards{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: fit-content;
     gap: 5vh;
     background-color: transparent;
-    padding: 1% 0 1% 0;
-    
+
 }
 .card1{
+    background-image: url(/public/assets/Foto.png);
+    background-position: center;
+    background-size: cover;
     display: flex; 
     flex-direction: row;
-    background-color: #ffffff7a;
     width: fit-content;
     align-items: center;
-    border-radius: 8px;
+    border-radius: 20px;
     height: fit-content;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
 }
-.card1 img {
-    /* height: 22vh; */
-    width: 19vw;
-    object-fit: cover;
 
-}
+
 .cardcontent1 {
     align-items: center;
     display: flex;
@@ -145,7 +117,7 @@ body {
     padding: 2%;
 }
 .titulo1 {
-    width: 100%;
+    width: fit-content;
     height: 5vh;
     align-items: center;
     justify-content: center;
@@ -165,6 +137,16 @@ body {
     align-content: center;
 
 }
+.texto1{
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
 .texto1 h1 {
     font-family: var(--font-family-paragrafo);
     font-size: 0.8rem;
@@ -175,8 +157,9 @@ body {
 .bottomcontent {
     display: flex;
     width: 100%;
-    gap: 30%;
+    gap: 10%;
     align-items: center;
+    justify-content: flex-start;
 
 }
 .categorias {
@@ -184,7 +167,7 @@ body {
     font-family: var(--font-family-paragrafo);
     font-size: 10px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     gap: 5%;
 
 }
@@ -205,24 +188,17 @@ body {
     display: flex;
     margin: 0;
 }
-.saibaicon1 i {
-    width: 100%;
-    font-size: 25px;
-    cursor: pointer;
-    color: var(--green-500) ;
+.bolinhascarrossel {
+    display: flex;
+    flex-direction: column;
+    color: var(--green-300);
+    align-items: center;
 }
-/* .setabaixo { */
-    width: fit-content;
-    height: fit-content;
-    border-radius: 8px;
-    cursor: pointer;
+.bolinha3{
+    color: var(--green-900);
+    font-size: 20px;
 }
-/* .setabaixo i { */
-    width: 100%;
-    font-size: 35px;
-    height: fit-content;
-    color: var(--green-700);
-}
+
 
 @media (max-width: 790px){
     .pagina {
