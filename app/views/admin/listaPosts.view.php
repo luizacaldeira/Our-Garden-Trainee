@@ -92,19 +92,29 @@
                             <?php endforeach; ?>
                         </tbody>
                     </table>
-                    <div class="paginacaoPosts">
-                        <div class="paginacaoPostsConteudo">
-                            <button class="arrow-left"><img src="../../../public/assets/arrow-left-icon.svg"
-                                    alt="ícone de seta para esquerda"></button>
-                            <div class="pages">
-                                <button class="page">1</button>
-                                <button class="page">2</button>
-                                <button class="page">3</button>
-                                <button class="page">4</button>
-                                <button class="page">...</button>
+                    <div class="paginacao">
+                        <div class="elementosPaginacao">
+                            <div class="arcos">
+                                <i class="bi bi-chevron-left"></i>
+                                <div class="numeros">
+                                    <div class="item-paginacao">
+                                        <p>1</p>
+                                    </div>
+                                    <div class="item-paginacao">
+                                        <p>2</p>
+                                    </div>
+                                    <div class="item-paginacao">
+                                        <p>3</p>
+                                    </div>
+                                    <div class="item-paginacao">
+                                        <p>4</p>
+                                    </div>
+                                    <div class="item-paginacao">
+                                        <p>...</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
                             </div>
-                            <button class="arrow-right"><img src="../../../public/assets/arrow-right-icon.svg"
-                                    alt="ícone de seta para direita"></button>
                         </div>
                     </div>
                 </div>
@@ -223,198 +233,198 @@
 
             </div>
 
-              <?php foreach($posts as $post): ?>
-            <!-- MODAL VISUALIZAR PUBLICAÇÃO -->
-            <div class="modal-view-publication" id="modalViewPublication<?= $post->id ?>">
-                <div class="modal-view-publication-header">
-                    <img src="../../../public/assets/eye-icon-white.svg" alt="ícone de olho">
-                    <p>Visualizar publicação</p>
-                </div>
+            <?php foreach ($posts as $post): ?>
+                <!-- MODAL VISUALIZAR PUBLICAÇÃO -->
+                <div class="modal-view-publication" id="modalViewPublication<?= $post->id ?>">
+                    <div class="modal-view-publication-header">
+                        <img src="../../../public/assets/eye-icon-white.svg" alt="ícone de olho">
+                        <p>Visualizar publicação</p>
+                    </div>
 
-                <div class="modal-view-publication-main">
-                    <section class="view-publication-container view-photo-container" id="viewPhotoContainer">
-                        <div class="view-photo-container-content">
-                            <img src="../../../public/assets/code-logo.png" alt="">
-                        </div>
-                    </section>
-
-                    <section class="view-publication-container" id="viewTitleContainer">
-                        <span>Título:</span>
-                        <div class="view-input">
-                            <p><?= $post->titulo ?></p>
-                        </div>
-                    </section>
-
-                    <section class="view-publication-container" id="viewDescriptionContainer">
-                        <span>Descrição:</span>
-                        <div class="view-input">
-                            <p><?= $post->descricao ?></p>
-                        </div>
-                    </section>
-
-                    <section class="view-publication-container" id="viewNameContainer">
-                        <span>Nome:</span>
-                        <div class="view-input">
-                            <p><?= $post->nome_planta ?></p>
-                        </div>
-                    </section>
-
-                    <section class="view-publication-container classification-container" id="classificationContainer">
-                        <span>Classificação:</span>
-                        <div class="view-input view-input-classification">
-                            <ul class="view-classification-ul">
-                                <li class="view-classification-li">
-                                    <strong>Ornamental:</strong> é cultivada principalmente pela beleza estética
-                                    (flores, folhas, formato ou cor), e não pelo uso alimentar ou medicinal.
-                                </li>
-                                <li class="view-classification-li">
-                                    <strong>Tóxica:</strong> possui substâncias que podem causar irritação,
-                                    intoxicação ou até envenenamento se ingerida ou em contato com a pele/olhos.
-                                </li>
-                                <li class="view-classification-li">
-                                    <strong>Interior:</strong> é adaptada para ser cultivada dentro de casas,
-                                    escritórios ou ambientes fechados, pois tolera luz indireta ou meia-sombra.
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section class="view-publication-container" id="viewAboutContainer">
-                        <span>Sobre:</span>
-                        <div class="view-input">
-                            <p><?= $post->sobre ?></p>
-                        </div>
-                    </section>
-
-                    <section class="view-publication-container" id="caresContainer">
-                        <span>Cuidados:</span>
-                        <div class="view-input view-input-cares">
-                            <ul class="view-cares-ul">
-                                <li class="view-care">Evite sol direto nas folhas, pois pode causar queimaduras.</li>
-                                <li class="view-care">Mantenha o solo levemente úmido, mas nunca encharcado.</li>
-                                <li class="view-care"> Utilize substrato rico em matéria orgânica e bem drenado.</li>
-                                <li class="view-care">Evite correntes de ar frio e mudanças bruscas de temperatura.</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section class="buttons">
-                        <button class="close-modal-view" id="btnCloseModalView"
-                            onclick="fecharModal('modalViewPublication<?= $post->id ?>', 'filtro')">Fechar</button>
-                    </section>
-
-                </div>
-
-            </div>
-
-            <!-- MODAL EDITAR PUBLICAÇÃO -->
-            <div class="modal-edit-publication" id="modalEditPublication<?= $post->id ?>">
-                <div class="modal-edit-publication-header">
-                    <i class="bi bi-pencil-square"></i>
-                    <p>Editar publicação</p>
-                </div>
-
-                <div class="modal-edit-publication-main">
-                    <form class="edit-publication-form" id="editPublicationForm">
-                        <div class="selectPhoto">
-                            <input type="file" name="trocar foto" id="changePhoto"
-                                onchange="trocarPreviewImagem('changePhoto','label-content')">
-                            <label for="changePhoto">
-                                <div class="label-content" id="label-content">
-                                    <img src="../../../public/assets/code-logo.png" alt="">
-                                </div>
-                            </label>
-                        </div>
-                        <div class="infosPost">
-                            <div class="title editPublicationContainer">
-                                <span>Título:</span>
-                                <input type="text" placeholder="Digite o novo título da publicação..." class="modalEditInput">
+                    <div class="modal-view-publication-main">
+                        <section class="view-publication-container view-photo-container" id="viewPhotoContainer">
+                            <div class="view-photo-container-content">
+                                <img src="../../../public/assets/code-logo.png" alt="">
                             </div>
-                            <div class="description editPublicationContainer">
-                                <span>Descrição:</span>
-                                <input type="text" placeholder="Digite a nova descrição da publicação..." class="modalEditInput">
+                        </section>
+
+                        <section class="view-publication-container" id="viewTitleContainer">
+                            <span>Título:</span>
+                            <div class="view-input">
+                                <p><?= $post->titulo ?></p>
                             </div>
-                            <div class="nameClass">
-                                <div class="name editPublicationContainer">
-                                    <span>Nome:</span>
-                                    <input type="text" placeholder="Digite o nome da planta..." class="modalEditInput">
+                        </section>
+
+                        <section class="view-publication-container" id="viewDescriptionContainer">
+                            <span>Descrição:</span>
+                            <div class="view-input">
+                                <p><?= $post->descricao ?></p>
+                            </div>
+                        </section>
+
+                        <section class="view-publication-container" id="viewNameContainer">
+                            <span>Nome:</span>
+                            <div class="view-input">
+                                <p><?= $post->nome_planta ?></p>
+                            </div>
+                        </section>
+
+                        <section class="view-publication-container classification-container" id="classificationContainer">
+                            <span>Classificação:</span>
+                            <div class="view-input view-input-classification">
+                                <ul class="view-classification-ul">
+                                    <li class="view-classification-li">
+                                        <strong>Ornamental:</strong> é cultivada principalmente pela beleza estética
+                                        (flores, folhas, formato ou cor), e não pelo uso alimentar ou medicinal.
+                                    </li>
+                                    <li class="view-classification-li">
+                                        <strong>Tóxica:</strong> possui substâncias que podem causar irritação,
+                                        intoxicação ou até envenenamento se ingerida ou em contato com a pele/olhos.
+                                    </li>
+                                    <li class="view-classification-li">
+                                        <strong>Interior:</strong> é adaptada para ser cultivada dentro de casas,
+                                        escritórios ou ambientes fechados, pois tolera luz indireta ou meia-sombra.
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="view-publication-container" id="viewAboutContainer">
+                            <span>Sobre:</span>
+                            <div class="view-input">
+                                <p><?= $post->sobre ?></p>
+                            </div>
+                        </section>
+
+                        <section class="view-publication-container" id="caresContainer">
+                            <span>Cuidados:</span>
+                            <div class="view-input view-input-cares">
+                                <ul class="view-cares-ul">
+                                    <li class="view-care">Evite sol direto nas folhas, pois pode causar queimaduras.</li>
+                                    <li class="view-care">Mantenha o solo levemente úmido, mas nunca encharcado.</li>
+                                    <li class="view-care"> Utilize substrato rico em matéria orgânica e bem drenado.</li>
+                                    <li class="view-care">Evite correntes de ar frio e mudanças bruscas de temperatura.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="buttons">
+                            <button class="close-modal-view" id="btnCloseModalView"
+                                onclick="fecharModal('modalViewPublication<?= $post->id ?>', 'filtro')">Fechar</button>
+                        </section>
+
+                    </div>
+
+                </div>
+
+                <!-- MODAL EDITAR PUBLICAÇÃO -->
+                <div class="modal-edit-publication" id="modalEditPublication<?= $post->id ?>">
+                    <div class="modal-edit-publication-header">
+                        <i class="bi bi-pencil-square"></i>
+                        <p>Editar publicação</p>
+                    </div>
+
+                    <div class="modal-edit-publication-main">
+                        <form class="edit-publication-form" id="editPublicationForm">
+                            <div class="selectPhoto">
+                                <input type="file" name="trocar foto" id="changePhoto"
+                                    onchange="trocarPreviewImagem('changePhoto','label-content')">
+                                <label for="changePhoto">
+                                    <div class="label-content" id="label-content">
+                                        <img src="../../../public/assets/code-logo.png" alt="">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="infosPost">
+                                <div class="title editPublicationContainer">
+                                    <span>Título:</span>
+                                    <input type="text" placeholder="Digite o novo título da publicação..." class="modalEditInput">
                                 </div>
-                                <div class="class editPublicationContainer">
-                                    <span>Classificação:</span>
-                                    <button type="button" id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao')">Escolha
-                                        3 opções... <img src="../../../public/assets/arrow-down-icon.svg"
-                                            alt="seta para baixo" class="icone-seta-baixo" id="iconeSetaBaixo"> <img
-                                            src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
-                                            class="icone-seta-cima" id="iconeSetaCima"></button>
-                                    <div class="dropDownClassificacao" id="dropDownClassificacao">
-                                        <label><input type="checkbox" name="classification[]" id="">Ornamentais</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Medicinais</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Alimentícias</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Aromáticas</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Tóxicas</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Industriais</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Forrageiras</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Madeireiras</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Oleaginosas</label>
-                                        <label><input type="checkbox" name="classification[]" id="">Fibrosas</label>
-                                        <label><input type="checkbox" name="classification[]"
-                                                id="">Condimentares</label>
+                                <div class="description editPublicationContainer">
+                                    <span>Descrição:</span>
+                                    <input type="text" placeholder="Digite a nova descrição da publicação..." class="modalEditInput">
+                                </div>
+                                <div class="nameClass">
+                                    <div class="name editPublicationContainer">
+                                        <span>Nome:</span>
+                                        <input type="text" placeholder="Digite o nome da planta..." class="modalEditInput">
+                                    </div>
+                                    <div class="class editPublicationContainer">
+                                        <span>Classificação:</span>
+                                        <button type="button" id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao')">Escolha
+                                            3 opções... <img src="../../../public/assets/arrow-down-icon.svg"
+                                                alt="seta para baixo" class="icone-seta-baixo" id="iconeSetaBaixo"> <img
+                                                src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
+                                                class="icone-seta-cima" id="iconeSetaCima"></button>
+                                        <div class="dropDownClassificacao" id="dropDownClassificacao">
+                                            <label><input type="checkbox" name="classification[]" id="">Ornamentais</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Medicinais</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Alimentícias</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Aromáticas</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Tóxicas</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Industriais</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Forrageiras</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Madeireiras</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Oleaginosas</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Fibrosas</label>
+                                            <label><input type="checkbox" name="classification[]"
+                                                    id="">Condimentares</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="infosPlanta editPublicationContainer">
-                                <span>Sobre:</span>
-                                <input type="text" placeholder="Digite novas informações sobre a planta..." class="modalEditInput">
-                            </div>
-                            <div class="cares editPublicationContainer">
-                                <span>Cuidados:</span>
-                                <div class="inputEPlus">
-                                    <input type="text" placeholder="Digite cuidados sobre a planta..." class="modalEditInput">
-                                    <i class="bi bi-plus-circle"></i>
+                                <div class="infosPlanta editPublicationContainer">
+                                    <span>Sobre:</span>
+                                    <input type="text" placeholder="Digite novas informações sobre a planta..." class="modalEditInput">
                                 </div>
-                                <ul id="ulCares" class="ul-cares"></ul>
+                                <div class="cares editPublicationContainer">
+                                    <span>Cuidados:</span>
+                                    <div class="inputEPlus">
+                                        <input type="text" placeholder="Digite cuidados sobre a planta..." class="modalEditInput">
+                                        <i class="bi bi-plus-circle"></i>
+                                    </div>
+                                    <ul id="ulCares" class="ul-cares"></ul>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="buttons">
-                            <div class="botaoCancelar">
-                                <button type="button" onclick="fecharModal('modalEditPublication<?= $post->id ?>','filtro')">Cancelar</button>
+                            <div class="buttons">
+                                <div class="botaoCancelar">
+                                    <button type="button" onclick="fecharModal('modalEditPublication<?= $post->id ?>','filtro')">Cancelar</button>
+                                </div>
+
+                                <div class="botaoEditar">
+                                    <button type="submit">Editar</button>
+                                </div>
                             </div>
-
-                            <div class="botaoEditar">
-                                <button type="submit">Editar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- MODAL EXCLUIR PUBLICAÇÃO -->
-            <div class="modal-delete-publication" id="modalDeletePublication">
-                <div class="modal-delete-publication-header">
-                    <i class="bi bi-trash"></i>
-                    <p>Excluir publicação</p>
-                </div>
-
-                <div class="modal-delete-publication-main">
-                    <form class="delete-publication-form" id="deletePublicationForm">
-                        <div class="text">
-                            <p>Tem certeza que deseja excluir essa publicação?</p>
-                        </div>
-
-                        <div class="buttonsExcluir">
-                            <div class="botaoCancelarExcluir">
-                                <button type="button" onclick="fecharModal('modalDeletePublication','filtro')">Cancelar</button>
-                            </div>
-                            <div class="botaoExcluir">
-                                <button>Excluir</button>
-                            </div>
-                        </div>
-
-                    </form>
+                        </form>
+                    </div>
                 </div>
 
-            </div>
+                <!-- MODAL EXCLUIR PUBLICAÇÃO -->
+                <div class="modal-delete-publication" id="modalDeletePublication">
+                    <div class="modal-delete-publication-header">
+                        <i class="bi bi-trash"></i>
+                        <p>Excluir publicação</p>
+                    </div>
+
+                    <div class="modal-delete-publication-main">
+                        <form class="delete-publication-form" id="deletePublicationForm">
+                            <div class="text">
+                                <p>Tem certeza que deseja excluir essa publicação?</p>
+                            </div>
+
+                            <div class="buttonsExcluir">
+                                <div class="botaoCancelarExcluir">
+                                    <button type="button" onclick="fecharModal('modalDeletePublication','filtro')">Cancelar</button>
+                                </div>
+                                <div class="botaoExcluir">
+                                    <button>Excluir</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
             <?php endforeach; ?>
         </div>
 
