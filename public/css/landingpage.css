@@ -16,7 +16,8 @@ body {
 .pagina {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    min-height: fit-content;
+    /* height: 100vh; */
     background-color: var(--green-200);
     align-items: center;
     justify-content: center;
