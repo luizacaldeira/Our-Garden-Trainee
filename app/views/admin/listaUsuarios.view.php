@@ -80,7 +80,7 @@
                                                 onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')"></button>
                                         <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
                                                 alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                                onclick="abrirModal('modalEditUser<?= $user->id ?>', 'fundoJS')"></button>
                                         <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
                                                 alt="ícone de lixeira"
                                                 onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
@@ -192,19 +192,21 @@
             </section>
             <?php endforeach; ?>
             <!-- MODAL EDITAR USUARIO  -->
-            <section class="modalEditUser" id="modalEditUser">
+            <?php foreach($users as $user): ?>
+            <section class="modalEditUser" id="modalEditUser<?= $user->id ?>">
                 <div class="modalEditUserHeader">
                     <img src="/public/assets/plus-icon.svg">
                     <p> Editar Usuário </p>
                 </div>
                 <div class="modalEditUserMain">
-                    <form class="editUserForm" id="editUserForm">
+                    <form class="editUserForm" id="editUserForm" method="post" action="usuarios/editar">
+                        <input type="hidden" name="id" value=<?= $user->id ?> readonly>
                         <div class="inputsEditUser">
                             <div class="editUserPhotoOut">
                                 <div class="editUserPhoto" id="editUserPhoto">
-                                        <input type="file" name="adicionar nova foto" id="editUserPhotoInput"
+                                        <input type="file" name="imagem" id="editUserPhotoInput"
                                             onchange="exibirPreviewImagem('editUserPhotoInput', 'previewContentEdited')"
-                                            style="display: none;" required>
+                                            style="display: none;" >
                                         <label for="editUserPhotoInput" id="labelArquivo" class="label-photo-container">
                                             <div class="preview-content" id="previewContentEdited">
                                                 <img src="../../../public/assets/image-icon.svg"
@@ -217,33 +219,34 @@
                             <div class="editUserName">
                                 <div class="editUserNamebox">
                                     <span>Nome:</span>
-                                    <input type="text" name="edite nome do user" id="inputEditUserName"
-                                        placeholder="Digite novo nome...">
+                                    <input type="text" name="nome" id="inputEditUserName"
+                                        placeholder="Digite novo nome..." value="<?= $user->nome ?>">
                                 </div>
                             </div>
                             <div class="editUserEmail">
                                 <div class="editUserEmailbox">
                                     <span>Email:</span>
-                                    <input type="text" name="edite email do user" id="inputEditUserEmail"
-                                        placeholder="Digite novo email...">
+                                    <input type="text" name="email" id="inputEditUserEmail"
+                                        placeholder="Digite novo email..." value="<?= $user->email ?>">
                                 </div>
                             </div>
                             <div class="editUserPassword">
                                 <div class="editUserPasswordbox">
                                     <span>Senha:</span>
-                                    <input type="text" name="nova senha do user" id="inputEditUserPassword"
-                                        placeholder="Digite a nova senha...">
+                                    <input type="text" name="senha" id="inputEditUserPassword"
+                                        placeholder="Digite a nova senha..." value="<?= $user->senha ?>">
                                 </div>
                             </div>
                         </div>
                         <div class="bottonsEditUser">
                             <button class="btnCancelEditUser" id="btnCancelEditUser" type="button"
-                                onclick="fecharModal('modalEditUser', 'fundoJS')">Cancelar</button>
+                                onclick="fecharModal('modalEditUser<?= $user->id ?>', 'fundoJS')">Cancelar</button>
                             <button class="btnEditUser" id="btnEditUser" type="submit">Editar</button>
                         </div>
                     </form>
                 </div>
             </section>
+            <?php endforeach; ?>
             <!-- MODAL EXCLUIR USUÁRIO -->
             <section class="modalDeletUser" id="modalDeletUser">
                 <div class="modalDeletUserHeader">
