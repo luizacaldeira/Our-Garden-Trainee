@@ -63,10 +63,12 @@ body {
 .heromiddle h1 {
     font-size: 2rem;
     font-weight: 600;
+    text-align: start;
 }
 .herobottom {
     display: flex;
-    justify-content: center;
+    text-align: start;
+    justify-content: flex-start;
 }
 .herobottom h1 {
     width: 80%;
