@@ -10,15 +10,15 @@ body {
 .backgroundListaPosts {
     display: flex;
     min-height: 100vh;
+    height: max-content;
 
     min-width: 100%;
     width: max-content;
 
-    height: max-content;
+    background-color: var(--green-200);
 }
 
 .mainListaPosts {
-    background-color: var(--green-200);
     height: max-content;
     width: 100%;
     display: flex;
