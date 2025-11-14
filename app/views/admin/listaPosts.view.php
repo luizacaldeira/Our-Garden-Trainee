@@ -92,29 +92,17 @@
                             <?php endforeach; ?>
                         </tbody>
                     </table>
-                    <div class="paginacao">
-                        <div class="elementosPaginacao">
-                            <div class="arcos">
-                                <i class="bi bi-chevron-left"></i>
-                                <div class="numeros">
-                                    <div class="item-paginacao">
-                                        <p>1</p>
-                                    </div>
-                                    <div class="item-paginacao">
-                                        <p>2</p>
-                                    </div>
-                                    <div class="item-paginacao">
-                                        <p>3</p>
-                                    </div>
-                                    <div class="item-paginacao">
-                                        <p>4</p>
-                                    </div>
-                                    <div class="item-paginacao">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right"></i>
+                    <div class="paginacaoPosts">
+                        <div class="paginacaoPostsConteudo">
+                            <button class="arrow-left"><i class="bi bi-chevron-left"></i></button>
+                            <div class="pages">
+                                <button class="page">1</button>
+                                <button class="page">2</button>
+                                <button class="page">3</button>
+                                <button class="page">4</button>
+                                <button class="page">...</button>
                             </div>
+                            <button class="arrow-right"><i class="bi bi-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>

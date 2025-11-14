@@ -159,84 +159,85 @@ body {
     padding: 1rem;
 }
 
-.paginacao {
+.paginacaoPosts {
     width: 100%;
-    justify-content: center;
-    padding: 2% 5% 0% 5%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-family-paragrafo);
-    color: var(--green-900);
 
     border-top: 1px solid var(--green-900);
+    padding-top: 1rem;
 }
 
-.elementosPaginacao {
-    font-size: 18px;
-    width: fit-content;
-    height: fit-content;
-    color: var(--green-900);
+.paginacaoPostsConteudo {
     display: flex;
-    padding: 0.8% 2% 0.8% 2%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border-top: 1px solid var(--green-900);
+    padding: 0.7rem 0.4rem;
 
-    background: rgba(255, 255, 255, 0.422);
+    background: rgba(255, 255, 255, 0.18);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.7px);
     -webkit-backdrop-filter: blur(3.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+
+    font-size: 1rem;
 }
 
-.arcos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: fit-content;
-}
-
-.arcos i {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    padding: 4%;
+.arrow-left {
+    all: unset;
     cursor: pointer;
-    color: var(--green-900);
 
-    font-size: 1.3rem;
-
+    padding-top: 0.1rem;
 }
 
-.numeros {
+.arrow-left .bi-chevron-left {
+    font-size: 1.2rem;
+}
+
+.pages {
     display: flex;
-    width: 100%;
-    justify-content: center;
     align-items: center;
-    gap: 8%;
-    color: var(--green-900);
-    height: 100%;
-    margin: 1%;
+    gap: 1rem;
 }
 
-.numeros p {
-    padding: 7%;
-}
+.page {
+    all: unset;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
 
-.item-paginacao {
-    border-radius: 10px;
-    width: 3rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 0.8rem;
+    height: 0.8rem;
+
     background-color: var(--green-200);
-    align-items: center;
-    justify-content: center;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(3.7px);
     -webkit-backdrop-filter: blur(3.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.item-paginacao:hover {
+.page:hover {
     background-color: var(--green-500);
+}
+
+.arrow-right {
+    all: unset;
     cursor: pointer;
+
+    padding-top: 0.1rem;
+}
+
+.arrow-right .bi-chevron-right {
+    font-size: 1.2rem;
 }
 
 .botoesAcoes {
