@@ -308,7 +308,7 @@
             </div>
 
             <!-- MODAL EDITAR PUBLICAÇÃO -->
-            <div class="modal-edit-publication" id="modalEditPublication">
+            <div class="modal-edit-publication" id="modalEditPublication<?= $post->id ?>">
                 <div class="modal-edit-publication-header">
                     <i class="bi bi-pencil-square"></i>
                     <p>Editar publicação</p>
@@ -378,7 +378,7 @@
 
                         <div class="buttons">
                             <div class="botaoCancelar">
-                                <button type="button" onclick="fecharModal('modalEditPublication','filtro')">Cancelar</button>
+                                <button type="button" onclick="fecharModal('modalEditPublication<?= $post->id ?>','filtro')">Cancelar</button>
                             </div>
 
                             <div class="botaoEditar">
