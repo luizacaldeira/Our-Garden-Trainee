@@ -7,7 +7,8 @@
     display: flex;
 
     min-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: max-content;
 
     background-color: var(--green-200);
     color: var(--green-900);
@@ -296,6 +297,11 @@ main .section3 .pagination .content .arrow-right .bi-chevron-right {
 
 /* RESPONSIVIDADE */
 @media screen and (min-width: 1279px) and (max-width: 1280px) {
+    .background-complete-page {
+        height: 100vh;
+        min-height: max-content;
+    }
+
     main {
         min-height: max-content;
     }
@@ -310,6 +316,11 @@ main .section3 .pagination .content .arrow-right .bi-chevron-right {
 }
 
 @media screen and (min-width: 800px) and (max-width: 1279px) {
+    .background-complete-page {
+        height: 100vh;
+        min-height: max-content;
+    }
+
     main {
         min-height: max-content;
     }
@@ -324,6 +335,11 @@ main .section3 .pagination .content .arrow-right .bi-chevron-right {
 }
 
 @media screen and (min-width: 767px) and (max-width: 768px) {
+    .background-complete-page {
+        height: 100vh;
+        min-height: max-content;
+    }
+
     main .section3 {
         overflow-x: auto;
         width: 100%;
@@ -364,6 +380,11 @@ main .section3 .pagination .content .arrow-right .bi-chevron-right {
 }
 
 @media screen and (max-width: 500px) {
+    .background-complete-page {
+        height: 100vh;
+        min-height: max-content;
+    }
+
     main {
         width: 100%;
         padding: 1rem;
