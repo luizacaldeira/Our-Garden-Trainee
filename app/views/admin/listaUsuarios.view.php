@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../../public/css/listaUsuarios.css">
@@ -93,8 +93,7 @@
                     </table>
                     <div class="pagination">
                         <div class="content">
-                            <button class="arrow-left"><img src="../../../public/assets/arrow-left-icon.svg"
-                                    alt="ícone de seta para esquerda"></button>
+                            <button class="arrow-left"><i class="bi bi-chevron-left"></i></button>
                             <div class="pages">
                                 <button class="page">1</button>
                                 <button class="page">2</button>
@@ -102,8 +101,7 @@
                                 <button class="page">4</button>
                                 <button class="page">...</button>
                             </div>
-                            <button class="arrow-right"><img src="../../../public/assets/arrow-right-icon.svg"
-                                    alt="ícone de seta para direita"></button>
+                            <button class="arrow-right"><i class="bi bi-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>

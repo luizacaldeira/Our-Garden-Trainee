@@ -213,26 +213,25 @@ main .section3 .users-table tbody tr td .actions .btn-actions:hover {
 
 main .section3 .pagination {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--font-family-paragrafo);
 
     border-top: 1px solid var(--green-900);
     padding-top: 1rem;
 }
 
 main .section3 .pagination .content {
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.625rem;
     border-top: 1px solid var(--green-900);
-    padding: 0.4rem 1rem;
+    padding: 0.7rem 0.4rem;
 
     background: rgba(255, 255, 255, 0.18);
-    border-radius: 40px;
+    border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.7px);
     -webkit-backdrop-filter: blur(3.7px);
@@ -243,26 +242,26 @@ main .section3 .pagination .content {
 
 main .section3 .pagination .content .arrow-left {
     all: unset;
-
     cursor: pointer;
 
-    transition: all 0.2s ease-in-out;
+    padding-top: 0.1rem;
+}
+
+main .section3 .pagination .content .arrow-left .bi-chevron-left {
+    font-size: 1.2rem;
 }
 
 main .section3 .pagination .content .pages {
     display: flex;
     align-items: center;
 
-    gap: 0.625rem;
-    /*10px*/
+    gap: 1rem;
 }
 
 main .section3 .pagination .content .pages .page {
     all: unset;
-
-    font-weight: bolder;
     padding: 0.625rem;
-    border-radius: 0.375rem;
+    border-radius: 0.625rem;
     cursor: pointer;
 
     display: flex;
@@ -271,6 +270,12 @@ main .section3 .pagination .content .pages .page {
 
     width: 0.8rem;
     height: 0.8rem;
+
+    background-color: var(--green-200);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 main .section3 .pagination .content .pages .page:hover {
@@ -283,6 +288,10 @@ main .section3 .pagination .content .arrow-right {
     cursor: pointer;
 
     transition: all 0.2s ease-in-out;
+}
+
+main .section3 .pagination .content .arrow-right .bi-chevron-right {
+    font-size: 1.2rem;
 }
 
 /* RESPONSIVIDADE */
@@ -366,9 +375,9 @@ main .section3 .pagination .content .arrow-right {
     }
 
     main .section1 .profile-container .profile-name {
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
     }
 
     main .section1 .profile-container .profile-name strong {
