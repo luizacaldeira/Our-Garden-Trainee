@@ -205,10 +205,6 @@ main{
     text-align: center;
 }
 
-.sidebar:hover .logoutsidebar .logoutsidebar_btn .logoutsidebarcontent .item-description{
-    display: flex;
-    width: fit-content;
-}
 
 .sidebar:hover .logoutsidebar{
     display: flex;
@@ -216,6 +212,11 @@ main{
     align-items: center;
     text-align: center;
     margin: auto;
+}
+.sidebar:hover .logoutsidebar .item-description {
+    margin: auto;
+    width: 100%;
+    padding-left: 10px;
 }
 
 @media (min-width: 700px){

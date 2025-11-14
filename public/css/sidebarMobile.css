@@ -46,8 +46,13 @@ main{
     gap: 50px;
 }
 .botoes_mobile a {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:3px;
+    text-decoration: none;
 }
+
 
 .botoes_mobile i {
     text-decoration: none;
@@ -55,6 +60,7 @@ main{
     display: flex;
     font-size: 25px;
     align-items: center;
+    line-height: 0.5;
 }
 
 .botoes_mobile .item-description-mobile {
@@ -67,33 +73,94 @@ main{
     flex-direction: column;
     justify-content: center;
 }
+.btnDashboardMobile i{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    align-items: center;
+}
 
 .btnUsuarioMobile i{
     display: flex;
     flex-direction: column;
     padding-top: 5px;
     align-items: center;
-
-
 }
-/* .btnUsuarioMobile{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center; */
-}
-
-
-.botoes_mobile a {
-    text-decoration: none;
-    margin: auto;
-    
-}
-
-
 
 .sidebarLogoMobile img {
     width: 45px;
 }
 
+.btnPublicacoesMobile i{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    align-items: center;
+}
+
+.btnUsuarioMobile i{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    align-items: center;
+}
+
+.btnLogoutMobile i{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    align-items: center;
+}
+
+.botoes_mobile .btnLogoutMobile .item-description-mobile {
+    font-size: 0.5rem;
+    color: var(--green-200);
+    text-align: center;
+}
+
+@media (max-width: 420px){
+
+.sidebarDesktop{
+    display: none;
+}
+
+.botoes_mobile{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (max-width: 370px){
+
+.sidebarDesktop{
+    display: none;
+}
+
+.botoes_mobile{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 280px){
+
+.sidebarDesktop{
+    display: none;
+}
+
+.botoes_mobile{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+}
