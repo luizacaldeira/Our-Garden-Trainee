@@ -10,7 +10,7 @@ class PublicacoesController
 
     public function index()
     {
-        $posts = App::get('database')->selectAll('publicacoes');
+        $posts = App::get('database')->selectPostsWithUser();
         return view('admin/listaPosts' ,compact('posts'));
     }
 }

@@ -73,7 +73,7 @@
                             <tr>
                                 <td><?= $post->id ?></td>
                                 <td><strong><?= $post->titulo ?></strong></td>
-                                <td>Julia Rodrigues</td>
+                                <td><?= $post->nome_usuario ?></td>
                                 <td><?= $post->data_criacao ?></td>
                                 <td>
                                     <div class="botoesAcoes">
