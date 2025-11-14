@@ -54,11 +54,26 @@ class QueryBuilder
             implode(', ', array_map(function($param) {return $param . ' = :' . $param;}, array_keys($parameters))),
             $id
     );
-    echo $sql;
 
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function delete($table, $id){
+        //DELETE FROM `usuarios` WHERE 0
+        $sql = sprintf('DELETE FROM %s WHERE id=%s',
+            $table, 
+            $id
+    );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
 
         } catch (Exception $e) {
             die($e->getMessage());

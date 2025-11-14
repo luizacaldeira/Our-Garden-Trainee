@@ -8,3 +8,4 @@ $router->get('', 'ExampleController@index');
 $router->get('usuarios', 'UsuariosController@index');
 $router->post('usuarios/criar', 'UsuariosController@criar');
 $router->post('usuarios/editar', 'UsuariosController@editar');
+$router->post('usuarios/deletar', 'UsuariosController@deletar');

@@ -44,4 +44,13 @@ class UsuariosController
         header ('Location: /usuarios');
 
     }
+
+    public function deletar()
+    {
+        $id = $_POST['id'];
+
+        App::get('database')->delete('usuarios', $id);
+
+        header ('Location: /usuarios');
+    }
 }

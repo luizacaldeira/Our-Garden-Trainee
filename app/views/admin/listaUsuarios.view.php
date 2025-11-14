@@ -83,7 +83,7 @@
                                                 onclick="abrirModal('modalEditUser<?= $user->id ?>', 'fundoJS')"></button>
                                         <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
                                                 alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                                onclick="abrirModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"></button>
                                     </div>
                                 </td>
                             </tr>
@@ -248,24 +248,27 @@
             </section>
             <?php endforeach; ?>
             <!-- MODAL EXCLUIR USUÁRIO -->
-            <section class="modalDeletUser" id="modalDeletUser">
+            <?php foreach($users as $user): ?>
+            <section class="modalDeletUser" id="modalDeletUser<?= $user->id ?>">
                 <div class="modalDeletUserHeader">
                     <img src="/public/assets/Design sem nome.png">
                     <p>Excluir</p>
                 </div>
                 <div class="modalDeletUserMain">
-                    <form class="deletUserForm" id="deleteUserForm">
+                    <form class="deletUserForm" id="deleteUserForm" method="post" action="usuarios/deletar">
+                        <input type="hidden" name="id" value=<?= $user->id ?> readonly>
                         <div class="deletUserText">
                             <p> Tem certeza que deseja excluir esse usuário? </p>
                         </div>
                         <div class="bottonsDeletUser">
                             <button class="btnCancelDeletUser" id="btnCancelDeletUser" type="button"
-                                onclick="fecharModal('modalDeletUser' , 'fundoJS')"> Cancelar </button>
+                                onclick="fecharModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"> Cancelar </button>
                             <button class="btnDeletUser" id="btnDeletUser" type="submit">Excluir</button>
                         </div>
                     </form>
                 </div>
             </section>
+            <?php endforeach; ?>
         </main>
     </div>
     <script src="../../../public/js/listaUsuarios.js"></script>
