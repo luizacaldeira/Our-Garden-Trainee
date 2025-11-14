@@ -69,26 +69,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($posts as $post): ?>
-                            <tr>
-                                <td><?= $post->id ?></td>
-                                <td><strong><?= $post->titulo ?></strong></td>
-                                <td><?= $post->nome_usuario ?></td>
-                                <td><?= $post->data_criacao ?></td>
-                                <td>
-                                    <div class="botoesAcoes">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')"></button>
-                                    </div>
-                                </td>
-                            </tr>
+                            <?php foreach ($posts as $post): ?>
+                                <tr>
+                                    <td><?= $post->id ?></td>
+                                    <td><strong><?= $post->titulo ?></strong></td>
+                                    <td><?= $post->nome_usuario ?></td>
+                                    <td><?= $post->data_criacao ?></td>
+                                    <td>
+                                        <div class="botoesAcoes">
+                                            <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                    alt="ícone de olho"
+                                                    onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')"></button>
+                                            <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                    alt="ícone de lápis"
+                                                    onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro')"></button>
+                                            <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                    alt="ícone de lixeira"
+                                                    onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')"></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                     <div class="paginacaoPosts">
@@ -122,7 +123,7 @@
                     <form class="create-publication-form" id="createPublicationForm" method="POST" action="/posts/create">
                         <section class="create-publication-container photo-container" id="photoContainer">
                             <div class="photo-container-content">
-                                <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
+                                <input type="file" name="imagemPublicacao" id="addNewPhotoInput"
                                     onchange="exibirPreviewImagem('addNewPhotoInput', 'previewContent')"
                                     style="display: none;" required>
                                 <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
@@ -137,20 +138,20 @@
 
                         <section class="create-publication-container" id="titleContainer">
                             <span>Título:</span>
-                            <input type="text" name="título da publicação" id="inputTitleName"
+                            <input type="text" name="tituloPublicacao" id="inputTitleName"
                                 placeholder="Digite o título da publicação..." required>
                         </section>
 
                         <section class="create-publication-container" id="descriptionContainer">
                             <span>Descrição:</span>
-                            <input type="text" name="descrição da publicação" id="inputDescriptionName"
+                            <input type="text" name="descricaoPublicacao" id="inputDescriptionName"
                                 placeholder="Digite a descrição da publicação..." required>
                         </section>
 
                         <div class="div-name-classification">
                             <section class="create-publication-container" id="nameContainer">
                                 <span>Nome:</span>
-                                <input type="text" name="nome da planta" id="inputPlantName"
+                                <input type="text" name="nomePlanta" id="inputPlantName"
                                     placeholder="Digite o nome da planta..." required>
                             </section>
 
@@ -193,7 +194,7 @@
 
                         <section class="create-publication-container" id="aboutContainer">
                             <span>Sobre:</span>
-                            <input type="text" name="sobre a planta" id="inputAboutPlant"
+                            <input type="text" name="sobrePlanta" id="inputAboutPlant"
                                 placeholder="Digite informações sobre a planta...">
                         </section>
 
@@ -201,7 +202,7 @@
                             <span>Cuidados:</span>
                             <div class="add-cares" id="addCaresContainer">
                                 <div class="input-cares-container">
-                                    <input type="text" name="cuidados com a planta" id="inputCaresPlant"
+                                    <input type="text" name="cuidadosPlanta" id="inputCaresPlant"
                                         placeholder="Digite até 5 cuidados sobre a planta...">
                                     <button class="btn-add-care" id="btnAddCares">
                                         <img src="../../../public/assets/plus-circle-green-icon.svg"
@@ -222,6 +223,7 @@
 
             </div>
 
+              <?php foreach($posts as $post): ?>
             <!-- MODAL VISUALIZAR PUBLICAÇÃO -->
             <div class="modal-view-publication" id="modalViewPublication<?= $post->id ?>">
                 <div class="modal-view-publication-header">
