@@ -5,4 +5,6 @@ use App\Controllers\ExampleController;
 use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
-$router->get('', 'PublicacoesController@index');
+
+// ROTAS DE PUBLICAÇÕES
+$router->get('posts', 'PublicacoesController@index');

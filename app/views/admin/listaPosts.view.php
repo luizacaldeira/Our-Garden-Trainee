@@ -69,106 +69,23 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach($posts as $post): ?>
                             <tr>
-                                <td>1</td>
-                                <td><strong>Casa com cara de jardim</strong></td>
+                                <td><?= $post->id ?></td>
+                                <td><strong><?= $post->titulo ?></strong></td>
                                 <td>Julia Rodrigues</td>
-                                <td>17/10/2025</td>
+                                <td><?= $post->data_criacao ?></td>
                                 <td>
                                     <div class="botoesAcoes">
                                         <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                                 alt="ícone de olho"
-                                                onclick="abrirModal('modalViewPublication', 'filtro')"></button>
+                                                onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')"></button>
                                         <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
                                                 alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditPublication','filtro')"></button>
+                                                onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro')"></button>
                                         <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
                                                 alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletePublication','filtro')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Casa com cara de jardim</strong></td>
-                                <td>Julia Rodrigues</td>
-                                <td>17/10/2025</td>
-                                <td>
-                                    <div class="botoesAcoes">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewPublication', 'filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditPublication','filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletePublication','filtro')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Casa com cara de jardim</strong></td>
-                                <td>Julia Rodrigues</td>
-                                <td>17/10/2025</td>
-                                <td>
-                                    <div class="botoesAcoes">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewPublication', 'filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditPublication','filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletePublication','filtro')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Casa com cara de jardim</strong></td>
-                                <td>Julia Rodrigues</td>
-                                <td>17/10/2025</td>
-                                <td>
-                                    <div class="botoesAcoes">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewPublication', 'filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditPublication','filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletePublication','filtro')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Casa com cara de jardim</strong></td>
-                                <td>Julia Rodrigues</td>
-                                <td>17/10/2025</td>
-                                <td>
-                                    <div class="botoesAcoes">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewPublication', 'filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditPublication','filtro')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletePublication','filtro')"></button>
+                                                onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')"></button>
                                     </div>
                                 </td>
                             </tr>
@@ -202,7 +119,7 @@
                 </div>
 
                 <div class="modal-create-publication-main">
-                    <form class="create-publication-form" id="createPublicationForm">
+                    <form class="create-publication-form" id="createPublicationForm" method="POST" action="/posts/create">
                         <section class="create-publication-container photo-container" id="photoContainer">
                             <div class="photo-container-content">
                                 <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
@@ -306,7 +223,7 @@
             </div>
 
             <!-- MODAL VISUALIZAR PUBLICAÇÃO -->
-            <div class="modal-view-publication" id="modalViewPublication">
+            <div class="modal-view-publication" id="modalViewPublication<?= $post->id ?>">
                 <div class="modal-view-publication-header">
                     <img src="../../../public/assets/eye-icon-white.svg" alt="ícone de olho">
                     <p>Visualizar publicação</p>
@@ -322,23 +239,21 @@
                     <section class="view-publication-container" id="viewTitleContainer">
                         <span>Título:</span>
                         <div class="view-input">
-                            <p>Casa com cara de jardim.</p>
+                            <p><?= $post->titulo ?></p>
                         </div>
                     </section>
 
                     <section class="view-publication-container" id="viewDescriptionContainer">
                         <span>Descrição:</span>
                         <div class="view-input">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quia iusto deserunt at
-                                ab, illo vero error. Eveniet porro rem repudiandae eligendi eius saepe cum odit,
-                                delectus fugit corrupti cumque.</p>
+                            <p><?= $post->descricao ?></p>
                         </div>
                     </section>
 
                     <section class="view-publication-container" id="viewNameContainer">
                         <span>Nome:</span>
                         <div class="view-input">
-                            <p>Comigo-ninguém-pode</p>
+                            <p><?= $post->nome_planta ?></p>
                         </div>
                     </section>
 
@@ -365,9 +280,7 @@
                     <section class="view-publication-container" id="viewAboutContainer">
                         <span>Sobre:</span>
                         <div class="view-input">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos consequatur molestias
-                                ipsam dolores assumenda nobis consectetur eaque cum laboriosam fugiat soluta, animi esse
-                                libero, eius, corrupti sint eveniet similique id.</p>
+                            <p><?= $post->sobre ?></p>
                         </div>
                     </section>
 
@@ -385,7 +298,7 @@
 
                     <section class="buttons">
                         <button class="close-modal-view" id="btnCloseModalView"
-                            onclick="fecharModal('modalViewPublication', 'filtro')">Fechar</button>
+                            onclick="fecharModal('modalViewPublication<?= $post->id ?>', 'filtro')">Fechar</button>
                     </section>
 
                 </div>
@@ -500,6 +413,7 @@
                 </div>
 
             </div>
+            <?php endforeach; ?>
         </div>
 
         <!-- JAVASCRIPT -->
