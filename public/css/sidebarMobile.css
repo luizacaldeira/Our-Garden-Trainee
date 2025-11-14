@@ -117,7 +117,7 @@ main{
     color: var(--green-200);
     text-align: center;
 }
-
+}
 @media (max-width: 420px){
 
 .sidebarDesktop{
@@ -132,7 +132,7 @@ main{
     align-items: center;
     gap: 40px;
 }
-
+}
 @media (max-width: 370px){
 
 .sidebarDesktop{
@@ -146,6 +146,7 @@ main{
     width: 100%;
     align-items: center;
     gap: 20px;
+}
 }
 
 @media (max-width: 280px){
@@ -162,4 +163,5 @@ main{
     align-items: center;
     gap: 10px;
 }
+
 }
