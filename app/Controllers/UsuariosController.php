@@ -16,11 +16,17 @@ class UsuariosController
 
     public function criar()
     {
+        $imagemTemporaria= $_FILES['imagemUsuario']['tmp_name'];
+        $nomeImagem= sha1(uniqid($_FILES['imagemUsuario']['name'], true)) . "." . pathinfo($_FILES['imagemUsuario']['name'],PATHINFO_EXTENSION) ;
+
+        $caminhoImagem= "public/assets/imagensUsuarios/" . $nomeImagem; 
+        move_uploaded_file($imagemTemporaria, $caminhoImagem);
+
         $parameters = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-            'imagem' => 'imagem'
+            'imagem' => $caminhoImagem
         ];   
 
         App::get('database')->insert('usuarios', $parameters);

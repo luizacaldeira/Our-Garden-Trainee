@@ -7,8 +7,7 @@
     display: flex;
 
     min-width: 100vw;
-    height: 100vh;
-    min-height: max-content;
+    height: max-content;
 
     background-color: var(--green-200);
     color: var(--green-900);

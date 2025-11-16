@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- CSS -->
@@ -116,11 +115,11 @@
                     <p>Adicionar Usuario</p>
                 </div>
                 <div class="modalAddNewUserMain">
-                    <form class="addNewUserForm" id="addNewUserForm" method="post" action="usuarios/criar">
+                    <form class="addNewUserForm" id="addNewUserForm" method="post" action="usuarios/criar" enctype="multipart/form-data">
                         <div class="inputsAddNewUser">
                             <section class="create-publication-container photo-container" id="photoContainer">
                                 <div class="photo-container-content">
-                                    <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
+                                    <input type="file" name="imagemUsuario" id="addNewPhotoInput"
                                         onchange="exibirPreviewImagem('addNewPhotoInput', 'previewContent')"
                                         style="display: none;">
                                     <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
@@ -170,7 +169,7 @@
                 <div class="modalAddNewUserMain">
                     <form class="modalViewUserForm" id="modalViewUserForm">
                         <div class="viewUserPhoto">
-                            <img <?= $user->imagem ?> alt="foto de perfil">
+                            <img src="/<?= $user->imagem ?>" alt="foto de perfil">
                         </div>
                         <div class="viewUserContent">
                             <div class="viewUserName">
@@ -198,7 +197,7 @@
                     <p> Editar Usuário </p>
                 </div>
                 <div class="modalEditUserMain">
-                    <form class="editUserForm" id="editUserForm" method="post" action="usuarios/editar">
+                    <form class="editUserForm" id="editUserForm" method="post" action="usuarios/editar" enctype="multipart/form-data">
                         <input type="hidden" name="id" value=<?= $user->id ?> readonly>
                         <div class="inputsEditUser">
                             <div class="editUserPhotoOut">
@@ -206,11 +205,9 @@
                                         <input type="file" name="imagem" id="editUserPhotoInput"
                                             onchange="exibirPreviewImagem('editUserPhotoInput', 'previewContentEdited')"
                                             style="display: none;" >
-                                        <label for="editUserPhotoInput" id="labelArquivo" class="label-photo-container">
-                                            <div class="preview-content" id="previewContentEdited">
-                                                <img src="../../../public/assets/image-icon.svg"
-                                                    alt="ícone de adicionar nova imagem">
-                                                <p>Selecione uma<br>nova foto</p>
+                                        <label for="editUserPhotoInput" id="labelArquivoEditar" class="label-photo-container">
+                                            <div class="preview-content-edited" id="previewContentEdited">
+                                                <img src="/<?= $user->imagem ?>" alt="">
                                             </div>
                                         </label>
                                 </div>
