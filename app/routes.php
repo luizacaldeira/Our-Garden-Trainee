@@ -10,4 +10,4 @@ $router->get('', 'ExampleController@index');
 $router->get('posts', 'PublicacoesController@index');
 $router->post('posts/create', 'PublicacoesController@create');
 $router->get('posts/edit', 'PublicacoesController@edit');
-// $router->post('posts/update', 'PublicacoesController@edit');
+$router->post('posts/update', 'PublicacoesController@updade');

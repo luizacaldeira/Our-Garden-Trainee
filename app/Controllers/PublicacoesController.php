@@ -35,8 +35,25 @@ class PublicacoesController
 
     public function edit($id){
         $id = $_GET['id'];
-        
+
         App::get('database')->selectOne($id);
         return view ('admin/listPosts' , compact('posts'));
+    }
+
+    public function updade($id){
+        $parameters = [
+            "titulo" => $_POST['tituloPublicacao'],
+            "descricao" => $_POST['descricaoPublicacao'],
+            "nome_planta" => $_POST['nomePlanta'],
+            "sobre" => $_POST['sobrePlanta'],
+            "cuidados" => json_encode($_POST['cuidadosPlanta']) ,
+            "imagem" => $_POST['imagemPublicacao'],
+            "data_criacao" => date('Y-m-d'),
+            "usuarios_id" => 1
+        ];
+
+        App::get('database')->updade('publicacoes','$id','$parameters');
+        header("Location: /posts");
+
     }
 }

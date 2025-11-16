@@ -81,4 +81,37 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function updade($table,$id,$parameters){
+        $sql = "UPDATE `publicacoes` SET 
+            `id`=$id,
+            `titulo`= :titulo,
+            `descricao`= ::descricao,
+            `nome_planta`=::nome_planta,
+            `sobre`= ::sobre,
+            `cuidados`= ::cuidados,
+            `imagem`=::imagem,
+            `data_criacao`= ::data_criacao,
+            `usuarios_id`= ::usuarios_id 
+            WHERE id = :id";
+
+        try {
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute([
+            ':titulo' => $table['titulo'],
+            ':descricao' => $table['descricao'],
+            ':nome_planta' => $table['nome_planta'],
+            ':sobre' => $table['sobre'],
+            ':cuidados' => $table['cuidados'],
+            ':imagem' => $table['imagem'],
+            ':usuarios_id' => $table['usuarios_id'],
+            ':id' => $id
+        ]);
+
+            return true;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
