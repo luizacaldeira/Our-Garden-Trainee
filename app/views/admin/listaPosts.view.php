@@ -118,7 +118,7 @@
                 </div>
 
                 <div class="modal-create-publication-main">
-                    <form class="create-publication-form" id="createPublicationForm" method="POST" action="/posts/create">
+                    <form class="create-publication-form" id="createPublicationForm" method="POST" action="/posts/create" enctype="multipart/form-data">
                         <section class="create-publication-container photo-container" id="photoContainer">
                             <div class="photo-container-content">
                                 <input type="file" name="imagemPublicacao" id="addNewPhotoInput"
@@ -232,7 +232,7 @@
                     <div class="modal-view-publication-main">
                         <section class="view-publication-container view-photo-container" id="viewPhotoContainer">
                             <div class="view-photo-container-content">
-                                <img src="../../../public/assets/code-logo.png" alt="">
+                                <img src="/<?= $post->imagem ?>" alt="">
                             </div>
                         </section>
 
