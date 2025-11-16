@@ -32,4 +32,11 @@ class PublicacoesController
 
         header("Location: /posts");
     }
+
+    public function edit($id){
+        $id = $_GET['id'];
+        
+        App::get('database')->selectOne($id);
+        return view ('admin/listPosts' , compact('posts'));
+    }
 }

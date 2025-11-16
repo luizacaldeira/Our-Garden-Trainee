@@ -96,12 +96,12 @@
                         <div class="paginacaoPostsConteudo">
                             <a class="arrow-left" href="?"><i class="bi bi-chevron-left"></i></a>
 
-                            <?php for ($i=1; $i<=$fim; $i++): ?>
+                            <!-- <?php for ($i=1; $i<=$fim; $i++): ?> -->
                             <div class="pages">
                                 <a class="page" href="?pagina=<?= $i ?>"><?=$i ?></a>
                                 
                             </div>
-                            <?php endfor; ?>
+                            <!-- <?php endfor; ?> -->
 
                             <button class="arrow-right"><i class="bi bi-chevron-right"></i></button>
                         </div>
@@ -324,20 +324,26 @@
                                     </div>
                                 </label>
                             </div>
+
                             <div class="infosPost">
+
                                 <div class="title editPublicationContainer">
                                     <span>Título:</span>
-                                    <input type="text" placeholder="Digite o novo título da publicação..." class="modalEditInput">
+                                    <input type="text" placeholder="Digite o novo título da publicação..." class="modalEditInput" value="<p><?= $post->titulo ?></p>">
                                 </div>
+                                
                                 <div class="description editPublicationContainer">
                                     <span>Descrição:</span>
-                                    <input type="text" placeholder="Digite a nova descrição da publicação..." class="modalEditInput">
+                                    <input type="text" placeholder="Digite a nova descrição da publicação..." class="modalEditInput" value="<p><?= $post->descricao ?></p>">
                                 </div>
+
                                 <div class="nameClass">
+
                                     <div class="name editPublicationContainer">
                                         <span>Nome:</span>
-                                        <input type="text" placeholder="Digite o nome da planta..." class="modalEditInput">
+                                        <input type="text" placeholder="Digite o nome da planta..." class="modalEditInput" value="<p><?= $post->nome_planta ?></p>">
                                     </div>
+
                                     <div class="class editPublicationContainer">
                                         <span>Classificação:</span>
                                         <button type="button" id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao')">Escolha
@@ -356,15 +362,16 @@
                                             <label><input type="checkbox" name="classification[]" id="">Madeireiras</label>
                                             <label><input type="checkbox" name="classification[]" id="">Oleaginosas</label>
                                             <label><input type="checkbox" name="classification[]" id="">Fibrosas</label>
-                                            <label><input type="checkbox" name="classification[]"
-                                                    id="">Condimentares</label>
+                                            <label><input type="checkbox" name="classification[]" id="">Condimentares</label>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="infosPlanta editPublicationContainer">
                                     <span>Sobre:</span>
-                                    <input type="text" placeholder="Digite novas informações sobre a planta..." class="modalEditInput">
+                                    <input type="text" placeholder="Digite novas informações sobre a planta..." class="modalEditInput" value="<p><?= $post->sobre ?></p>">
                                 </div>
+
                                 <div class="cares editPublicationContainer">
                                     <span>Cuidados:</span>
                                     <div class="inputEPlus">
