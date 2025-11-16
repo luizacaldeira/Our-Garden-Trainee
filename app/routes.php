@@ -9,3 +9,5 @@ $router->get('', 'ExampleController@index');
 // ROTAS DE PUBLICAÇÕES
 $router->get('posts', 'PublicacoesController@index');
 $router->post('posts/create', 'PublicacoesController@create');
+$router->get('posts/edit', 'PublicacoesController@edit');
+$router->post('posts/update', 'PublicacoesController@updade');
