@@ -149,7 +149,7 @@
 
                         <div class="div-name-classification">
                             <section class="create-publication-container" id="nameContainer">
-                                <span>Nome:</span>
+                                <span>Nome da planta:</span>
                                 <input type="text" name="nomePlanta" id="inputPlantName"
                                     placeholder="Digite o nome da planta..." required>
                             </section>
@@ -252,7 +252,7 @@
                         </section>
 
                         <section class="view-publication-container" id="viewNameContainer">
-                            <span>Nome:</span>
+                            <span>Nome da planta:</span>
                             <div class="view-input">
                                 <p><?= $post->nome_planta ?></p>
                             </div>
@@ -314,7 +314,8 @@
                     </div>
 
                     <div class="modal-edit-publication-main">
-                        <form class="edit-publication-form" id="editPublicationForm">
+                        <form class="edit-publication-form" id="editPublicationForm <?= $post->id ?>" method="POST" action="posts/edit" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="<?= $post->id ?>" >
                             <div class="selectPhoto">
                                 <input type="file" name="trocar foto" id="changePhoto"
                                     onchange="trocarPreviewImagem('changePhoto','label-content')">
@@ -329,19 +330,19 @@
 
                                 <div class="title editPublicationContainer">
                                     <span>Título:</span>
-                                    <input type="text" placeholder="Digite o novo título da publicação..." class="modalEditInput" value="<p><?= $post->titulo ?></p>">
+                                    <input type="text" placeholder="Digite o novo título da publicação..." class="modalEditInput" value="<?= $post->titulo ?>" name="titulo">
                                 </div>
                                 
                                 <div class="description editPublicationContainer">
                                     <span>Descrição:</span>
-                                    <input type="text" placeholder="Digite a nova descrição da publicação..." class="modalEditInput" value="<p><?= $post->descricao ?></p>">
+                                    <input type="text" placeholder="Digite a nova descrição da publicação..." class="modalEditInput" value="<?= $post->descricao ?>" name="descricao">
                                 </div>
 
                                 <div class="nameClass">
 
                                     <div class="name editPublicationContainer">
-                                        <span>Nome:</span>
-                                        <input type="text" placeholder="Digite o nome da planta..." class="modalEditInput" value="<p><?= $post->nome_planta ?></p>">
+                                        <span>Nome da planta:</span>
+                                        <input type="text" placeholder="Digite o nome da planta..." class="modalEditInput" value="<?= $post->nome_planta ?>" name="nome_planta">
                                     </div>
 
                                     <div class="class editPublicationContainer">
@@ -369,7 +370,7 @@
 
                                 <div class="infosPlanta editPublicationContainer">
                                     <span>Sobre:</span>
-                                    <input type="text" placeholder="Digite novas informações sobre a planta..." class="modalEditInput" value="<p><?= $post->sobre ?></p>">
+                                    <input type="text" placeholder="Digite novas informações sobre a planta..." class="modalEditInput" value="<?= $post->sobre ?>" name="sobre">
                                 </div>
 
                                 <div class="cares editPublicationContainer">
