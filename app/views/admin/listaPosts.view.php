@@ -316,12 +316,13 @@
                     <div class="modal-edit-publication-main">
                         <form class="edit-publication-form" id="editPublicationForm <?= $post->id ?>" method="POST" action="posts/edit" enctype="multipart/form-data">
                             <input type="hidden" name="id" value="<?= $post->id ?>" >
+                            <input type="hidden" name="img_atual" value="<?= $post->imagem ?>" >
                             <div class="selectPhoto">
-                                <input type="file" name="trocar foto" id="changePhoto"
+                                <input type="file" name="imagem_post" id="changePhoto" 
                                     onchange="trocarPreviewImagem('changePhoto','label-content')">
                                 <label for="changePhoto">
                                     <div class="label-content" id="label-content">
-                                        <img src="../../../public/assets/code-logo.png" alt="">
+                                        <img src='<?= $post->imagem ?>' alt="">
                                     </div>
                                 </label>
                             </div>

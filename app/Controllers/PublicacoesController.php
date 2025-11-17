@@ -42,13 +42,40 @@ class PublicacoesController
 
 
     public function edit(){
+        var_dump($_POST);
+        var_dump($_FILES);
+        die();
+        if (
+        isset($_FILES['imagem_post']) &&
+        isset($_FILES['imagem_post']['error']) &&
+        $_FILES['imagem_post']['error'] === 0 // upload bem-sucedido
+    ) {
+
+        $tmp = $_FILES['imagem_post']['tmp_name'];
+        $ext = pathinfo($_FILES['imagem_post']['name'], PATHINFO_EXTENSION);
+
+        // Gera nome único
+        $novoNome = sha1(uniqid($_FILES['imagem_post']['name'], true)) . "." . $ext;
+
+        // Caminho final
+        $caminhoImagem = "public/assets/imagensPosts/" . $novoNome;
+
+        // Move o arquivo
+        move_uploaded_file($tmp, $caminhoImagem);
+
+    } else {
+        // Nenhuma imagem nova → mantém a antiga
+        // (error = 4 ou qualquer outro erro)
+        $caminhoImagem = $_POST['img_atual'];
+    }
+
         $parameters = [
             "titulo" => $_POST['titulo'],
             "descricao" => $_POST['descricao'],
             "nome_planta" => $_POST['nome_planta'],
             "sobre" => $_POST['sobre'],
             "cuidados" => json_encode($_POST['cuidados']) ,
-            "imagem" => $_POST['imagem'],
+            "imagem" => $caminhoImagem,
             "usuarios_id" => 1
         ];
 
