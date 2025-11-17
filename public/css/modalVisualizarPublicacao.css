@@ -103,11 +103,12 @@
     border: 2px solid var(--green-700);
     border-radius: 1rem;
 
-    object-fit: cover;
+    overflow: hidden;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content img {
     width: 100%;
+    object-fit: cover;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-publication-container .view-input-classification {
