@@ -42,9 +42,6 @@ class PublicacoesController
 
 
     public function edit(){
-        var_dump($_POST);
-        var_dump($_FILES);
-        die();
         if (
         isset($_FILES['imagem_post']) &&
         isset($_FILES['imagem_post']['error']) &&
