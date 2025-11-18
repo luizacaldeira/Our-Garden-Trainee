@@ -101,6 +101,19 @@ const ul_cares = document.querySelector("#ulCares");
 const cares = [];
 let cont = -1;
 
+function updateCares() {
+  const caresInputHidden = document.createElement("input");
+  caresInputHidden.type = "hidden";
+  caresInputHidden.id = "cuidadosPlantaJSON";
+  caresInputHidden.name = "cuidadosPlanta";
+
+  create_publication_form.appendChild(caresInputHidden);
+
+  const caresContent = cares.map(care => care.content);
+
+  caresInputHidden.value = JSON.stringify(caresContent);
+}
+
 btn_add_cares.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -108,34 +121,38 @@ btn_add_cares.addEventListener("click", (event) => {
   delete_li_cares.setAttribute("src", "../../../public/assets/trash-icon.svg");
   delete_li_cares.setAttribute("alt", "ícone de lixeira");
   delete_li_cares.setAttribute("class", "delete-li-cares");
-  
+
   const liCares = document.createElement("li");
   liCares.setAttribute("class", "li-cares");
-  liCares.setAttribute("id", cont+1);
+  liCares.setAttribute("id", cont + 1);
   liCares.innerHTML = input_cares_plant.value;
   liCares.appendChild(delete_li_cares);
 
   if (input_cares_plant.value.trim() != '') {
-    cares.push({ id: cont+1, content: input_cares_plant.value });
+    cares.push({ id: cont + 1, content: input_cares_plant.value });
     cont++;
     ul_cares.appendChild(liCares);
+    updateCares();
   } else {
     alert("Preencha os campos do formulario antes de adicionar um novo cuidado.");
   }
 
-   if(cares.length >= 5) {
+  if (cares.length >= 5) {
     input_cares_plant.style.display = "none";
     btn_add_cares.style.display = "none";
-  } 
+  }
 
   input_cares_plant.value = '';
 
   delete_li_cares.addEventListener("click", () => {
     const caresExclusao = cares.findIndex(care => care.id === Number(liCares.id));
-    if(caresExclusao != -1) cares.splice(caresExclusao, 1);
+    if (caresExclusao != -1) {
+      cares.splice(caresExclusao, 1);
+      updateCares();
+    }
     ul_cares.removeChild(liCares);
-    
-    if(cares.length < 5 && input_cares_plant.style.display == "none" && btn_add_cares.style.display == "none") {
+
+    if (cares.length < 5 && input_cares_plant.style.display == "none" && btn_add_cares.style.display == "none") {
       input_cares_plant.style.display = "block";
       btn_add_cares.style.display = "block";
     }

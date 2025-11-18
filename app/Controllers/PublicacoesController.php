@@ -27,7 +27,7 @@ class PublicacoesController
             "descricao" => $_POST['descricaoPublicacao'],
             "nome_planta" => $_POST['nomePlanta'],
             "sobre" => $_POST['sobrePlanta'],
-            "cuidados" => json_encode($_POST['cuidadosPlanta']) ,
+            "cuidados" => $_POST['cuidadosPlanta'],
             "imagem" => $caminhoImagem,
             "data_criacao" => date('Y-m-d'),
             "usuarios_id" => 1
