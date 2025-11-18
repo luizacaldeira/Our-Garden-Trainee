@@ -96,10 +96,10 @@
                         <div class="paginacaoPostsConteudo">
                             <a class="arrow-left" href="?"><i class="bi bi-chevron-left"></i></a>
 
-                            <!-- <?php for ($i=1; $i<=$fim; $i++): ?> -->
+                            <!-- <?php for ($i = 1; $i <= $fim; $i++): ?> -->
                             <div class="pages">
-                                <a class="page" href="?pagina=<?= $i ?>"><?=$i ?></a>
-                                
+                                <a class="page" href="?pagina=<?= $i ?>"><?= $i ?></a>
+
                             </div>
                             <!-- <?php endfor; ?> -->
 
@@ -165,28 +165,10 @@
                                         class="arrow-up-icon" id="arrowUpIcon">
                                 </button>
                                 <div class="dropdown-classification" id="dropdownClassification">
-                                    <label><input type="checkbox" value="Ornamentais" name="classification[]">
-                                        Ornamentais</label>
-                                    <label><input type="checkbox" value="Medicinais" name="classification[]">
-                                        Medicinais</label>
-                                    <label><input type="checkbox" value="Alimentícias" name="classification[]">
-                                        Alimentícias</label>
-                                    <label><input type="checkbox" value="Aromáticas" name="classification[]">
-                                        Aromáticas</label>
-                                    <label><input type="checkbox" value="Tóxicas" name="classification[]">
-                                        Tóxicas</label>
-                                    <label><input type="checkbox" value="Industriais" name="classification[]">
-                                        Industriais</label>
-                                    <label><input type="checkbox" value="Forrageiras" name="classification[]">
-                                        Forrageiras</label>
-                                    <label><input type="checkbox" value="Madeireiras" name="classification[]">
-                                        Madeireiras</label>
-                                    <label><input type="checkbox" value="Oleaginosas" name="classification[]">
-                                        Oleaginosas</label>
-                                    <label><input type="checkbox" value="Fibrosas" name="classification[]">
-                                        Fibrosas</label>
-                                    <label><input type="checkbox" value="Condimentares" name="classification[]">
-                                        Condimentares</label>
+                                    <?php foreach ($classificacoes as $classificacao): ?>
+                                        <label><input type="checkbox" value=<?= $classificacao->id ?> name="classification[]">
+                                            <?= $classificacao->nome ?></label>
+                                    <?php endforeach; ?>
                                 </div>
                             </section>
                         </div>
@@ -262,18 +244,11 @@
                             <span>Classificação:</span>
                             <div class="view-input view-input-classification">
                                 <ul class="view-classification-ul">
-                                    <li class="view-classification-li">
-                                        <strong>Ornamental:</strong> é cultivada principalmente pela beleza estética
-                                        (flores, folhas, formato ou cor), e não pelo uso alimentar ou medicinal.
-                                    </li>
-                                    <li class="view-classification-li">
-                                        <strong>Tóxica:</strong> possui substâncias que podem causar irritação,
-                                        intoxicação ou até envenenamento se ingerida ou em contato com a pele/olhos.
-                                    </li>
-                                    <li class="view-classification-li">
-                                        <strong>Interior:</strong> é adaptada para ser cultivada dentro de casas,
-                                        escritórios ou ambientes fechados, pois tolera luz indireta ou meia-sombra.
-                                    </li>
+                                    <?php foreach ($post->classificacoes as $classificacao): ?>
+                                        <li class="view-classification-li">
+                                            <strong><?= $classificacao->nome ?></strong> <?= $classificacao->descricao ?>
+                                        </li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </section>
@@ -315,10 +290,10 @@
 
                     <div class="modal-edit-publication-main">
                         <form class="edit-publication-form" id="editPublicationForm<?= $post->id ?>" method="POST" action="posts/edit" enctype="multipart/form-data">
-                            <input type="hidden" name="id" value="<?= $post->id ?>" >
-                            <input type="hidden" name="img_atual" value="<?= $post->imagem ?>" >
+                            <input type="hidden" name="id" value="<?= $post->id ?>">
+                            <input type="hidden" name="img_atual" value="<?= $post->imagem ?>">
                             <div class="selectPhoto">
-                                <input type="file" name="imagem_post" id="changePhoto<?= $post->id ?>" style="display:none" 
+                                <input type="file" name="imagem_post" id="changePhoto<?= $post->id ?>" style="display:none"
                                     onchange="trocarPreviewImagem('changePhoto<?= $post->id ?>','label-content<?= $post->id ?>')">
                                 <label for="changePhoto <?= $post->id ?>">
                                     <div class="label-content" id="label-content <?= $post->id ?>">
@@ -333,7 +308,7 @@
                                     <span>Título:</span>
                                     <input type="text" placeholder="Digite o novo título da publicação..." class="modalEditInput" value="<?= $post->titulo ?>" name="titulo">
                                 </div>
-                                
+
                                 <div class="description editPublicationContainer">
                                     <span>Descrição:</span>
                                     <input type="text" placeholder="Digite a nova descrição da publicação..." class="modalEditInput" value="<?= $post->descricao ?>" name="descricao">
@@ -381,10 +356,10 @@
                                         <i class="bi bi-plus-circle"></i>
                                     </div>
                                     <ul id="ulCares" class="ul-cares">
-                                        <?php foreach(json_decode($post->cuidados) as $cuidado): ?>
+                                        <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
                                             <input class="li-cares-edit" id="cares-edit" value="<?= $cuidado ?>">
                                         <?php endforeach; ?>
-                                        
+
                                     </ul>
                                 </div>
                             </div>

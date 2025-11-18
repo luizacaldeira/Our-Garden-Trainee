@@ -51,13 +51,15 @@ class QueryBuilder
         }
     }
 
-    public function insert($table, $parameters) {
+    public function insert($table, $parameters)
+    {
         var_dump($parameters);
 
-        $sql = sprintf("INSERT INTO %s (%s) VALUES (%s)", 
-        $table, 
-        implode(', ', array_keys($parameters)), 
-        ":" . implode(', :', array_keys($parameters))
+        $sql = sprintf(
+            "INSERT INTO %s (%s) VALUES (%s)",
+            $table,
+            implode(', ', array_keys($parameters)),
+            ":" . implode(', :', array_keys($parameters))
         );
 
         try {
@@ -68,7 +70,8 @@ class QueryBuilder
         }
     }
 
-    public function selectOne($table,$id){
+    public function selectOne($table, $id)
+    {
         // SELECT * FROM `publicacoes` WHERE 1
         $sql = "SELECT * FROM {$table} WHERE id = :id LIMIT 1";
 
@@ -82,12 +85,14 @@ class QueryBuilder
         }
     }
 
-    public function update($table,$id,$parameters){
-        $sql = sprintf('UPDATE %s SET %s WHERE id = :id', 
-            $table, 
+    public function update($table, $id, $parameters)
+    {
+        $sql = sprintf(
+            'UPDATE %s SET %s WHERE id = :id',
+            $table,
             implode(', ', array_map(function ($column) {
                 return $column . ' = :' . $column;
-            }, array_keys($parameters))) 
+            }, array_keys($parameters)))
         );
 
         $parameters['id'] = $id;
@@ -95,6 +100,64 @@ class QueryBuilder
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    // $records = ["1,2" "1,3" "2,4"];
+    public function insertPivot($records)
+    {
+        foreach ($records as $record) {
+            $id_publicacao = (int)$record['id_publicacao'];
+            $id_classificacao = (int)$record['id_classificacao'];
+            $values[] = "($id_publicacao, $id_classificacao)";
+        }
+
+        $sql = "INSERT INTO publicacoes_classificacoes (id_publicacao, id_classificacao) VALUES" . implode(", ", $values);
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function lastInsertID()
+    {
+        return $this->pdo->lastInsertID();
+    }
+
+    public function selectPostsWithClassification($id_post)
+    {
+        $sql = "
+            SELECT c.*
+            FROM classificacoes c
+            INNER JOIN publicacoes_classificacoes pc 
+            ON c.id = pc.id_classificacao
+            WHERE pc.id_publicacao = :id_publicacao";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(["id_publicacao" => $id_post]);
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    /**
+     * $value = id do post
+     */
+    public function deletePivot($column, $value)
+    {
+        $sql = "DELETE FROM publicacoes_classificacoes WHERE {$column} = :value";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(["value" => $value]);
 
         } catch (Exception $e) {
             die($e->getMessage());
