@@ -11,6 +11,9 @@ class PublicacoesController
     public function index()
     {
         $posts = App::get('database')->selectPostsWithUser();
+        foreach ($posts as $post){
+            $post->cuidados;
+        }
         return view('admin/listaPosts' ,compact('posts'));
     }
 

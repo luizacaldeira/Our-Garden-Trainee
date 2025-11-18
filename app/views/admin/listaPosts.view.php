@@ -380,7 +380,12 @@
                                         <input type="text" placeholder="Digite cuidados sobre a planta..." class="modalEditInput">
                                         <i class="bi bi-plus-circle"></i>
                                     </div>
-                                    <ul id="ulCares" class="ul-cares"></ul>
+                                    <ul id="ulCares" class="ul-cares">
+                                        <?php foreach(json_decode($post->cuidados) as $cuidado): ?>
+                                            <input class="li-cares-edit" id="cares-edit" value="<?= $cuidado ?>">
+                                        <?php endforeach; ?>
+                                        
+                                    </ul>
                                 </div>
                             </div>
 
