@@ -264,10 +264,11 @@
                             <span>Cuidados:</span>
                             <div class="view-input view-input-cares">
                                 <ul class="view-cares-ul">
-                                    <li class="view-care">Evite sol direto nas folhas, pois pode causar queimaduras.</li>
-                                    <li class="view-care">Mantenha o solo levemente úmido, mas nunca encharcado.</li>
-                                    <li class="view-care"> Utilize substrato rico em matéria orgânica e bem drenado.</li>
-                                    <li class="view-care">Evite correntes de ar frio e mudanças bruscas de temperatura.</li>
+                                    <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
+                                        <li class="view-care">
+                                            <?= $cuidado ?>
+                                        </li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </div>
                         </section>
@@ -359,7 +360,6 @@
                                         <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
                                             <input class="li-cares-edit" id="cares-edit" value="<?= $cuidado ?>">
                                         <?php endforeach; ?>
-
                                     </ul>
                                 </div>
                             </div>
