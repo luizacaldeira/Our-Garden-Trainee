@@ -96,12 +96,17 @@
                         <div class="paginacaoPostsConteudo">
                             <a class="arrow-left" href="?"><i class="bi bi-chevron-left"></i></a>
 
-                            <!-- <?php for ($i = 1; $i <= $fim; $i++): ?> -->
+                            
                             <div class="pages">
-                                <a class="page" href="?pagina=<?= $i ?>"><?= $i ?></a>
+                                
+                                <button class="page">1</button>
+                                <button class="page">2</button>
+                                <button class="page">3</button>
+                                <button class="page">4</button>
+                                
 
                             </div>
-                            <!-- <?php endfor; ?> -->
+                            
 
                             <button class="arrow-right"><i class="bi bi-chevron-right"></i></button>
                         </div>
