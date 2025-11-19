@@ -383,18 +383,18 @@
                 </div>
 
                 <!-- MODAL EXCLUIR PUBLICAÇÃO -->
-                <div class="modal-delete-publication" id="modalDeletePublication">
+                <div class="modal-delete-publication" id="modalDeletePublication<?= $post->id ?>">
                     <div class="modal-delete-publication-header">
                         <i class="bi bi-trash"></i>
                         <p>Excluir publicação</p>
                     </div>
 
                     <div class="modal-delete-publication-main">
-                        <form class="delete-publication-form" id="deletePublicationForm">
+                        <form class="delete-publication-form" id="deletePublicationForm" action="posts/delete" method="POST">
                             <div class="text">
                                 <p>Tem certeza que deseja excluir essa publicação?</p>
                             </div>
-
+                            <input type="hidden" value="<?= $post->id ?>" name="id">
                             <div class="buttonsExcluir">
                                 <div class="botaoCancelarExcluir">
                                     <button type="button" onclick="fecharModal('modalDeletePublication','filtro')">Cancelar</button>

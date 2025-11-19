@@ -99,4 +99,10 @@ class PublicacoesController
         App::get('database')->update('publicacoes', $id, $parameters);
         header("Location: /posts");
     }
+
+    public function delete (){
+        $id = $_POST['id'];
+        App::get('database')->delete('publicacoes', $id);
+        header("Location: /posts");
+    }
 }
