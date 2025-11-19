@@ -301,8 +301,8 @@
                             <div class="selectPhoto">
                                 <input type="file" name="imagem_post" id="changePhoto<?= $post->id ?>" style="display:none"
                                     onchange="trocarPreviewImagem('changePhoto<?= $post->id ?>','label-content<?= $post->id ?>')">
-                                <label for="changePhoto <?= $post->id ?>">
-                                    <div class="label-content" id="label-content <?= $post->id ?>">
+                                <label for="changePhoto<?= $post->id ?>">
+                                    <div class="label-content" id="label-content<?= $post->id ?>">
                                         <img src='/<?= $post->imagem ?>' class="preview-image" alt="">
                                     </div>
                                 </label>
@@ -363,7 +363,7 @@
                                     </div>
                                     <ul id="ulCares" class="ul-cares">
                                         <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
-                                            <input class="li-cares-edit" id="cares-edit" value="<?= $cuidado ?>">
+                                            <input class="li-cares-edit" id="cares-edit" name="cuidados[]" value="<?= $cuidado ?>">
                                         <?php endforeach; ?>
                                     </ul>
                                 </div>
