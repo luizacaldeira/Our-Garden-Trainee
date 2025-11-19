@@ -16,7 +16,7 @@
 .modalEditUser {
     background-color: var(--green-100);
     width: 50%;
-    height: 90%;
+    /* height: 90%; */
     border-radius: 1rem;
     font-family: var(--font-family-paragrafo);
     display: flex;
