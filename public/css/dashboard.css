@@ -55,28 +55,42 @@ body{
 
     display: flex;
     align-items: center;
-    justify-content: end;
     box-shadow: 2px 4px 7px rgb(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 0.095);
     backdrop-filter: blur(4.2px);
     -webkit-backdrop-filter: blur(4.2px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--green-100);
+}
 
+.dropdownLogout form {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
     gap: 5%;
 }
 
-.dropdownLogout i {
-    font-size: 1.5rem;
-}
-
-.dropdownLogout button {
+.dropdownLogout form button {
     all: unset;
     font-family: var(--font-family-paragrafo);
     font-size: 1rem;
 
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+    height: 100%;
+    gap: 15%;
 }
+
+.dropdownLogout form button i {
+    font-size: 1.5rem;
+}
+
 
 .total {
     display: flex;

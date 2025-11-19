@@ -1,9 +1,9 @@
-<?php 
-    session_start();
+<?php
+session_start();
 
-    if(!isset($_SESSION['id'])){
-        header('Location: /login');
-    }
+if (!isset($_SESSION['id'])) {
+    header('Location: /login');
+}
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="../../../public/css/styles.css">
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -42,8 +42,10 @@
                     </div>
                     <div class="dropdownLogout">
                         <form action="/logout" method="POST">
-                            <i class="bi bi-box-arrow-left"></i>
-                            <button type="submit">Sair</button>
+                            <button type="submit">
+                                <i class="bi bi-box-arrow-left"></i>
+                                Sair
+                            </button>
                         </form>
                     </div>
                 </div>
