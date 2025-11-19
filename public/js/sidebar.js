@@ -1,14 +1,18 @@
-    // const divimagemlogo=document.getElementById('logo_ourgarden4');
-    // // document.getElementById('open_btn').addEventListener('click', function () {
-    // //     const sidebar = document.getElementById('sidebar')
-    // //     sidebar.classList.toggle('open-sidebar');
-    //     if (sidebar.classList.contains("id_logo_our_garden")){
-    //     divimagemlogo.setAttribute("src", "/public/assets/1.png");
-    //     divimagemlogo.style.width="130px"
-    //     }
-    //     else{
-    //     divimagemlogo.setAttribute("src", "/public/assets/4.png");
-    //     divimagemlogo.style.width="50px"
-    //     }
+const id_logo_ourgarden =document.getElementById("id_logo_ourgarden");
+const btnDashboard = document.getElementById("btnDashboard");
+const btnUsuarios = document.getElementById("btnUsuarios");
+const btnPublicacoes = document.getElementById("btnPublicacoes");
+const vazio = document.getElementById("vazio");
 
-    // });
+btnUsuarios.addEventListener("click", () => {
+    btnUsuarios.classList.add('active');
+    
+    btnDashboard.classList.remove('active');
+    btnPublicacoes.classList.remove('active');
+
+    id_logo_ourgarden.style.borderBottomRightRadius = "0px";
+    vazio.style.borderTopRightRadius = "0px";
+
+    btnDashboard.style.borderBottomRightRadius = "50px";
+    btnPublicacoes.style.borderTopRightRadius = "50px";
+})
