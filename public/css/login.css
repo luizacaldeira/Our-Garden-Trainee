@@ -102,13 +102,14 @@ body {
 }
 
 .loginBoxButton {
+    all: unset;
     color: var(--green-100);
     font-family: var(--font-family-paragrafo);
     font-size: 13px;
     text-align: center;
     background-color: var(--green-900);
     border-radius: 10px;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
 }
 
@@ -139,14 +140,20 @@ body {
 
 .loginInput {
     background-color: var(--green-200);
-    padding: 2% 4%;
-    border-radius: 8px;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 4%;
     justify-content: space-between;
     align-items: center;
+}
+
+.loginInput input {
+    font-family: var(--font-family-paragrafo);
+    font-size: 0.8rem;
 }
 
 .inputLogin {
@@ -193,6 +200,12 @@ body {
     gap: 12px;
 }
 
+.loginData form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
 .mensagemErro{
     display: flex;
     justify-content: center;
@@ -216,7 +229,7 @@ body {
 .loginBoxXoxomidias {
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 10px;
     justify-content: center;
 }
 
