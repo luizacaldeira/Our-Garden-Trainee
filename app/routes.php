@@ -15,3 +15,4 @@ $router->get('login', 'LoginController@index');
 $router->post('login', 'LoginController@loginVerification');
 
 $router->get('dashboard', 'DashboardController@index');
+$router->post('logout', 'DashboardController@logout');
