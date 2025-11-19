@@ -81,6 +81,8 @@ main {
     flex-direction: column;
     list-style: none;
     width: 100%;
+
+    background-color: var(--green-200);
 }
 
 .sidebottons {
