@@ -13,10 +13,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../../../public/css/styles.css">
     <link rel="stylesheet" href="../../../public/css/login.css">
-    
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-        
+
     <title>Login</title>
 </head>
 
@@ -40,44 +40,54 @@
                 <div class="loginBoxSubtitle">
                     <h2>Digite suas credenciais para continuar.</h2>
                 </div>
-                <div class="loginBoxId">
-                    <div class="loginBoxEmail">
-                        <p>Email</p>
+                <form action="/login" method="POST">
+                    <div class="mensagemErro">
+                        <?php
+                        session_start();
+                        if(isset($_SESSION['mensagemErro']))
+                            echo $_SESSION['mensagemErro'];
+                        unset($_SESSION['mensagemErro']);
+                        ?>
                     </div>
-                    <div class="loginInput">
-                        <i class="bi bi-envelope"></i>
-                        <input class="inputLogin" type="email" placeholder="Digite seu email...">
-                    </div>
-                </div>
-                <div class="loginBoxId">
-                    <div class="loginBoxSenha">
-                        <p>Senha</p>
-                    </div>
-                    <div class="loginInput">
-                        <div class="loginLock">
-                            <i class="bi bi-lock"></i>
-                            <input class="inputLoginPassword" id="inputLoginPassword" type="password" placeholder="Digite sua senha...">
+                    <div class="loginBoxId">
+                        <div class="loginBoxEmail">
+                            <p>Email</p>
                         </div>
-                        <div class="divOlhos" id="divOlhos">
-                            <i class="bi bi-eye-slash" id="olho"></i>
-                            <i class="bi bi-eye" id="olhoAberto"></i>
+                        <div class="loginInput">
+                            <i class="bi bi-envelope"></i>
+                            <input class="inputLogin" type="email" name="email" placeholder="Digite seu email...">
                         </div>
                     </div>
-                </div>
+                    <div class="loginBoxId">
+                        <div class="loginBoxSenha">
+                            <p>Senha</p>
+                        </div>
+                        <div class="loginInput">
+                            <div class="loginLock">
+                                <i class="bi bi-lock"></i>
+                                <input class="inputLoginPassword" id="inputLoginPassword" name="senha" type="password" placeholder="Digite sua senha...">
+                            </div>
+                            <div class="divOlhos" id="divOlhos">
+                                <i class="bi bi-eye-slash" id="olho"></i>
+                                <i class="bi bi-eye" id="olhoAberto"></i>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
             <div class="loginVerification">
                 <div class="loginBoxPassword">
                     <p>Esqueceu a senha?</p>
                 </div>
-                <div class="loginBoxButton">
+                <button class="loginBoxButton" type="submit">
                     <h3>Login</h3>
-                </div>
+                </button>
                 <div class="loginBoxEnd">
                     <p>Não tem uma conta?</p>
                     <p class="loginRegisterButton">Registre-se</p>
                 </div>
             </div>
+            </form>
 
             <div class="loginBoxXoxomidias">
                 <a class="a" href="https://www.instagram.com/codejr" target="_blank"><i class="bi bi-instagram"></i></a>
