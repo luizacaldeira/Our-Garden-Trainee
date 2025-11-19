@@ -36,13 +36,23 @@ class UsuariosController
 
     public function editar()
     {
+        if(isset($_FILES['imagemUsuarioEdit'])&& (isset($_FILES['imagemUsuarioEdit']['error']))&& $_FILES['imagemUsuarioEdit']['error'] === 0){
+            $imagemTemporaria= $_FILES['imagemUsuarioEdit']['tmp_name'];
+            $nomeImagem= sha1(uniqid($_FILES['imagemUsuarioEdit']['name'], true)) . "." . pathinfo($_FILES['imagemUsuarioEdit']['name'],PATHINFO_EXTENSION) ;
+
+            $caminhoImagem= "public/assets/imagensUsuarios/" . $nomeImagem; 
+            move_uploaded_file($imagemTemporaria, $caminhoImagem);
+        }
+        else{
+            $caminhoImagem= $_POST['imgAtual'];
+        }
         $id = $_POST['id'];
 
         $parameters = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-            'imagem' => 'imagem1'        
+            'imagem' => $caminhoImagem        
         ];
 
         App::get('database')->update('usuarios', $id, $parameters);
