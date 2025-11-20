@@ -65,6 +65,17 @@ btn_classification.addEventListener('click', (event) => {
   }
 });
 
+// Fecha o dropdown ao clicar fora dele
+document.addEventListener('click', (event) => {
+  const clickedOutside = !dropdown_classification.contains(event.target) && !btn_classification.contains(event.target);
+
+  if (clickedOutside && dropdown_classification.classList.contains('open')) {
+    dropdown_classification.classList.remove('open');
+    arrow_down_icon.style.display = "block";
+    arrow_up_icon.style.display = "none";
+  }
+});
+
 // Limita o máximo de 3 opções de escolha de classificação
 /**
  * Código disponível em: https://gist.github.com/dantetesta/590f6719400d57001380c9ca017982b3
