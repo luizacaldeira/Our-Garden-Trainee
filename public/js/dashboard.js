@@ -14,3 +14,17 @@ arrow.addEventListener("click", () => {
 
     dropdownLogout.classList.toggle("open");
 });
+
+
+// Fecha o dropdown ao clicar fora dele
+document.addEventListener('click', (event) => {
+  const clickedOutside =
+    !dropdownLogout.contains(event.target) &&
+    !arrow.contains(event.target);
+
+  if (clickedOutside && dropdownLogout.classList.contains('open')) {
+    dropdownLogout.classList.remove('open');
+    setaParaBaixo.style.display = "block";
+    setaParaCima.style.display = "none";
+  }
+});
