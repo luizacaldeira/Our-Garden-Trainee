@@ -4,7 +4,7 @@ const setaParaCima = document.querySelector(".setaParaCima");
 const dropdownLogout = document.querySelector(".dropdownLogout");
 
 arrow.addEventListener("click", () => {
-    if (setaParaBaixo.style.display === "block") {
+    if (setaParaBaixo.style.display === "block" || setaParaBaixo.style.display === "") {
         setaParaBaixo.style.display = "none";
         setaParaCima.style.display = "block";
     } else {

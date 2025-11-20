@@ -47,7 +47,6 @@ body{
 .dropdownLogout.open {
     position: absolute;
     width: 34%;
-    background-color: var(--green-900);
     color: var(--green-100);
     padding: 1rem;
     border-radius: 0.5rem;
@@ -246,10 +245,15 @@ body{
 
 .arrow i {
     padding: 0.2rem;
+    border: 1px solid transparent;
 }
 
 .arrow i:hover {
-    background-color: var(--green-500);
+    box-shadow: 2px 4px 7px rgb(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.095);
+    backdrop-filter: blur(4.2px);
+    -webkit-backdrop-filter: blur(4.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     scale: 1.05;
     transition: 0.1s;
