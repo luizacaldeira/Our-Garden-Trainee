@@ -48,12 +48,13 @@ body{
     position: absolute;
     width: 34%;
     color: var(--green-100);
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
     top: 95%;
 
     display: flex;
     align-items: center;
+    justify-content: center;
     box-shadow: 2px 4px 7px rgb(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 0.095);
     backdrop-filter: blur(4.2px);
@@ -80,10 +81,11 @@ body{
 
     display: flex;
     align-items: center;
+    justify-content: end;
 
-    width: fit-content;
+    width: 30%;
     height: 100%;
-    gap: 15%;
+    gap: 9%;
 }
 
 .dropdownLogout form button i {
