@@ -232,8 +232,8 @@
 
     border: 1px solid var(--green-700);
 
-    background: transparent;
-
+    background-color: var(--green-200);
+    outline: none;
     font-family: var(--font-family-paragrafo);
     color: var(--green-900);
 }

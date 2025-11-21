@@ -364,6 +364,7 @@
                                     <ul id="ulCares" class="ul-cares">
                                         <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
                                             <input class="li-cares-edit" id="cares-edit" name="cuidados[]" value="<?= $cuidado ?>">
+                                            <!-- <i class="bi bi-trash-fill"></i> -->
                                         <?php endforeach; ?>
                                     </ul>
                                 </div>
