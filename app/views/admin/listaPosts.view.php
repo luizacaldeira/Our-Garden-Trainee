@@ -94,21 +94,19 @@
                     </table>
                     <div class="paginacaoPosts">
                         <div class="paginacaoPostsConteudo">
-                            <a class="arrow-left" href="?"><i class="bi bi-chevron-left"></i></a>
-
-                            
+                            <li class="page-item <?= $page <= 1 ? "disabled" : "" ?>"> 
+                                <a class="arrow-left" href="?paginacaoNumero= <? $page-1 ?>"><i class="bi bi-chevron-left"></i></a>
+                            </li>
                             <div class="pages">
+                                <?php for ($pageNumber = 1; $pageNumber <= $total_pages; $pageNumber ++):?>
+                                    <a class="page <?= $pageNumber == $page ? "active" : "" ?>
+                                    " href="?paginacaoNumero=<?= $pageNumber ?>" > <?= $pageNumber?> </a>
+                                <?php endfor ?>
                                 
-                                <button class="page">1</button>
-                                <button class="page">2</button>
-                                <button class="page">3</button>
-                                <button class="page">4</button>
-                                
-
                             </div>
-                            
-
-                            <button class="arrow-right"><i class="bi bi-chevron-right"></i></button>
+                            <li class="page-item <?= $page >= $total_pages ? "disabled" : "" ?>">
+                                <a class="arrow-right" href="?paginacaoNumero= <? $page+1 ?>"><i class="bi bi-chevron-right"></i></a>
+                            </li>
                         </div>
                     </div>
                 </div>
