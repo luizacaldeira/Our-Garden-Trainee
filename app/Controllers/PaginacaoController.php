@@ -8,7 +8,7 @@ use Exception;
 class PaginacaoController
 {
 
-    public function index()
+    public function paginacao()
     {
         $page=1;
 
@@ -27,8 +27,9 @@ class PaginacaoController
             return redirect('admin/listaPosts');
         }
 
-        $posts = App::get('database')->selectAll('posts');
-        return view('admin/listaPosts');
+        $posts = App::get('database')->selectAll('posts', $inicio, $itensPage);
+        $total_pages= ceil($rows_count/$itensPage);
+        return view('admin/listaPosts', compact('posts', 'page', 'total_pages'));
     }
     
 }
