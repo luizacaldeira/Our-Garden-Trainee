@@ -10,20 +10,42 @@ class PublicacoesController
 
     public function index()
     {
-        $posts = App::get('database')->selectPostsWithUser();
-        $classificacoes = App::get('database')->selectAll('classificacoes');
+        // Paginação 
+        $page=1;
+
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page<=0){
+                return redirect('admin/listaPosts');
+            }
+        }
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('publicacoes');
+        
+        if($inicio>$rows_count){
+            return redirect('admin/listaPosts');
+        }
+        
+        $total_pages= ceil($rows_count/$itensPage);
+
+        // Publicações 
+        $posts = App::get('database')->selectPostsWithUser($inicio, $itensPage);
 
         foreach ($posts as $post) {
             $post->cuidados;
             $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
         }
 
-        return view('admin/listaPosts', compact('posts', 'classificacoes'));
+        // Classificações
+        $classificacoes = App::get('database')->selectAll('classificacoes');
+
+        return view('admin/listaPosts', compact('posts', 'classificacoes','page', 'total_pages'));
     }
 
     public function create()
     {
-
         $imagemTemporaria = $_FILES['imagemPublicacao']['tmp_name'];
         $nomeImagem = sha1(uniqid($_FILES['imagemPublicacao']['name'], true)) . "." . pathinfo($_FILES['imagemPublicacao']['name'], PATHINFO_EXTENSION);
         $caminhoImagem = "public/assets/imagensPosts/" . $nomeImagem;
@@ -104,5 +126,37 @@ class PublicacoesController
         $id = $_POST['id'];
         App::get('database')->delete('publicacoes', $id);
         header("Location: /posts");
+    }
+
+    public function paginacao()
+    {
+        $page=1;
+
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page<=0){
+                return redirect('admin/listaPosts');
+            }
+        }
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('publicacoes');
+        
+        if($inicio>$rows_count){
+            return redirect('admin/listaPosts');
+        }
+
+        $posts = App::get('database')->selectPostsWithUser($inicio, $itensPage);
+        $total_pages= ceil($rows_count/$itensPage);
+
+        $classificacoes = App::get('database')->selectAll('classificacoes');
+
+        foreach ($posts as $post) {
+            $post->cuidados;
+            $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
+        }
+
+        return view('admin/listaPosts', compact('posts', 'classificacoes','page', 'total_pages'));
     }
 }

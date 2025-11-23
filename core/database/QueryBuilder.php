@@ -34,7 +34,7 @@ class QueryBuilder
     /**
      * Função que vai pegar todos os dados da tabela, juntamente com o nome do usuário que fez a publicação.
      */
-    public function selectPostsWithUser()
+    public function selectPostsWithUser($inicio=null, $rows_count=null)
     {
         $sql = "
             SELECT 
@@ -42,7 +42,8 @@ class QueryBuilder
             u.nome AS nome_usuario
             FROM publicacoes AS p
             INNER JOIN usuarios AS u
-            ON p.usuarios_id = u.id";
+            ON p.usuarios_id = u.id
+            LIMIT {$inicio}, {$rows_count}";
 
         try {
             $stmt = $this->pdo->prepare($sql);
