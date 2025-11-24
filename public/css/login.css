@@ -193,6 +193,14 @@ body {
     gap: 12px;
 }
 
+.mensagemErro{
+    display: flex;
+    justify-content: center;
+    color: var(--orange-500);
+    font-family: var(--font-family-paragrafo);
+    font-size: 14px;
+}
+
 .loginVerification {
     display: flex;
     flex-direction: column;
