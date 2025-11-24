@@ -224,6 +224,13 @@
     gap: 0.5rem;
 }
 
+.ul-cares .li-cares-update {
+    display: flex;
+    gap: 2%;
+
+    align-items: center;
+}
+
 .li-cares-edit {
     width: 100%;
     padding: 0.625rem;
@@ -236,6 +243,11 @@
     outline: none;
     font-family: var(--font-family-paragrafo);
     color: var(--green-900);
+}
+
+.ul-cares .li-cares-update i {
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .buttons {

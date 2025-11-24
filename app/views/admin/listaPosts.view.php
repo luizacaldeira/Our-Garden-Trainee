@@ -94,20 +94,20 @@
                     </table>
                     <div class="paginacaoPosts">
                         <div class="paginacaoPostsConteudo">
-                            <li class="page-item <?= $page <= 1 ? "disabled" : "" ?>"> 
-                                <a class="arrow-left" href="?paginacaoNumero=<?= $page-1 ?>"><i class="bi bi-chevron-left"></i></a>
+                            <li class="page-item <?= $page <= 1 ? "disabled" : "" ?>">
+                                <a class="arrow-left" href="?paginacaoNumero=<?= $page - 1 ?>"><i class="bi bi-chevron-left"></i></a>
                             </li>
                             <div class="pages">
-                                <?php for ($pageNumber = 1; $pageNumber <= $total_pages; $pageNumber++):?>
+                                <?php for ($pageNumber = 1; $pageNumber <= $total_pages; $pageNumber++): ?>
                                     <li class="page-item">
                                         <a class="page <?= $pageNumber == $page ? "active" : "" ?>"
-                                        href="?paginacaoNumero=<?= $pageNumber ?>" ><?= $pageNumber?></a>
+                                            href="?paginacaoNumero=<?= $pageNumber ?>"><?= $pageNumber ?></a>
                                     </li>
                                 <?php endfor ?>
-                                
+
                             </div>
                             <li class="page-item <?= $page >= $total_pages ? "disabled" : "" ?>">
-                                <a class="arrow-right" href="?paginacaoNumero=<?= $page+1 ?>"><i class="bi bi-chevron-right"></i></a>
+                                <a class="arrow-right" href="?paginacaoNumero=<?= $page + 1 ?>"><i class="bi bi-chevron-right"></i></a>
                             </li>
                         </div>
                     </div>
@@ -357,14 +357,16 @@
 
                                 <div class="cares editPublicationContainer">
                                     <span>Cuidados:</span>
-                                    <div class="inputEPlus">
-                                        <input type="text" placeholder="Digite cuidados sobre a planta..." class="modalEditInput">
-                                        <i class="bi bi-plus-circle"></i>
+                                    <div class="inputEPlus" id="inputEPlus<?= $post->id ?>">
+                                        <input type="text" id="careInput<?= $post->id ?>" placeholder="Digite cuidados sobre a planta..." class="modalEditInput">
+                                        <i class="bi bi-plus-circle" onclick="addCaresUpdate(<?= $post->id ?>)"></i>
                                     </div>
-                                    <ul id="ulCares" class="ul-cares">
+                                    <ul id="ulCares<?= $post->id ?>" class="ul-cares">
                                         <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
-                                            <input class="li-cares-edit" id="cares-edit" name="cuidados[]" value="<?= $cuidado ?>">
-                                            <!-- <i class="bi bi-trash-fill"></i> -->
+                                            <li class="li-cares-update">
+                                                <input class="li-cares-edit" id="cares-edit" name="cuidados[]" value="<?= $cuidado ?>">
+                                                <i class="bi bi-trash-fill" onclick="deleteCaresUpdate(<?= $post->id ?>)"></i>
+                                            </li>
                                         <?php endforeach; ?>
                                     </ul>
                                 </div>
