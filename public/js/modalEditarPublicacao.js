@@ -23,7 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         checkboxes.forEach((checkbox) => {
             checkbox.addEventListener('change', () => {
-                const checkedCount = document.querySelectorAll(`input[name="${groupName}"]:checked`).length;
+                const dropdown = checkbox.closest('.dropDownClassificacao');
+                const checkedCount = dropdown.querySelectorAll(`input[name="${groupName}"]:checked`).length;
+
+                console.log(checkedCount);
 
                 if (checkedCount > limit) {
                     checkbox.checked = false;
@@ -99,7 +102,7 @@ function addCaresUpdate(id) {
     careInput.value = "";
 
     delete_li_cares.addEventListener("click", () => {
-        const caresExclusao = cares.findIndex(care => care.id === Number(li.id));
+        const caresExclusao = caresUpdate.findIndex(care => care.id === Number(li.id));
         if (caresExclusao != -1) {
             caresUpdate.splice(caresExclusao, 1);
             updateCares();

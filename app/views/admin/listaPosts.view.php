@@ -169,7 +169,7 @@
                                     <img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
                                         class="arrow-up-icon" id="arrowUpIcon">
                                 </button>
-                                <div class="dropdown-classification" id="dropdownClassification">
+                                <div class="dropdown-classification" id="dropdownClassification<?= $post->id ?>">
                                     <?php foreach ($classificacoes as $classificacao): ?>
                                         <label><input type="checkbox" value=<?= $classificacao->id ?> name="classification[]">
                                             <?= $classificacao->nome ?></label>
@@ -329,23 +329,22 @@
 
                                     <div class="class editPublicationContainer">
                                         <span>Classificação:</span>
-                                        <button type="button" id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao')">Escolha
+                                        <button type="button" id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao<?= $post->id ?>')">Escolha
                                             3 opções... <img src="../../../public/assets/arrow-down-icon.svg"
                                                 alt="seta para baixo" class="icone-seta-baixo" id="iconeSetaBaixo"> <img
                                                 src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
                                                 class="icone-seta-cima" id="iconeSetaCima"></button>
-                                        <div class="dropDownClassificacao" id="dropDownClassificacao">
-                                            <label><input type="checkbox" name="classification[]" id="">Ornamentais</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Medicinais</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Alimentícias</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Aromáticas</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Tóxicas</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Industriais</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Forrageiras</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Madeireiras</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Oleaginosas</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Fibrosas</label>
-                                            <label><input type="checkbox" name="classification[]" id="">Condimentares</label>
+                                        <?php $classificacoesMarcadas = array_map(fn($classificacao) => $classificacao->id, $post->classificacoes); ?>
+                                        <div class="dropDownClassificacao" id="dropDownClassificacao<?= $post->id ?>">
+                                            <?php foreach ($classificacoes as $classificacao): ?>
+                                                <label>
+                                                    <input
+                                                        type="checkbox"
+                                                        name="classification[]"
+                                                        value="<?= $classificacao->id ?>"
+                                                        <?= in_array($classificacao->id, $classificacoesMarcadas) ? 'checked' : '' ?>><?= $classificacao->nome ?>
+                                                </label>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -400,7 +399,7 @@
                             <input type="hidden" value="<?= $post->id ?>" name="id">
                             <div class="buttonsExcluir">
                                 <div class="botaoCancelarExcluir">
-                                    <button type="button" onclick="fecharModal('modalDeletePublication','filtro')">Cancelar</button>
+                                    <button type="button" onclick="fecharModal('modalDeletePublication<?= $post->id ?>','filtro')">Cancelar</button>
                                 </div>
                                 <div class="botaoExcluir">
                                     <button>Excluir</button>
