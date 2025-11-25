@@ -30,8 +30,8 @@ class UsuariosController
         $total_pages= ceil($rows_count/$itensPage);
 
         // user
-        $users = App::get('database')->selectAll('usuarios');
-        return view('admin/listaUsuarios', compact('users'));
+        $users = App::get('database')->selectAll('usuarios', $inicio, $itensPage);
+        return view('admin/listaUsuarios', compact('users', 'page', 'total_pages'));
     }
 
     public function criar()
