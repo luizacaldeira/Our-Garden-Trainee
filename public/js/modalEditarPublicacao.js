@@ -99,19 +99,28 @@ function addCaresUpdate(id) {
     careInput.value = "";
 
     delete_li_cares.addEventListener("click", () => {
-    const caresExclusao = cares.findIndex(care => care.id === Number(li.id));
-    if (caresExclusao != -1) {
-      caresUpdate.splice(caresExclusao, 1);
-      updateCares();
-    }
-    ulCares.removeChild(li);
-  });
+        const caresExclusao = cares.findIndex(care => care.id === Number(li.id));
+        if (caresExclusao != -1) {
+            caresUpdate.splice(caresExclusao, 1);
+            updateCares();
+        }
+        ulCares.removeChild(li);
+    });
 
 }
 
 // FUNÇÃO QUE VAI DELETAR CUIDADOS
 function deleteCaresUpdate(id) {
-   const li = document.getElementById(id);
-    if (li) li.remove();
+    const li = document.getElementById(id);
+    if (li) {
+        li.remove();
+    }
 }
 
+function fecharModalUpdate(idModal, idFundo) {
+    //console.log("sai da funcao");
+    document.getElementById(idModal).style.display = "none";
+    document.getElementById(idFundo).style.display = "none";
+
+    window.location.reload();
+}

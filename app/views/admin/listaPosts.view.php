@@ -374,7 +374,7 @@
 
                             <div class="buttons">
                                 <div class="botaoCancelar">
-                                    <button type="button" action="/posts" onclick="fecharModal('modalEditPublication<?= $post->id ?>','filtro')">Cancelar</button>
+                                    <button type="button" action="/posts" onclick="fecharModalUpdate('modalEditPublication<?= $post->id ?>','filtro')">Cancelar</button>
                                 </div>
 
                                 <div class="botaoEditar">
