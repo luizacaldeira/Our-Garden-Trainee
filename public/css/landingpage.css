@@ -402,25 +402,7 @@ body {
 }
 
 .swiper-pagination {
-    position: absolute;
-    right: 10px; /* posicione do lado direito */
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex !important;
-    flex-direction: column;
-    gap: 10px;
-    z-index: -10 !important;
-}
-
-.swiper-pagination-bullet {
-    background: var(--green-300)!important;
-    opacity: 1 !important;
-    width: 12px;
-    height: 12px;
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--green-900) !important;
+    display: none !important;
 }
 
 .cardcontent1 {
@@ -429,7 +411,10 @@ body {
     flex-direction: column;
     align-self: center;
     border-radius: 8px;
-    padding: 2%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
 }
 .titulo1 {
     width: fit-content;
@@ -502,6 +487,14 @@ body {
 .cat h1{
     display: flex;
     margin: 0;
+}
+
+}
+
+@media (max-width: 850px){
+
+.swiper-pagination {
+    display:none !important;
 }
 
 }
