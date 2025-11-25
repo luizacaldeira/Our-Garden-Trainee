@@ -6,4 +6,4 @@ yarn.lock
 .env
 
 
-vendor/
+vendor
