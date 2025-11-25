@@ -340,7 +340,7 @@
                                                 <label>
                                                     <input
                                                         type="checkbox"
-                                                        name="classification[]"
+                                                        name="classificationEdit[]"
                                                         value="<?= $classificacao->id ?>"
                                                         <?= in_array($classificacao->id, $classificacoesMarcadas) ? 'checked' : '' ?>><?= $classificacao->nome ?>
                                                 </label>

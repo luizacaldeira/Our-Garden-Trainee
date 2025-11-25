@@ -16,15 +16,15 @@ function abrirDropdown(id) {
         setaCima.style.display = 'none';
     }
 
-    const checkboxSetups = [{ groupName: "classification[]", limit: 3 }];
+    const checkboxSetups = [{ groupName: "classificationEdit[]", limit: 3 }];
 
     checkboxSetups.forEach((setup) => {
-        limitCheckboxSelection(setup.groupName, setup.limit);
+        limitCheckboxSelectionEdited(setup.groupName, setup.limit);
     });
 }
 
 // FUNÇÃO QUE LIMITA O MAXIMO DE 3 OPÇÕES DE ESCOLHA DE CLASSIFICAÇÃO
-function limitCheckboxSelection(groupName, limit) {
+function limitCheckboxSelectionEdited(groupName, limit) {
     const checkboxes = document.querySelectorAll(`input[name="${groupName}"]`);
 
     checkboxes.forEach((checkbox) => {
