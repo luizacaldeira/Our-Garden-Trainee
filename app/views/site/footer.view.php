@@ -19,9 +19,9 @@
 <body>
     <footer>
         <section class="footer-content">
-            <div class="cards">
+            <div class="cardsFooter">
 
-                <div class="card">
+                <div class="cardFooter">
                     <div class="title">
                         <p>Missão</p>
                     </div>
@@ -36,7 +36,7 @@
                 <div class="vertical-line"></div>
                 <hr>
 
-                <div class="card">
+                <div class="cardFooter">
                     <div class="title">
                         <p>Visão</p>
                     </div>
@@ -50,7 +50,7 @@
                 <div class="vertical-line"></div>
                 <hr>
 
-                <div class="card">
+                <div class="cardFooter">
                     <div class="title">
                         <p>Valores</p>
                     </div>
@@ -64,7 +64,7 @@
                 <div class="vertical-line"></div>
                 <hr>
 
-                <div class="card">
+                <div class="cardFooter">
                     <div class="title">
                         <a href="https://www.codejr.com.br/" target="_blank"><img src="../../../public/assets/code-logo-branca.svg" alt="Logo da Code" class="logo-code-branca"></a>
                     </div>

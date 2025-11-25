@@ -58,7 +58,7 @@ if (!isset($_SESSION['id'])) {
                     <div class="icon">
                         <i class="bi bi-house-door-fill"></i>
                     </div>
-                    <div class="containerUsuarios">
+                    <a class="containerUsuarios" href="/">
                         <div class="content">
                             <div class="title">
                                 <h2>Home</h2>
@@ -67,7 +67,7 @@ if (!isset($_SESSION['id'])) {
                                 <p>Visualize as últimas novidades do Our Garden</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- <div class="verMais">
                         <p>Ver mais</p>
                         <i class="bi bi-arrow-right"></i>
@@ -77,7 +77,7 @@ if (!isset($_SESSION['id'])) {
                     <div class="icon">
                         <i class="bi bi-person-lines-fill"></i>
                     </div>
-                    <div class="containerUsuarios">
+                    <a class="containerUsuarios" href="/usuarios">
                         <div class="content">
                             <div class="title">
                                 <h2>Usuários</h2>
@@ -86,7 +86,7 @@ if (!isset($_SESSION['id'])) {
                                 <p>Visualize e administre os usuários do sistema</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- <div class="verMais">
                         <p>Ver mais</p>
                         <i class="bi bi-arrow-right"></i>
@@ -96,7 +96,7 @@ if (!isset($_SESSION['id'])) {
                     <div class="icon">
                         <i class="bi bi-file-post"></i>
                     </div>
-                    <div class="containerUsuarios">
+                    <a class="containerUsuarios" href="/posts">
                         <div class="content">
                             <div class="title">
                                 <h2>Publicações</h2>
@@ -105,7 +105,7 @@ if (!isset($_SESSION['id'])) {
                                 <p>Gerencie e crie novas postagens para o blog</p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <!-- <div class="verMais">
                         <p>Ver mais</p>
                         <i class="bi bi-arrow-right"></i>

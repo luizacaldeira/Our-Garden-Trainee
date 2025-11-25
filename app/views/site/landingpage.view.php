@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <?php include __DIR__ . '/../site/navbar.view.php' ?>
     <div class="pagina">
         <div class="conteudofull">
             <div class="herocontent">
@@ -215,9 +216,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-        <script type="module" src="/public/js/carrossel.js"></script>
+        </div> 
+    </div> 
+    <?php include __DIR__ . '/../site/footer.view.php' ?>       
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="/public/js/carrossel.js"></script>
 </body>
 
 </html>

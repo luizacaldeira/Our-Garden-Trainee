@@ -33,11 +33,11 @@
             <img src="../../../public/assets/Escrito verde claro vazio.png" class="navbarLogo">
 
             <div class="navbarContent">
-                <a class="navbarText" href = "#home">Home</a>
+                <a class="navbarText" href = "/">Home</a>
                 <div class="navbarDivider"></div>
-                <a class="navbarText" href = "#publicações">Publicações</a>
+                <a class="navbarText" href = "/publicacoes">Publicações</a>
                 <div class="navbarDivider"></div>
-                <a class="navbarLoginButton" href = "#login">Login</a>
+                <a class="navbarLoginButton" href = "/login">Login</a>
             </div>
         </div>
     </div>

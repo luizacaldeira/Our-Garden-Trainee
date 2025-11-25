@@ -27,9 +27,9 @@
     </div>
 
     <div class="loginBox">
-        <div class="loginBoxImg">
+        <a class="loginBoxImg" href="/">
 
-        </div>
+        </a>
 
         <div class="loginBoxForm">
             <div class="loginBoxTitle">

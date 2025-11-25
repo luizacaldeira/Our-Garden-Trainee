@@ -5,11 +5,11 @@ namespace App\Controllers;
 use App\Core\App;
 use Exception;
 
-class ExampleController
+class PostIndividualController
 {
 
     public function index()
     {
-        return view('site/landingpage');
+        return view('site/postIndividual');
     }
 }

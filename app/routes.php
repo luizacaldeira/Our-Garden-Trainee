@@ -5,6 +5,8 @@ use App\Controllers\ExampleController;
 use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
+$router->get('publicacoes', 'PaginaPostsController@index');
+$router->get('post', 'PostIndividualController@index');
 
 $router->get('usuarios', 'UsuariosController@index');
 $router->post('usuarios/criar', 'UsuariosController@criar');

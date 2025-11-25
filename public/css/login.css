@@ -49,6 +49,7 @@ body {
     background-size: cover;
     background-position: center;
     border-radius: 90px 30px 150px 90px;
+    cursor: pointer;
 }
 
 .loginBoxForm {
