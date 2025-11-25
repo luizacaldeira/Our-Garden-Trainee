@@ -8,8 +8,28 @@ use Exception;
 class UsuariosController
 {
 
-    public function index()
-    {
+    public function index(){
+
+    // Paginação 
+        $page=1;
+
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page<=0){
+                return redirect('admin/listaUsuarios');
+            }
+        }
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('usuarios');
+        
+        if($inicio>$rows_count){
+            return redirect('admin/listaUsuarios');
+        }
+        $total_pages= ceil($rows_count/$itensPage);
+
+        // user
         $users = App::get('database')->selectAll('usuarios');
         return view('admin/listaUsuarios', compact('users'));
     }
@@ -68,5 +88,25 @@ class UsuariosController
         App::get('database')->delete('usuarios', $id);
 
         header ('Location: /usuarios');
+    }
+    public function paginacao()
+    {
+        $page=1;
+
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+            $page = intval($_GET['paginacaoNumero']);
+
+            if($page<=0){
+                return redirect('admin/listaUsuarios');
+            }
+        }
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+        $rows_count = App::get('database')->countAll('usuarios');
+        
+        if($inicio>$rows_count){
+            return redirect('admin/listaUsuarios');
+        }
+
     }
 }
