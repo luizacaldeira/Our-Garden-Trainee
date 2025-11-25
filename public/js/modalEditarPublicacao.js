@@ -4,6 +4,7 @@ function abrirDropdown(id) {
     const dropdown = document.getElementById(`dropDownClassificacao${id}`);
     const setaCima = document.getElementById(`iconeSetaCima${id}`);
     const setaBaixo = document.getElementById(`iconeSetaBaixo${id}`);
+    const btnMostrarDropdown = document.getElementById(`mostarDropdown${id}`);
 
     dropdown.classList.toggle('open');
 
@@ -20,6 +21,21 @@ function abrirDropdown(id) {
 
     checkboxSetups.forEach((setup) => {
         limitCheckboxSelectionEdited(setup.groupName, setup.limit);
+    });
+
+    closeDropdownClickOutside(dropdown, btnMostrarDropdown, setaCima, setaBaixo);
+}
+
+// Fecha o dropdown ao clicar fora dele
+function closeDropdownClickOutside(dropdown_classification, btn_classification, arrow_up_icon, arrow_down_icon) {
+    document.addEventListener('click', (event) => {
+        const clickedOutside = !dropdown_classification.contains(event.target) && !btn_classification.contains(event.target);
+
+        if (clickedOutside && dropdown_classification.classList.contains('open')) {
+            dropdown_classification.classList.remove('open');
+            arrow_down_icon.style.display = "block";
+            arrow_up_icon.style.display = "none";
+        }
     });
 }
 

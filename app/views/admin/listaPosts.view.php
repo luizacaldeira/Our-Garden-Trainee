@@ -329,7 +329,7 @@
 
                                     <div class="class editPublicationContainer">
                                         <span>Classificação:</span>
-                                        <button type="button" id="mostarDropdown" onclick="abrirDropdown('<?= $post->id ?>')">Escolha
+                                        <button type="button" id="mostarDropdown<?= $post->id ?>" onclick="abrirDropdown('<?= $post->id ?>')">Escolha
                                             3 opções... <img src="../../../public/assets/arrow-down-icon.svg"
                                                 alt="seta para baixo" class="icone-seta-baixo" id="iconeSetaBaixo<?= $post->id ?>"> <img
                                                 src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
