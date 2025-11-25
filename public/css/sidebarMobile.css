@@ -105,11 +105,37 @@ main{
     align-items: center;
 }
 
-.btnLogoutMobile i{
+.btnLogoutMobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnLogoutMobile form {
+    display: flex;
+    align-items: center;
+}
+
+.btnLogoutMobile form .logoutsidebar_btn {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.btnLogoutMobile form .logoutsidebar_btn i{
     display: flex;
     flex-direction: column;
     padding-top: 5px;
     align-items: center;
+}
+
+.btnLogoutMobile form .logoutsidebar_btn span {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding-left: 7px;
 }
 
 .botoes_mobile .btnLogoutMobile .item-description-mobile {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="/public/css/sidebarMobile.css">
     <link rel="stylesheet" href="/public/css/styles.css">
 </head>
+
 <body>
     <!-- SIDEBAR PARA DESKTOP -->
     <div class="sidebarDesktop">
@@ -62,8 +64,8 @@
             <div class="logoutsidebar">
                 <form action="/logoutSidebar" method="POST">
                     <button class="logoutsidebar_btn" type="submit">
-                    <i class="bi bi-box-arrow-left"></i>
-                    <span class="item-description">Sair</span>
+                        <i class="bi bi-box-arrow-left"></i>
+                        <span class="item-description">Sair</span>
                     </button>
                 </form>
             </div>
@@ -76,7 +78,7 @@
                 <div class="btnDashboardMobile">
                     <a href="/dashboard">
                         <i class="bi bi-grid"></i>
-                        <span class="item-description-mobile"> 
+                        <span class="item-description-mobile">
                             Dashboard
                         </span>
                     </a>
@@ -84,7 +86,7 @@
                 <div class="btnUsuarioMobile">
                     <a href="/usuarios">
                         <i class="bi bi-person"></i>
-                        <span class="item-description-mobile"> 
+                        <span class="item-description-mobile">
                             Usuários
                         </span>
                     </a>
@@ -95,22 +97,23 @@
                 <div class="btnPublicacoesMobile">
                     <a href="/posts">
                         <i class="bi bi-pencil-square"></i>
-                        <span class="item-description-mobile"> 
+                        <span class="item-description-mobile">
                             Publicações
                         </span>
                     </a>
                 </div>
                 <div class="btnLogoutMobile">
-                    <a href="#">
-                        <i class="bi bi-box-arrow-left"></i>
-                        <span class="item-description-mobile"> 
-                            Sair
-                        </span>
-                    </a>
+                    <form action="/logoutSidebar" method="POST">
+                        <button class="logoutsidebar_btn" type="submit">
+                            <i class="bi bi-box-arrow-left"></i>
+                            <span class="item-description-mobile">Sair</span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>
     </div>
     <script src="/public/js/sidebar.js"></script>
 </body>
+
 </html>

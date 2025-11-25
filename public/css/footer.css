@@ -196,6 +196,8 @@ footer {
 
     .footer-content {
         gap: 1.875rem; /*30px*/
+
+        padding: 3rem 0;
     }
 
     .footer-content .cardsFooter {
