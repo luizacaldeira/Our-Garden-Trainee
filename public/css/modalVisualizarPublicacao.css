@@ -243,7 +243,7 @@
 }
 
 @media screen and (max-width: 320px) {
-   .backgroundListaPosts .mainListaPosts .modal-view-publication {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication {
         width: 90%;
 
         position: absolute;

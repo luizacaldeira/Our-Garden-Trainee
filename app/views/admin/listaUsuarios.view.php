@@ -167,7 +167,7 @@
                     <p>Visualizar Usuário</p>
                 </div>
                 <div class="modalAddNewUserMain">
-                    <form class="modalViewUserForm" id="modalViewUserForm">
+                    <form class="modalViewUserForm" id="modalViewUserForm<?= $user->id ?>">
                         <div class="viewUserPhoto">
                             <img src="/<?= $user->imagem ?>" alt="foto de perfil">
                         </div>
@@ -197,17 +197,18 @@
                     <p> Editar Usuário </p>
                 </div>
                 <div class="modalEditUserMain">
-                    <form class="editUserForm" id="editUserForm" method="post" action="usuarios/editar" enctype="multipart/form-data">
+                    <form class="editUserForm" id="editUserForm<?= $user->id ?>" method="post" action="usuarios/editar" enctype="multipart/form-data">
                         <input type="hidden" name="id" value=<?= $user->id ?> readonly>
+                        <input type="hidden" name="imgAtual" value=<?= $user->imagem?> readonly>
                         <div class="inputsEditUser">
                             <div class="editUserPhotoOut">
                                 <div class="editUserPhoto" id="editUserPhoto">
-                                        <input type="file" name="imagem" id="editUserPhotoInput"
-                                            onchange="exibirPreviewImagem('editUserPhotoInput', 'previewContentEdited')"
+                                        <input type="file" name="imagemUsuarioEdit" id="editUserPhotoInput<?= $user->id ?>"
+                                            onchange="exibirPreviewImagem('editUserPhotoInput<?= $user->id ?>', 'previewContentEdited<?= $user->id ?>')"
                                             style="display: none;" >
-                                        <label for="editUserPhotoInput" id="labelArquivoEditar" class="label-photo-container">
-                                            <div class="preview-content-edited" id="previewContentEdited">
-                                                <img src="/<?= $user->imagem ?>" alt="">
+                                        <label for="editUserPhotoInput<?= $user->id ?>" id="labelArquivoEditar<?= $user->id ?>" class="label-photo-container">
+                                            <div class="preview-content-edited" id="previewContentEdited<?= $user->id ?>">
+                                                <img src="/<?= $user->imagem?>" alt="">
                                             </div>
                                         </label>
                                 </div>
