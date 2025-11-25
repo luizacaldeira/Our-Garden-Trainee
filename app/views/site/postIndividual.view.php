@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <?php include __DIR__ . '/../site/navbar.view.php' ?>
     <main>
         <section class="hero-section">
 
@@ -118,7 +119,7 @@
             </div>
         </section>
     </main>
-
+    <?php include __DIR__ . '/../site/footer.view.php' ?>
     <script src="../../../public/js/postIndividual.js"></script>
 </body>
 
