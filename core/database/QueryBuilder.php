@@ -117,9 +117,9 @@ class QueryBuilder
             $id_classificacao = (int)$record['id_classificacao'];
             $values[] = "($id_publicacao, $id_classificacao)";
         }
-
+        
         $sql = "INSERT INTO publicacoes_classificacoes (id_publicacao, id_classificacao) VALUES" . implode(", ", $values);
-
+        
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -127,7 +127,23 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    
+    /**
+     * $value = id do post
+     */
+    public function deletePivot($column, $value)
+    {
+        $sql = "DELETE FROM publicacoes_classificacoes WHERE {$column} = :value";
 
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(["value" => $value]);
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    
     public function lastInsertID()
     {
         return $this->pdo->lastInsertID();
@@ -152,21 +168,6 @@ class QueryBuilder
         }
     }
 
-    /**
-     * $value = id do post
-     */
-    public function deletePivot($column, $value)
-    {
-        $sql = "DELETE FROM publicacoes_classificacoes WHERE {$column} = :value";
-
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(["value" => $value]);
-
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-    }
 
     public function delete($table, $id){
         $sql = sprintf('DELETE FROM %s WHERE id = :id', 
