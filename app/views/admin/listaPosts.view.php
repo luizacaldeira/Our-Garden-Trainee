@@ -364,7 +364,7 @@
                                         <?php foreach (json_decode($post->cuidados) as $index => $cuidado): ?>
                                             <li class="li-cares-update" id="li-care-db<?= $post->id ?><?= $index ?>">
                                                 <input class="li-cares-edit" id="cares-edit" name="cuidados[]" value="<?= $cuidado ?>">
-                                                <i class="bi bi-trash-fill" onclick="deleteCaresUpdate('li-care-db<?= $post->id ?><?= $index ?>')"></i>
+                                                <i class="bi bi-trash-fill" onclick="deleteCaresUpdate('li-care-db<?= $post->id ?><?= $index ?>', <?= $post->id ?>)"></i>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>

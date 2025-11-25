@@ -88,9 +88,7 @@ function addCaresUpdate(id) {
     const ulCares = document.getElementById(`ulCares${id}`);
     const inputBox = document.getElementById(`inputEPlus${id}`);
 
-    if (ulCares.children.length >= 5) {
-        inputBox.style.display = "none";
-    }
+    console.log(ulCares.children.length);
 
     if (careInput.value.trim() === "") {
         alert("Preencha o campo antes de adicionar um cuidado.");
@@ -123,15 +121,28 @@ function addCaresUpdate(id) {
             updateCares();
         }
         ulCares.removeChild(li);
+        if (ulCares.children.length <= 5) {
+            inputBox.style.display = "flex";
+        }
     });
+
+    if (ulCares.children.length >= 5) {
+        inputBox.style.display = "none";
+    }
 
 }
 
 // FUNÇÃO QUE VAI DELETAR CUIDADOS
-function deleteCaresUpdate(id) {
+function deleteCaresUpdate(id, postId) {
+    const ulCares = document.getElementById(`ulCares${postId}`);
+    const inputBox = document.getElementById(`inputEPlus${postId}`);
     const li = document.getElementById(id);
     if (li) {
         li.remove();
+
+        if (ulCares.children.length <= 5) {
+            inputBox.style.display = "flex";
+        }
     }
 }
 
