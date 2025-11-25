@@ -1,9 +1,18 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['id'])) {
+    header('Location: /login');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="../../../public/css/styles.css">
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -11,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet" />
 </head>
+
 <body>
     <div class="containerDashboard">
         <!-- <div class="sidebarDashboard"></div> -->
@@ -27,7 +37,16 @@
                         <p>administrador</p>
                     </div>
                     <div class="arrow">
-                        <i class="bi bi-chevron-down"></i>        
+                        <i class="bi bi-chevron-down setaParaBaixo"></i>
+                        <i class="bi bi-chevron-up setaParaCima"></i>
+                    </div>
+                    <div class="dropdownLogout">
+                        <form action="/logout" method="POST">
+                            <button type="submit">
+                                <i class="bi bi-box-arrow-left"></i>
+                                Sair
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -95,5 +114,8 @@
             </div>
         </div>
     </div>
+
+    <script src="../../../public/js/dashboard.js"></script>
 </body>
+
 </html>

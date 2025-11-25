@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../../public/css/listaUsuarios.css">
@@ -20,7 +19,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap"
         rel="stylesheet" />
-
+        
+    <link rel="icon" href="/public/assets/Logo verde claro vazio.png">
     <title>Lista usuários</title>
 </head>
 
@@ -67,107 +67,32 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach($users as $user): ?>
                             <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
+                                <td><?= $user->id ?></td>
+                                <td><strong><?= $user->nome ?></strong></td>
+                                <td><?= $user->email ?></td>
                                 <td>administrador</td>
                                 <td>
                                     <div class="actions">
                                         <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
                                                 alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
+                                                onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')"></button>
                                         <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
                                                 alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
+                                                onclick="abrirModal('modalEditUser<?= $user->id ?>', 'fundoJS')"></button>
                                         <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
                                                 alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
+                                                onclick="abrirModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"></button>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td><strong>Julia Rodrigues</strong></td>
-                                <td>juliarodrigues@rmail.com</td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                     <div class="pagination">
                         <div class="content">
-                            <button class="arrow-left"><img src="../../../public/assets/arrow-left-icon.svg"
-                                    alt="ícone de seta para esquerda"></button>
+                            <button class="arrow-left"><i class="bi bi-chevron-left"></i></button>
                             <div class="pages">
                                 <button class="page">1</button>
                                 <button class="page">2</button>
@@ -175,8 +100,7 @@
                                 <button class="page">4</button>
                                 <button class="page">...</button>
                             </div>
-                            <button class="arrow-right"><img src="../../../public/assets/arrow-right-icon.svg"
-                                    alt="ícone de seta para direita"></button>
+                            <button class="arrow-right"><i class="bi bi-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -184,19 +108,20 @@
 
             <div class="fundoJS" id="fundoJS"></div>
             <!-- MODAL CRIAR USUARIO -->
+            
             <section class="modalAddNewUser" id="modalAddNewUser">
                 <div class="modalAddNewUserHeader">
                     <img src="../../../public/assets/plus-circle-icon.svg" alt="ícone de adiconar">
                     <p>Adicionar Usuario</p>
                 </div>
                 <div class="modalAddNewUserMain">
-                    <form class="addNewUserForm" id="addNewUserForm">
+                    <form class="addNewUserForm" id="addNewUserForm" method="post" action="usuarios/criar" enctype="multipart/form-data">
                         <div class="inputsAddNewUser">
                             <section class="create-publication-container photo-container" id="photoContainer">
                                 <div class="photo-container-content">
-                                    <input type="file" name="adicionar nova foto" id="addNewPhotoInput"
+                                    <input type="file" name="imagemUsuario" id="addNewPhotoInput"
                                         onchange="exibirPreviewImagem('addNewPhotoInput', 'previewContent')"
-                                        style="display: none;" required>
+                                        style="display: none;">
                                     <label for="addNewPhotoInput" id="labelArquivo" class="label-photo-container">
                                         <div class="preview-content" id="previewContent">
                                             <img src="../../../public/assets/image-icon.svg"
@@ -209,22 +134,19 @@
                             <div class="userName">
                                 <section class="addUserName">
                                     <span>Nome:</span>
-                                    <input type="text" name="nome do user" id="inputUserName"
-                                        placeholder="Digite seu nome...">
+                                    <input type="text" name="nome" id="inputUserName" placeholder="Digite seu nome...">
                                 </section>
                             </div>
                             <div class="userEmail">
                                 <section class="addUserEmail">
                                     <span>Email:</span>
-                                    <input type="text" name="email do user" id="inputUserEmail"
-                                        placeholder="Digite seu email...">
+                                    <input type="text" name="email" id="inputUserEmail" placeholder="Digite seu email...">
                                 </section>
                             </div>
                             <div class="userPassword">
                                 <section class="addUserPassword">
                                     <span>Senha:</span>
-                                    <input type="text" name="senha do user" id="inputUserPassword"
-                                        placeholder="Digite sua senha...">
+                                    <input type="text" name="senha" id="inputUserPassword" placeholder="Digite sua senha...">
                                 </section>
                             </div>
                         </div>
@@ -236,53 +158,57 @@
                     </form>
                 </div>
             </section>
+            
             <!-- MODAL VISUALIZAR USUARIO -->
-            <section class="modalViewUser" id="modalViewUser">
+            <?php foreach($users as $user): ?>
+            <section class="modalViewUser" id="modalViewUser<?= $user->id ?>">
                 <div class="modalViewUserHeader">
                     <img src="../../../public/assets/eye-icon-white.svg" alt="ícone de vizualizar">
                     <p>Visualizar Usuário</p>
                 </div>
                 <div class="modalAddNewUserMain">
-                    <form class="modalViewUserForm" id="modalViewUserForm">
+                    <form class="modalViewUserForm" id="modalViewUserForm<?= $user->id ?>">
                         <div class="viewUserPhoto">
-                            <img src="../../../public/assets/XiJingPingGigaChad.jpg" alt="foto de perfil">
+                            <img src="/<?= $user->imagem ?>" alt="foto de perfil">
                         </div>
                         <div class="viewUserContent">
                             <div class="viewUserName">
                                 <span>Nome:</span>
-                                <p>Julia Rodrigues</p>
+                                <p><?= $user->nome ?></p>
                             </div>
                             <div class="viewUserEmail">
                                 <span>Email:</span>
-                                <p>juliarodrigues@gmail.com</p>
+                                <p><?= $user->email ?></p>
                             </div>
                         </div>
                         <section class="bottonsViewUser">
                             <button class="btnExitViewUser" id="btnExitNewUser" type="button"
-                                onclick="fecharModal('modalViewUser', 'fundoJS')">Sair</button>
+                                onclick="fecharModal('modalViewUser<?= $user->id ?>', 'fundoJS')">Sair</button>
                         </section>
                     </form>
                 </div>
             </section>
+            <?php endforeach; ?>
             <!-- MODAL EDITAR USUARIO  -->
-            <section class="modalEditUser" id="modalEditUser">
+            <?php foreach($users as $user): ?>
+            <section class="modalEditUser" id="modalEditUser<?= $user->id ?>">
                 <div class="modalEditUserHeader">
                     <img src="/public/assets/plus-icon.svg">
                     <p> Editar Usuário </p>
                 </div>
                 <div class="modalEditUserMain">
-                    <form class="editUserForm" id="editUserForm">
+                    <form class="editUserForm" id="editUserForm<?= $user->id ?>" method="post" action="usuarios/editar" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value=<?= $user->id ?> readonly>
+                        <input type="hidden" name="imgAtual" value=<?= $user->imagem?> readonly>
                         <div class="inputsEditUser">
                             <div class="editUserPhotoOut">
                                 <div class="editUserPhoto" id="editUserPhoto">
-                                        <input type="file" name="adicionar nova foto" id="editUserPhotoInput"
-                                            onchange="exibirPreviewImagem('editUserPhotoInput', 'previewContentEdited')"
-                                            style="display: none;" required>
-                                        <label for="editUserPhotoInput" id="labelArquivo" class="label-photo-container">
-                                            <div class="preview-content" id="previewContentEdited">
-                                                <img src="../../../public/assets/image-icon.svg"
-                                                    alt="ícone de adicionar nova imagem">
-                                                <p>Selecione uma<br>nova foto</p>
+                                        <input type="file" name="imagemUsuarioEdit" id="editUserPhotoInput<?= $user->id ?>"
+                                            onchange="exibirPreviewImagem('editUserPhotoInput<?= $user->id ?>', 'previewContentEdited<?= $user->id ?>')"
+                                            style="display: none;" >
+                                        <label for="editUserPhotoInput<?= $user->id ?>" id="labelArquivoEditar<?= $user->id ?>" class="label-photo-container">
+                                            <div class="preview-content-edited" id="previewContentEdited<?= $user->id ?>">
+                                                <img src="/<?= $user->imagem?>" alt="">
                                             </div>
                                         </label>
                                 </div>
@@ -290,52 +216,56 @@
                             <div class="editUserName">
                                 <div class="editUserNamebox">
                                     <span>Nome:</span>
-                                    <input type="text" name="edite nome do user" id="inputEditUserName"
-                                        placeholder="Digite novo nome...">
+                                    <input type="text" name="nome" id="inputEditUserName"
+                                        placeholder="Digite novo nome..." value="<?= $user->nome ?>">
                                 </div>
                             </div>
                             <div class="editUserEmail">
                                 <div class="editUserEmailbox">
                                     <span>Email:</span>
-                                    <input type="text" name="edite email do user" id="inputEditUserEmail"
-                                        placeholder="Digite novo email...">
+                                    <input type="text" name="email" id="inputEditUserEmail"
+                                        placeholder="Digite novo email..." value="<?= $user->email ?>">
                                 </div>
                             </div>
                             <div class="editUserPassword">
                                 <div class="editUserPasswordbox">
                                     <span>Senha:</span>
-                                    <input type="text" name="nova senha do user" id="inputEditUserPassword"
-                                        placeholder="Digite a nova senha...">
+                                    <input type="text" name="senha" id="inputEditUserPassword"
+                                        placeholder="Digite a nova senha..." value="<?= $user->senha ?>">
                                 </div>
                             </div>
                         </div>
                         <div class="bottonsEditUser">
                             <button class="btnCancelEditUser" id="btnCancelEditUser" type="button"
-                                onclick="fecharModal('modalEditUser', 'fundoJS')">Cancelar</button>
+                                onclick="fecharModal('modalEditUser<?= $user->id ?>', 'fundoJS')">Cancelar</button>
                             <button class="btnEditUser" id="btnEditUser" type="submit">Editar</button>
                         </div>
                     </form>
                 </div>
             </section>
+            <?php endforeach; ?>
             <!-- MODAL EXCLUIR USUÁRIO -->
-            <section class="modalDeletUser" id="modalDeletUser">
+            <?php foreach($users as $user): ?>
+            <section class="modalDeletUser" id="modalDeletUser<?= $user->id ?>">
                 <div class="modalDeletUserHeader">
                     <img src="/public/assets/Design sem nome.png">
                     <p>Excluir</p>
                 </div>
                 <div class="modalDeletUserMain">
-                    <form class="deletUserForm" id="deleteUserForm">
+                    <form class="deletUserForm" id="deleteUserForm" method="post" action="usuarios/deletar">
+                        <input type="hidden" name="id" value=<?= $user->id ?> readonly>
                         <div class="deletUserText">
                             <p> Tem certeza que deseja excluir esse usuário? </p>
                         </div>
                         <div class="bottonsDeletUser">
                             <button class="btnCancelDeletUser" id="btnCancelDeletUser" type="button"
-                                onclick="fecharModal('modalDeletUser' , 'fundoJS')"> Cancelar </button>
+                                onclick="fecharModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"> Cancelar </button>
                             <button class="btnDeletUser" id="btnDeletUser" type="submit">Excluir</button>
                         </div>
                     </form>
                 </div>
             </section>
+            <?php endforeach; ?>
         </main>
     </div>
     <script src="../../../public/js/listaUsuarios.js"></script>

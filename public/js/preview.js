@@ -17,5 +17,6 @@ function exibirPreviewImagem(idInput, idLabelContent) {
 
       reader.readAsDataURL(imageSrc);
     }
+    console.log(idLabelContent);
   }
 }

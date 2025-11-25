@@ -1,0 +1,242 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-paragrafo);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--green-200);
+}
+
+main {
+    padding: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    position: fixed;
+    width: 60px;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.sidebarcontent {
+    width: 100%;
+    height: fit-content
+}
+
+.logo_ourgarden img {
+    object-fit: cover;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.logoopen {
+    width: fit-content;
+    display: none;
+}
+
+.logoopen img {
+    width: 130px;
+}
+
+.logoclose img {
+    width: 40px;
+
+}
+
+.logoclose {
+    display: flex;
+    width: 30px;
+}
+
+.sidebar:hover .logoclose {
+    display: none;
+}
+
+.sidebar:hover .logoopen {
+    display: block;
+}
+
+.logo_ourgarden {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--green-900);
+    border-bottom-right-radius: 20px;
+}
+
+.sidebotton {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+
+    background-color: var(--green-200);
+}
+
+.sidebottons {
+    height: 50px;
+    justify-content: flex-start;
+    cursor: pointer;
+    align-content: center;
+    align-items: center;
+    padding-left: 25px;
+    display: flex;
+    width: 100%;
+}
+
+.sidebottomout {
+    width: 100%;
+}
+
+.btnDashboard {
+    background-color: var(--green-900);
+}
+
+.btnUsuarios {
+    border-top-right-radius: 20px;
+    background-color: var(--green-900);
+}
+
+.btnPublicacoes {
+    background-color: var(--green-900);
+}
+
+.btnDashboard.active {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: var(--green-900);
+}
+
+.active {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: var(--green-200);
+}
+
+.sidebottons a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: var(--green-200);
+}
+
+.sidebottons.active a {
+    color: var(--green-900);
+}
+
+.sidebottons:hover:not(.active) a {
+    color: var(--green-200);
+    text-shadow: 0 0 10px ; 
+    transform: scale(1.2); 
+}
+
+.sidebottons a i {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.vazio {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--green-900);
+    height: 80%;
+}
+
+.logoutsidebar {
+    align-self: center;
+    background-color: var(--green-900);
+    width: 100%;
+    justify-items: center;
+    padding-bottom: 20px;
+    margin: auto;
+}
+
+.logoutsidebar .item-description {
+    margin: auto;
+}
+
+.logoutsidebar_btn {
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    background-color: var(--green-900);
+    color: var(--green-200);
+    cursor: pointer;
+    margin: auto;
+}
+
+.sidebar:hover {
+    width: 190px;
+}
+
+.sidebar .item-description {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+.sidebar:hover .item-description {
+    width: 150px;
+    opacity: 1;
+}
+
+.sidebottons a {
+    justify-content: center;
+    transition: justify-content 0.3s ease;
+}
+
+.sidebar:hover .sidebottons a {
+    justify-content: flex-start;
+}
+
+.logoutsidebar a {
+    text-decoration: none;
+    text-align: center;
+    color: var(--green-200);
+}
+.logoutsidebar:hover a {
+    text-shadow: 0 0 10px ; 
+    transform: scale(1.2); 
+}
+
+.sidebar:hover .logoutsidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.sidebar:hover .logoutsidebar .item-description {
+    margin: auto;
+    width: 100%;
+    padding-left: 10px;
+}
+
+@media (min-width: 700px) {
+
+    .sidebarMobile {
+        display: none;
+    }
+}

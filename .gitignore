@@ -7,3 +7,5 @@ yarn.lock
 
 
 vendor
+
+public/assets/imagensPosts/*
