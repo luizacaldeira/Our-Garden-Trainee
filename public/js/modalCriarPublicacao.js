@@ -6,6 +6,13 @@ const filtro = document.querySelector("#filtro");
 botoes_lista_posts.addEventListener("click", () => {
   modal_create_publication.style.display = "flex";
   filtro.style.display = "block";
+
+  const checkboxSetups = [
+    { groupName: "classification[]", limit: 3 },
+  ];
+  checkboxSetups.forEach((setup) => {
+    limitCheckboxSelection(setup.groupName, setup.limit);
+  });
 });
 
 // Faz fechar o modal de criar nova publicação
@@ -80,29 +87,19 @@ document.addEventListener('click', (event) => {
 /**
  * Código disponível em: https://gist.github.com/dantetesta/590f6719400d57001380c9ca017982b3
  */
-document.addEventListener("DOMContentLoaded", () => {
-  function limitCheckboxSelection(groupName, limit) {
-    const checkboxes = document.querySelectorAll(`input[name="${groupName}"]`);
+function limitCheckboxSelection(groupName, limit) {
+  const checkboxes = document.querySelectorAll(`input[name="${groupName}"]`);
 
-    checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', () => {
-        const checkedCount = document.querySelectorAll(`input[name="${groupName}"]:checked`).length;
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      const checkedCount = document.querySelectorAll(`input[name="${groupName}"]:checked`).length;
 
-        if (checkedCount > limit) {
-          checkbox.checked = false;
-        }
-      });
+      if (checkedCount > limit) {
+        checkbox.checked = false;
+      }
     });
-  }
-
-  const checkboxSetups = [
-    { groupName: "classification[]", limit: 3 },
-  ];
-
-  checkboxSetups.forEach((setup) => {
-    limitCheckboxSelection(setup.groupName, setup.limit);
   });
-});
+}
 
 // Cria as opções de cuidados com a planta
 const input_cares_plant = document.querySelector("#inputCaresPlant");

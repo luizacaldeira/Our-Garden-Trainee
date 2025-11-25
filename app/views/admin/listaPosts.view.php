@@ -169,7 +169,7 @@
                                     <img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
                                         class="arrow-up-icon" id="arrowUpIcon">
                                 </button>
-                                <div class="dropdown-classification" id="dropdownClassification<?= $post->id ?>">
+                                <div class="dropdown-classification" id="dropdownClassification">
                                     <?php foreach ($classificacoes as $classificacao): ?>
                                         <label><input type="checkbox" value=<?= $classificacao->id ?> name="classification[]">
                                             <?= $classificacao->nome ?></label>
@@ -329,11 +329,11 @@
 
                                     <div class="class editPublicationContainer">
                                         <span>Classificação:</span>
-                                        <button type="button" id="mostarDropdown" onclick="abrirDropdown('dropDownClassificacao<?= $post->id ?>')">Escolha
+                                        <button type="button" id="mostarDropdown" onclick="abrirDropdown('<?= $post->id ?>')">Escolha
                                             3 opções... <img src="../../../public/assets/arrow-down-icon.svg"
-                                                alt="seta para baixo" class="icone-seta-baixo" id="iconeSetaBaixo"> <img
+                                                alt="seta para baixo" class="icone-seta-baixo" id="iconeSetaBaixo<?= $post->id ?>"> <img
                                                 src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"
-                                                class="icone-seta-cima" id="iconeSetaCima"></button>
+                                                class="icone-seta-cima" id="iconeSetaCima<?= $post->id ?>"></button>
                                         <?php $classificacoesMarcadas = array_map(fn($classificacao) => $classificacao->id, $post->classificacoes); ?>
                                         <div class="dropDownClassificacao" id="dropDownClassificacao<?= $post->id ?>">
                                             <?php foreach ($classificacoes as $classificacao): ?>
