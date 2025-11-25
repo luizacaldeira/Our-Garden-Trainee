@@ -111,23 +111,7 @@ function addCaresUpdate(id) {
 
 // FUNÇÃO QUE VAI DELETAR CUIDADOS
 function deleteCaresUpdate(id) {
-    const careInput = document.getElementById(`careInput${id}`);
-    const ulCares = document.getElementById(`ulCares${id}`);
-    const inputBox = document.getElementById(`inputEPlus${id}`);
-
-    if (ulCares.children.length >= 5) {
-        inputBox.style.display = "none";
-    }
-
-    if (careInput.value.trim() === "") {
-        alert("Preencha o campo antes de adicionar um cuidado.");
-    }
-
-    const li = document.createElement("li");
-    li.classList.add("li-cares-update");
-    li.innerHTML = `
-    <input class="li-cares-edit" name="cuidados[]" value="${careInput.value}">`;
-
-    ulCares.appendChild(li);
-    careInput.value = "";
+   const li = document.getElementById(id);
+    if (li) li.remove();
 }
+

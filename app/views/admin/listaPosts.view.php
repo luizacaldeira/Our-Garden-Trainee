@@ -362,10 +362,10 @@
                                         <i class="bi bi-plus-circle" onclick="addCaresUpdate(<?= $post->id ?>)"></i>
                                     </div>
                                     <ul id="ulCares<?= $post->id ?>" class="ul-cares">
-                                        <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
-                                            <li class="li-cares-update">
+                                        <?php foreach (json_decode($post->cuidados) as $index => $cuidado): ?>
+                                            <li class="li-cares-update" id="li-care-db<?= $post->id ?><?= $index ?>">
                                                 <input class="li-cares-edit" id="cares-edit" name="cuidados[]" value="<?= $cuidado ?>">
-                                                <i class="bi bi-trash-fill" onclick="deleteCaresUpdate(<?= $post->id ?>)"></i>
+                                                <i class="bi bi-trash-fill" onclick="deleteCaresUpdate('li-care-db<?= $post->id ?><?= $index ?>')"></i>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>
@@ -374,7 +374,7 @@
 
                             <div class="buttons">
                                 <div class="botaoCancelar">
-                                    <button type="button" onclick="fecharModal('modalEditPublication<?= $post->id ?>','filtro')">Cancelar</button>
+                                    <button type="button" action="/posts" onclick="fecharModal('modalEditPublication<?= $post->id ?>','filtro')">Cancelar</button>
                                 </div>
 
                                 <div class="botaoEditar">
