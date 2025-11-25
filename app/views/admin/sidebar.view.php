@@ -26,7 +26,7 @@
                     <ul class="sidebotton">
                         <div class="btnDashboard" id="btnDashboardContainer">
                             <li class="sidebottons dash active" id="btnDashboard">
-                                <a href="#">
+                                <a href="/dashboard">
                                     <i class="bi bi-grid"></i>
                                     <span class="item-description">
                                         Dashboard
@@ -36,7 +36,7 @@
                         </div>
                         <div class="btnUsuarios" id="btnUsuariosContainer">
                             <li class="sidebottons user" id="btnUsuarios">
-                                <a href="#">
+                                <a href="/usuarios">
                                     <i class="bi bi-person"></i>
                                     <span class="item-description">
                                         Usuários
@@ -46,7 +46,7 @@
                         </div>
                         <div class="btnPublicacoes" id="btnPublicacoesContainer">
                             <li class="sidebottons post" id="btnPublicacoes">
-                                <a href="#">
+                                <a href="/posts">
                                     <i class="bi bi-pencil-square"></i>
                                     <span class="item-description">
                                         Publicações
@@ -60,10 +60,12 @@
             <div class="vazio" id="vazio">
             </div>
             <div class="logoutsidebar">
-                <a href="#" class="logoutsidebar_btn">
+                <form action="/logoutSidebar" method="POST">
+                    <button class="logoutsidebar_btn" type="submit">
                     <i class="bi bi-box-arrow-left"></i>
                     <span class="item-description">Sair</span>
-                </a>
+                    </button>
+                </form>
             </div>
         </nav>
     </div>
@@ -72,7 +74,7 @@
         <nav class="sidebar_mobile" id="sidebar_mobile">
             <div class="botoes_mobile">
                 <div class="btnDashboardMobile">
-                    <a href="#">
+                    <a href="/dashboard">
                         <i class="bi bi-grid"></i>
                         <span class="item-description-mobile"> 
                             Dashboard
@@ -80,7 +82,7 @@
                     </a>
                 </div>
                 <div class="btnUsuarioMobile">
-                    <a href="#">
+                    <a href="/usuarios">
                         <i class="bi bi-person"></i>
                         <span class="item-description-mobile"> 
                             Usuários
@@ -91,7 +93,7 @@
                     <img src="/public/assets/4.png">
                 </div>
                 <div class="btnPublicacoesMobile">
-                    <a href="#">
+                    <a href="/posts">
                         <i class="bi bi-pencil-square"></i>
                         <span class="item-description-mobile"> 
                             Publicações

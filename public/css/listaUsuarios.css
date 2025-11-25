@@ -23,8 +23,9 @@ main {
     gap: 2.5rem;
     /*40px*/
 
-    min-width: 100%;
+    width: 100%;
     min-height: 100%;
+    padding-left: 1rem;
 }
 
 main .section1 {

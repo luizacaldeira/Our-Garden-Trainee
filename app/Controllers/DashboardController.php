@@ -20,4 +20,12 @@ class DashboardController
 
         header("Location: /login");
     }
+
+    public function logoutSidebar() {
+        session_start();
+        session_unset();
+        session_destroy();
+
+        header("Location: /");
+    }
 }

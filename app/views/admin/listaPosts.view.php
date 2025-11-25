@@ -30,6 +30,7 @@
 
 <body>
     <div class="backgroundListaPosts">
+        <?php include __DIR__ . '/../admin/sidebar.view.php' ?>
         <div class="mainListaPosts">
             <div class="superiorListaPosts">
                 <div class="pesquisaPosts">
@@ -412,6 +413,7 @@
                 </div>
             <?php endforeach; ?>
         </div>
+    </div>
 
         <!-- JAVASCRIPT -->
         <script src="../../../public/js/modalCriarPublicacao.js"></script>

@@ -26,6 +26,7 @@
 
 <body>
     <div class="background-complete-page">
+        <?php include __DIR__ . '/../admin/sidebar.view.php' ?>
         <main>
             <section class="section1">
                 <div class="input-search-container">

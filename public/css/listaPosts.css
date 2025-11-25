@@ -24,6 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2.5rem;
+    padding-left: 1rem;
     gap: 2.5rem;
 }
 

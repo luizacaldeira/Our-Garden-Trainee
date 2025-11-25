@@ -18,6 +18,7 @@ $router->post('login', 'LoginController@loginVerification');
 
 $router->get('dashboard', 'DashboardController@index');
 $router->post('logout', 'DashboardController@logout');
+$router->post('logoutSidebar', 'DashboardController@logoutSidebar');
 
 // ROTAS DE PUBLICAÇÕES
 $router->get('posts', 'PublicacoesController@index');

@@ -22,7 +22,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    position: fixed;
+    min-height: max-content;
+    /* position: fixed; */
     width: 60px;
     transition: width 0.3s ease;
     z-index: 1000;
