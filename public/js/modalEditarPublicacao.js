@@ -17,12 +17,13 @@ function abrirDropdown(id) {
         setaCima.style.display = 'none';
     }
 
+    // chama a funcao que limita a escolha de no máximo 3 checkboxs de classificacoes somente ao abrir o modal
     const checkboxSetups = [{ groupName: "classificationEdit[]", limit: 3 }];
-
     checkboxSetups.forEach((setup) => {
         limitCheckboxSelectionEdited(setup.groupName, setup.limit);
     });
 
+    // chama a funcao que fecha o dropdown ao clicar fora dele
     closeDropdownClickOutside(dropdown, btnMostrarDropdown, setaCima, setaBaixo);
 }
 
@@ -114,6 +115,7 @@ function addCaresUpdate(id) {
     ulCares.appendChild(li);
     careInput.value = "";
 
+    // funcao que vai deletar cuidados que o usuario adicionar no frontend
     delete_li_cares.addEventListener("click", () => {
         const caresExclusao = caresUpdate.findIndex(care => care.id === Number(li.id));
         if (caresExclusao != -1) {
@@ -132,7 +134,7 @@ function addCaresUpdate(id) {
 
 }
 
-// FUNÇÃO QUE VAI DELETAR CUIDADOS
+// FUNÇÃO QUE VAI DELETAR CUIDADOS QUE VEM DO BANCO
 function deleteCaresUpdate(id, postId) {
     const ulCares = document.getElementById(`ulCares${postId}`);
     const inputBox = document.getElementById(`inputEPlus${postId}`);
