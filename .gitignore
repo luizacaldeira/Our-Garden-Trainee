@@ -9,3 +9,4 @@ yarn.lock
 vendor
 
 public/assets/imagensPosts/*
+public/assets/imagensUsuarios/*
