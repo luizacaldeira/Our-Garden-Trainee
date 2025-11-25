@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="../../../public/css/modalExcluirPublicacao.css">
     <link rel="stylesheet" href="../../../public/css/modalVisualizarPublicacao.css">
 
-    <title>Lista de Posts</title>
+    <title>Lista de Publicações</title>
+    <link rel="icon" href="/public/assets/4.png">
 </head>
 
 <body>

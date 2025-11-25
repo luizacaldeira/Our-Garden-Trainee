@@ -21,7 +21,8 @@
         rel="stylesheet" />
         
     <link rel="icon" href="/public/assets/Logo verde claro vazio.png">
-    <title>Lista usuários</title>
+    <title>Lista de Usuários</title>
+    <link rel="icon" href="/public/assets/4.png">
 </head>
 
 <body>
