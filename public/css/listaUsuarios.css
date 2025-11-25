@@ -213,7 +213,7 @@ main .section3 .users-table tbody tr td .actions .btn-actions:hover {
     transform: scale(1.1);
 }
 
-main .section3 .pagination {
+.paginacaoPosts {
     width: 100%;
     display: flex;
     align-items: center;
@@ -224,7 +224,7 @@ main .section3 .pagination {
     padding-top: 1rem;
 }
 
-main .section3 .pagination .content {
+.paginacaoPostsConteudo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,25 +242,28 @@ main .section3 .pagination .content {
     font-size: 1rem;
 }
 
-main .section3 .pagination .content .arrow-left {
+.paginacaoPostsConteudo li {
+    list-style: none;
+}
+
+.arrow-left {
     all: unset;
     cursor: pointer;
 
     padding-top: 0.1rem;
 }
 
-main .section3 .pagination .content .arrow-left .bi-chevron-left {
+.arrow-left .bi-chevron-left {
     font-size: 1.2rem;
 }
 
-main .section3 .pagination .content .pages {
+.pages {
     display: flex;
     align-items: center;
-
     gap: 1rem;
 }
 
-main .section3 .pagination .content .pages .page {
+.page {
     all: unset;
     padding: 0.625rem;
     border-radius: 0.625rem;
@@ -280,19 +283,18 @@ main .section3 .pagination .content .pages .page {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-main .section3 .pagination .content .pages .page:hover {
+.page:hover {
     background-color: var(--green-500);
 }
 
-main .section3 .pagination .content .arrow-right {
+.arrow-right {
     all: unset;
-
     cursor: pointer;
 
-    transition: all 0.2s ease-in-out;
+    padding-top: 0.1rem;
 }
 
-main .section3 .pagination .content .arrow-right .bi-chevron-right {
+.arrow-right .bi-chevron-right {
     font-size: 1.2rem;
 }
 
@@ -380,10 +382,23 @@ main .section3 .pagination .content .arrow-right .bi-chevron-right {
     }
 }
 
+@media screen and (min-width: 501px) and (max-width: 700px) {
+    .background-complete-page {
+        height: 100vh;
+        min-height: max-content;
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .background-complete-page {
         height: 100vh;
         min-height: max-content;
+
+        display: flex;
+        flex-direction: column;
     }
 
     main {

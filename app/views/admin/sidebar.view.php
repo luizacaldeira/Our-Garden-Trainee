@@ -25,7 +25,7 @@
                 <div class="sidebottomout">
                     <ul class="sidebotton">
                         <div class="btnDashboard" id="btnDashboardContainer">
-                            <li class="sidebottons dash active" id="btnDashboard">
+                            <li class="sidebottons dash ativa" id="btnDashboard">
                                 <a href="/dashboard">
                                     <i class="bi bi-grid"></i>
                                     <span class="item-description">

@@ -9,10 +9,10 @@ const btnUsuariosContainer= document.getElementById("btnUsuariosContainer");
 const btnPublicacoesContainer = document.getElementById("btnPublicacoesContainer");
 
 btnDashboard.addEventListener("click", () => {
-    btnDashboard.classList.add('active');
+    btnDashboard.classList.add('ativa');
     
-    btnUsuarios.classList.remove('active');
-    btnPublicacoes.classList.remove('active');
+    btnUsuarios.classList.remove('ativa');
+    btnPublicacoes.classList.remove('ativa');
     
     id_logo_ourgarden.style.borderBottomRightRadius = "20px";
     btnUsuariosContainer.style.borderTopRightRadius = "20px";
@@ -24,10 +24,10 @@ btnDashboard.addEventListener("click", () => {
 });
 
 btnUsuarios.addEventListener("click", () => {
-    btnUsuarios.classList.add('active');
+    btnUsuarios.classList.add('ativa');
     
-    btnDashboard.classList.remove('active');
-    btnPublicacoes.classList.remove('active');
+    btnDashboard.classList.remove('ativa');
+    btnPublicacoes.classList.remove('ativa');
     
     btnDashboardContainer.style.borderBottomRightRadius = "20px";
     btnPublicacoesContainer.style.borderTopRightRadius = "20px";
@@ -37,10 +37,10 @@ btnUsuarios.addEventListener("click", () => {
 });
 
 btnPublicacoes.addEventListener("click", () => {
-    btnPublicacoes.classList.add('active');
+    btnPublicacoes.classList.add('ativa');
     
-    btnDashboard.classList.remove('active');
-    btnUsuarios.classList.remove('active');
+    btnDashboard.classList.remove('ativa');
+    btnUsuarios.classList.remove('ativa');
     
     btnUsuariosContainer.style.borderBottomRightRadius = "20px";
     vazio.style.borderTopRightRadius = "20px";

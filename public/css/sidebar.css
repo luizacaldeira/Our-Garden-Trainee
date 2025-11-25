@@ -22,7 +22,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    min-height: max-content;
+    max-height: max-content;
     /* position: fixed; */
     width: 60px;
     transition: width 0.3s ease;
@@ -114,13 +114,13 @@ main {
     background-color: var(--green-900);
 }
 
-.btnDashboard.active {
+.btnDashboard.ativa {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     background-color: var(--green-900);
 }
 
-.active {
+.ativa {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     background-color: var(--green-200);
@@ -135,11 +135,11 @@ main {
     color: var(--green-200);
 }
 
-.sidebottons.active a {
+.sidebottons.ativa a {
     color: var(--green-900);
 }
 
-.sidebottons:hover:not(.active) a {
+.sidebottons:hover:not(.ativa) a {
     color: var(--green-200);
     text-shadow: 0 0 10px ; 
     transform: scale(1.2); 
