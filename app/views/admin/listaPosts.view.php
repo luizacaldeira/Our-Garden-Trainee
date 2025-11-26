@@ -84,7 +84,7 @@ if (!isset($_SESSION['id'])) {
                                     <td><?= $post->id ?></td>
                                     <td><strong><?= $post->titulo ?></strong></td>
                                     <td><?= $post->nome_usuario ?></td>
-                                    <td><?= $post->data_criacao ?></td>
+                                    <td><?= (new DateTime($post->data_criacao))->format('d/m/Y') ?></td>
                                     <td>
                                         <div class="botoesAcoes">
                                             <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
