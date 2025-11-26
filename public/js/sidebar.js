@@ -8,7 +8,9 @@ const btnDashboardContainer= document.getElementById("btnDashboardContainer");
 const btnUsuariosContainer= document.getElementById("btnUsuariosContainer");
 const btnPublicacoesContainer = document.getElementById("btnPublicacoesContainer");
 
-btnDashboard.addEventListener("click", () => {
+const currentPath = window.location.pathname;
+
+if (currentPath === "/dashboard") {
     btnDashboard.classList.add('ativa');
     
     btnUsuarios.classList.remove('ativa');
@@ -21,9 +23,8 @@ btnDashboard.addEventListener("click", () => {
     btnPublicacoesContainer.style.borderTopRightRadius = "0px";
     vazio.style.borderTopRightRadius = "0px";
 
-});
+} else if (currentPath === "/usuarios") {
 
-btnUsuarios.addEventListener("click", () => {
     btnUsuarios.classList.add('ativa');
     
     btnDashboard.classList.remove('ativa');
@@ -34,9 +35,9 @@ btnUsuarios.addEventListener("click", () => {
 
     id_logo_ourgarden.style.borderBottomRightRadius = "0px";
     vazio.style.borderTopRightRadius = "0px";
-});
 
-btnPublicacoes.addEventListener("click", () => {
+} else if (currentPath === "/posts") {
+
     btnPublicacoes.classList.add('ativa');
     
     btnDashboard.classList.remove('ativa');
@@ -48,5 +49,6 @@ btnPublicacoes.addEventListener("click", () => {
     id_logo_ourgarden.style.borderBottomRightRadius = "0px";
     btnPublicacoesContainer.style.borderTopRightRadius = "0px";
     btnUsuariosContainer.style.borderTopRightRadius = "0px";
+ 
     btnDashboardContainer.style.borderBottomRightRadius = "0px";
-});
+}
