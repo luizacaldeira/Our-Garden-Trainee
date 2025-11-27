@@ -37,39 +37,11 @@
                                 <i class="bi bi-person-circle"></i>
                             </div>
                             <div class="nomeUsuarioPosts">
-                                <p>@juliarodrigues</p>
+                                <p>Julia Rodrigues</p>
                             </div>
                         </div>
                         <div class="folhinhaPosts">
                             <i class="bi bi-leaf"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="imgPlantaPosts">
-                    <img src="../../../public/assets/planta.jpg">
-                </div>
-                <div class="conteudo">
-                    <h3>Casa com cara de jardim</h3>
-                    <p>Nada como um cantinho verde para deixar o dia mais leve e a casa com aquele ar de frescor natural.</p>
-                    <div class="hora">
-                        <i class="bi bi-calendar-fill"></i>
-                        <p>Há duas horas</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="infos">
-                    <div class="profile">
-                        <div class="nomeEFoto">
-                            <div class="usuarioPosts">
-                                <i class="bi bi-person-circle"></i>
-                            </div>
-                            <div class="nomeUsuarioPosts">
-                                <p>@juliarodrigues</p>
-                            </div>
-                        </div>
-                        <div class="folhinhaPosts">
                             <i class="bi bi-leaf-fill"></i>
                         </div>
                     </div>
@@ -95,11 +67,12 @@
                                 <i class="bi bi-person-circle"></i>
                             </div>
                             <div class="nomeUsuarioPosts">
-                                <p>@juliarodrigues</p>
+                                <p>Julia Rodrigues</p>
                             </div>
                         </div>
                         <div class="folhinhaPosts">
                             <i class="bi bi-leaf"></i>
+                            <i class="bi bi-leaf-fill"></i>
                         </div>
                     </div>
                 </div>
@@ -124,11 +97,12 @@
                                 <i class="bi bi-person-circle"></i>
                             </div>
                             <div class="nomeUsuarioPosts">
-                                <p>@juliarodrigues</p>
+                                <p>@Julia Rodrigues</p>
                             </div>
                         </div>
                         <div class="folhinhaPosts">
                             <i class="bi bi-leaf"></i>
+                            <i class="bi bi-leaf-fill"></i>
                         </div>
                     </div>
                 </div>
@@ -153,11 +127,12 @@
                                 <i class="bi bi-person-circle"></i>
                             </div>
                             <div class="nomeUsuarioPosts">
-                                <p>@juliarodrigues</p>
+                                <p>Julia Rodrigues</p>
                             </div>
                         </div>
                         <div class="folhinhaPosts">
                             <i class="bi bi-leaf"></i>
+                            <i class="bi bi-leaf-fill"></i>
                         </div>
                     </div>
                 </div>
@@ -182,11 +157,42 @@
                                 <i class="bi bi-person-circle"></i>
                             </div>
                             <div class="nomeUsuarioPosts">
-                                <p>@juliarodrigues</p>
+                                <p>Julia Rodrigues</p>
                             </div>
                         </div>
                         <div class="folhinhaPosts">
                             <i class="bi bi-leaf"></i>
+                            <i class="bi bi-leaf-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgPlantaPosts">
+                    <img src="../../../public/assets/planta.jpg">
+                </div>
+                <div class="conteudo">
+                    <h3>Casa com cara de jardim</h3>
+                    <p>Nada como um cantinho verde para deixar o dia mais leve e a casa com aquele ar de frescor natural.</p>
+                    <div class="hora">
+                        <i class="bi bi-calendar-fill"></i>
+                        <p>Há duas horas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="infos">
+                    <div class="profile">
+                        <div class="nomeEFoto">
+                            <div class="usuarioPosts">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="nomeUsuarioPosts">
+                                <p>Julia Rodrigues</p>
+                            </div>
+                        </div>
+                        <div class="folhinhaPosts">
+                            <i class="bi bi-leaf"></i>
+                            <i class="bi bi-leaf-fill"></i>
                         </div>
                     </div>
                 </div>
