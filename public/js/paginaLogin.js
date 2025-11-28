@@ -17,12 +17,12 @@ divOlhos.addEventListener("click", () => {
 
 const loginEnvelope = document.getElementById('loginEnvelope');
 const loginRegisterButton = document.getElementById('loginRegisterButton');
-const loginEnterButton = document.getElementById('loginEnterButton');
+const registerEnterButton = document.getElementById('registerEnterButton');
 
 loginRegisterButton.addEventListener("click", () => {
     loginEnvelope.classList.add("akutibu");
 });
 
-loginEnterButton.addEventListener("click", () => {
+registerEnterButton.addEventListener("click", () => {
     loginEnvelope.classList.remove("akutibu");
 });

@@ -40,12 +40,20 @@
             </div>
 
             <div class="registerData">
-                <div class="loginBoxSubtitle">
-                    <h2>Digite suas credenciais para continuar.</h2>
+                <div class="registerBoxSubtitle">
+                    <h2>Digite suas informações para cadastrar-se.</h2>
                 </div>
-                <form action="/login" method="POST">
-                    <div class="loginBoxId">
-                        <div class="loginBoxEmail">
+                <form action="/register" method="POST">
+                    <div class="registerBoxId">
+                        <div class="registerBoxNome">
+                            <p>Nome</p>
+                        </div>
+                        <div class="registerInput">
+                            <input class="inputLogin" type="text" name="nameRegister" placeholder="Digite seu nome...">
+                        </div>
+                    </div>
+                    <div class="registerBoxId">
+                        <div class="registerBoxEmail">
                             <p>Email</p>
                         </div>
                         <div class="registerInput">
@@ -53,14 +61,14 @@
                             <input class="inputLogin" type="email" name="emailRegister" placeholder="Digite seu email...">
                         </div>
                     </div>
-                    <div class="loginBoxId">
-                        <div class="loginBoxSenha">
+                    <div class="registerBoxId">
+                        <div class="registerBoxSenha">
                             <p>Senha</p>
                         </div>
                         <div class="registerInput">
-                            <div class="loginLock">
+                            <div class="registerLock">
                                 <i class="bi bi-lock"></i>
-                                <input class="inputLoginPassword" id="inputRegisterPassword" name="senhaRegister" type="password" placeholder="Digite sua senha...">
+                                <input class="inputRegisterPassword" id="inputLoginPassword" name="senhaRegister" type="password" placeholder="Digite sua senha...">
                             </div>
                             <div class="divOlhos" id="divOlhos">
                                 <i class="bi bi-eye-slash" id="olho"></i>
@@ -70,16 +78,13 @@
                     </div>
             </div>
 
-            <div class="loginVerification">
-                <div class="loginBoxPassword">
-                    <p>Esqueceu a senha?</p>
-                </div>
-                <button class="loginBoxButton" type="submit">
-                    <h3>Login</h3>
+            <div class="registerVerification">
+                <button class="registerBoxButton" type="submit">
+                    <h3>Cadastrar</h3>
                 </button>
-                <div class="loginBoxEnd">
+                <div class="registerBoxEnd">
                     <p>Já tem uma conta?</p>
-                    <p class="loginEnterButton" id="loginEnterButton">Entrar</p>
+                    <p class="registerEnterButton" id="registerEnterButton">Entrar</p>
                 </div>
             </div>
             </form>

@@ -1,5 +1,5 @@
 body{
-    height: 100vh;
+    height: max-content;
     background-image: url(../assets/monstera-deixa-o-papel-de-parede-fundo-da-natureza.jpg);
     background-position: center;
     background-repeat: no-repeat;
