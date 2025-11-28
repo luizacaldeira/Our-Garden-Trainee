@@ -13,5 +13,16 @@ divOlhos.addEventListener("click", () => {
         olhoAberto.style.display = "block";
         olho.style.display = "none";
     }
+});
 
+const loginEnvelope = document.getElementById('loginEnvelope');
+const loginRegisterButton = document.getElementById('loginRegisterButton');
+const loginEnterButton = document.getElementById('loginEnterButton');
+
+loginRegisterButton.addEventListener("click", () => {
+    loginEnvelope.classList.add("akutibu");
+});
+
+loginEnterButton.addEventListener("click", () => {
+    loginEnvelope.classList.remove("akutibu");
 });

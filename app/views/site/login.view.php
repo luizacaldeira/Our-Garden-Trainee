@@ -22,15 +22,75 @@
 </head>
 
 <body>
+    <?php session_start(); ?>
     <div class="loginBackground">
         <div class="loginBackgroundImg"></div>
         <div class="loginBackgroundColor"></div>
     </div>
 
     <div class="loginBox">
+    <div class="loginEnvelope" id="loginEnvelope">
         <a class="loginBoxImg" href="/">
 
         </a>
+
+        <div class="registerBoxForm">
+            <div class="registerBoxTitle">
+                <h1>Registre-se</h1>
+            </div>
+
+            <div class="registerData">
+                <div class="loginBoxSubtitle">
+                    <h2>Digite suas credenciais para continuar.</h2>
+                </div>
+                <form action="/login" method="POST">
+                    <div class="loginBoxId">
+                        <div class="loginBoxEmail">
+                            <p>Email</p>
+                        </div>
+                        <div class="registerInput">
+                            <i class="bi bi-envelope"></i>
+                            <input class="inputLogin" type="email" name="emailRegister" placeholder="Digite seu email...">
+                        </div>
+                    </div>
+                    <div class="loginBoxId">
+                        <div class="loginBoxSenha">
+                            <p>Senha</p>
+                        </div>
+                        <div class="registerInput">
+                            <div class="loginLock">
+                                <i class="bi bi-lock"></i>
+                                <input class="inputLoginPassword" id="inputRegisterPassword" name="senhaRegister" type="password" placeholder="Digite sua senha...">
+                            </div>
+                            <div class="divOlhos" id="divOlhos">
+                                <i class="bi bi-eye-slash" id="olho"></i>
+                                <i class="bi bi-eye" id="olhoAberto"></i>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="loginVerification">
+                <div class="loginBoxPassword">
+                    <p>Esqueceu a senha?</p>
+                </div>
+                <button class="loginBoxButton" type="submit">
+                    <h3>Login</h3>
+                </button>
+                <div class="loginBoxEnd">
+                    <p>Já tem uma conta?</p>
+                    <p class="loginEnterButton" id="loginEnterButton">Entrar</p>
+                </div>
+            </div>
+            </form>
+
+            <div class="loginBoxXoxomidias">
+                <a class="a" href="https://www.instagram.com/codejr" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a class="a" href="https://www.facebook.com/codeempresajunior" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a class="a" href="https://www.linkedin.com/company/codejr/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a class="a" href="https://api.whatsapp.com/send/?phone=5532991519313&text&type=phone_number&app_absent=0" target="_blank"><i class="bi bi-telephone-fill"></i></a>
+            </div>
+        </div>
 
         <div class="loginBoxForm">
             <div class="loginBoxTitle">
@@ -44,7 +104,6 @@
                 <form action="/login" method="POST">
                     <div class="mensagemErro">
                         <?php
-                        session_start();
                         if(isset($_SESSION['mensagemErro']))
                             echo $_SESSION['mensagemErro'];
                         unset($_SESSION['mensagemErro']);
@@ -85,7 +144,7 @@
                 </button>
                 <div class="loginBoxEnd">
                     <p>Não tem uma conta?</p>
-                    <p class="loginRegisterButton">Registre-se</p>
+                    <p class="loginRegisterButton" id="loginRegisterButton">Registre-se</p>
                 </div>
             </div>
             </form>
@@ -97,6 +156,7 @@
                 <a class="a" href="https://api.whatsapp.com/send/?phone=5532991519313&text&type=phone_number&app_absent=0" target="_blank"><i class="bi bi-telephone-fill"></i></a>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="../../../public/js/paginaLogin.js"></script>
