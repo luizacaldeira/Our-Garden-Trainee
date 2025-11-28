@@ -41,7 +41,7 @@
 
             <div class="registerData">
                 <div class="registerBoxSubtitle">
-                    <h2>Digite suas informações para cadastrar-se.</h2>
+                    <h2>Digite suas informações para registrar-se.</h2>
                 </div>
                 <form action="/register" method="POST">
                     <div class="registerBoxId">
@@ -80,7 +80,7 @@
 
             <div class="registerVerification">
                 <button class="registerBoxButton" type="submit">
-                    <h3>Cadastrar</h3>
+                    <h3>Registrar</h3>
                 </button>
                 <div class="registerBoxEnd">
                     <p>Já tem uma conta?</p>
