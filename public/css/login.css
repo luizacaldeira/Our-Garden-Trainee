@@ -401,12 +401,28 @@ body {
         height: 100%;
         display: flex;
         flex-direction: column;
+        position: relative;
+    }
+
+    .loginEnvelope.akutibu .loginBoxImg{
+        transform: none;
+        transition: all 1.5s ease-in-out;
+        border-radius: 40px 40px 10px 100px;
     }
 
     .loginBoxForm {
-        padding: 64% 8% 6% 8%;
+        padding: 60% 0 6% 0;
         justify-content: space-evenly;
         height: 100%;
+        position: absolute;
+        transition: all 1.5s ease-in-out;
+        right: 4%;
+        left: 4%;
+    }
+
+    .loginEnvelope.akutibu .loginBoxForm{
+        transform: translateX(110%);
+        transition: all 1.5s ease-in-out;
     }
 
     .loginBoxTitle {
@@ -446,11 +462,23 @@ body {
     }
 
     .registerBoxForm{
-        padding: 4% 8%;
-        display: none;
+        padding: 60% 8% 6% 8%;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
         box-sizing: border-box;
+        position: absolute;
+
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1.5s ease-in-out;
+    }
+
+    .loginEnvelope.akutibu .registerBoxForm{
+        transition: all 3s ease-in-out;
+
+        visibility: visible;
+        opacity: 1;
     }
 }
