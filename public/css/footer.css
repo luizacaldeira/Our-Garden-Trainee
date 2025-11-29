@@ -8,7 +8,7 @@ body {
 
 footer {
     width: 100%;
-    min-height: 26rem;
+    min-height: 25rem;
 
     background-color: var(--green-900);
     color: var(--green-100);
