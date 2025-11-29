@@ -52,7 +52,7 @@ body {
 
 .loginEnvelope.akutibu .loginBoxImg{
     transform: translateX(100%);
-    transition: all 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
     border-radius: 30px 90px 90px 150px;
 }
 
@@ -67,7 +67,7 @@ body {
     width: 50%;
     height: 100%;
     z-index: 1000;
-    transition: all 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .loginBoxForm, .registerBoxForm {
@@ -412,7 +412,7 @@ body {
 
     .loginEnvelope.akutibu .loginBoxImg{
         transform: none;
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-in-out;
         border-radius: 40px 40px 10px 100px;
     }
 
@@ -420,14 +420,14 @@ body {
         padding: 60% 0 6% 0;
         height: 100%;
         position: absolute;
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-in-out;
         right: 4%;
         left: 4%;
     }
 
     .loginEnvelope.akutibu .loginBoxForm{
         transform: translateX(110%);
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-in-out;
     }
 
     .loginBoxTitle{
@@ -487,11 +487,11 @@ body {
 
         visibility: hidden;
         opacity: 0;
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-in-out;
     }
 
     .loginEnvelope.akutibu .registerBoxForm{
-        transition: all 3s ease-in-out;
+        transition: all 1.5s ease-in-out;
 
         visibility: visible;
         opacity: 1;
