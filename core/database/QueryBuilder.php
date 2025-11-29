@@ -8,17 +8,16 @@ class QueryBuilder
 {
     protected $pdo;
 
-
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table, $inicio=null, $rows_count=null)
+    public function selectAll($table, $inicio = null, $rows_count = null)
     {
         $sql = "select * from {$table}";
-        if($inicio>=0 && $rows_count>0){
-            $sql .= " LIMIT {$inicio}, {$rows_count}"; 
+        if ($inicio >= 0 && $rows_count > 0) {
+            $sql .= " LIMIT {$inicio}, {$rows_count}";
         }
 
         try {
@@ -32,9 +31,9 @@ class QueryBuilder
     }
 
     /**
-     * Função que vai pegar todos os dados da tabela, juntamente com o nome do usuário que fez a publicação.
+     * Função que vai pegar todos os dados da tabela publicacoes, juntamente com o nome do usuário que fez a publicação.
      */
-    public function selectPostsWithUser($inicio=null, $rows_count=null)
+    public function selectPostsWithUser($inicio = null, $rows_count = null)
     {
         $sql = "
             SELECT 
@@ -108,7 +107,6 @@ class QueryBuilder
         }
     }
 
-    // $records = ["1,2" "1,3" "2,4"];
     public function insertPivot($records)
     {
         foreach ($records as $record) {
@@ -116,9 +114,9 @@ class QueryBuilder
             $id_classificacao = (int)$record['id_classificacao'];
             $values[] = "($id_publicacao, $id_classificacao)";
         }
-        
+
         $sql = "INSERT INTO publicacoes_classificacoes (id_publicacao, id_classificacao) VALUES" . implode(", ", $values);
-        
+
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
@@ -126,7 +124,7 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    
+
     /**
      * $value = id do post
      */
@@ -137,12 +135,11 @@ class QueryBuilder
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(["value" => $value]);
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
-    
+
     public function lastInsertID()
     {
         return $this->pdo->lastInsertID();
@@ -167,19 +164,19 @@ class QueryBuilder
         }
     }
 
-
-    public function delete($table, $id){
-        $sql = sprintf('DELETE FROM %s WHERE id = :id', 
+    public function delete($table, $id)
+    {
+        $sql = sprintf(
+            'DELETE FROM %s WHERE id = :id',
             $table,
             'id = :id'
-    );
-    try {
+        );
+        try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(compact('id'));
         } catch (Exception $e) {
             die($e->getMessage());
         }
-        
     }
 
     public function countAll($table)
@@ -196,8 +193,8 @@ class QueryBuilder
         }
     }
 
-
-    public function verificarLogin($email, $senha){
+    public function verificarLogin($email, $senha)
+    {
         //SELECT * FROM `usuarios` WHERE 1
         $sql = sprintf('SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
 
@@ -210,11 +207,31 @@ class QueryBuilder
             $user = $stmt->fetch(PDO::FETCH_OBJ);
 
             return $user;
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
 
-        
+    public function selectPostWithUserById($id)
+    {
+        $sql = "
+        SELECT 
+            p.*,
+            u.nome AS nome_usuario
+        FROM publicacoes AS p
+        INNER JOIN usuarios AS u
+            ON p.usuarios_id = u.id
+        WHERE p.id = :id
+        LIMIT 1
+    ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+
+            return $stmt->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

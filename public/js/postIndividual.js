@@ -5,12 +5,12 @@ btn_show_more.addEventListener('click', () => {
     plant_infos_container.classList.toggle('open');
 
     if (plant_infos_container.classList.contains('open')) {
-        return btn_show_more.innerHTML = `<img src="../../../public/assets/arrow-up-icon.svg" alt="seta para cima"></img>`;
+        return btn_show_more.innerHTML = `<img src="../../../public/assets/arrow-up-white-icon.svg" alt="seta para cima"></img>`;
     }
 
     setTimeout(() => {
       btn_show_more.innerHTML = `
-        <img src="../../../public/assets/arrow-down-icon.svg" alt="Seta para baixo">
+        <img src="../../../public/assets/arrow-down-white-icon.svg" alt="Seta para baixo">
         Saiba mais sobre a planta
       `;
     }, 400); 

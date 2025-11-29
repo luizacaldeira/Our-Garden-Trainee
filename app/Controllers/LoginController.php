@@ -20,17 +20,34 @@ class LoginController
 
         $user = App::get('database')->verificarLogin($email, $senha);
 
-        if($user != false){
+        if ($user != false) {
             session_start();
             $_SESSION['id'] = $user->id;
 
             header("Location: /dashboard");
-        }else{
+        } else {
             session_start();
             $_SESSION['mensagemErro'] = 'Usuário e/ou senha incorretos';
 
             header("Location: /login");
         };
+    }
 
+    public function logout()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+
+        header("Location: /login");
+    }
+
+    public function logoutSidebar()
+    {
+        session_start();
+        session_unset();
+        session_destroy();
+
+        header("Location: /");
     }
 }
