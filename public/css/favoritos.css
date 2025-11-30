@@ -118,8 +118,9 @@ body{
     align-items: center;
 }
 
-.nomeUsuarioPosts {
-    font-size: 10px;
+.nomeUsuarioPosts p{
+    white-space: nowrap;
+    /* font-size: 10px; */
 }
 
 .profile p {
