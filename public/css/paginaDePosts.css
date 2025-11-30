@@ -91,7 +91,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 85%;
+    height: 87%;
     box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.5);
     cursor: pointer;
     /* border: 1px solid blue; */
@@ -118,8 +118,8 @@ body{
     align-items: center;
 }
 
-.nomeUsuarioPosts {
-    font-size: 70px;
+.nomeUsuarioPosts p{
+    white-space: nowrap;
 }
 
 .profile p {
@@ -181,8 +181,6 @@ body{
     object-fit: cover;
 }
 
-
-
 .conteudo {
     width: 100%;
     height: 25%;
@@ -202,15 +200,32 @@ body{
 
 .conteudo h3 {
     width: fit-content;
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-size: 25px;
     font-family: var(--font-family-titulo);
     color: var(--green-900);
 }
 
 .conteudo p {
-    
     font-size: 14px;
     font-family: var(--font-family-paragrafo);
+    padding-bottom: 4%;
+}
+
+.classificacoes {
+    display: flex;
+    font-family: var(--font-family-paragrafo);
+    font-size: 10px;
+    width: 100%;
+    justify-content: center;
+    gap: 4%;
+    
+}
+.classificacoes p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: var(--green-200);
+    border-radius: 20px;
+    padding: 1% 6% 1% 6%;
 }
 
 .hora {
@@ -225,7 +240,7 @@ body{
 
 .hora p {
     text-align: left;
-    padding: 0%;
+    padding-bottom: 5%;
     font-family: var(--font-family-paragrafo);
     font-size: 13px;
     font-style: italic;
