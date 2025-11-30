@@ -71,6 +71,11 @@
                 <div class="conteudo">
                     <h3>Casa com cara de jardim</h3>
                     <p>Nada como um cantinho verde para deixar o dia mais leve e a casa com aquele ar de frescor natural.</p>
+                    <div class="classificacoes">
+                        <p>Ornamental</p>
+                        <p>Interior</p>
+                        <p>Tóxica</p>
+                    </div>
                     <div class="hora">
                         <i class="bi bi-calendar-fill"></i>
                         <p>Há duas horas</p>
