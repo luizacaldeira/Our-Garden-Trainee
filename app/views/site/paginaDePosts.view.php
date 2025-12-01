@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +46,8 @@
                             <i class="bi bi-leaf"></i>
                             <i class="bi bi-leaf-fill"></i>
                         <?php else: ?>
-                            <i class="bi bi-leaf"></i>
-                            <i class="bi bi-leaf-fill"></i>
+                            <i class="bi bi-leaf blocked"></i>
+                            <i class="bi bi-leaf-fill blocked"></i>
                         <?php endif; ?>
                         </div>
                     </div>

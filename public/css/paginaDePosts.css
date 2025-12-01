@@ -169,6 +169,24 @@ body{
     opacity: 1;
 }
 
+.folhinhaPosts i.blocked, .folhinhaPosts i.blocked:hover {
+    opacity: 1 !important;
+}
+
+.folhinhaPosts i.blocked + i, .folhinhaPosts i.blocked + i:hover {
+    opacity: 0 !important;
+}
+
+.folhinhaPosts .bi-leaf.blocked {
+    color: var(--green-200);
+    cursor: not-allowed;
+}
+
+.folhinhaPosts .bi-leaf-fill.blocked {
+    color: var(--green-100);
+    cursor: not-allowed;
+}
+
 .imgPlantaPosts {
     width: 100%;
     height: 55%;
