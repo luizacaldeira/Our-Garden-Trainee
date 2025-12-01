@@ -236,7 +236,13 @@ class QueryBuilder
     }
 
     public function buscaPublicacoes($titulo){
-        $sql = 'SELECT * FROM publicacoes WHERE titulo LIKE :titulo';
+        $sql = 'SELECT 
+                p.*,
+                u.nome AS nome_usuario
+                FROM publicacoes AS p
+                INNER JOIN usuarios AS u
+                ON p.usuarios_id = u.id
+                WHERE p.titulo LIKE :titulo';
 
         try {
             $stmt = $this->pdo->prepare($sql);

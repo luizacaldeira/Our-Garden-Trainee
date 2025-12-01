@@ -153,5 +153,5 @@ function fecharModalUpdate(idModal, idFundo) {
     document.getElementById(idModal).style.display = "none";
     document.getElementById(idFundo).style.display = "none";
 
-    window.location.reload();
+    // window.location.reload();
 }

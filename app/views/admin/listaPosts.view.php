@@ -92,15 +92,15 @@ if (!isset($_SESSION['id'])) {
                                     <td><?= (new DateTime($post->data_criacao))->format('d/m/Y') ?></td>
                                     <td>
                                         <div class="botoesAcoes">
-                                            <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                    alt="ícone de olho"
-                                                    onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')"></button>
-                                            <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                    alt="ícone de lápis"
-                                                    onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro')"></button>
-                                            <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                    alt="ícone de lixeira"
-                                                    onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')"></button>
+                                            <button class="btn-actions" onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')">
+                                                <img src="../../../public/assets/eye-icon.svg" alt="ícone de olho">
+                                            </button>
+                                            <button class="btn-actions" onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro')">
+                                                <img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis">
+                                            </button>
+                                            <button class="btn-actions" onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')">
+                                                <img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira">
+                                            </button>
                                         </div>
                                     </td>
                                 </tr>
@@ -109,20 +109,44 @@ if (!isset($_SESSION['id'])) {
                     </table>
                     <div class="paginacaoPosts">
                         <div class="paginacaoPostsConteudo">
-                            <li class="page-item <?= $page <= 1 ? "disabled" : "" ?>">
-                                <a class="arrow-left" href="?paginacaoNumero=<?= $page - 1 ?>"><i class="bi bi-chevron-left"></i></a>
+                            <?php $searchParam = isset($_GET['pesquisarPublicacoes']) ? '&pesquisarPublicacoes=' . urlencode($_GET['pesquisarPublicacoes']) : ''; ?>
+                            
+                            <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
+                                <a class="arrow-left" href="?page=<?= max(1, $page-1) ?><?= $searchParam ?>">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
                             </li>
-                            <div class="pages">
-                                <?php for ($pageNumber = 1; $pageNumber <= $total_pages; $pageNumber++): ?>
-                                    <li class="page-item">
-                                        <a class="page <?= $pageNumber == $page ? "active" : "" ?>"
-                                            href="?paginacaoNumero=<?= $pageNumber ?>"><?= $pageNumber ?></a>
-                                    </li>
-                                <?php endfor ?>
 
+                            <div class="pages">
+                                <li class="page-item <?= $page == 1 ? 'active' : '' ?>">
+                                    <a class="page" href="?page=1<?= $searchParam ?>">1</a>
+                                </li>
+
+                                <?php if ($page > 4): ?>
+                                    <li class="page-item disabled"><span class="page">...</span></li>
+                                <?php endif; ?>
+
+                                <?php for ($page_number = max(2, $page - 2); $page_number <= min($totalPages - 1, $page + 2); $page_number++): ?>
+                                    <li class="page-item <?= $page_number == $page ? 'active' : '' ?>">
+                                        <a class="page" href="?page=<?= $page_number ?><?= $searchParam ?>"><?= $page_number ?></a>
+                                    </li>
+                                <?php endfor; ?>
+
+                                <?php if ($page < $totalPages - 3): ?>
+                                    <li class="page-item disabled"><span class="page">...</span></li>
+                                <?php endif; ?>
+
+                                <?php if ($totalPages > 1): ?>
+                                    <li class="page-item <?= $page == $totalPages ? 'active' : '' ?>">
+                                        <a class="page" href="?page=<?= $totalPages ?><?= $searchParam ?>"><?= $totalPages ?></a>
+                                    </li>
+                                <?php endif; ?>
                             </div>
-                            <li class="page-item <?= $page >= $total_pages ? "disabled" : "" ?>">
-                                <a class="arrow-right" href="?paginacaoNumero=<?= $page + 1 ?>"><i class="bi bi-chevron-right"></i></a>
+
+                            <li class="page-item <?= $page >= $totalPages ? 'disabled' : '' ?>">
+                                <a class="arrow-right" href="?page=<?= min($totalPages, $page+1) ?><?= $searchParam ?>">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
                             </li>
                         </div>
                     </div>

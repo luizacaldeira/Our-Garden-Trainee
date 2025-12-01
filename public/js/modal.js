@@ -1,5 +1,5 @@
 function abrirModal(idModal, idFundo){
-    //console.log("entrei na funcao");
+    console.log(idModal);
     document.getElementById(idModal).style.display = "flex";
     document.getElementById(idFundo).style.display = "flex";
 }
