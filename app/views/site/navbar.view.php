@@ -24,11 +24,7 @@
 <body>
     <div class="navbarGlobal">
 
-        <div class="sanduba">
-            <i class="bi bi-list"></i>
-        </div>
-
-        <div class="navbar">
+        <div class="navbar" id="navbar">
 
             <img src="../../../public/assets/Escrito verde claro vazio.png" class="navbarLogo">
 
@@ -40,7 +36,25 @@
                 <a class="navbarLoginButton" href = "/login">Login</a>
             </div>
         </div>
+
+        <div class="navbarMobile" id="navbarMobile">
+
+            <div class="sanduba">
+                <i class="bi bi-list" id="abrirSanduba"></i>
+                <i class="bi bi-x-lg" id="fecharSanduba"></i>
+                <img src="../../../public/assets/Escrito verde claro vazio.png" class="navbarLogo">
+            </div>            
+
+            <div class="navbarContentMobile" id="navbarContentMobile">
+                <a class="navbarTextMobile" href = "/">Home</a>
+                <div class="navbarDividerMobile"></div>
+                <a class="navbarTextMobile" href = "/publicacoes">Publicações</a>
+                <div class="navbarDividerMobile"></div>
+                <a class="navbarLoginButtonMobile" href = "/login">Login</a>
+            </div>
+        </div>
     </div>
+    <script src="../../../public/js/navbar.js"></script>
 </body>
 
 </html>
