@@ -332,9 +332,6 @@ body {
     border: 5px solid var(--green-300);
     border-top: none;
     box-shadow: 0px 0px 50px 0px #000; 
-
-    padding-top: 7rem;
-
 }
 .herotop img{
     width: 20%;
