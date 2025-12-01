@@ -79,6 +79,12 @@ body{
         align-items: center;
         padding: 1rem;
         font-size: 2.5rem;
+
+        position: absolute;
+        width: 100vw;
+        height: max-content;
+
+        z-index: 1000;
     }
 
     .navbar{
@@ -102,7 +108,7 @@ body{
     .navbarContentMobile{
         display: none;
         position: absolute;
-        top: 125%;
+        top: 124%;
         background-color: var(--green-900);
         flex-direction: column;
         width: 100vw;
