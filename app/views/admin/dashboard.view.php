@@ -28,8 +28,8 @@ if (!isset($_SESSION['id'])) {
         <div class="mainDashbord">
             <div class="section1">
                 <div class="total">
-                    <p>Total de usuários: 42</p>
-                    <p>Total de publicações: 102</p>
+                    <p>Total de usuários: <?= $total_user ?></p>
+                    <p>Total de publicações: <?= $total_post ?></p>
                 </div>
                 <div class="profileADM">
                     <i class="bi bi-person-circle"></i>
