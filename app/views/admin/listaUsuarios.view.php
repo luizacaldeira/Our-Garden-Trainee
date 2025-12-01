@@ -27,7 +27,7 @@ if (!isset($_SESSION['id'])) {
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap"
         rel="stylesheet" />
-        
+
     <link rel="icon" href="/public/assets/Logo verde claro vazio.png">
     <title>Lista de Usuários</title>
     <link rel="icon" href="/public/assets/4.png">
@@ -46,8 +46,14 @@ if (!isset($_SESSION['id'])) {
                 <div class="profile-container">
                     <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
                     <div class="profile-name">
-                        <strong>Julia Rodrigues</strong>
-                        <p>administrador</p>
+                        <strong><?= $_SESSION['nome'] ?></strong>
+                        <?php if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0): ?>
+                            <p>administrador</p>
+                        <?php elseif (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 1): ?>
+                            <p>usuário</p>
+                        <?php else: ?>
+                            <p>não informado</p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </section>
@@ -77,26 +83,26 @@ if (!isset($_SESSION['id'])) {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach($users as $user): ?>
-                            <tr>
-                                <td><?= $user->id ?></td>
-                                <td><strong><?= $user->nome ?></strong></td>
-                                <td><?= $user->email ?></td>
-                                <td>administrador</td>
-                                <td>
-                                    <div class="actions">
-                                        <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                alt="ícone de olho"
-                                                onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                alt="ícone de lápis"
-                                                onclick="abrirModal('modalEditUser<?= $user->id ?>', 'fundoJS')"></button>
-                                        <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                alt="ícone de lixeira"
-                                                onclick="abrirModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"></button>
-                                    </div>
-                                </td>
-                            </tr>
+                            <?php foreach ($users as $user): ?>
+                                <tr>
+                                    <td><?= $user->id ?></td>
+                                    <td><strong><?= $user->nome ?></strong></td>
+                                    <td><?= $user->email ?></td>
+                                    <td>administrador</td>
+                                    <td>
+                                        <div class="actions">
+                                            <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                    alt="ícone de olho"
+                                                    onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')"></button>
+                                            <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                    alt="ícone de lápis"
+                                                    onclick="abrirModal('modalEditUser<?= $user->id ?>', 'fundoJS')"></button>
+                                            <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                    alt="ícone de lixeira"
+                                                    onclick="abrirModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"></button>
+                                        </div>
+                                    </td>
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
@@ -123,7 +129,7 @@ if (!isset($_SESSION['id'])) {
 
             <div class="fundoJS" id="fundoJS"></div>
             <!-- MODAL CRIAR USUARIO -->
-            
+
             <section class="modalAddNewUser" id="modalAddNewUser">
                 <div class="modalAddNewUserHeader">
                     <img src="../../../public/assets/plus-circle-icon.svg" alt="ícone de adiconar">
@@ -173,113 +179,113 @@ if (!isset($_SESSION['id'])) {
                     </form>
                 </div>
             </section>
-            
+
             <!-- MODAL VISUALIZAR USUARIO -->
-            <?php foreach($users as $user): ?>
-            <section class="modalViewUser" id="modalViewUser<?= $user->id ?>">
-                <div class="modalViewUserHeader">
-                    <img src="../../../public/assets/eye-icon-white.svg" alt="ícone de vizualizar">
-                    <p>Visualizar Usuário</p>
-                </div>
-                <div class="modalAddNewUserMain">
-                    <form class="modalViewUserForm" id="modalViewUserForm<?= $user->id ?>">
-                        <div class="viewUserPhoto">
-                            <img src="/<?= $user->imagem ?>" alt="foto de perfil">
-                        </div>
-                        <div class="viewUserContent">
-                            <div class="viewUserName">
-                                <span>Nome:</span>
-                                <p><?= $user->nome ?></p>
+            <?php foreach ($users as $user): ?>
+                <section class="modalViewUser" id="modalViewUser<?= $user->id ?>">
+                    <div class="modalViewUserHeader">
+                        <img src="../../../public/assets/eye-icon-white.svg" alt="ícone de vizualizar">
+                        <p>Visualizar Usuário</p>
+                    </div>
+                    <div class="modalAddNewUserMain">
+                        <form class="modalViewUserForm" id="modalViewUserForm<?= $user->id ?>">
+                            <div class="viewUserPhoto">
+                                <img src="/<?= $user->imagem ?>" alt="foto de perfil">
                             </div>
-                            <div class="viewUserEmail">
-                                <span>Email:</span>
-                                <p><?= $user->email ?></p>
+                            <div class="viewUserContent">
+                                <div class="viewUserName">
+                                    <span>Nome:</span>
+                                    <p><?= $user->nome ?></p>
+                                </div>
+                                <div class="viewUserEmail">
+                                    <span>Email:</span>
+                                    <p><?= $user->email ?></p>
+                                </div>
                             </div>
-                        </div>
-                        <section class="bottonsViewUser">
-                            <button class="btnExitViewUser" id="btnExitNewUser" type="button"
-                                onclick="fecharModal('modalViewUser<?= $user->id ?>', 'fundoJS')">Sair</button>
-                        </section>
-                    </form>
-                </div>
-            </section>
+                            <section class="bottonsViewUser">
+                                <button class="btnExitViewUser" id="btnExitNewUser" type="button"
+                                    onclick="fecharModal('modalViewUser<?= $user->id ?>', 'fundoJS')">Sair</button>
+                            </section>
+                        </form>
+                    </div>
+                </section>
             <?php endforeach; ?>
             <!-- MODAL EDITAR USUARIO  -->
-            <?php foreach($users as $user): ?>
-            <section class="modalEditUser" id="modalEditUser<?= $user->id ?>">
-                <div class="modalEditUserHeader">
-                    <img src="/public/assets/plus-icon.svg">
-                    <p> Editar Usuário </p>
-                </div>
-                <div class="modalEditUserMain">
-                    <form class="editUserForm" id="editUserForm<?= $user->id ?>" method="post" action="usuarios/editar" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value=<?= $user->id ?> readonly>
-                        <input type="hidden" name="imgAtual" value=<?= $user->imagem?> readonly>
-                        <div class="inputsEditUser">
-                            <div class="editUserPhotoOut">
-                                <div class="editUserPhoto" id="editUserPhoto">
+            <?php foreach ($users as $user): ?>
+                <section class="modalEditUser" id="modalEditUser<?= $user->id ?>">
+                    <div class="modalEditUserHeader">
+                        <img src="/public/assets/plus-icon.svg">
+                        <p> Editar Usuário </p>
+                    </div>
+                    <div class="modalEditUserMain">
+                        <form class="editUserForm" id="editUserForm<?= $user->id ?>" method="post" action="usuarios/editar" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value=<?= $user->id ?> readonly>
+                            <input type="hidden" name="imgAtual" value=<?= $user->imagem ?> readonly>
+                            <div class="inputsEditUser">
+                                <div class="editUserPhotoOut">
+                                    <div class="editUserPhoto" id="editUserPhoto">
                                         <input type="file" name="imagemUsuarioEdit" id="editUserPhotoInput<?= $user->id ?>"
                                             onchange="exibirPreviewImagem('editUserPhotoInput<?= $user->id ?>', 'previewContentEdited<?= $user->id ?>')"
-                                            style="display: none;" >
+                                            style="display: none;">
                                         <label for="editUserPhotoInput<?= $user->id ?>" id="labelArquivoEditar<?= $user->id ?>" class="label-photo-container">
                                             <div class="preview-content-edited" id="previewContentEdited<?= $user->id ?>">
-                                                <img src="/<?= $user->imagem?>" alt="">
+                                                <img src="/<?= $user->imagem ?>" alt="">
                                             </div>
                                         </label>
+                                    </div>
+                                </div>
+                                <div class="editUserName">
+                                    <div class="editUserNamebox">
+                                        <span>Nome:</span>
+                                        <input type="text" name="nome" id="inputEditUserName"
+                                            placeholder="Digite novo nome..." value="<?= $user->nome ?>">
+                                    </div>
+                                </div>
+                                <div class="editUserEmail">
+                                    <div class="editUserEmailbox">
+                                        <span>Email:</span>
+                                        <input type="text" name="email" id="inputEditUserEmail"
+                                            placeholder="Digite novo email..." value="<?= $user->email ?>">
+                                    </div>
+                                </div>
+                                <div class="editUserPassword">
+                                    <div class="editUserPasswordbox">
+                                        <span>Senha:</span>
+                                        <input type="text" name="senha" id="inputEditUserPassword"
+                                            placeholder="Digite a nova senha..." value="<?= $user->senha ?>">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="editUserName">
-                                <div class="editUserNamebox">
-                                    <span>Nome:</span>
-                                    <input type="text" name="nome" id="inputEditUserName"
-                                        placeholder="Digite novo nome..." value="<?= $user->nome ?>">
-                                </div>
+                            <div class="bottonsEditUser">
+                                <button class="btnCancelEditUser" id="btnCancelEditUser" type="button"
+                                    onclick="fecharModal('modalEditUser<?= $user->id ?>', 'fundoJS')">Cancelar</button>
+                                <button class="btnEditUser" id="btnEditUser" type="submit">Editar</button>
                             </div>
-                            <div class="editUserEmail">
-                                <div class="editUserEmailbox">
-                                    <span>Email:</span>
-                                    <input type="text" name="email" id="inputEditUserEmail"
-                                        placeholder="Digite novo email..." value="<?= $user->email ?>">
-                                </div>
-                            </div>
-                            <div class="editUserPassword">
-                                <div class="editUserPasswordbox">
-                                    <span>Senha:</span>
-                                    <input type="text" name="senha" id="inputEditUserPassword"
-                                        placeholder="Digite a nova senha..." value="<?= $user->senha ?>">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bottonsEditUser">
-                            <button class="btnCancelEditUser" id="btnCancelEditUser" type="button"
-                                onclick="fecharModal('modalEditUser<?= $user->id ?>', 'fundoJS')">Cancelar</button>
-                            <button class="btnEditUser" id="btnEditUser" type="submit">Editar</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
+                        </form>
+                    </div>
+                </section>
             <?php endforeach; ?>
             <!-- MODAL EXCLUIR USUÁRIO -->
-            <?php foreach($users as $user): ?>
-            <section class="modalDeletUser" id="modalDeletUser<?= $user->id ?>">
-                <div class="modalDeletUserHeader">
-                    <img src="/public/assets/Design sem nome.png">
-                    <p>Excluir</p>
-                </div>
-                <div class="modalDeletUserMain">
-                    <form class="deletUserForm" id="deleteUserForm" method="post" action="usuarios/deletar">
-                        <input type="hidden" name="id" value=<?= $user->id ?> readonly>
-                        <div class="deletUserText">
-                            <p> Tem certeza que deseja excluir esse usuário? </p>
-                        </div>
-                        <div class="bottonsDeletUser">
-                            <button class="btnCancelDeletUser" id="btnCancelDeletUser" type="button"
-                                onclick="fecharModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"> Cancelar </button>
-                            <button class="btnDeletUser" id="btnDeletUser" type="submit">Excluir</button>
-                        </div>
-                    </form>
-                </div>
-            </section>
+            <?php foreach ($users as $user): ?>
+                <section class="modalDeletUser" id="modalDeletUser<?= $user->id ?>">
+                    <div class="modalDeletUserHeader">
+                        <img src="/public/assets/Design sem nome.png">
+                        <p>Excluir</p>
+                    </div>
+                    <div class="modalDeletUserMain">
+                        <form class="deletUserForm" id="deleteUserForm" method="post" action="usuarios/deletar">
+                            <input type="hidden" name="id" value=<?= $user->id ?> readonly>
+                            <div class="deletUserText">
+                                <p> Tem certeza que deseja excluir esse usuário? </p>
+                            </div>
+                            <div class="bottonsDeletUser">
+                                <button class="btnCancelDeletUser" id="btnCancelDeletUser" type="button"
+                                    onclick="fecharModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"> Cancelar </button>
+                                <button class="btnDeletUser" id="btnDeletUser" type="submit">Excluir</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
             <?php endforeach; ?>
         </main>
     </div>

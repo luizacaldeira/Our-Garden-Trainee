@@ -23,6 +23,8 @@ class LoginController
         if ($user != false) {
             session_start();
             $_SESSION['id'] = $user->id;
+            $_SESSION['tipo_usuario'] = $user->tipo_usuario;
+            $_SESSION['nome'] = $user->nome;
 
             header("Location: /dashboard");
         } else {

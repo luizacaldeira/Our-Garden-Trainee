@@ -34,8 +34,14 @@ if (!isset($_SESSION['id'])) {
                 <div class="profileADM">
                     <i class="bi bi-person-circle"></i>
                     <div class="textADM">
-                        <h5>Julia Rodrigues</h5>
-                        <p>administrador</p>
+                        <h5><?= $_SESSION['nome'] ?></h5>
+                        <?php if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0): ?>
+                            <p>administrador</p>
+                        <?php elseif (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 1): ?>
+                            <p>usuário</p>
+                        <?php else: ?>
+                            <p>não informado</p>
+                        <?php endif; ?>
                     </div>
                     <div class="arrow">
                         <i class="bi bi-chevron-down setaParaBaixo"></i>

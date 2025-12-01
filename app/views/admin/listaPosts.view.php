@@ -49,8 +49,14 @@ if (!isset($_SESSION['id'])) {
                 <div class="perfilListaPosts">
                     <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
                     <div class="nomePerfil">
-                        <strong>Julia Rodrigues</strong>
-                        <p>administrador</p>
+                        <strong><?= $_SESSION['nome'] ?></strong>
+                        <?php if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0): ?>
+                            <p>administrador</p>
+                        <?php elseif (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 1): ?>
+                            <p>usuário</p>
+                        <?php else: ?>
+                            <p>não informado</p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

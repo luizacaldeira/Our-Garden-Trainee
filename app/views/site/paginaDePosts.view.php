@@ -41,8 +41,13 @@
                             </div>
                         </div>
                         <div class="folhinhaPosts">
+                        <?php if (isset($_SESSION['id'])): ?>
                             <i class="bi bi-leaf"></i>
                             <i class="bi bi-leaf-fill"></i>
+                        <?php else: ?>
+                            <i class="bi bi-leaf"></i>
+                            <i class="bi bi-leaf-fill"></i>
+                        <?php endif; ?>
                         </div>
                     </div>
                 </div>
