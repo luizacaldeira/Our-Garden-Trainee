@@ -17,6 +17,7 @@ $router->get('posts', 'PublicacoesController@index');
 $router->post('posts/create', 'PublicacoesController@create');
 $router->post('posts/edit', 'PublicacoesController@edit');
 $router->post('posts/delete', 'PublicacoesController@delete');
+$router->get('posts/buscaPublicacoes', 'PublicacoesController@buscaPublicacoes');
 
 // ROTAS DE LOGIN
 $router->get('login', 'LoginController@index');

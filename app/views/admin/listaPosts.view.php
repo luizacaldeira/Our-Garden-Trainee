@@ -44,8 +44,7 @@ if (!isset($_SESSION['id'])) {
             <div class="superiorListaPosts">
                 <div class="pesquisaPosts">
                     <img src="../../../public/assets/lupa-icon.svg" alt="ícone de lupa" class="lupa-icon">
-                    <input type="text" name="pesquisarUsuarios" id="input-search" class="input-search"
-                        placeholder="Pesquisar publicação...">
+                    <input type="text" name="pesquisarPublicacoes" id="input-search" class="input-search" placeholder="Pesquisar publicação...">
                 </div>
                 <div class="perfilListaPosts">
                     <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
@@ -428,6 +427,7 @@ if (!isset($_SESSION['id'])) {
         <script src="../../../public/js/modalCriarPublicacao.js"></script>
         <script src="../../../public/js/modal.js"></script>
         <script src="../../../public/js/modalEditarPublicacao.js"></script>
+        <script src="../../../public/js/buscaPublicacao.js"></script>
 
 </body>
 

@@ -234,4 +234,18 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function buscaPublicacoes($titulo){
+        $sql = 'SELECT * FROM publicacoes WHERE titulo LIKE :titulo';
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['titulo' => "%" . $titulo . "%"]);
+
+            return $stmt->fetchAll(\PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
+

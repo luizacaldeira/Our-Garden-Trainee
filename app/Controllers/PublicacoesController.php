@@ -174,4 +174,26 @@ class PublicacoesController
 
         return view('admin/listaPosts', compact('posts', 'classificacoes','page', 'total_pages'));
     }
+
+    public function buscaPublicacoes(){
+        $titulo = $_GET['pesquisarPublicacoes'] ?? '';
+
+        $page = isset($_GET['paginacaoNumero']) ? intval($_GET['paginacaoNumero']) : 1;
+        $itensPage = 5;
+        $inicio = $itensPage * $page - $itensPage;
+
+        $todosPosts = App::get('database')->buscaPublicacoes($titulo);
+        $num_posts = count($todosPosts);
+
+        $posts = array_slice($todosPosts, $inicio, $itensPage);
+
+        $total_pages = ceil($num_posts / $itensPage);
+
+        echo json_encode([
+            "posts" => $posts,
+            "total_pages" => $total_pages,
+            "page" => $page
+        ]);
+        exit;
+    }
 }
