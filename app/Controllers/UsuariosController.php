@@ -8,30 +8,36 @@ use Exception;
 class UsuariosController
 {
 
-    public function index(){
-
-    // Paginação 
-        $page=1;
-
-        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
-            $page = intval($_GET['paginacaoNumero']);
-
-            if($page<=0){
-                return redirect('admin/listaUsuarios');
-            }
-        }
+    public function index()
+    {
+        // Paginação
+        $page = isset($_GET['page']) && $_GET['page'] > 0 ? intval($_GET['page']) : 1;
         $itensPage = 5;
-        $inicio = $itensPage * $page - $itensPage;
-        $rows_count = App::get('database')->countAll('usuarios');
-        
-        if($inicio>$rows_count){
-            return redirect('admin/listaUsuarios');
-        }
-        $total_pages= ceil($rows_count/$itensPage);
+        $inicio = ($page - 1) * $itensPage;
 
-        // user
-        $users = App::get('database')->selectAll('usuarios', $inicio, $itensPage);
-        return view('admin/listaUsuarios', compact('users', 'page', 'total_pages'));
+        // Busca
+        $nome = isset($_GET['pesquisarUsuarios']) ? trim($_GET['pesquisarUsuarios']) : '';
+
+        if (!empty($nome)) {
+            // Com busca
+            $todosUsuarios = App::get('database')->buscaUsuarios($nome);
+            $rows_count = count($todosUsuarios);
+            $users = array_slice($todosUsuarios, $inicio, $itensPage);
+        } else {
+            // Sem busca
+            $rows_count = App::get('database')->countAll('usuarios');
+            $users = App::get('database')->selectAll('usuarios', $inicio, $itensPage);
+        }
+
+        $totalPages = max(1, ceil($rows_count / $itensPage));
+
+        // Garante que a página não seja maior que o total
+        if ($page > $totalPages) {
+            header("Location: /usuarios?page=" . $totalPages);
+            exit;
+        }
+
+        return view('admin/listaUsuarios', compact('users', 'page', 'totalPages'));
     }
 
     public function criar()

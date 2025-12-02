@@ -253,5 +253,18 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function buscaUsuarios($nome){
+        $sql = 'SELECT * FROM usuarios WHERE nome LIKE :nome';
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['nome' => "%" . $nome . "%"]);
+
+            return $stmt->fetchAll(\PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }
 
