@@ -25,6 +25,7 @@ $router->get('login', 'LoginController@index');
 $router->post('login', 'LoginController@loginVerification');
 $router->post('logout', 'LoginController@logout');
 $router->post('logoutSidebar', 'LoginController@logoutSidebar');
+$router->post('login/register', 'LoginController@register');
 
 // ROTAS DA DASHBOARD
 $router->get('dashboard', 'DashboardController@index');

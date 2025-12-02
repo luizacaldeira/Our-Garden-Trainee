@@ -43,13 +43,13 @@
                 <div class="registerBoxSubtitle">
                     <h2>Digite suas informações para registrar-se.</h2>
                 </div>
-                <form action="/register" method="POST">
+                <form action="/login/register" method="POST">
                     <div class="registerBoxId">
                         <div class="registerBoxNome">
                             <p>Nome</p>
                         </div>
                         <div class="registerInput">
-                            <input class="inputLogin" type="text" name="nameRegister" placeholder="Digite seu nome...">
+                            <input class="inputLogin" type="text" name="nomeRegister" placeholder="Digite seu nome...">
                         </div>
                     </div>
                     <div class="registerBoxId">

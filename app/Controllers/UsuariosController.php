@@ -52,7 +52,8 @@ class UsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-            'imagem' => $caminhoImagem
+            'imagem' => $caminhoImagem,
+            'tipo_usuario' => 0
         ];   
 
         App::get('database')->insert('usuarios', $parameters);

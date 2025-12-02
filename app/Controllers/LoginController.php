@@ -52,4 +52,19 @@ class LoginController
 
         header("Location: /");
     }
+
+    public function register()
+    {
+        $parameters = [
+            'nome' => $_POST['nomeRegister'],
+            'email' => $_POST['emailRegister'],
+            'senha' => $_POST['senhaRegister'],
+            'imagem' => 'public/assets/BackgroundFolhasLogo.png',
+            'tipo_usuario' => 1
+        ];
+
+        App::get('database')->insert('usuarios', $parameters);
+
+        header('Location: /');
+    }
 }
