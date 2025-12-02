@@ -88,7 +88,7 @@ if (!isset($_SESSION['id'])) {
                                     <td><?= $user->id ?></td>
                                     <td><strong><?= $user->nome ?></strong></td>
                                     <td><?= $user->email ?></td>
-                                    <td>administrador</td>
+                                    <td><?= $user->tipo_usuario == 0 ? 'administrador' : 'usuário' ?></td>
                                     <td>
                                         <div class="actions">
                                             <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
