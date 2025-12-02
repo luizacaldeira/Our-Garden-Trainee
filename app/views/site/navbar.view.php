@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,11 +30,25 @@
             <img src="../../../public/assets/Escrito verde claro vazio.png" class="navbarLogo">
 
             <div class="navbarContent">
-                <a class="navbarText" href = "/">Home</a>
-                <div class="navbarDivider"></div>
-                <a class="navbarText" href = "/publicacoes">Publicações</a>
-                <div class="navbarDivider"></div>
-                <a class="navbarLoginButton" href = "/login">Login</a>
+                <?php if (isset($_SESSION['id'])): ?>
+                    <a class="navbarText" href="/">Home</a>
+                    <div class="navbarDivider"></div>
+                    <a class="navbarText" href="/publicacoes">Publicações</a>
+                    <div class="navbarDivider"></div>
+                    <a class="navbarText" href="/dashboard">Dashboard</a>
+                    <div class="navbarDivider"></div>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="navbarLoginButton">
+                            Logout
+                        </button>
+                    </form>
+                <?php else: ?>
+                    <a class="navbarText" href="/">Home</a>
+                    <div class="navbarDivider"></div>
+                    <a class="navbarText" href="/publicacoes">Publicações</a>
+                    <div class="navbarDivider"></div>
+                    <a class="navbarLoginButton" href="/login">Login</a>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -43,14 +58,28 @@
                 <i class="bi bi-list" id="abrirSanduba"></i>
                 <i class="bi bi-x-lg" id="fecharSanduba"></i>
                 <img src="../../../public/assets/Escrito verde claro vazio.png" class="navbarLogo">
-            </div>            
+            </div>
 
             <div class="navbarContentMobile" id="navbarContentMobile">
-                <a class="navbarTextMobile" href = "/">Home</a>
-                <div class="navbarDividerMobile"></div>
-                <a class="navbarTextMobile" href = "/publicacoes">Publicações</a>
-                <div class="navbarDividerMobile"></div>
-                <a class="navbarLoginButtonMobile" href = "/login">Login</a>
+                <?php if (isset($_SESSION['id'])): ?>
+                    <a class="navbarTextMobile" href="/">Home</a>
+                    <div class="navbarDividerMobile"></div>
+                    <a class="navbarTextMobile" href="/publicacoes">Publicações</a>
+                    <div class="navbarDividerMobile"></div>
+                    <a class="navbarTextMobile" href="/dashboard">Dashboard</a>
+                    <div class="navbarDividerMobile"></div>
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="navbarLoginButtonMobile">
+                            Logout
+                        </button>
+                    </form>
+                <?php else: ?>
+                    <a class="navbarTextMobile" href="/">Home</a>
+                    <div class="navbarDividerMobile"></div>
+                    <a class="navbarTextMobile" href="/publicacoes">Publicações</a>
+                    <div class="navbarDividerMobile"></div>
+                    <a class="navbarLoginButtonMobile" href="/login">Login</a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
