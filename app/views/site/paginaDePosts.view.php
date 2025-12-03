@@ -56,8 +56,8 @@
                     <h3><?= $post->titulo ?></h3>
                     <p><?= $post->descricao ?></p>
                     <div class="classificacoes">
-                        <?php foreach ($classificacoes as $classificacao): ?>
-                            <p><?= $post->classificacao ?></p>
+                        <?php foreach ($post->classificacoes as $classificacao): ?>
+                            <p><?= $classificacao->nome ?></p>
                         <?php endforeach; ?>
                     </div>
                     <div class="hora">
