@@ -15,10 +15,10 @@ body{
 
 .container {
     display: flex;
-    padding: 7% 0 7% 0;
+    padding: 7% 5.5% 7% 0;
     align-items: center;
     /* justify-content: space-between; */
-    width: 80%;
+    width: 100%;
     height: 100%;
     /* border: 1px solid orange; */
 }
@@ -55,6 +55,30 @@ body{
 .pesquisa input {
     all: unset;
 
+}
+
+.btnPublicacoesFavoritasContainer {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 0 4.2rem 2rem 0;
+}
+
+.btnPublicacoesFavoritas {
+    all: unset;
+    padding: 0.6rem;
+    background-color: var(--green-700);
+    color: var(--green-100);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btnPublicacoesFavoritas:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* .pesquisa i {

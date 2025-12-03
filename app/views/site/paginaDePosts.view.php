@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Publicações</title>
     <link rel="icon" href="/public/assets/4.png">
     <link rel="stylesheet" href="../../../public/css/styles.css">
-    <link rel="stylesheet" href="../../../public/css/paginaDePosts.css"> 
+    <link rel="stylesheet" href="../../../public/css/paginaDePosts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet" />
 </head>
+
 <body>
     <?php include __DIR__ . '/../site/navbar.view.php' ?>
     <div class="pagina">
@@ -25,47 +27,59 @@
             </div>
         </div>
 
+        <?php if (isset($_SESSION['id'])): ?>
+        <div class="btnPublicacoesFavoritasContainer">
+            <a href="/publicacoes/favoritos" class="btnPublicacoesFavoritas">Favoritos</a>
+        </div>
+        <?php endif; ?>
+
         <div class="listaCards">
-            <?php foreach($posts as $post): ?>
-            <div class="card">
-                <div class="infos">
-                    <div class="profile">
-                        <div class="nomeEFoto">
-                            <div class="usuarioPosts">
-                                <i class="bi bi-person-circle"></i>
+            <?php foreach ($posts as $post): ?>
+                <div class="card">
+                    <div class="infos">
+                        <div class="profile">
+                            <div class="nomeEFoto">
+                                <div class="usuarioPosts">
+                                    <i class="bi bi-person-circle"></i>
+                                </div>
+                                <div class="nomeUsuarioPosts">
+                                    <p><?= $post->nome_usuario ?></p>
+                                </div>
                             </div>
-                            <div class="nomeUsuarioPosts">
-                                <p><?= $post->usuarios_id ?></p>
-                            </div>
+                                <form action="/posts/favoritar" method="post">
+                                    <input type="hidden" name="post_id" value="<?php $post->id ?>">
+                                    <input type="hidden" name="usuario_id" value="<?php $_SESSION['id'] ?>">
+                                    <div class="folhinhaPosts">
+                                        <?php if (isset($_SESSION['id'])): ?>
+                                            <button type="submit">
+                                                <i class="bi bi-leaf"></i>
+                                                <i class="bi bi-leaf-fill"></i>
+                                            </button>
+                                        <?php else: ?>
+                                            <i class="bi bi-leaf blocked"></i>
+                                            <i class="bi bi-leaf-fill blocked"></i>
+                                        <?php endif; ?>
+                                    </div>
+                                </form>
                         </div>
-                        <div class="folhinhaPosts">
-                        <?php if (isset($_SESSION['id'])): ?>
-                            <i class="bi bi-leaf"></i>
-                            <i class="bi bi-leaf-fill"></i>
-                        <?php else: ?>
-                            <i class="bi bi-leaf blocked"></i>
-                            <i class="bi bi-leaf-fill blocked"></i>
-                        <?php endif; ?>
+                    </div>
+                    <div class="imgPlantaPosts">
+                        <img src="<?= $post->imagem ?>">
+                    </div>
+                    <div class="conteudo">
+                        <h3><?= $post->titulo ?></h3>
+                        <p class="pMaluco"><?= $post->descricao ?></p>
+                        <div class="classificacoes">
+                            <?php foreach ($post->classificacoes as $classificacao): ?>
+                                <p><?= $classificacao->nome ?></p>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="hora">
+                            <i class="bi bi-calendar-fill"></i>
+                            <p><?= $post->data_criacao ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="imgPlantaPosts">
-                    <img src="<?= $post->imagem ?>">
-                </div>
-                <div class="conteudo">
-                    <h3><?= $post->titulo ?></h3>
-                    <p class="pMaluco"><?= htmlspecialchars($post->descricao) ?></p>
-                    <div class="classificacoes">
-                        <?php foreach ($post->classificacoes as $classificacao): ?>
-                            <p><?= $classificacao->nome ?></p>
-                        <?php endforeach; ?>
-                    </div>
-                    <div class="hora">
-                        <i class="bi bi-calendar-fill"></i>
-                        <p><?= $post->data_criacao ?></p>
-                    </div>
-                </div>
-            </div>
             <?php endforeach; ?>
         </div>
 
@@ -92,6 +106,7 @@
             </div>
         </div>
     </div>
-<?php include __DIR__ . '/../site/footer.view.php' ?>
+    <?php include __DIR__ . '/../site/footer.view.php' ?>
 </body>
+
 </html>

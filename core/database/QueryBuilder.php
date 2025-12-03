@@ -236,7 +236,8 @@ class QueryBuilder
         }
     }
 
-    public function buscaPublicacoes($titulo){
+    public function buscaPublicacoes($titulo)
+    {
         $sql = 'SELECT 
                 p.*,
                 u.nome AS nome_usuario
@@ -255,7 +256,8 @@ class QueryBuilder
         }
     }
 
-    public function buscaUsuarios($nome){
+    public function buscaUsuarios($nome)
+    {
         $sql = 'SELECT * FROM usuarios WHERE nome LIKE :nome';
 
         try {
@@ -273,7 +275,7 @@ class QueryBuilder
         $sql = "SELECT * FROM {$table} WHERE ";
         $bindings = [];
         $clauses = [];
-        
+
         foreach ($conditions as $col => $val) {
             $param = ':' . $col;
             $clauses[] = "{$col} = {$param}";
@@ -288,5 +290,19 @@ class QueryBuilder
 
         return $stmt->fetch(\PDO::FETCH_OBJ);
     }
-}
 
+    public function insereFavoritos($id_post, $id_user)
+    {
+        $sql = 'INSERT INTO favoritos (id_publicacao, id_usuario) VALUES (:id_post, :id_user)';
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':id_user' => $id_user,
+                ':id_post' => $id_post,
+            ]);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+}
