@@ -36,180 +36,31 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
+                        <?php foreach ($posts as $post): ?>
                         <div class="swiper-slide">
-                            <div class="cardfilter">
+                            <div class="cardfilter" style="background-image: url(<?= $post->imagem ?>)">
                                 <div class="card1">
                                     <div class="cardcontent1">
                                         <div class="titulo1">
-                                            <h1> Casa com cara de jardim 🌱 </h1>
+                                            <h1><?= htmlspecialchars($post -> titulo) ?></h1>
                                         </div>
                                         <div class="texto1">
-                                            <h1> Nada como um cantinho verde para deixar o dia mais leve e a casa com
-                                                aquele ar de frescor natural.
-                                            </h1>
+                                            <h1> <?= htmlspecialchars($post -> descricao) ?></h1>
                                         </div>
                                         <div class="bottomcontent">
                                             <div class="categorias">
+                                                <?php foreach($post -> classificacoes as $classificacao): ?>
                                                 <div class="cat">
-                                                    <h1>Ornamental</h1>
+                                                    <h1><?= htmlspecialchars($classificacao->nome) ?></h1>
                                                 </div>
-                                                <div class="cat">
-                                                    <h1>Tóxica</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Interior</h1>
-                                                </div>
+                                                <?php endforeach; ?>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="cardfilter">
-                                <div class="card1">
-                                    <div class="cardcontent1">
-                                        <div class="titulo1">
-                                            <h1> Casa com cara de jardim 🌱 </h1>
-                                        </div>
-                                        <div class="texto1">
-                                            <h1> Nada como um cantinho verde para deixar o dia mais leve e a casa com
-                                                aquele ar de frescor natural.
-                                            </h1>
-                                        </div>
-                                        <div class="bottomcontent">
-                                            <div class="categorias">
-                                                <div class="cat">
-                                                    <h1>Ornamental</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Tóxica</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Interior</h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cardfilter">
-                                <div class="card1">
-                                    <div class="cardcontent1">
-                                        <div class="titulo1">
-                                            <h1> Casa com cara de jardim 🌱 </h1>
-                                        </div>
-                                        <div class="texto1">
-                                            <h1> Nada como um cantinho verde para deixar o dia mais leve e a casa com
-                                                aquele ar de frescor natural.
-                                            </h1>
-                                        </div>
-                                        <div class="bottomcontent">
-                                            <div class="categorias">
-                                                <div class="cat">
-                                                    <h1>Ornamental</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Tóxica</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Interior</h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cardfilter">
-                                <div class="card1">
-                                    <div class="cardcontent1">
-                                        <div class="titulo1">
-                                            <h1> Casa com cara de jardim 🌱 </h1>
-                                        </div>
-                                        <div class="texto1">
-                                            <h1> Nada como um cantinho verde para deixar o dia mais leve e a casa com
-                                                aquele ar de frescor natural.
-                                            </h1>
-                                        </div>
-                                        <div class="bottomcontent">
-                                            <div class="categorias">
-                                                <div class="cat">
-                                                    <h1>Ornamental</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Tóxica</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Interior</h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cardfilter">
-                                <div class="card1">
-                                    <div class="cardcontent1">
-                                        <div class="titulo1">
-                                            <h1> Casa com cara de jardim 🌱 </h1>
-                                        </div>
-                                        <div class="texto1">
-                                            <h1> Nada como um cantinho verde para deixar o dia mais leve e a casa com
-                                                aquele ar de frescor natural.
-                                            </h1>
-                                        </div>
-                                        <div class="bottomcontent">
-                                            <div class="categorias">
-                                                <div class="cat">
-                                                    <h1>Ornamental</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Tóxica</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Interior</h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="cardfilter">
-                                <div class="card1">
-                                    <div class="cardcontent1">
-                                        <div class="titulo1">
-                                            <h1> Casa com cara de jardim 🌱 </h1>
-                                        </div>
-                                        <div class="texto1">
-                                            <h1> Nada como um cantinho verde para deixar o dia mais leve e a casa com
-                                                aquele ar de frescor natural.
-                                            </h1>
-                                        </div>
-                                        <div class="bottomcontent">
-                                            <div class="categorias">
-                                                <div class="cat">
-                                                    <h1>Ornamental</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Tóxica</h1>
-                                                </div>
-                                                <div class="cat">
-                                                    <h1>Interior</h1>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
                     <!-- se precisar de paginação -->
                     <div class="swiper-pagination">
