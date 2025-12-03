@@ -267,5 +267,26 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function selectWhere($table, $conditions)
+    {
+        $sql = "SELECT * FROM {$table} WHERE ";
+        $bindings = [];
+        $clauses = [];
+        
+        foreach ($conditions as $col => $val) {
+            $param = ':' . $col;
+            $clauses[] = "{$col} = {$param}";
+            $bindings[$param] = $val;
+        }
+
+        $sql .= implode(' AND ', $clauses);
+        $sql .= " LIMIT 1";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($bindings);
+
+        return $stmt->fetch(\PDO::FETCH_OBJ);
+    }
 }
 

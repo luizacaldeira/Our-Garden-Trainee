@@ -54,7 +54,7 @@ class LoginController
         header("Location: /");
     }
 
-        public function register()
+    public function register()
     {
         $parameters = [
             'nome' => $_POST['nomeRegister'],
@@ -69,44 +69,57 @@ class LoginController
         header('Location: /');
     }
 
-    public function enviaEmail()
+    public function recuperar()
     {
+        return view('site/recuperarSenha');
+    }
+
+    public function enviaEmail() {
+
+        $email = $_POST['email'];
+
+        $usuario = App::get('database')->selectWhere('usuarios', [
+            'email' => $email
+        ]);
+
+        if (!$usuario) {
+            session_start();
+            $_SESSION['mensagemErro'] = "Este email não está cadastrado.";
+            header("Location: /login/recuperar");
+            exit;
+        }
+
         $mail = new PHPMailer(true);
 
         try {
-            // CONFIG SMTP
+            //CONFIG SMTP
             $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'ourgarden.teste@gmail.com';       // troque aqui
-            $mail->Password   = 'jfud skny sezu vzga';      // troque aqui
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'ourgarden.teste@gmail.com';
+            $mail->Password = 'jfud skny sezu vzga';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port       = 587;
+            $mail->Port = 587;
 
-            // Permitir localhost sem SSL
-            $mail->SMTPOptions = [
-                'ssl' => [
-                    'verify_peer' => false,
-                    'verify_peer_name' => false,
-                    'allow_self_signed' => true
-                ]
-            ];
-
-            // REMETENTE
+            //REMETENTE
             $mail->setFrom('ourgarden.teste@gmail.com', 'OurGarden');
 
-            // DESTINATÁRIO
-            $mail->addAddress('ourgarden.teste@gmail.com');
+            //DESTINATÁRIO DINÂMICO
+            $mail->addAddress($email);
 
-            // CONTEÚDO
+            //CONTEÚDO
             $mail->isHTML(true);
-            $mail->Subject = 'Teste de Email no Localhost';
-            $mail->Body    = '<h2>Email enviado com sucesso pelo localhost!</h2>';
-            $mail->AltBody = 'Email enviado com sucesso pelo localhost!';
+            $mail->Subject = 'Recuperacao de senha - OurGarden';
+
+            $mail->Body = "<h2>Sua senha é:</h2><p>{$usuario->senha}</p>";
+
+            $mail->AltBody = "Sua senha é: {$usuario->senha}";
 
             $mail->send();
 
-            echo 'Email enviado com sucesso!';
+            //REDIRECIONA PARA O LOGIN
+            header("Location: /login");
+
         } catch (Exception $e) {
             echo "Erro ao enviar email: {$mail->ErrorInfo}";
         }
