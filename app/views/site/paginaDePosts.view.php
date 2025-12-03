@@ -26,6 +26,7 @@
         </div>
 
         <div class="listaCards">
+            <?php foreach($posts as $post): ?>
             <div class="card">
                 <div class="infos">
                     <div class="profile">
@@ -34,7 +35,7 @@
                                 <i class="bi bi-person-circle"></i>
                             </div>
                             <div class="nomeUsuarioPosts">
-                                <p>Julia Rodrigues</p>
+                                <p><?= $post->usuarios_id ?></p>
                             </div>
                         </div>
                         <div class="folhinhaPosts">
@@ -49,22 +50,23 @@
                     </div>
                 </div>
                 <div class="imgPlantaPosts">
-                    <img src="../../../public/assets/planta.jpg">
+                    <img src="<?= $post->imagem ?>">
                 </div>
                 <div class="conteudo">
-                    <h3>Casa com cara de jardim</h3>
-                    <p>Nada como um cantinho verde para deixar o dia mais leve e a casa com aquele ar de frescor natural.</p>
+                    <h3><?= $post->titulo ?></h3>
+                    <p><?= $post->descricao ?></p>
                     <div class="classificacoes">
-                        <p>Ornamental</p>
-                        <p>Interior</p>
-                        <p>Tóxica</p>
+                        <?php foreach ($classificacoes as $classificacao): ?>
+                            <p><?= $post->classificacao ?></p>
+                        <?php endforeach; ?>
                     </div>
                     <div class="hora">
                         <i class="bi bi-calendar-fill"></i>
-                        <p>Há duas horas</p>
+                        <p><?= $post->data_criacao ?></p>
                     </div>
                 </div>
             </div>
+            <?php endforeach; ?>
         </div>
 
         <div class="paginacao">
