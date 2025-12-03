@@ -47,7 +47,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 0.625rem; /*10px*/
+    /* gap: 0.625rem; 10px */
 }
 
 .footer-content .cardsFooter .cardFooter .title {
@@ -61,6 +61,8 @@ footer {
     height: 4.375rem; /*70px*/
 
     transition: all 0.2s ease-in-out;
+    
+    margin-bottom: 12px;
 }
 
 .footer-content .cardsFooter .cardFooter .title a .logo-code-branca:hover {
