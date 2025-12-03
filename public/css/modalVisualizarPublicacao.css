@@ -84,6 +84,12 @@
     font-size: 0.875rem;
 }
 
+.backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-publication-container .view-input p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
 .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container {
     display: flex;
 
@@ -162,7 +168,7 @@
         bottom: 15%;
     }
 
-    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content  {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content {
         width: 41%;
         height: 10rem;
     }
@@ -180,7 +186,7 @@
         padding: 0.5rem 0.8rem;
     }
 
-    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content  {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content {
         width: 51%;
         height: 10rem;
     }
@@ -198,7 +204,7 @@
         padding: 0.5rem 0.5rem;
     }
 
-    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content  {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content {
         width: 51%;
         height: 9rem;
     }
@@ -216,7 +222,7 @@
         padding: 0.5rem 0.5rem;
     }
 
-    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content  {
+    .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-photo-container-content {
         width: 51%;
         height: 9rem;
     }
