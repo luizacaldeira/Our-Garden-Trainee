@@ -10,6 +10,13 @@ class ExampleController
 
     public function index()
     {
-        return view('site/landingpage');
-    }
+        $posts= App::get('database')-> selectAll('publicacoes');
+        $classificacoes = App::get('database')->selectAll('classificacoes');
+        foreach ($posts as $post) {
+            $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
+        }
+        return view('site/landingpage',compact('posts','classificacoes'));
+
+}
+
 }
