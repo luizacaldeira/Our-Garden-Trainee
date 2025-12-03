@@ -63,24 +63,19 @@ body{
     left: 59%;
 } */
 
-.funil {
-    font-size: 30px;
-    align-content: center;
-    /* border: 1px solid red; */
-    cursor: pointer;
-}
-
 .listaCards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5rem;
-    width: 80%;
-    max-width: 1200px;
+    width: 100%;
+    /* max-width: 1200px; */
     /* align-items: start; */
     justify-content: center;
-    grid-auto-rows: minmax(0, auto);
+    /* grid-auto-rows: minmax(0, auto); */
     /* padding-bottom: 5%; */
     /* border: 1px solid red; */
+
+    gap: 5rem;
 }
 
 
@@ -89,12 +84,12 @@ body{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 83%;
+    width: 500px;
+    height: fit-content;
     box-shadow: 2px 4px 10px rgb(0, 0, 0, 0.5);
     cursor: pointer;
     /* border: 1px solid blue; */
-    width: 100%;
+    /* width: 100%; */
 }
 
 .infos{
@@ -193,7 +188,7 @@ body{
 }
 
 .imgPlantaPosts img {
-    width: 70px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -226,6 +221,13 @@ body{
     font-size: 14px;
     font-family: var(--font-family-paragrafo);
     padding-bottom: 4%;
+}
+
+.pMaluco {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap !important;
+    width: 100%;
 }
 
 .classificacoes {

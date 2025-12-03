@@ -54,7 +54,7 @@
                 </div>
                 <div class="conteudo">
                     <h3><?= $post->titulo ?></h3>
-                    <p><?= $post->descricao ?></p>
+                    <p class="pMaluco"><?= htmlspecialchars($post->descricao) ?></p>
                     <div class="classificacoes">
                         <?php foreach ($post->classificacoes as $classificacao): ?>
                             <p><?= $classificacao->nome ?></p>
