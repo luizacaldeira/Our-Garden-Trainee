@@ -145,7 +145,6 @@ main {
 .sidebottons:hover:not(.ativa) a {
     color: var(--green-200);
     text-shadow: 0 0 10px ; 
-    transform: scale(1.2); 
 }
 
 .sidebottons a i {
@@ -217,13 +216,13 @@ main {
 .logoutsidebar a {
     text-decoration: none;
     text-align: center;
-    color: var(--green-200);
-}
-.logoutsidebar:hover a {
-    text-shadow: 0 0 10px ; 
-    transform: scale(1.2); 
+    color: var(--green-200);  
 }
 
+.logoutsidebar:hover a{
+    text-shadow: 0 0 10px ; 
+
+}
 .sidebar:hover .logoutsidebar {
     display: flex;
     justify-content: center;
@@ -236,6 +235,7 @@ main {
     margin: auto;
     width: 100%;
     padding-left: 10px;
+
 }
 
 @media (min-width: 700px) {
