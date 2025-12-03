@@ -138,6 +138,7 @@ body {
     align-self: center;
     border-radius: 8px;
     padding: 2%;
+    width: 100%;
 }
 .titulo1 {
     width: fit-content;
@@ -168,16 +169,19 @@ body {
     align-content: center;
     padding-left: 30px;
     padding-right: 30px;
+    width: 100%;
 
 }
 .texto1 h1 {
     font-family: var(--font-family-paragrafo);
     font-size: 0.8rem;
     color: var(--green-100);
-    text-align: left;
-    display: inline-block;
-    overflow: hidden !important;
+    text-align: center;
     text-overflow: ellipsis;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 
 }
 .bottomcontent {
@@ -455,7 +459,7 @@ body {
     font-family: var(--font-family-paragrafo);
     font-size: 0.8rem;
     color: var(--green-100);
-    text-align: left;
+    text-align: center;
     display: -webkit-box; 
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5; 
