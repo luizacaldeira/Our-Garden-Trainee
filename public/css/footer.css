@@ -8,7 +8,7 @@ body {
 
 footer {
     width: 100%;
-    min-height: 20rem;
+    height: max-content;
 
     background-color: var(--green-900);
     color: var(--green-100);
@@ -16,7 +16,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 var(--padding-1-pagina-desktop) 0 var(--padding-1-pagina-desktop) ;
+    padding: 3rem var(--padding-1-pagina-desktop) 2rem var(--padding-1-pagina-desktop) ;
 }
 
 .footer-content {
