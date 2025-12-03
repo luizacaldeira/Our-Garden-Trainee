@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 use App\Core\App;
-use Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 class LoginController
 {
@@ -53,18 +54,46 @@ class LoginController
         header("Location: /");
     }
 
-    public function register()
+    public function enviaEmail()
     {
-        $parameters = [
-            'nome' => $_POST['nomeRegister'],
-            'email' => $_POST['emailRegister'],
-            'senha' => $_POST['senhaRegister'],
-            'imagem' => 'public/assets/foto perfil.png',
-            'tipo_usuario' => 1
-        ];
+        $mail = new PHPMailer(true);
 
-        App::get('database')->insert('usuarios', $parameters);
+        try {
+            // CONFIG SMTP
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'ourgarden.teste@gmail.com';       // troque aqui
+            $mail->Password   = 'jfud skny sezu vzga';      // troque aqui
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port       = 587;
 
-        header('Location: /');
+            // Permitir localhost sem SSL
+            $mail->SMTPOptions = [
+                'ssl' => [
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                ]
+            ];
+
+            // REMETENTE
+            $mail->setFrom('ourgarden.teste@gmail.com', 'OurGarden');
+
+            // DESTINATÁRIO
+            $mail->addAddress('ourgarden.teste@gmail.com');
+
+            // CONTEÚDO
+            $mail->isHTML(true);
+            $mail->Subject = 'Teste de Email no Localhost';
+            $mail->Body    = '<h2>Email enviado com sucesso pelo localhost!</h2>';
+            $mail->AltBody = 'Email enviado com sucesso pelo localhost!';
+
+            $mail->send();
+
+            echo 'Email enviado com sucesso!';
+        } catch (Exception $e) {
+            echo "Erro ao enviar email: {$mail->ErrorInfo}";
+        }
     }
 }

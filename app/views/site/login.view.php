@@ -142,7 +142,7 @@
 
             <div class="loginVerification">
                 <div class="loginBoxPassword">
-                    <p>Esqueceu a senha?</p>
+                    <a href="/login/enviaEmail">Esqueceu a senha?</a>
                 </div>
                 <button class="loginBoxButton" type="submit">
                     <h3>Login</h3>
