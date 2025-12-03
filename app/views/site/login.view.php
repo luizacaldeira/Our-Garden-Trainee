@@ -30,9 +30,7 @@
 
     <div class="loginBox">
     <div class="loginEnvelope" id="loginEnvelope">
-        <a class="loginBoxImg" href="/">
-
-        </a>
+        <a class="loginBoxImg" href="/"></a>
 
         <div class="registerBoxForm">
             <div class="registerBoxTitle">
