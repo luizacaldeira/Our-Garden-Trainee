@@ -42,6 +42,7 @@ class QueryBuilder
             FROM publicacoes AS p
             INNER JOIN usuarios AS u
             ON p.usuarios_id = u.id
+            ORDER BY p.id DESC
             LIMIT {$inicio}, {$rows_count}";
 
         try {
