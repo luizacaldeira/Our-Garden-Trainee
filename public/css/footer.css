@@ -8,7 +8,7 @@ body {
 
 footer {
     width: 100%;
-    min-height: 25rem;
+    min-height: 20rem;
 
     background-color: var(--green-900);
     color: var(--green-100);
@@ -28,7 +28,7 @@ footer {
     align-items: center;
     justify-content: center;
 
-    gap: 4.375rem; /*70px*/
+    gap: 2rem; /*70px*/
 }
 
 .footer-content .cardsFooter {

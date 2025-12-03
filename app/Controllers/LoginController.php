@@ -59,7 +59,7 @@ class LoginController
             'nome' => $_POST['nomeRegister'],
             'email' => $_POST['emailRegister'],
             'senha' => $_POST['senhaRegister'],
-            'imagem' => 'public/assets/BackgroundFolhasLogo.png',
+            'imagem' => 'public/assets/foto perfil.png',
             'tipo_usuario' => 1
         ];
 
