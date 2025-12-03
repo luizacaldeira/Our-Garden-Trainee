@@ -22,9 +22,6 @@
                     <i class="bi bi-search"></i>
                     <input type="text" placeholder="Pesquise...">
                 </div>
-                <div class="funil">
-                    <i class="bi bi-funnel"></i>
-                </div>
             </div>
         </div>
 
