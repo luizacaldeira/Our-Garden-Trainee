@@ -36,8 +36,6 @@ main {
 
 .logo_ourgarden img {
     object-fit: cover;
-    padding-top: 20px;
-    padding-bottom: 30px;
     transition: opacity 0.3s ease;
 }
 
@@ -47,17 +45,23 @@ main {
 }
 
 .logoopen img {
+    padding-top: 10px;
+    padding-bottom: 5px;
     width: 130px;
 }
 
 .logoclose img {
-    width: 40px;
-
+    width: 90%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .logoclose {
     display: flex;
-    width: 30px;
+    width: 100%;
+    justify-content: center;
 }
 
 .sidebar:hover .logoclose {
@@ -65,7 +69,7 @@ main {
 }
 
 .sidebar:hover .logoopen {
-    display: block;
+    display: flex;
 }
 
 .logo_ourgarden {
