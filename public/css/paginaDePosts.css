@@ -76,6 +76,8 @@ body{
     /* border: 1px solid red; */
 
     gap: 5rem;
+
+    padding-bottom: 5rem;
 }
 
 
@@ -224,9 +226,12 @@ body{
 }
 
 .pMaluco {
-    display: inline-block;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap !important;
+    word-wrap: break-word;
     width: 100%;
 }
 
