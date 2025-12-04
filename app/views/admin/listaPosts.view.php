@@ -95,7 +95,7 @@ if (!isset($_SESSION['id'])) {
                                             <button class="btn-actions" onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')">
                                                 <img src="../../../public/assets/eye-icon.svg" alt="ícone de olho">
                                             </button>
-                                            <button class="btn-actions" onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro')">
+                                            <button class="btn-actions" onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro'); validarInputCares(<?= $post->id ?>);">
                                                 <img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis">
                                             </button>
                                             <button class="btn-actions" onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')">
@@ -110,9 +110,9 @@ if (!isset($_SESSION['id'])) {
                     <div class="paginacaoPosts">
                         <div class="paginacaoPostsConteudo">
                             <?php $searchParam = isset($_GET['pesquisarPublicacoes']) ? '&pesquisarPublicacoes=' . urlencode($_GET['pesquisarPublicacoes']) : ''; ?>
-                            
+
                             <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
-                                <a class="arrow-left" href="?page=<?= max(1, $page-1) ?><?= $searchParam ?>">
+                                <a class="arrow-left" href="?page=<?= max(1, $page - 1) ?><?= $searchParam ?>">
                                     <i class="bi bi-chevron-left"></i>
                                 </a>
                             </li>
@@ -144,7 +144,7 @@ if (!isset($_SESSION['id'])) {
                             </div>
 
                             <li class="page-item <?= $page >= $totalPages ? 'disabled' : '' ?>">
-                                <a class="arrow-right" href="?page=<?= min($totalPages, $page+1) ?><?= $searchParam ?>">
+                                <a class="arrow-right" href="?page=<?= min($totalPages, $page + 1) ?><?= $searchParam ?>">
                                     <i class="bi bi-chevron-right"></i>
                                 </a>
                             </li>
@@ -308,7 +308,13 @@ if (!isset($_SESSION['id'])) {
                             <span>Cuidados:</span>
                             <div class="view-input view-input-cares">
                                 <ul class="view-cares-ul">
-                                    <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
+                                    <?php
+                                    $cuidados = json_decode($post->cuidados, true);
+                                    if (!is_array($cuidados)) {
+                                        $cuidados = [];
+                                    }
+                                    ?>
+                                    <?php foreach ($cuidados as $index => $cuidado): ?>
                                         <li class="view-care">
                                             <?= $cuidado ?>
                                         </li>
@@ -400,7 +406,13 @@ if (!isset($_SESSION['id'])) {
                                         <i class="bi bi-plus-circle" onclick="addCaresUpdate(<?= $post->id ?>)"></i>
                                     </div>
                                     <ul id="ulCares<?= $post->id ?>" class="ul-cares">
-                                        <?php foreach (json_decode($post->cuidados) as $index => $cuidado): ?>
+                                        <?php
+                                        $cuidados = json_decode($post->cuidados, true);
+                                        if (!is_array($cuidados)) {
+                                            $cuidados = [];
+                                        }
+                                        ?>
+                                        <?php foreach ($cuidados as $index => $cuidado): ?>
                                             <li class="li-cares-update" id="li-care-db<?= $post->id ?><?= $index ?>">
                                                 <input class="li-cares-edit" id="cares-edit" name="cuidados[]" value="<?= $cuidado ?>">
                                                 <i class="bi bi-trash-fill" onclick="deleteCaresUpdate('li-care-db<?= $post->id ?><?= $index ?>', <?= $post->id ?>)"></i>
@@ -453,12 +465,12 @@ if (!isset($_SESSION['id'])) {
         </div>
     </div>
 
-        <!-- JAVASCRIPT -->
-        <script src="../../../public/js/modalCriarPublicacao.js"></script>
-        <script src="../../../public/js/modal.js"></script>
-        <script src="../../../public/js/modalEditarPublicacao.js"></script>
-        <script src="../../../public/js/buscaPublicacao.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="../../../public/js/modalCriarPublicacao.js"></script>
+    <script src="../../../public/js/modal.js"></script>
+    <script src="../../../public/js/modalEditarPublicacao.js"></script>
+    <script src="../../../public/js/buscaPublicacao.js"></script>
 
 </body>
 
-</html>
+</html>                        

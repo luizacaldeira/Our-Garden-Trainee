@@ -123,7 +123,7 @@ function addCaresUpdate(id) {
             updateCares();
         }
         ulCares.removeChild(li);
-        if (ulCares.children.length <= 5) {
+        if (ulCares.children.length < 5) {
             inputBox.style.display = "flex";
         }
     });
@@ -142,7 +142,7 @@ function deleteCaresUpdate(id, postId) {
     if (li) {
         li.remove();
 
-        if (ulCares.children.length <= 5) {
+        if (ulCares.children.length < 5) {
             inputBox.style.display = "flex";
         }
     }
@@ -154,4 +154,17 @@ function fecharModalUpdate(idModal, idFundo) {
     document.getElementById(idFundo).style.display = "none";
 
     // window.location.reload();
+}
+
+function validarInputCares(postId) {
+    const ul = document.getElementById(`ulCares${postId}`);
+    const inputBox = document.getElementById(`inputEPlus${postId}`);
+
+    if (!ul || !inputBox) return;
+
+    if (ul.children.length >= 5) {
+        inputBox.style.display = "none";
+    } else {
+        inputBox.style.display = "flex";
+    }
 }
