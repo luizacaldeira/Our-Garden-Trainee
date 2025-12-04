@@ -36,5 +36,5 @@ $router->get('dashboard', 'DashboardController@index');
 $router->get('publicacoes', 'PaginaPostsController@index');
 $router->get('publicacoes/{id}', 'PaginaPostsController@exibirPostIndividual');
 $router->post('publicacoes/favoritar', 'PaginaPostsController@favoritarPublicacao');
-$router->post('publicacoes/favoritos', 'PaginaPostsController@exibirFavoritos');
+$router->get('publicacoes/favoritos', 'PaginaPostsController@exibirFavoritos');
 

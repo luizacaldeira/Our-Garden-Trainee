@@ -42,11 +42,6 @@ class PaginaPostsController
 
     public function exibirFavoritos()
     {
-        $posts = App::get('database')->selectPostsWithUser(0, 6);
-        $classificacoes = App::get('database')->selectAll('classificacoes');
-        foreach ($posts as $post) {
-            $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
-        }
-        return view('site/favoritos', compact('posts', 'classificacoes'));
+        return view('site/favoritos');
     }
 }
