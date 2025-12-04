@@ -28,9 +28,9 @@
         </div>
 
         <?php if (isset($_SESSION['id'])): ?>
-        <div class="btnPublicacoesFavoritasContainer">
-            <a href="/publicacoes/favoritos" class="btnPublicacoesFavoritas">Favoritos</a>
-        </div>
+            <div class="btnPublicacoesFavoritasContainer">
+                <a href="/publicacoes/favoritos" class="btnPublicacoesFavoritas">Favoritos</a>
+            </div>
         <?php endif; ?>
 
         <div class="listaCards">
@@ -46,21 +46,21 @@
                                     <p><?= $post->nome_usuario ?></p>
                                 </div>
                             </div>
-                                <form action="/posts/favoritar" method="post">
-                                    <input type="hidden" name="post_id" value="<?php $post->id ?>">
-                                    <input type="hidden" name="usuario_id" value="<?php $_SESSION['id'] ?>">
-                                    <div class="folhinhaPosts">
-                                        <?php if (isset($_SESSION['id'])): ?>
-                                            <button type="submit">
-                                                <i class="bi bi-leaf"></i>
-                                                <i class="bi bi-leaf-fill"></i>
-                                            </button>
-                                        <?php else: ?>
-                                            <i class="bi bi-leaf blocked"></i>
-                                            <i class="bi bi-leaf-fill blocked"></i>
-                                        <?php endif; ?>
-                                    </div>
-                                </form>
+                            <form action="/posts/favoritar" method="post">
+                                <div class="folhinhaPosts">
+                                    <?php if (isset($_SESSION['id'])): ?>
+                                        <input type="hidden" name="post_id" value="<?= $post->id ?>">
+                                        <input type="hidden" name="usuario_id" value="<?= $_SESSION['id'] ?>">
+                                        <button type="submit">
+                                            <i class="bi bi-leaf"></i>
+                                            <i class="bi bi-leaf-fill"></i>
+                                        </button>
+                                    <?php else: ?>
+                                        <i class="bi bi-leaf blocked"></i>
+                                        <i class="bi bi-leaf-fill blocked"></i>
+                                    <?php endif; ?>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <div class="imgPlantaPosts">
