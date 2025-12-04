@@ -46,7 +46,7 @@
                                     <p><?= $post->nome_usuario ?></p>
                                 </div>
                             </div>
-                            <form action="/posts/favoritar" method="post">
+                            <form action="/publicacoes/favoritar" method="post">
                                 <div class="folhinhaPosts">
                                     <?php if (isset($_SESSION['id'])): ?>
                                         <input type="hidden" name="post_id" value="<?= $post->id ?>">

@@ -9,6 +9,8 @@ class PaginaPostsController
 {
     public function index()
     {
+        session_start();
+        
         $posts = App::get('database')->selectPostsWithUser(0, 6);
         $classificacoes = App::get('database')->selectAll('classificacoes');
         foreach ($posts as $post) {
@@ -45,7 +47,7 @@ class PaginaPostsController
     public function exibirFavoritos()
     {
         session_start();
-        
+
         $id_usuario = $_SESSION['id'];
 
         $posts = App::get('database')->selectFavoritosByUser($id_usuario);

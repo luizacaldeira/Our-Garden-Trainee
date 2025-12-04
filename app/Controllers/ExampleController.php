@@ -10,6 +10,8 @@ class ExampleController
 
     public function index()
     {
+        session_start();
+        
         $posts= App::get('database')-> selectPostsWithUser(0, 6);
         $classificacoes = App::get('database')->selectAll('classificacoes');
         foreach ($posts as $post) {
