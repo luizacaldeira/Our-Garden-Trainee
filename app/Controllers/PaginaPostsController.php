@@ -30,8 +30,10 @@ class PaginaPostsController
 
     public function favoritarPublicacao()
     {
+        session_start();
+
         $id_post = $_POST['post_id'];
-        $id_usuario = $_POST['usuario_id'];
+        $id_usuario = $_SESSION['id'];
 
         App::get('database')->insereFavoritos($id_post, $id_usuario);
 
@@ -42,6 +44,16 @@ class PaginaPostsController
 
     public function exibirFavoritos()
     {
-        return view('site/favoritos');
+        session_start();
+        
+        $id_usuario = $_SESSION['id'];
+
+        $posts = App::get('database')->selectFavoritosByUser($id_usuario);
+
+        foreach ($posts as $post) {
+            $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
+        }
+
+        return view('site/favoritos', compact('posts'));
     }
 }

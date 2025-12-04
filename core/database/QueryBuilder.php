@@ -305,4 +305,29 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function selectFavoritosByUser($id_usuario)
+    {
+        $sql = "
+        SELECT 
+            p.*,
+            u.nome AS nome_usuario
+        FROM favoritos f
+        INNER JOIN publicacoes p 
+            ON f.id_publicacao = p.id
+        INNER JOIN usuarios u 
+            ON p.usuarios_id = u.id
+        WHERE f.id_usuario = :id_usuario
+        ORDER BY p.id DESC
+    ";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id_usuario' => $id_usuario]);
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

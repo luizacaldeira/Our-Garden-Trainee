@@ -50,7 +50,6 @@
                                 <div class="folhinhaPosts">
                                     <?php if (isset($_SESSION['id'])): ?>
                                         <input type="hidden" name="post_id" value="<?= $post->id ?>">
-                                        <input type="hidden" name="usuario_id" value="<?= $_SESSION['id'] ?>">
                                         <button type="submit">
                                             <i class="bi bi-leaf"></i>
                                             <i class="bi bi-leaf-fill"></i>
