@@ -243,6 +243,14 @@ body{
     font-size: 25px;
     font-family: var(--font-family-titulo);
     color: var(--green-900);
+    /* white-space: nowrap; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 .conteudo p {
@@ -444,7 +452,7 @@ body{
     /* Tablets */
 @media screen and (min-width: 789px) and (max-width: 992px){
     .pagina {
-        padding: 0 8%;
+        padding: 0 7%;
     }
     
     .container {
@@ -453,21 +461,22 @@ body{
 
     .container h2 {
         font-size: 25px;
+        white-space: nowrap;
     }
 
-
-    
     .listaCards {
         width: 100%;
         gap: 4rem 3rem;
+        justify-items: space-between;
     }
 
     .card {
-        height: 100%;
+        width: 320px;
     }
 
     .conteudo h3 {
         font-size: 20px;
+        
     }
 
     .conteudo p {
@@ -555,11 +564,20 @@ body{
     }
 
     .imgPlantaPosts {
-        height: 55%;
-    }
+    width: 100%;
+    height: 300px;
+    /* display: block; */
+}
+
+.imgPlantaPosts img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
     .conteudo h3 {
         font-size: 23px;
+        padding: 2% 0;
     }
 
     .pMaluco {
@@ -568,11 +586,11 @@ body{
     }
 
     .classificacoes {
-        padding: 5% 0;
+        padding: 3% 0;
     }
 
     .hora {
-        /* padding-bottom: 3%; */
+        padding-top: 1%;
     }
 
     .paginacao {
@@ -589,7 +607,7 @@ body{
 
 /* Smartphones pequenos */
 @media screen and (max-width: 360px){
-    .pagina {
+        .pagina {
         padding: 0;
     }
 
@@ -597,29 +615,36 @@ body{
         display: flex;
         flex-direction: column-reverse;
         gap: 20%;
+        padding: 5% 5%;
     }
 
     .container h2 {
         font-size: 24px;
         width: 100%;
-    }
-
-    .conteudo p {
-        font-size: 12px;
+        justify-content: center;
+        text-align: center;
     }
 
     .pesquisa {
-        width: 87%;
+        width: 100%;
+    }
+
+    .btnPublicacoesFavoritasContainer {
+        /* width: 50%; */
+        padding: 0;
+        justify-content: center;
     }
     
     .listaCards {
         grid-template-columns: repeat(1, 1fr);
         gap: 3rem;
+        padding: 5%;
     }
 
     .card {
         width: 100%;
-        height: 98%;
+        height: fit-content;
+        
     }
 
     .profile {
@@ -631,21 +656,43 @@ body{
     }
 
     .imgPlantaPosts {
-        height: 60%;
+    width: 100%;
+    height: 300px;
+    /* display: block; */
+}
+
+.imgPlantaPosts img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    .conteudo h3 {
+        font-size: 23px;
+        padding: 2% 0;
+    }
+
+    .pMaluco {
+        font-size: 12px;
+        /* padding: 0; */
+    }
+
+    .classificacoes {
+        padding: 3% 0;
     }
 
     .hora {
-        padding-bottom: 3%;
+        padding-top: 1%;
     }
 
     .paginacao {
-        padding: 0 10% 15% 10%;
-        padding-top: 0;
+        padding: 5% 10% 15% 10%;
     }
 
     .elementosPaginacao {
-        width: 100%;
+        width: 95%;
         display: flex;
+        padding: 2%;
         justify-content: center;
     }
 }
