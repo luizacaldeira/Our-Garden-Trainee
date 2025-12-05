@@ -193,13 +193,14 @@ footer {
 /* Smartphones grandes */
 @media screen and (min-width: 361px) and (max-width: 703px) {
     footer {
+        padding: 0 var(--padding-1-pagina-desktop);
         font-size: var(--font-size-titulo-mobile);
     }
 
     .footer-content {
         gap: 1.875rem; /*30px*/
 
-        padding: 3rem 0;
+        padding: 3rem 0 1rem 0;
     }
 
     .footer-content .cardsFooter {
@@ -251,13 +252,14 @@ footer {
 /* Smartphones pequenos */
 @media screen and (max-width: 360px) {
     footer {
-        padding: 60px;
+        padding: 0 var(--padding-1-pagina-desktop);
 
         font-size: var(--font-size-subtitulo-mobile);
     }
 
     .footer-content {
         gap: 1.875rem; /*30px*/
+        padding: 3rem 0 1rem 0;
     }
 
     .footer-content .cardsFooter {
