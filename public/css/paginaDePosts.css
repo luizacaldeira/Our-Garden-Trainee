@@ -231,7 +231,7 @@ body{
 
 .imgPlantaPosts {
     width: 100%;
-    height: 300px;
+    height: 350px;
     /* display: block; */
 }
 
@@ -440,10 +440,13 @@ body{
 @media screen and (min-width: 1105px) and (max-width: 1299px){
     .container h2 {
         font-size: 28px;
+        white-space: nowrap;
     }
     
     .conteudo h3 {
         font-size: 22px;
+        display: flex;
+        height: 30px;
     }
 
     .conteudo p {
@@ -460,8 +463,14 @@ body{
     }
 
     .card {
-        height: 100%;
+        display: flex;
+        width: 450px;
+        height: fit-content;
     }
+
+    /* .classificacoes {
+        padding-top: 5%;
+    } */
 
 }
 
@@ -488,7 +497,7 @@ body{
     }
 
     .card {
-        width: 320px;
+        width: 400px;
     }
 
     .conteudo h3 {
@@ -513,20 +522,59 @@ body{
 /* Tablets pequenos */
 @media screen and (min-width: 600px) and (max-width: 788px){
     .pagina {
-        padding: 5%;
+        padding: 0 7%;
     }
-
+    
     .container {
         width: 100%;
     }
 
-    /* .container h3 {
-        font-size: 15px;
-    } */
+    .container h2 {
+        font-size: 25px;
+        white-space: nowrap;
+    }
 
     .listaCards {
         width: 100%;
-    
+        gap: 4rem 3rem;
+        justify-items: space-between;
+    }
+
+    .card {
+        width: 300px;
+    }
+
+    .imgPlantaPosts {
+    width: 100%;
+    height: 300px;
+    /* display: block; */
+    }
+
+    .imgPlantaPosts img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .conteudo h3 {
+        font-size: 20px;
+        
+    }
+
+    .conteudo p {
+        font-size: 12px;
+    }
+
+    .classificacoes {
+        padding: 0 10%;
+    }
+
+    .hora {
+        font-size: 8px;
+    }
+
+    .paginacao {
+        padding: 6%;
     }
 }
 
@@ -600,7 +648,7 @@ body{
     width: 100%;
     height: 350px;
     /* display: block; */
-}
+    }
 
 .imgPlantaPosts img {
     width: 100%;
