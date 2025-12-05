@@ -135,13 +135,14 @@ body{
     }
 
     .navbarLoginButtonMobile{
+        all: unset;
         color: var(--green-900);
         background-color: var(--green-200);
         text-decoration: none;
         padding: 5px 15px;
         display: flex;
         border-radius: 8px;
-        width: 100%;
+        width: 90%;
         max-height: max-content;
         align-items: center;
         justify-content: center;
