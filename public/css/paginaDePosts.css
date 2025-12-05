@@ -143,6 +143,19 @@ body{
     white-space: nowrap;
 }
 
+.fotoUsuarioPosts {
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid red; */
+}
+
+.fotoUsuarioPosts img{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
 .profile p {
     width: 100%;
     font-size: 20px;
@@ -260,12 +273,9 @@ body{
 }
 
 .pMaluco {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     width: 100%;
 }
 
