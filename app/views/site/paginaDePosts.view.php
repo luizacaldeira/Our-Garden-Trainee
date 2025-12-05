@@ -19,19 +19,19 @@
     <div class="pagina">
         <div class="container">
             <h2>ÚLTIMAS PUBLICAÇÕES</h2>
-            <div class="pesquisaFunil">
+            <div class="pesquisaFavoritos">
                 <div class="pesquisa">
                     <i class="bi bi-search"></i>
                     <input type="text" placeholder="Pesquise...">
                 </div>
+                <?php if (isset($_SESSION['id'])): ?>
+                    <div class="btnPublicacoesFavoritasContainer">
+                        <a href="/publicacoes/favoritos" class="btnPublicacoesFavoritas">Favoritos</a>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
 
-        <?php if (isset($_SESSION['id'])): ?>
-            <div class="btnPublicacoesFavoritasContainer">
-                <a href="/publicacoes/favoritos" class="btnPublicacoesFavoritas">Favoritos</a>
-            </div>
-        <?php endif; ?>
 
         <div class="listaCards">
             <?php foreach ($posts as $post): ?>

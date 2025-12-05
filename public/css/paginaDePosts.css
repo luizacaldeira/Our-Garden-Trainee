@@ -31,16 +31,17 @@ body{
     /* border: 1px solid rebeccapurple; */
 }
 
-.pesquisaFunil{
+.pesquisaFavoritos{
     display: flex;
     height: 48px;
     width: 100%;
+    gap: 3%;
+    /* border: 1px solid red; */
     justify-content: end;
-    gap: 2%;
 }
 
 .pesquisa {
-    width: 70%;
+    width: 60%;
     border-radius: 30px;
     border: none;
     padding: 0 3%;
@@ -54,14 +55,15 @@ body{
 
 .pesquisa input {
     all: unset;
-
 }
 
 .btnPublicacoesFavoritasContainer {
     display: flex;
     justify-content: end;
-    width: 100%;
-    padding: 0 4.2rem 2rem 0;
+    width: fit-content;
+    align-items: center;
+    /* padding: 0 4.2rem 2rem 0; */
+    /* border: 1px solid purple; */
 }
 
 .btnPublicacoesFavoritas {
@@ -72,6 +74,7 @@ body{
     border-radius: 0.5rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    /* height: 100%; */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
