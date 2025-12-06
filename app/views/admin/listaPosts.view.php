@@ -92,15 +92,37 @@ if (!isset($_SESSION['id'])) {
                                     <td><?= (new DateTime($post->data_criacao))->format('d/m/Y') ?></td>
                                     <td>
                                         <div class="botoesAcoes">
-                                            <button class="btn-actions" onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')">
-                                                <img src="../../../public/assets/eye-icon.svg" alt="ícone de olho">
-                                            </button>
-                                            <button class="btn-actions" onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro'); validarInputCares(<?= $post->id ?>);">
-                                                <img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis">
-                                            </button>
-                                            <button class="btn-actions" onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')">
-                                                <img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira">
-                                            </button>
+                                            <?php if ($_SESSION['tipo_usuario'] == 0): ?>
+                                                <button class="btn-actions" onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')">
+                                                    <img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" class="btn-action">
+                                                </button>
+                                                <button class="btn-actions" onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro'); validarInputCares(<?= $post->id ?>);">
+                                                    <img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" class="btn-action">
+                                                </button>
+                                                <button class="btn-actions" onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')">
+                                                    <img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" class="btn-action">
+                                                </button>
+                                            <?php elseif ($_SESSION['tipo_usuario'] == 1 && $post->usuarios_id == $_SESSION['id']): ?>
+                                                <button class="btn-actions" onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')">
+                                                    <img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" class="btn-action">
+                                                </button>
+                                                <button class="btn-actions" onclick="abrirModal('modalEditPublication<?= $post->id ?>','filtro'); validarInputCares(<?= $post->id ?>);">
+                                                    <img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis" class="btn-action">
+                                                </button>
+                                                <button class="btn-actions" onclick="abrirModal('modalDeletePublication<?= $post->id ?>','filtro')">
+                                                    <img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira" class="btn-action">
+                                                </button>
+                                            <?php else: ?>
+                                                <button class="btn-actions" onclick="abrirModal('modalViewPublication<?= $post->id ?>', 'filtro')">
+                                                    <img src="../../../public/assets/eye-icon.svg" alt="ícone de olho" class="btn-action">
+                                                </button>
+                                                <button class="btn-actions">
+                                                    <img src="../../../public/assets/pencil-icon.svg" alt="ícone de lápis"  class="btn-action actionBlocked">
+                                                </button>
+                                                <button class="btn-actions">
+                                                    <img src="../../../public/assets/trash-icon.svg" alt="ícone de lixeira"  class="btn-action actionBlocked">
+                                                </button>
+                                            <?php endif; ?>
                                         </div>
                                     </td>
                                 </tr>

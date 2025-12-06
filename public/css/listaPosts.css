@@ -254,12 +254,28 @@ body {
 
 .btn-actions {
     all: unset;
-    cursor: pointer;
 }
 
-.btn-actions:hover {
+.btn-action {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-action:hover {
     transition: all 0.2s ease-in-out;
     transform: scale(1.1);
+}
+
+.btn-action.actionBlocked {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-action.actionBlocked:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transition: none;
+    transform: none;
 }
 
 @media screen and (min-width: 1279px) and (max-width: 1290px) {

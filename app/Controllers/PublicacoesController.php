@@ -47,7 +47,7 @@ class PublicacoesController
     }
 
     public function create() {
-
+        session_start();
         $imagemTemporaria = $_FILES['imagemPublicacao']['tmp_name'];
         $nomeImagem= sha1(uniqid($_FILES['imagemPublicacao']['name'], true)) . "." . pathinfo($_FILES['imagemPublicacao']['name'],PATHINFO_EXTENSION) ;
 
@@ -64,7 +64,7 @@ class PublicacoesController
             "cuidados" => $cuidados,
             "imagem" => $caminhoImagem,
             "data_criacao" => date('Y-m-d'),
-            "usuarios_id" => 1
+            "usuarios_id" => $_SESSION['id']
         ];
 
         App::get('database')->insert('publicacoes', $parameters);
