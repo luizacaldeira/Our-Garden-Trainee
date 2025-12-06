@@ -91,15 +91,35 @@ if (!isset($_SESSION['id'])) {
                                     <td><?= $user->tipo_usuario == 0 ? 'administrador' : 'usuário' ?></td>
                                     <td>
                                         <div class="actions">
-                                            <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
-                                                    alt="ícone de olho"
-                                                    onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')"></button>
-                                            <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
-                                                    alt="ícone de lápis"
-                                                    onclick="abrirModal('modalEditUser<?= $user->id ?>', 'fundoJS')"></button>
-                                            <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
-                                                    alt="ícone de lixeira"
-                                                    onclick="abrirModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')"></button>
+                                            <?php if ($_SESSION['tipo_usuario'] == 0): ?>
+                                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                        alt="ícone de olho"
+                                                        onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')" class="action-icon"></button>
+                                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                        alt="ícone de lápis"
+                                                        onclick="abrirModal('modalEditUser<?= $user->id ?>', 'fundoJS')" class="action-icon"></button>
+                                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                        alt="ícone de lixeira"
+                                                        onclick="abrirModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')" class="action-icon"></button>
+                                            <?php elseif ($_SESSION['tipo_usuario'] == 1 && $user->id == $_SESSION['id']): ?>
+                                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                        alt="ícone de olho"
+                                                        onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')" class="action-icon"></button>
+                                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                        alt="ícone de lápis"
+                                                        onclick="abrirModal('modalEditUser<?= $user->id ?>', 'fundoJS')" class="action-icon"></button>
+                                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                        alt="ícone de lixeira"
+                                                        onclick="abrirModal('modalDeletUser<?= $user->id ?>' , 'fundoJS')" class="action-icon"></button>
+                                            <?php else: ?>
+                                                <button class="btn-actions"><img src="../../../public/assets/eye-icon.svg"
+                                                        alt="ícone de olho"
+                                                        onclick="abrirModal('modalViewUser<?= $user->id ?>', 'fundoJS')" class="action-icon"></button>
+                                                <button class="btn-actions"><img src="../../../public/assets/pencil-icon.svg"
+                                                        alt="ícone de lápis" class="action-icon action-icon-blocked"></button>
+                                                <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
+                                                        alt="ícone de lixeira" class="action-icon action-icon-blocked"></button>
+                                             <?php endif; ?>
                                         </div>
                                     </td>
                                 </tr>

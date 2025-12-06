@@ -202,15 +202,29 @@ main .section3 .users-table tbody tr td .actions {
 
 main .section3 .users-table tbody tr td .actions .btn-actions {
     all: unset;
+}
 
+main .section3 .users-table tbody tr td .actions .btn-actions .action-icon {
     cursor: pointer;
 
     transition: all 0.2s ease-in-out;
 }
 
-main .section3 .users-table tbody tr td .actions .btn-actions:hover {
+main .section3 .users-table tbody tr td .actions .btn-actions .action-icon:hover {
     transition: all 0.2s ease-in-out;
     transform: scale(1.1);
+}
+
+main .section3 .users-table tbody tr td .actions .btn-actions .action-icon.action-icon-blocked {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+main .section3 .users-table tbody tr td .actions .btn-actions .action-icon.action-icon-blocked:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transition: none;
+    transform: none;
 }
 
 .paginacaoPosts {
