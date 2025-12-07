@@ -36,6 +36,7 @@
         <div class="listaCards">
             <?php foreach ($posts as $post): ?>
                 <div class="card">
+                    <a href="/publicacoes/<?=$post->id?>">
                     <div class="infos">
                         <div class="profile">
                             <div class="nomeEFoto">
@@ -78,6 +79,7 @@
                             <p><?= $post->data_criacao ?></p>
                         </div>
                     </div>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>

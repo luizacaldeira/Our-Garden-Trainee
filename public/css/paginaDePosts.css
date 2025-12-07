@@ -121,6 +121,9 @@ body{
     /* border: 1px solid blue; */
     /* width: 100%; */
 }
+.card a{
+    all: unset;
+}
 
 .infos{
     width: 100%;    

@@ -39,7 +39,7 @@
                                 <div class="classification">
                                     <p><?= $classificacao->nome ?></p>
                                 </div>
-                                 <?php endforeach; ?>
+                                <?php endforeach; ?>
                             </div>
                             <div class="post-description">
                                 <p><?=$post->descricao?></p>

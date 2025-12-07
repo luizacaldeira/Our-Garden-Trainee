@@ -39,6 +39,7 @@
                         <?php foreach ($posts as $post): ?>
                         <div class="swiper-slide">
                             <div class="cardfilter" style="background-image: url(<?= $post->imagem ?>)">
+                                <a href="/publicacoes/<?=$post->id?>">
                                 <div class="card1">
                                     <div class="cardcontent1">
                                         <div class="titulo1">
@@ -58,6 +59,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <?php endforeach; ?>
