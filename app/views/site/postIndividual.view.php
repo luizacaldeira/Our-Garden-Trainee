@@ -25,30 +25,30 @@
             <div class="post-container">
                 <div class="post">
                     <div class="image-container">
-                        <img src="/<?=$post->imagem?>" alt="imagem de planta">
+                        <img src="/<?= $post->imagem ?>" alt="imagem de planta">
                     </div>
                     <div class="content">
                         <div class="content-header">
                             <div class="header-title">
-                                <p><?=$post->titulo?></p>
+                                <p><?= $post->titulo ?></p>
                             </div>
                         </div>
                         <div class="content-main">
                             <div class="class-container">
                                 <?php foreach ($post->classificacoes as $classificacao): ?>
-                                <div class="classification">
-                                    <p><?= $classificacao->nome ?></p>
-                                </div>
+                                    <div class="classification">
+                                        <p><?= $classificacao->nome ?></p>
+                                    </div>
                                 <?php endforeach; ?>
                             </div>
                             <div class="post-description">
-                                <p><?=$post->descricao?></p>
+                                <p><?= $post->descricao ?></p>
                             </div>
                         </div>
                         <div class="content-footer">
                             <div class="author">
                                 <img src="../../../public/assets/perfil-icon.svg" alt="ícone de perfil">
-                                <p><?=$post->nome_usuario?></p>
+                                <p><?= $post->nome_usuario ?></p>
                             </div>
                             <div class="date">
                                 <img src="../../../public/assets/calendar-icon.svg" alt="ícone de calendário">
@@ -65,30 +65,36 @@
                     <div class="container">
                         <span>Nome</span>
                         <div class="plant-name">
-                            <?=$post->nome_planta?>
+                            <?= $post->nome_planta ?>
                         </div>
                     </div>
                     <div class="container">
                         <span>Classificação</span>
                         <ul class="classifications">
                             <?php foreach ($post->classificacoes as $classificacao): ?>
-                            <li class="classification">
-                                <strong><?= $classificacao->nome ?>:</strong> <?= $classificacao->descricao ?>
-                            </li>
-                             <?php endforeach; ?>
+                                <li class="classification">
+                                    <strong><?= $classificacao->nome ?>:</strong> <?= $classificacao->descricao ?>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                     <div class="container">
                         <span>Sobre</span>
                         <div class="plant-about">
-                            <?=$post->sobre?>
+                            <?= $post->sobre ?>
                         </div>
                     </div>
                     <div class="container">
                         <span>Cuidados</span>
                         <ul class="cares">
-                            <?php foreach (json_decode($post->cuidados) as $cuidado): ?>
-                            <li class="care"> <?= $cuidado ?></li>
+                            <?php
+                            $cuidados = json_decode($post->cuidados, true);
+                            if (!is_array($cuidados)) {
+                                $cuidados = [];
+                            }
+                            ?>
+                            <?php foreach ($cuidados as $index => $cuidado): ?>
+                                <li class="care"> <?= $cuidado ?></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
