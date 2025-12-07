@@ -208,6 +208,11 @@ body{
     cursor: not-allowed;
 }
 
+.folhinhaPosts i.blocked:hover {
+    transform: none;
+    transition: none;
+} 
+
 .imgPlantaPosts {
     width: 100%;
     height: 350px;
