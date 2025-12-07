@@ -23,7 +23,7 @@
 
         <div class="listaCards">
             <?php foreach ($posts as $post): ?>
-                <div class="card">
+                <a class="card" href="/publicacoes/<?=$post->id?>">
                     <div class="infos">
                         <div class="profile">
                             <div class="nomeEFoto">
@@ -45,12 +45,17 @@
                     <div class="conteudo">
                         <h3><?= $post->titulo ?></h3>
                         <p><?= $post->descricao ?></p>
+                        <div class="classificacoes">
+                            <?php foreach ($post->classificacoes as $classificacao): ?>
+                                <p><?= $classificacao->nome ?></p>
+                            <?php endforeach; ?>
+                        </div>
                         <div class="hora">
                             <i class="bi bi-calendar-fill"></i>
                             <p><?= (new DateTime($post->data_criacao))->format('d/m/Y') ?></p>
                         </div>
                     </div>
-                </div>
+                </a>
             <?php endforeach; ?>
         </div>
 

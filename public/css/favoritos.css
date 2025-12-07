@@ -90,6 +90,7 @@ body {
 
 
 .card {
+    all: unset;
     background-color: rgba(236, 248, 240, 0.945);
     border-radius: 20px;
     display: flex;
@@ -161,7 +162,7 @@ body {
 .conteudo {
     width: 100%;
     height: 25%;
-    gap: 0%;
+    gap: 0.3rem;
     padding: 3% 5%;
     display: flex;
     flex-direction: column;
@@ -174,12 +175,6 @@ body {
     /* padding-bottom: 3%; */
     padding: 2px;
     /* border: 1px solid purple; */
-
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-    width: 100%;
-
 }
 
 .conteudo h3 {
@@ -190,9 +185,13 @@ body {
 }
 
 .conteudo p {
-
     font-size: 14px;
     font-family: var(--font-family-paragrafo);
+
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    width: 100%;
 }
 
 .classificacoes {
@@ -201,22 +200,22 @@ body {
     font-size: 10px;
     width: 100%;
     justify-content: center;
-    gap: 4%;
-
+    gap: 4%;    
 }
-
-.classificacoes p {
-    font-size: 0.8rem;
+.classificacoes p{
     font-weight: 600;
     background-color: var(--green-200);
     border-radius: 20px;
     padding: 1% 6% 1% 6%;
+
+    display: flex;
+    justify-content: center;
 }
 
 .hora {
     display: flex;
     width: 100%;
-
+    
     justify-content: flex-end;
     align-items: center;
     gap: 2%;
@@ -224,16 +223,18 @@ body {
 }
 
 .hora p {
-    text-align: left;
-    padding: 0%;
+    text-align: right;
+    padding-bottom: 2%;
     font-family: var(--font-family-paragrafo);
     font-size: 13px;
     font-style: italic;
+    width: max-content;
 }
 
 .hora i {
     text-align: right;
     font-size: 12px;
+    padding-bottom: 2%;
 }
 
 .paginacao {
