@@ -15,7 +15,10 @@ class PaginaPostsController
         $classificacoes = App::get('database')->selectAll('classificacoes');
         foreach ($posts as $post) {
             $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
-            $post->favoritado = App::get('database')->isFavorito($post->id, $_SESSION['id']);
+
+            if (isset($_SESSION['id'])) {
+                $post->favoritado = App::get('database')->isFavorito($post->id, $_SESSION['id']);
+            }
         }
         return view('site/paginaDePosts', compact('posts', 'classificacoes'));
     }
@@ -64,9 +67,9 @@ class PaginaPostsController
         $itensPage = 5;
         $inicio = ($page - 1) * $itensPage;
         $rows_count = count($posts);
-        
+
         $totalPages = max(1, ceil($rows_count / $itensPage));
-        
+
         if ($page <= 0) {
             return redirect('site/listaPosts');
         }
