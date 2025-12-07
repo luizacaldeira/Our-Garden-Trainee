@@ -184,51 +184,27 @@ body{
 }
 
 .folhinhaPosts i {
-    /* align-items: center; */
     position: absolute;
     color: var(--green-700);
     font-size: 30px;
-    transition: opacity .2s ease;
     bottom: 10px;
     right: 3px;
-    /* border: 1px solid red; */
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
 }
 
-.folhinhaPosts i:hover{
-    opacity: 0;
+.folhinhaPosts i:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
 }
 
-.folhinhaPosts i:first-child {
-    opacity: 1;
+.folhinhaPosts.ativo i {
+    color: var(--green-700);
 }
 
-.folhinhaPosts i:last-child {
-    opacity: 0;
-}
-
-.folhinhaPosts:hover i:first-child {
-    opacity: 0;
-}
-
-.folhinhaPosts:hover i:last-child {
-    opacity: 1;
-}
-
-.folhinhaPosts i.blocked, .folhinhaPosts i.blocked:hover {
-    opacity: 1 !important;
-}
-
-.folhinhaPosts i.blocked + i, .folhinhaPosts i.blocked + i:hover {
-    opacity: 0 !important;
-}
-
-.folhinhaPosts .bi-leaf.blocked {
-    color: var(--green-200);
-    cursor: not-allowed;
-}
-
-.folhinhaPosts .bi-leaf-fill.blocked {
-    color: var(--green-100);
+.folhinhaPosts i.blocked {
+    opacity: 0.6;
     cursor: not-allowed;
 }
 

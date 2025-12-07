@@ -218,7 +218,9 @@ class QueryBuilder
         $sql = "
         SELECT 
             p.*,
-            u.nome AS nome_usuario
+            u.nome AS nome_usuario,
+            (SELECT COUNT(*) FROM favoritos f 
+        WHERE f.id_publicacao = p.id AND f.id_usuario = :id_user) AS favoritado
         FROM publicacoes AS p
         INNER JOIN usuarios AS u
             ON p.usuarios_id = u.id

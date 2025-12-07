@@ -48,16 +48,14 @@
                                 </div>
                             </div>
                             <form action="/publicacoes/favoritar" method="post">
-                                <div class="folhinhaPosts">
+                                <div class="folhinhaPosts  <?= $post->favoritado ? 'ativo' : '' ?>">
                                     <?php if (isset($_SESSION['id'])): ?>
                                         <input type="hidden" name="post_id" value="<?= $post->id ?>">
                                         <button type="submit">
-                                            <i class="bi bi-leaf"></i>
-                                            <i class="bi bi-leaf-fill"></i>
+                                            <i class="bi <?= $post->favoritado ? 'bi-leaf-fill' : 'bi-leaf' ?>"></i>
                                         </button>
                                     <?php else: ?>
                                         <i class="bi bi-leaf blocked"></i>
-                                        <i class="bi bi-leaf-fill blocked"></i>
                                     <?php endif; ?>
                                 </div>
                             </form>
