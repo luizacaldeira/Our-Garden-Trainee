@@ -10,7 +10,7 @@ class PaginaPostsController
     public function index()
     {
         session_start();
-        
+
         $posts = App::get('database')->selectPostsWithUser(0, 6);
         $classificacoes = App::get('database')->selectAll('classificacoes');
         foreach ($posts as $post) {
@@ -22,7 +22,7 @@ class PaginaPostsController
     public function exibirPostIndividual($id)
     {
         session_start();
-        
+
         $post = App::get('database')->selectPostWithUserById($id);
 
         $classificacoes = App::get('database')->selectPostsWithClassification($id);
@@ -58,6 +58,23 @@ class PaginaPostsController
             $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
         }
 
-        return view('site/favoritos', compact('posts'));
+        // Paginação
+        $page = isset($_GET['page']) && $_GET['page'] > 0 ? intval($_GET['page']) : 1;
+        $itensPage = 5;
+        $inicio = ($page - 1) * $itensPage;
+        $rows_count = count($posts);
+        
+        $totalPages = max(1, ceil($rows_count / $itensPage));
+        
+        if ($page <= 0) {
+            return redirect('site/listaPosts');
+        }
+
+        if ($page > $totalPages) {
+            header("Location: /posts?page=" . $totalPages);
+            exit;
+        }
+
+        return view('site/favoritos', compact('posts', 'page', 'totalPages'));
     }
 }

@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
-body{
+body {
     background-color: var(--green-200);
 }
 
@@ -31,7 +31,7 @@ body{
     /* border: 1px solid rebeccapurple; */
 }
 
-.pesquisaFunil{
+.pesquisaFunil {
     display: flex;
     height: 48px;
     width: 100%;
@@ -75,7 +75,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5rem;
     width: 80%;
-    
+
     max-width: 1200px;
     /* align-items: start; */
     justify-content: center;
@@ -98,8 +98,8 @@ body{
     width: 100%;
 }
 
-.infos{
-    width: 100%;    
+.infos {
+    width: 100%;
 }
 
 .profile {
@@ -118,7 +118,7 @@ body{
     align-items: center;
 }
 
-.nomeUsuarioPosts p{
+.nomeUsuarioPosts p {
     white-space: nowrap;
     /* font-size: 10px; */
 }
@@ -165,11 +165,13 @@ body{
     /* border: 1px solid red; */
 }
 
-.conteudo h3, .conteudo p, .hora {
+.conteudo h3,
+.conteudo p,
+.hora {
     /* padding-bottom: 3%; */
     padding: 2px;
     /* border: 1px solid purple; */
-    
+
 }
 
 .conteudo h3 {
@@ -180,7 +182,7 @@ body{
 }
 
 .conteudo p {
-    
+
     font-size: 14px;
     font-family: var(--font-family-paragrafo);
 }
@@ -192,9 +194,10 @@ body{
     width: 100%;
     justify-content: center;
     gap: 4%;
-    
+
 }
-.classificacoes p{
+
+.classificacoes p {
     font-size: 0.8rem;
     font-weight: 600;
     background-color: var(--green-200);
@@ -205,7 +208,7 @@ body{
 .hora {
     display: flex;
     width: 100%;
-    
+
     justify-content: flex-end;
     align-items: center;
     gap: 2%;
@@ -239,89 +242,80 @@ body{
 }
 
 .elementosPaginacao {
-    font-size: 18px;
-    width: fit-content;
-    height: fit-content;
-    color: var(--green-900);
     display: flex;
-    padding: 0.8% 2% 0.8% 2%;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border-top: 1px solid var(--green-900);
+    padding: 0.7rem 0.4rem;
 
-    /* padding: 0 1%; */
-    /* border: 1px solid firebrick; */
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.422);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.7px);
     -webkit-backdrop-filter: blur(3.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+
+    font-size: 1rem;
 }
 
-.arcos {
-    display: flex;
-    /* gap: 12%; */
-    /* padding: 4%; */
-    justify-content: center;
-    height: 100%;
-    width: fit-content;
-    /* background-color: blue; */
-    /* border: 1px solid magenta; */
+.elementosPaginacao li {
+    list-style: none;
 }
 
-.arcos i {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    padding: 4%;
+.arrow-left {
+    all: unset;
     cursor: pointer;
-    color: var(--green-900);
 
+    padding-top: 0.1rem;
+}
+
+.arrow-left .bi-chevron-left {
+    font-size: 1.2rem;
 }
 
 .numeros {
     display: flex;
-    width: 100%;
-    justify-content: center;
     align-items: center;
-    gap: 9%;
-    color: var(--green-900);
-    height: 100%;
-    margin: 1%;
-
-    /* gap: 30%;
-    width: 100%;
-    justify-content: center;
-    padding: 5%; */
-    /* border: 1px solid red; */
+    gap: 1rem;
 }
 
-.numeros p {
-    padding: 7%;
+.page {
+    all: unset;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
 
-    /* border: 1px solid aqua; */
-}
-
-.item-paginacao {
-    /* height: 3rem; */
-    border-radius: 10px;
-    width: 3rem;
     display: flex;
-    background-color: var(--green-200);
     align-items: center;
     justify-content: center;
+
+    width: 0.8rem;
+    height: 0.8rem;
+
+    background-color: var(--green-200);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(3.7px);
     -webkit-backdrop-filter: blur(3.7px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.item-paginacao:hover {
+.page:hover {
     background-color: var(--green-500);
-    cursor: pointer;
-    /* height: 70%; */
 }
 
-@media screen and (min-width: 1300px) and (max-width: 1420px){
+.arrow-right {
+    all: unset;
+    cursor: pointer;
+
+    padding-top: 0.1rem;
+}
+
+.arrow-right .bi-chevron-right {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1420px) {
     .conteudo h3 {
         font-size: 22px;
     }
@@ -335,11 +329,11 @@ body{
     }
 }
 
-@media screen and (min-width: 1105px) and (max-width: 1299px){
+@media screen and (min-width: 1105px) and (max-width: 1299px) {
     .container h2 {
         font-size: 28px;
     }
-    
+
     .conteudo h3 {
         font-size: 22px;
     }
@@ -364,12 +358,12 @@ body{
 }
 
 
-    /* Tablets */
-@media screen and (min-width: 789px) and (max-width: 992px){
+/* Tablets */
+@media screen and (min-width: 789px) and (max-width: 992px) {
     .pagina {
         padding: 0 8%;
     }
-    
+
     .container {
         width: 100%;
     }
@@ -379,7 +373,7 @@ body{
     }
 
 
-    
+
     .listaCards {
         width: 100%;
         gap: 4rem 3rem;
@@ -408,7 +402,7 @@ body{
 }
 
 /* Tablets pequenos */
-@media screen and (min-width: 600px) and (max-width: 788px){
+@media screen and (min-width: 600px) and (max-width: 788px) {
     .pagina {
         padding: 5%;
     }
@@ -423,12 +417,12 @@ body{
 
     .listaCards {
         width: 100%;
-    
+
     }
 }
 
 /* Smartphones grandes */
-@media screen and (min-width: 361px) and (max-width: 703px){
+@media screen and (min-width: 361px) and (max-width: 703px) {
     .pagina {
         padding: 0;
     }
@@ -447,7 +441,7 @@ body{
     .pesquisa {
         width: 90%;
     }
-    
+
     .listaCards {
         grid-template-columns: repeat(1, 1fr);
         gap: 0.5rem;
@@ -495,7 +489,7 @@ body{
 }
 
 /* Smartphones pequenos */
-@media screen and (max-width: 360px){
+@media screen and (max-width: 360px) {
     .pagina {
         padding: 0;
     }
@@ -518,7 +512,7 @@ body{
     .pesquisa {
         width: 87%;
     }
-    
+
     .listaCards {
         grid-template-columns: repeat(1, 1fr);
         gap: 3rem;
