@@ -21,6 +21,8 @@ class PaginaPostsController
 
     public function exibirPostIndividual($id)
     {
+        session_start();
+        
         $post = App::get('database')->selectPostWithUserById($id);
 
         $classificacoes = App::get('database')->selectPostsWithClassification($id);
