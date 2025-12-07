@@ -293,16 +293,31 @@ class QueryBuilder
 
     public function insereFavoritos($id_post, $id_user)
     {
-        $sql = 'INSERT INTO favoritos (id_publicacao, id_usuario) VALUES (:id_post, :id_user)';
+        if ($this->isFavorito($id_post, $id_user)) {
+            $sql = "DELETE FROM favoritos 
+                WHERE id_publicacao = :id_post AND id_usuario = :id_user";
 
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute([
-                ':id_user' => $id_user,
-                ':id_post' => $id_post,
-            ]);
-        } catch (Exception $e) {
-            die($e->getMessage());
+            try {
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute([
+                    ':id_post' => $id_post,
+                    ':id_user' => $id_user
+                ]);
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
+        } else {
+            $sql = 'INSERT INTO favoritos (id_publicacao, id_usuario) VALUES (:id_post, :id_user)';
+
+            try {
+                $stmt = $this->pdo->prepare($sql);
+                $stmt->execute([
+                    ':id_user' => $id_user,
+                    ':id_post' => $id_post,
+                ]);
+            } catch (Exception $e) {
+                die($e->getMessage());
+            }
         }
     }
 
@@ -326,6 +341,28 @@ class QueryBuilder
             $stmt->execute(['id_usuario' => $id_usuario]);
 
             return $stmt->fetchAll(PDO::FETCH_OBJ);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    // Função que vai verificar se um post já está marcado como favorito 
+    public function isFavorito($id_post, $id_user)
+    {
+        $sql = "SELECT COUNT(*) AS total 
+            FROM favoritos 
+            WHERE id_publicacao = :id_post AND id_usuario = :id_user";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                ':id_post' => $id_post,
+                ':id_user' => $id_user
+            ]);
+
+            $result = $stmt->fetch(PDO::FETCH_OBJ);
+
+            return $result->total > 0;
         } catch (Exception $e) {
             die($e->getMessage());
         }
