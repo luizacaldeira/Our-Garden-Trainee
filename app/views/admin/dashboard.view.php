@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if (!isset($_SESSION['id'])) {
     header('Location: /login');
@@ -32,7 +31,9 @@ if (!isset($_SESSION['id'])) {
                     <p>Total de publicações: <?= $total_post ?></p>
                 </div>
                 <div class="profileADM">
-                    <i class="bi bi-person-circle"></i>
+                    <div class="fotoUsuarioDashboard">
+                        <img src="/<?= $usuario->imagem ?>" alt="Foto do usuário">
+                    </div>
                     <div class="textADM">
                         <h5><?= $_SESSION['nome'] ?></h5>
                         <?php if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0): ?>

@@ -41,7 +41,7 @@
                         <div class="profile">
                             <div class="nomeEFoto">
                                 <div class="fotoUsuarioPosts">
-                                    <img src="<?= $post->imagem ?>" alt="imagem">
+                                    <img src="/<?= $post->imagem_usuario ?>" alt="imagem">
                                 </div>
                                 <div class="nomeUsuarioPosts">
                                     <p><?= $post->nome_usuario ?></p>

@@ -10,9 +10,14 @@ class DashboardController
     
     public function index()
     {
+        session_start();
+
         $total_post = App::get('database')->countAll('publicacoes');
         $total_user = App::get('database')->countAll('usuarios');
 
-        return view('admin/dashboard', compact('total_post', 'total_user'));
+        // Busca o usuário logado (inclusive imagem)
+        $usuario = App::get('database')->findUserById($_SESSION['id']);
+
+        return view('admin/dashboard', compact('total_post', 'total_user', 'usuario'));
     }
 }

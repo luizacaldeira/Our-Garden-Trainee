@@ -38,7 +38,8 @@ class QueryBuilder
         $sql = "
             SELECT 
             p.*,
-            u.nome AS nome_usuario
+            u.nome AS nome_usuario,
+            u.imagem AS imagem_usuario
             FROM publicacoes AS p
             INNER JOIN usuarios AS u
             ON p.usuarios_id = u.id
@@ -363,6 +364,20 @@ class QueryBuilder
             $result = $stmt->fetch(PDO::FETCH_OBJ);
 
             return $result->total > 0;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function findUserById($id)
+    {
+        $sql = "SELECT * FROM usuarios WHERE id = :id LIMIT 1";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute(['id' => $id]);
+
+            return $stmt->fetch(PDO::FETCH_OBJ);
         } catch (Exception $e) {
             die($e->getMessage());
         }

@@ -122,6 +122,12 @@ body{
     position: relative;
 }
 
+.fotoUsuarioDashboard img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 .textADM h5{
     font-size: 15px;
