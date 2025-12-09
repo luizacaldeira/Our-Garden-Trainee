@@ -11,16 +11,40 @@ class PaginaPostsController
     {
         session_start();
 
-        $posts = App::get('database')->selectPostsWithUser(0, 6);
+        // Paginação
+        $page = isset($_GET['page']) && $_GET['page'] > 0 ? intval($_GET['page']) : 1;
+        $itensPage = 6;
+        $inicio = ($page - 1) * $itensPage;
+
+        // Busca
+        $termo = isset($_GET['pesquisarPublicacoes']) ? trim($_GET['pesquisarPublicacoes']) : '';
+
+        if (!empty($termo)) {
+            // Com busca
+            $todosPosts = App::get('database')->buscaPublicacoes($termo);
+            $rows_count = count($todosPosts);
+            $posts = array_slice($todosPosts, $inicio, $itensPage);
+        } else {
+            // Sem busca
+            $rows_count = App::get('database')->countAll('publicacoes');
+            $posts = App::get('database')->selectPostsWithUser($inicio, $itensPage);
+        }
+
+        $totalPages = max(1, ceil($rows_count / $itensPage));
+
+        // Garante que a página não seja maior que o total
+        if ($page > $totalPages) {
+            header("Location: /publicacoes?page=" . $totalPages);
+            exit;
+        }
+
         $classificacoes = App::get('database')->selectAll('classificacoes');
+        
         foreach ($posts as $post) {
             $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
-
-            if (isset($_SESSION['id'])) {
-                $post->favoritado = App::get('database')->isFavorito($post->id, $_SESSION['id']);
-            }
         }
-        return view('site/paginaDePosts', compact('posts', 'classificacoes'));
+
+        return view('site/paginaDePosts', compact('posts', 'classificacoes', 'page', 'totalPages'));
     }
 
     public function exibirPostIndividual($id)

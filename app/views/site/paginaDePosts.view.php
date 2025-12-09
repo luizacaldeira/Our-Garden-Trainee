@@ -22,7 +22,7 @@
             <div class="pesquisaFavoritos">
                 <div class="pesquisa">
                     <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Pesquise...">
+                    <input type="text" placeholder="Pesquise..." id="input-search">
                 </div>
                 <?php if (isset($_SESSION['id'])): ?>
                     <div class="btnPublicacoesFavoritasContainer">
@@ -74,7 +74,7 @@
                         </div>
                         <div class="hora">
                             <i class="bi bi-calendar-fill"></i>
-                            <p><?= $post->data_criacao ?></p>
+                            <p><?= (new DateTime($post->data_criacao))->format('d/m/Y') ?></p>
                         </div>
                     </div>
                     </a>
@@ -82,30 +82,53 @@
             <?php endforeach; ?>
         </div>
 
-        <div class="paginacao">
-            <div class="elementosPaginacao">
-                <div class="arcos">
-                    <i class="bi bi-chevron-left"></i>
-                    <div class="numeros">
-                        <div class="item-paginacao">
-                            <p>1</p>
-                        </div>
-                        <div class="item-paginacao">
-                            <p>2</p>
-                        </div>
-                        <div class="item-paginacao">
-                            <p>3</p>
-                        </div>
-                        <div class="item-paginacao">
-                            <p>4</p>
-                        </div>
-                    </div>
-                    <i class="bi bi-chevron-right"></i>
+        <div class="paginacaoPosts">
+            <div class="paginacaoPostsConteudo">
+                <?php $searchParam = isset($_GET['pesquisarPublicacoes']) ? '&pesquisarPublicacoes=' . urlencode($_GET['pesquisarPublicacoes']) : ''; ?>
+
+                <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
+                    <a class="arrow-left" href="?page=<?= max(1, $page - 1) ?><?= $searchParam ?>">
+                        <i class="bi bi-chevron-left"></i>
+                    </a>
+                </li>
+
+                <div class="pages">
+                    <li class="page-item <?= $page == 1 ? 'active' : '' ?>">
+                        <a class="page" href="?page=1<?= $searchParam ?>">1</a>
+                    </li>
+
+                    <?php if ($page > 4): ?>
+                        <li class="page-item disabled"><span class="page">...</span></li>
+                    <?php endif; ?>
+
+                    <?php for ($page_number = max(2, $page - 2); $page_number <= min($totalPages - 1, $page + 2); $page_number++): ?>
+                        <li class="page-item <?= $page_number == $page ? 'active' : '' ?>">
+                            <a class="page" href="?page=<?= $page_number ?><?= $searchParam ?>"><?= $page_number ?></a>
+                        </li>
+                    <?php endfor; ?>
+
+                    <?php if ($page < $totalPages - 3): ?>
+                        <li class="page-item disabled"><span class="page">...</span></li>
+                    <?php endif; ?>
+
+                    <?php if ($totalPages > 1): ?>
+                        <li class="page-item <?= $page == $totalPages ? 'active' : '' ?>">
+                            <a class="page" href="?page=<?= $totalPages ?><?= $searchParam ?>"><?= $totalPages ?></a>
+                        </li>
+                    <?php endif; ?>
                 </div>
+
+                <li class="page-item <?= $page >= $totalPages ? 'disabled' : '' ?>">
+                    <a class="arrow-right" href="?page=<?= min($totalPages, $page + 1) ?><?= $searchParam ?>">
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
             </div>
         </div>
     </div>
     <?php include __DIR__ . '/../site/footer.view.php' ?>
+
+    <script src="../../../public/js/buscaPaginaPosts.js"></script>
 </body>
 
 </html>

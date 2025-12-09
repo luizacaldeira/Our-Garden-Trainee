@@ -119,7 +119,7 @@ class PublicacoesController
             "sobre" => $_POST['sobre'],
             "cuidados" => json_encode($_POST['cuidados']) ,
             "imagem" => $caminhoImagem,
-            "usuarios_id" => 1
+            "usuarios_id" => $_SESSION['id']
         ];
 
         $id = $_POST['id'];

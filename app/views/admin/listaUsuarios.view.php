@@ -119,7 +119,7 @@ if (!isset($_SESSION['id'])) {
                                                         alt="ícone de lápis" class="action-icon action-icon-blocked"></button>
                                                 <button class="btn-actions"><img src="../../../public/assets/trash-icon.svg"
                                                         alt="ícone de lixeira" class="action-icon action-icon-blocked"></button>
-                                             <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </td>
                                 </tr>
