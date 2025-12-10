@@ -169,3 +169,15 @@ btn_add_cares.addEventListener("click", (event) => {
   });
 
 });
+
+// Função que impede o envio do formulário de nova publicação se os campos obrigatórios não forem preenchidos
+const addNewPhotoInput = document.querySelector("#addNewPhotoInput");
+const btnCreatePublication = document.querySelector("#btnCreatePublication");
+btnCreatePublication.addEventListener("click", (event) => {
+  if (addNewPhotoInput.files.length === 0) {
+      event.preventDefault();
+      alert('Adicione uma foto para criar a publicação.');
+      return;
+    }
+});
+

@@ -38,7 +38,7 @@ class PublicacoesController
         }
 
         $classificacoes = App::get('database')->selectAll('classificacoes');
-        
+
         foreach ($posts as $post) {
             $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
         }
@@ -46,15 +46,20 @@ class PublicacoesController
         return view('admin/listaPosts', compact('posts', 'classificacoes', 'page', 'totalPages'));
     }
 
-    public function create() {
+    public function create()
+    {
         session_start();
         $imagemTemporaria = $_FILES['imagemPublicacao']['tmp_name'];
-        $nomeImagem= sha1(uniqid($_FILES['imagemPublicacao']['name'], true)) . "." . pathinfo($_FILES['imagemPublicacao']['name'],PATHINFO_EXTENSION) ;
+        $nomeImagem = sha1(uniqid($_FILES['imagemPublicacao']['name'], true)) . "." . pathinfo($_FILES['imagemPublicacao']['name'], PATHINFO_EXTENSION);
 
-        $caminhoImagem = "public/assets/imagensPosts/" . $nomeImagem; 
+        $caminhoImagem = "public/assets/imagensPosts/" . $nomeImagem;
         move_uploaded_file($imagemTemporaria, $caminhoImagem);
 
         $cuidados = $_POST['cuidadosPlanta'];
+
+        if (empty($cuidados)) {
+            $cuidados = json_encode([]);
+        }
 
         $parameters = [
             "titulo" => $_POST['tituloPublicacao'],
@@ -75,8 +80,8 @@ class PublicacoesController
             $pivotRecords = [];
             foreach ($_POST['classification'] as $id_classificacao) {
                 $pivotRecords[] = [
-                        'id_publicacao' => $id_publicacao,
-                        'id_classificacao' => $id_classificacao
+                    'id_publicacao' => $id_publicacao,
+                    'id_classificacao' => $id_classificacao
                 ];
             }
             App::get('database')->insertPivot($pivotRecords);
@@ -86,54 +91,54 @@ class PublicacoesController
     }
 
 
-    public function edit(){
+    public function edit()
+    {
         session_start();
-        
+
         if (
-        isset($_FILES['imagem_post']) &&
-        isset($_FILES['imagem_post']['error']) &&
-        $_FILES['imagem_post']['error'] === 0 // upload bem-sucedido
-    ) {
+            isset($_FILES['imagem_post']) &&
+            isset($_FILES['imagem_post']['error']) &&
+            $_FILES['imagem_post']['error'] === 0 // upload bem-sucedido
+        ) {
 
-        $tmp = $_FILES['imagem_post']['tmp_name'];
-        $ext = pathinfo($_FILES['imagem_post']['name'], PATHINFO_EXTENSION);
+            $tmp = $_FILES['imagem_post']['tmp_name'];
+            $ext = pathinfo($_FILES['imagem_post']['name'], PATHINFO_EXTENSION);
 
-        // Gera nome único
-        $novoNome = sha1(uniqid($_FILES['imagem_post']['name'], true)) . "." . $ext;
+            // Gera nome único
+            $novoNome = sha1(uniqid($_FILES['imagem_post']['name'], true)) . "." . $ext;
 
-        // Caminho final
-        $caminhoImagem = "public/assets/imagensPosts/" . $novoNome;
+            // Caminho final
+            $caminhoImagem = "public/assets/imagensPosts/" . $novoNome;
 
-        // Move o arquivo
-        move_uploaded_file($tmp, $caminhoImagem);
-
-    } else {
-        // Nenhuma imagem nova → mantém a antiga
-        // (error = 4 ou qualquer outro erro)
-        $caminhoImagem = $_POST['img_atual'];
-    }
+            // Move o arquivo
+            move_uploaded_file($tmp, $caminhoImagem);
+        } else {
+            // Nenhuma imagem nova → mantém a antiga
+            // (error = 4 ou qualquer outro erro)
+            $caminhoImagem = $_POST['img_atual'];
+        }
 
         $parameters = [
             "titulo" => $_POST['titulo'],
             "descricao" => $_POST['descricao'],
             "nome_planta" => $_POST['nome_planta'],
             "sobre" => $_POST['sobre'],
-            "cuidados" => json_encode($_POST['cuidados']) ,
+            "cuidados" => json_encode($_POST['cuidados']),
             "imagem" => $caminhoImagem,
             "usuarios_id" => $_SESSION['id']
         ];
 
         $id = $_POST['id'];
 
-        App::get('database')->update('publicacoes',$id,$parameters);
+        App::get('database')->update('publicacoes', $id, $parameters);
         header("Location: /posts");
-
     }
 
-    public function delete(){
+    public function delete()
+    {
         $id = $_POST['id'];
 
-        App::get('database')->delete('publicacoes',$id);
+        App::get('database')->delete('publicacoes', $id);
         header("Location: /posts");
     }
 }

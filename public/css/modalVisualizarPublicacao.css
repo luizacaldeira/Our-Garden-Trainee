@@ -70,6 +70,7 @@
 
 .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-publication-container .view-input {
     width: 100%;
+    min-height: 2.7rem;
     padding: 0.625rem;
 
     border-radius: 0.5rem;
@@ -124,7 +125,6 @@
 
 .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .view-publication-container .view-input-cares {
     padding-left: 1.5rem;
-    min-height: 2.7rem;
 }
 
 .backgroundListaPosts .mainListaPosts .modal-view-publication .modal-view-publication-main .buttons {
