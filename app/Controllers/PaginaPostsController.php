@@ -42,6 +42,7 @@ class PaginaPostsController
         
         foreach ($posts as $post) {
             $post->classificacoes = App::get('database')->selectPostsWithClassification($post->id);
+            $post->favoritado = App::get('database')->isFavorito($post->id, $_SESSION['id']);
         }
 
         return view('site/paginaDePosts', compact('posts', 'classificacoes', 'page', 'totalPages'));
