@@ -26,6 +26,7 @@ class LoginController
             $_SESSION['id'] = $user->id;
             $_SESSION['tipo_usuario'] = $user->tipo_usuario;
             $_SESSION['nome'] = $user->nome;
+            $_SESSION['foto_perfil'] = $user->imagem;
 
             header("Location: /dashboard");
         } else {

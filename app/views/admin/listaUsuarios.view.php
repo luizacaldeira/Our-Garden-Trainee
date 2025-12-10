@@ -36,7 +36,7 @@ if (!isset($_SESSION['id'])) {
 <body>
     <div class="background-complete-page">
         <?php include __DIR__ . '/../admin/sidebar.view.php' ?>
-        <main>
+        <main class="mainPage">
             <section class="section1">
                 <div class="input-search-container">
                     <img src="../../../public/assets/lupa-icon.svg" alt="ícone de lupa" class="lupa-icon">
@@ -44,7 +44,11 @@ if (!isset($_SESSION['id'])) {
                         placeholder="Pesquisar usuário...">
                 </div>
                 <div class="profile-container">
-                    <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
+                    <?php if (isset($_SESSION['foto_perfil'])): ?>
+                        <img src="../../../<?= $_SESSION['foto_perfil'] ?>" alt="ícone de perfil" class="profile-icon">
+                    <?php else: ?>
+                        <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
+                    <?php endif; ?>
                     <div class="profile-name">
                         <strong><?= $_SESSION['nome'] ?></strong>
                         <?php if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0): ?>

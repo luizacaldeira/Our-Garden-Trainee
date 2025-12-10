@@ -77,6 +77,13 @@ body {
     color: var(--green-900);
 }
 
+.profile-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .superiorTabelaPosts {
     display: flex;
     flex-direction: row;

@@ -47,7 +47,11 @@ if (!isset($_SESSION['id'])) {
                     <input type="text" name="pesquisarPublicacoes" id="input-search" class="input-search" placeholder="Pesquisar publicação...">
                 </div>
                 <div class="perfilListaPosts">
-                    <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
+                    <?php if (isset($_SESSION['foto_perfil'])): ?>
+                        <img src="../../../<?= $_SESSION['foto_perfil'] ?>" alt="ícone de perfil" class="profile-icon">
+                    <?php else: ?>
+                        <img src="../../../public/assets/profile-icon.svg" alt="ícone de perfil" class="profile-icon">
+                    <?php endif; ?>
                     <div class="nomePerfil">
                         <strong><?= $_SESSION['nome'] ?></strong>
                         <?php if (isset($_SESSION['tipo_usuario']) && $_SESSION['tipo_usuario'] == 0): ?>
