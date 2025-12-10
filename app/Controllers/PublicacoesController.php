@@ -87,7 +87,8 @@ class PublicacoesController
 
 
     public function edit(){
-
+        session_start();
+        
         if (
         isset($_FILES['imagem_post']) &&
         isset($_FILES['imagem_post']['error']) &&
