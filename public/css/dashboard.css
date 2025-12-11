@@ -1,16 +1,23 @@
 body{
-    height: max-content;
+    height: auto;
+    min-height: 100vh;
+
+}
+
+html {
+    height: auto;
+    min-height: 100vh;
+}
+
+.containerDashboard {
+    display: flex;
+    min-height: 100vh;
     background-image: url(../assets/monstera-deixa-o-papel-de-parede-fundo-da-natureza.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.519);
     background-blend-mode:multiply;
-}
-
-.containerDashboard {
-    display: flex;
-    height: 100%;
 }
 
 .mainDashbord {
@@ -237,29 +244,6 @@ body{
     font-size: 19px;
 }
 
-.verMais {
-    /* border: 1px solid red; */
-    text-align: center;
-    padding: 4% 7%;
-    background-color: var(--green-500);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20%;
-    font-family: var(--font-family-paragrafo);
-    width: fit-content;
-    font-size: 15px;
-    white-space: nowrap;
-    color: aliceblue;
-    box-shadow: 2px 4px 7px rgb(0, 0, 0, 0.5);
-}
-
-.verMais:hover {
-    background-color: var(--green-700);
-    scale: 1.05;
-    transition: 0.3s;
-}
-
 .arrow i {
     padding: 0.2rem;
     border: 1px solid transparent;
@@ -280,40 +264,141 @@ body{
     padding: 0.2rem;
 }
 
+@media screen and (min-width: 1030px) and (max-width: 1220px){
+    .body {
+        display: flex;
+        height: fit-content;
+    }
+    .section3Total{
+        
+    }
+
+    .containerUsuarios {
+        width: 300px;
+    }
+}
+
+    /* Tablets */
+@media screen and (min-width: 900px) and (max-width: 1030px){
+    .containerUsuarios{
+        width: 250px;
+    }
+
+    .total p {
+        align-content: center;
+        font-size: 11px;
+    }
+
+    .fotoUsuarioDashboard {
+        display: flex;
+        align-items: center;
+    }
+
+    .fotoUsuarioDashboard img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .title h2 {
+        font-size: 25px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 899px){
+    .containerUsuarios{
+        width: 250px;
+    }
+
+    .total p {
+        align-content: center;
+        font-size: 11px;
+    }
+
+    .fotoUsuarioDashboard {
+        display: flex;
+        align-items: center;
+    }
+
+    .fotoUsuarioDashboard img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .section3Total {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10%;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .section3Total .section3:nth-child(3) {
+        grid-column: 1 / 3;
+    }
+
+    .icon {
+        padding: 2% 5%;
+        left: 43%;
+    }
+
+    .icon i {
+        font-size: 22px;
+    }
+
+    .icon i:nth-child(3){
+        padding: 5%;
+    }
+
+    .title h2 {
+        font-size: 25px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 600px) {
-.section1 {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 10px;
-}
+    .containerDashboard {
+        
+    }
+    .section1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
 
-.profileADM {
-    padding: 5% 0;
-    gap: 10px;
-    justify-content: center;
-}
+    .profileADM {
+        padding: 5% 0;
+        gap: 10px;
+        justify-content: center;
+    }
 
-.total {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-}
+    .total {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
 
-.section3Total{
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
-    padding: 8% 9%;
-}
+    .section3Total{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        padding: 8% 9%;
+    }
 
-.section2 {
-    padding: 8% 0;
-}
+    .section2 {
+        padding: 8% 0;
+    }
 
-.dropdownLogout.open {
-    width: 120%;
-}
+    .dropdownLogout.open {
+        width: 120%;
+    }
 }
 
 /* @media (max-width: 820px) {

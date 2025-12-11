@@ -76,10 +76,6 @@ if (!isset($_SESSION['id'])) {
                             </div>
                         </div>
                     </a>
-                    <!-- <div class="verMais">
-                        <p>Ver mais</p>
-                        <i class="bi bi-arrow-right"></i>
-                    </div> -->
                 </div>
                 <div class="section3">
                     <div class="icon">
@@ -95,10 +91,6 @@ if (!isset($_SESSION['id'])) {
                             </div>
                         </div>
                     </a>
-                    <!-- <div class="verMais">
-                        <p>Ver mais</p>
-                        <i class="bi bi-arrow-right"></i>
-                    </div> -->
                 </div>
                 <div class="section3">
                     <div class="icon">
@@ -114,10 +106,6 @@ if (!isset($_SESSION['id'])) {
                             </div>
                         </div>
                     </a>
-                    <!-- <div class="verMais">
-                        <p>Ver mais</p>
-                        <i class="bi bi-arrow-right"></i>
-                    </div> -->
                 </div>
             </div>
         </div>
