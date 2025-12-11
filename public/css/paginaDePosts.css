@@ -238,8 +238,7 @@ body{
 .conteudo h3, .conteudo p, .hora {
     /* padding-bottom: 3%; */
     padding: 2px;
-    /* border: 1px solid purple; */
-    
+    /* border: 1px solid purple; */ 
 }
 
 .conteudo h3 {

@@ -269,9 +269,6 @@ html {
         display: flex;
         height: fit-content;
     }
-    .section3Total{
-        
-    }
 
     .containerUsuarios {
         width: 300px;
@@ -363,9 +360,6 @@ html {
 }
 
 @media (max-width: 600px) {
-    .containerDashboard {
-        
-    }
     .section1 {
         display: flex;
         flex-direction: column-reverse;
