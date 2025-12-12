@@ -22,41 +22,45 @@
         </div>
 
         <div class="listaCards">
-            <?php foreach ($posts as $post): ?>
-                <a class="card" href="/publicacoes/<?=$post->id?>">
-                    <div class="infos">
-                        <div class="profile">
-                            <div class="nomeEFoto">
-                                <div class="usuarioPosts">
-                                    <i class="bi bi-person-circle"></i>
+            <?php if (empty($posts)): ?>
+                <p class="nenhum-favorito">Você ainda não favoritou nenhuma publicação.</p>
+            <?php else: ?>
+                <?php foreach ($posts as $post): ?>
+                    <a class="card" href="/publicacoes/<?= $post->id ?>">
+                        <div class="infos">
+                            <div class="profile">
+                                <div class="nomeEFoto">
+                                    <div class="usuarioPosts">
+                                        <i class="bi bi-person-circle"></i>
+                                    </div>
+                                    <div class="nomeUsuarioPosts">
+                                        <p><?= $post->nome_usuario ?></p>
+                                    </div>
                                 </div>
-                                <div class="nomeUsuarioPosts">
-                                    <p><?= $post->nome_usuario ?></p>
+                                <div class="folhinhaPosts">
+                                    <i class="bi bi-leaf-fill"></i>
                                 </div>
                             </div>
-                            <div class="folhinhaPosts">
-                                <i class="bi bi-leaf-fill"></i>
+                        </div>
+                        <div class="imgPlantaPosts">
+                            <img src="/<?= $post->imagem ?>">
+                        </div>
+                        <div class="conteudo">
+                            <h3><?= $post->titulo ?></h3>
+                            <p><?= $post->descricao ?></p>
+                            <div class="classificacoes">
+                                <?php foreach ($post->classificacoes as $classificacao): ?>
+                                    <p><?= $classificacao->nome ?></p>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="hora">
+                                <i class="bi bi-calendar-fill"></i>
+                                <p><?= (new DateTime($post->data_criacao))->format('d/m/Y') ?></p>
                             </div>
                         </div>
-                    </div>
-                    <div class="imgPlantaPosts">
-                        <img src="/<?= $post->imagem ?>">
-                    </div>
-                    <div class="conteudo">
-                        <h3><?= $post->titulo ?></h3>
-                        <p><?= $post->descricao ?></p>
-                        <div class="classificacoes">
-                            <?php foreach ($post->classificacoes as $classificacao): ?>
-                                <p><?= $classificacao->nome ?></p>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="hora">
-                            <i class="bi bi-calendar-fill"></i>
-                            <p><?= (new DateTime($post->data_criacao))->format('d/m/Y') ?></p>
-                        </div>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+                    </a>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
 
         <div class="paginacao">
