@@ -42,14 +42,14 @@ class UsuariosController
 
     public function criar()
     {
-        
-        if($_FILES['imagemUsuario']['name'] == NULL){
+
+        if ($_FILES['imagemUsuario']['name'] == NULL) {
             $caminhoImagem = 'public/assets/foto perfil.png';
-        }else{
-            $imagemTemporaria= $_FILES['imagemUsuario']['tmp_name'];
-            $nomeImagem= sha1(uniqid($_FILES['imagemUsuario']['name'], true)) . "." . pathinfo($_FILES['imagemUsuario']['name'],PATHINFO_EXTENSION) ;
-    
-            $caminhoImagem= "public/assets/imagensUsuarios/" . $nomeImagem; 
+        } else {
+            $imagemTemporaria = $_FILES['imagemUsuario']['tmp_name'];
+            $nomeImagem = sha1(uniqid($_FILES['imagemUsuario']['name'], true)) . "." . pathinfo($_FILES['imagemUsuario']['name'], PATHINFO_EXTENSION);
+
+            $caminhoImagem = "public/assets/imagensUsuarios/" . $nomeImagem;
             move_uploaded_file($imagemTemporaria, $caminhoImagem);
         };
 
@@ -59,7 +59,7 @@ class UsuariosController
             'senha' => $_POST['senha'],
             'imagem' => $caminhoImagem,
             'tipo_usuario' => 0
-        ];   
+        ];
 
         App::get('database')->insert('usuarios', $parameters);
 
@@ -68,15 +68,16 @@ class UsuariosController
 
     public function editar()
     {
-        if(isset($_FILES['imagemUsuarioEdit'])&& (isset($_FILES['imagemUsuarioEdit']['error']))&& $_FILES['imagemUsuarioEdit']['error'] === 0){
-            $imagemTemporaria= $_FILES['imagemUsuarioEdit']['tmp_name'];
-            $nomeImagem= sha1(uniqid($_FILES['imagemUsuarioEdit']['name'], true)) . "." . pathinfo($_FILES['imagemUsuarioEdit']['name'],PATHINFO_EXTENSION) ;
+        session_start();
+        
+        if (isset($_FILES['imagemUsuarioEdit']) && (isset($_FILES['imagemUsuarioEdit']['error'])) && $_FILES['imagemUsuarioEdit']['error'] === 0) {
+            $imagemTemporaria = $_FILES['imagemUsuarioEdit']['tmp_name'];
+            $nomeImagem = sha1(uniqid($_FILES['imagemUsuarioEdit']['name'], true)) . "." . pathinfo($_FILES['imagemUsuarioEdit']['name'], PATHINFO_EXTENSION);
 
-            $caminhoImagem= "public/assets/imagensUsuarios/" . $nomeImagem; 
+            $caminhoImagem = "public/assets/imagensUsuarios/" . $nomeImagem;
             move_uploaded_file($imagemTemporaria, $caminhoImagem);
-        }
-        else{
-            $caminhoImagem= $_POST['imgAtual'];
+        } else {
+            $caminhoImagem = $_POST['imgAtual'];
         }
         $id = $_POST['id'];
 
@@ -84,19 +85,25 @@ class UsuariosController
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
-            'imagem' => $caminhoImagem        
+            'imagem' => $caminhoImagem
         ];
 
         App::get('database')->update('usuarios', $id, $parameters);
 
-        header ('Location: /usuarios');
+        // Atualiza a variável de foto_perfil da sessão para que a imagem do usuário mude dinamicamente caso ele edite sua foto de perfil
+        if ($_SESSION['id'] == $id) {
+            $_SESSION['foto_perfil'] = $caminhoImagem;
+            $_SESSION['nome'] = $_POST['nome'];
+            $_SESSION['email'] = $_POST['email'];
+        }
 
+        header('Location: /usuarios');
     }
 
     public function deletar()
     {
         session_start();
-        
+
         $id = $_POST['id'];
 
         App::get('database')->delete('usuarios', $id);
@@ -108,27 +115,26 @@ class UsuariosController
             exit;
         }
 
-        header ('Location: /usuarios');
+        header('Location: /usuarios');
     }
 
     public function paginacao()
     {
-        $page=1;
+        $page = 1;
 
-        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+        if (isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])) {
             $page = intval($_GET['paginacaoNumero']);
 
-            if($page<=0){
+            if ($page <= 0) {
                 return redirect('admin/listaUsuarios');
             }
         }
         $itensPage = 5;
         $inicio = $itensPage * $page - $itensPage;
         $rows_count = App::get('database')->countAll('usuarios');
-        
-        if($inicio>$rows_count){
+
+        if ($inicio > $rows_count) {
             return redirect('admin/listaUsuarios');
         }
-
     }
 }
