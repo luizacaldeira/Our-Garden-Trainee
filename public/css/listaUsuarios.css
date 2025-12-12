@@ -144,6 +144,17 @@
     transform: scale(1.03);
 }
 
+.mainPage .section2 .buttons-container .btn-create-user.btn-create-user-blocked{
+    /* display: none; */
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.mainPage .section2 .buttons-container .btn-create-user.btn-create-user-blocked:hover{
+    transition: none;
+    transform: none;
+}
+
 .mainPage .section3 {
     background-color: var(--green-100);
 
@@ -434,7 +445,6 @@
 
     .mainPage .section1 .profile-container .profile-name {
         height: fit-content;
-        display: flex;
         flex-direction: column;
     }
 

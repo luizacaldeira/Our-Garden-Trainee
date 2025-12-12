@@ -67,10 +67,17 @@ if (!isset($_SESSION['id'])) {
                     <p>Usuários</p>
                 </div>
                 <div class="buttons-container">
+                    <?php if ($_SESSION['tipo_usuario'] == 0): ?>
                     <button class="btn-create-user" onclick="abrirModal('modalAddNewUser', 'fundoJS')">
                         <img src="../../../public/assets/plus-icon.svg" alt="ícone de mais">
                         Novo usuário
                     </button>
+                    <?php else: ?>
+                        <button class="btn-create-user btn-create-user-blocked">
+                        <img src="../../../public/assets/plus-icon.svg" alt="ícone de mais">
+                        Novo usuário
+                    </button>
+                    <?php endif; ?>
                 </div>
             </section>
 
