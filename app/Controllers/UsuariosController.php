@@ -95,12 +95,22 @@ class UsuariosController
 
     public function deletar()
     {
+        session_start();
+        
         $id = $_POST['id'];
 
         App::get('database')->delete('usuarios', $id);
 
+        if ($_SESSION['id'] == $id) {
+            session_unset();
+            session_destroy();
+            header("Location: /login");
+            exit;
+        }
+
         header ('Location: /usuarios');
     }
+
     public function paginacao()
     {
         $page=1;
