@@ -145,7 +145,7 @@
 }
 
 .mainPage .section2 .buttons-container .btn-create-user.btn-create-user-blocked{
-    /* display: none; */
+    display: none;
     opacity: 0.6;
     cursor: not-allowed;
 }
