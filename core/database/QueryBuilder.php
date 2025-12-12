@@ -241,7 +241,8 @@ class QueryBuilder
     {
         $sql = 'SELECT 
                 p.*,
-                u.nome AS nome_usuario
+                u.nome AS nome_usuario,
+                u.imagem AS imagem_usuario 
                 FROM publicacoes AS p
                 INNER JOIN usuarios AS u
                 ON p.usuarios_id = u.id
