@@ -42,11 +42,16 @@ class UsuariosController
 
     public function criar()
     {
-        $imagemTemporaria= $_FILES['imagemUsuario']['tmp_name'];
-        $nomeImagem= sha1(uniqid($_FILES['imagemUsuario']['name'], true)) . "." . pathinfo($_FILES['imagemUsuario']['name'],PATHINFO_EXTENSION) ;
-
-        $caminhoImagem= "public/assets/imagensUsuarios/" . $nomeImagem; 
-        move_uploaded_file($imagemTemporaria, $caminhoImagem);
+        
+        if($_FILES['imagemUsuario']['name'] == NULL){
+            $caminhoImagem = 'public/assets/foto perfil.png';
+        }else{
+            $imagemTemporaria= $_FILES['imagemUsuario']['tmp_name'];
+            $nomeImagem= sha1(uniqid($_FILES['imagemUsuario']['name'], true)) . "." . pathinfo($_FILES['imagemUsuario']['name'],PATHINFO_EXTENSION) ;
+    
+            $caminhoImagem= "public/assets/imagensUsuarios/" . $nomeImagem; 
+            move_uploaded_file($imagemTemporaria, $caminhoImagem);
+        };
 
         $parameters = [
             'nome' => $_POST['nome'],

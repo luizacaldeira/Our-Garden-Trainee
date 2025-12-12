@@ -204,19 +204,19 @@ if (!isset($_SESSION['id'])) {
                             <div class="userName">
                                 <section class="addUserName">
                                     <span>Nome:</span>
-                                    <input type="text" name="nome" id="inputUserName" placeholder="Digite seu nome...">
+                                    <input type="text" name="nome" id="inputUserName" placeholder="Digite seu nome..." required>
                                 </section>
                             </div>
                             <div class="userEmail">
                                 <section class="addUserEmail">
                                     <span>Email:</span>
-                                    <input type="text" name="email" id="inputUserEmail" placeholder="Digite seu email...">
+                                    <input type="email" name="email" id="inputUserEmail" placeholder="Digite seu email..." required>
                                 </section>
                             </div>
                             <div class="userPassword">
                                 <section class="addUserPassword">
                                     <span>Senha:</span>
-                                    <input type="text" name="senha" id="inputUserPassword" placeholder="Digite sua senha...">
+                                    <input type="text" name="senha" id="inputUserPassword" placeholder="Digite sua senha..." required>
                                 </section>
                             </div>
                         </div>
