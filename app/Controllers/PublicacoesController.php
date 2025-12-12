@@ -131,6 +131,20 @@ class PublicacoesController
         $id = $_POST['id'];
 
         App::get('database')->update('publicacoes', $id, $parameters);
+
+        App::get('database')->deletePivot('id_publicacao', $id);
+        if (isset($_POST['classificationEdit']) && is_array($_POST['classificationEdit'])) {
+            $records_aux = [];
+            foreach ($_POST['classificationEdit'] as $id_classificacao) {
+                $records_aux[] = [
+                    "id_publicacao" => $id,
+                    "id_classificacao" => $id_classificacao,
+                ];
+            }
+
+            App::get('database')->insertPivot($records_aux);
+        }
+        
         header("Location: /posts");
     }
 
