@@ -124,6 +124,13 @@ body {
     align-items: center;
 }
 
+.usuarioPosts img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .nomeUsuarioPosts p {
     white-space: nowrap;
     /* font-size: 10px; */
@@ -208,6 +215,7 @@ body {
     background-color: var(--green-200);
     border-radius: 20px;
     padding: 1% 6% 1% 6%;
+    width: max-content;
 
     display: flex;
     justify-content: center;

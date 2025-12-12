@@ -328,7 +328,8 @@ class QueryBuilder
         $sql = "
         SELECT 
             p.*,
-            u.nome AS nome_usuario
+            u.nome AS nome_usuario,
+            u.imagem AS imagem_usuario
         FROM favoritos f
         INNER JOIN publicacoes p 
             ON f.id_publicacao = p.id

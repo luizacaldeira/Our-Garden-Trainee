@@ -31,7 +31,7 @@
                             <div class="profile">
                                 <div class="nomeEFoto">
                                     <div class="usuarioPosts">
-                                        <i class="bi bi-person-circle"></i>
+                                        <img src="/<?= $post->imagem_usuario ?>" alt="">
                                     </div>
                                     <div class="nomeUsuarioPosts">
                                         <p><?= $post->nome_usuario ?></p>
