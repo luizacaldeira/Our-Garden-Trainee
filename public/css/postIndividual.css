@@ -606,7 +606,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
 @media screen and (min-width: 361px) and (max-width: 703px) {
     main {
         width: 100%;
-        min-height: 100vh;
+        min-height: max-content;
 
         font-size: var(--font-size-titulo-mobile);
     }
@@ -615,13 +615,13 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
         background: linear-gradient(to bottom, var(--green-200) 0%, #8EB87F 78%, var(--green-500) 100%);
 
         width: 100%;
-        min-height: 100vh;
+        min-height: max-content;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        padding: 1rem;
+        padding: 5rem 1rem;
     }
 
     main .hero-section .post-container {
@@ -663,7 +663,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
 
     main .hero-section .post-container .post .image-container img {
         width: 100%;
-        height: 100%;
+        height: 17rem;
 
         object-fit: cover;
     }
@@ -841,7 +841,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
 @media screen and (max-width: 360px) {
     main {
         width: 100%;
-        min-height: 100vh;
+        min-height: max-content;
 
         font-size: var(--font-size-subtitulo-mobile);
     }
@@ -850,13 +850,13 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
         background: linear-gradient(to bottom, var(--green-200) 0%, #8EB87F 78%, var(--green-500) 100%);
 
         width: 100%;
-        min-height: 100vh;
+        min-height: max-content;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        padding: 1rem;
+        padding: 5rem 1rem;
     }
 
     main .hero-section .post-container {
@@ -898,7 +898,7 @@ main .hero-section .post-container .show-more-container .btn-show-more:focus {
 
     main .hero-section .post-container .post .image-container img {
         width: 100%;
-        height: 100%;
+        height: 17rem;
 
         object-fit: cover;
     }
