@@ -85,7 +85,7 @@ class LoginController
 
         if (!$usuario) {
             session_start();
-            $_SESSION['mensagemErro'] = "Este email não está cadastrado.";
+            $_SESSION['mensagemErroRegister'] = "Este email não está cadastrado.";
             header("Location: /login/recuperar");
             exit;
         }

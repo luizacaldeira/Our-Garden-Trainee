@@ -22,7 +22,7 @@
 </head>
 
 <body>
-
+    <?php session_start(); ?>
     <div class="loginBackground">
         <div class="loginBackgroundImg"></div>
         <div class="loginBackgroundColor"></div>
@@ -42,13 +42,20 @@
                         <h2>Digite seu email para recuperar a senha.</h2>
                     </div>
                     <form action="/login/enviaEmail" method="POST">
+                        <div class="mensagemErro">
+                            <?php
+                            if(isset($_SESSION['mensagemErroRegister']))
+                                echo $_SESSION['mensagemErroRegister'];
+                            unset($_SESSION['mensagemErroRegister']);
+                            ?>
+                        </div>
                         <div class="loginBoxId">
                             <div class="loginBoxEmail">
                                 <p>Email</p>
                             </div>
                             <div class="loginInput">
                                 <i class="bi bi-envelope"></i>
-                                <input class="inputLogin" type="email" name="email" placeholder="Digite seu email...">
+                                <input class="inputLogin" type="email" name="email" placeholder="Digite seu email..." required>
                             </div>
                         </div>
                 </div>

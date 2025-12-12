@@ -47,7 +47,7 @@
                             <p>Nome</p>
                         </div>
                         <div class="registerInput">
-                            <input class="inputLogin" type="text" name="nomeRegister" placeholder="Digite seu nome...">
+                            <input class="inputLogin" type="text" name="nomeRegister" placeholder="Digite seu nome..." required>
                         </div>
                     </div>
                     <div class="registerBoxId">
@@ -56,7 +56,7 @@
                         </div>
                         <div class="registerInput">
                             <i class="bi bi-envelope"></i>
-                            <input class="inputLogin" type="email" name="emailRegister" placeholder="Digite seu email...">
+                            <input class="inputLogin" type="email" name="emailRegister" placeholder="Digite seu email..." required>
                         </div>
                     </div>
                     <div class="registerBoxId">
@@ -66,7 +66,7 @@
                         <div class="registerInput">
                             <div class="registerLock">
                                 <i class="bi bi-lock"></i>
-                                <input class="inputRegisterPassword" id="inputLoginPassword" name="senhaRegister" type="password" placeholder="Digite sua senha...">
+                                <input class="inputRegisterPassword" id="inputLoginPassword" name="senhaRegister" type="password" placeholder="Digite sua senha..." required>
                             </div>
                             <div class="divOlhos" id="divOlhos">
                                 <i class="bi bi-eye-slash" id="olho"></i>
@@ -118,7 +118,7 @@
                         </div>
                         <div class="loginInput">
                             <i class="bi bi-envelope"></i>
-                            <input class="inputLogin" type="email" name="email" placeholder="Digite seu email...">
+                            <input class="inputLogin" type="email" name="email" placeholder="Digite seu email..." required>
                         </div>
                     </div>
                     <div class="loginBoxId">
@@ -128,7 +128,7 @@
                         <div class="loginInput">
                             <div class="loginLock">
                                 <i class="bi bi-lock"></i>
-                                <input class="inputLoginPassword" id="inputLoginPassword" name="senha" type="password" placeholder="Digite sua senha...">
+                                <input class="inputLoginPassword" id="inputLoginPassword" name="senha" type="password" placeholder="Digite sua senha..." required>
                             </div>
                             <div class="divOlhos" id="divOlhos">
                                 <i class="bi bi-eye-slash" id="olho"></i>
