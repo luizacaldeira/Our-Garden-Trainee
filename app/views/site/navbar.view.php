@@ -25,8 +25,9 @@
     <div class="navbarGlobal">
 
         <div class="navbar" id="navbar">
-
-            <img src="../../../public/assets/Escrito verde claro vazio.png" class="navbarLogo">
+            <a href="/">
+                <img src="../../../public/assets/Escrito verde claro vazio.png" class="navbarLogo">
+            </a>
 
             <div class="navbarContent">
                 <?php if (isset($_SESSION['id'])): ?>
