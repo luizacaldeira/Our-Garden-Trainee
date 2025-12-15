@@ -71,7 +71,7 @@
                     <div class="content">
                         <div class="icons">
                             <a href="https://www.facebook.com/codeempresajunior" target="_blank"><img src="../../../public/assets/facebook-logo.svg" alt="Logo do Facebook" class="icon"></a>
-                            <a href="https://www.instagram.com/codejr" target="_blank"><img src="../../../public/assets/instagram-logo.svg" alt="Logo do Instagram" class="icon"></a>
+                            <a href="https://www.instagram.com/our.gardenjr/" target="_blank"><img src="../../../public/assets/instagram-logo.svg" alt="Logo do Instagram" class="icon"></a>
                             <a href="https://www.linkedin.com/company/codejr/" target="_blank"><img src="../../../public/assets/linkedin-logo.svg" alt="Logo do Linkedin" class="icon"></a>
                             <a href="https://api.whatsapp.com/send/?phone=5532991519313&text&type=phone_number&app_absent=0" target="_blank"><img src="../../../public/assets/telefone-logo.svg" alt="Logo do Telefone" class="icon"></a>
                         </div>

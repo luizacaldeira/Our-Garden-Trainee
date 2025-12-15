@@ -16,9 +16,15 @@
 <body>
     <?php include __DIR__ . '/../site/navbar.view.php' ?>
     <div class="pagina">
+        <div class="videoContainer" id="videoContainer">
+            <video id="video" loop>
+                <source src="../../../public/assets/SeClicarMorre.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo
+            </video>
+        </div>
         <div class="conteudofull">
             <div class="herocontent">
-                <div class="herotop">
+                <div class="herotop" id="easter-egg">
                     <img src="/public/assets/4.png" />
                 </div>
                 <div class="hero">
@@ -74,6 +80,7 @@
     <?php include __DIR__ . '/../site/footer.view.php' ?>       
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="/public/js/carrossel.js"></script>
+    <script src="/public/js/video.js"></script>
 </body>
 
 </html>

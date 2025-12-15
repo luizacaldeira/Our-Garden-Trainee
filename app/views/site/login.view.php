@@ -153,7 +153,7 @@
             </form>
 
             <div class="loginBoxXoxomidias">
-                <a class="a" href="https://www.instagram.com/codejr" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a class="a" href="https://www.instagram.com/our.gardenjr/" target="_blank"><i class="bi bi-instagram"></i></a>
                 <a class="a" href="https://www.facebook.com/codeempresajunior" target="_blank"><i class="bi bi-facebook"></i></a>
                 <a class="a" href="https://www.linkedin.com/company/codejr/" target="_blank"><i class="bi bi-linkedin"></i></a>
                 <a class="a" href="https://api.whatsapp.com/send/?phone=5532991519313&text&type=phone_number&app_absent=0" target="_blank"><i class="bi bi-telephone-fill"></i></a>

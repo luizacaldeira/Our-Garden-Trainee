@@ -355,6 +355,12 @@ body {
     }
 }
 
+@media (max-width: 950px) {
+    .registerBoxTitle h1{
+        font-size: 50px;
+    }
+}
+
 @media (max-width: 768px) {
     .loginBackground {
         grid-template-columns: 1fr 1fr;
